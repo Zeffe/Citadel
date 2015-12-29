@@ -1,1 +1,13 @@
 c:\users\seth\documents\visual studio 2015\Projects\Citadel\Citadel\bin\Debug\Citadel.exe.config
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.csprojResolveAssemblyReference.cache
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bin\Debug\Citadel.pdb
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bin\Debug\asset.dll
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bin\Debug\asset.pdb
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bin\Debug\asset.xml
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.Form1.resources
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.exe
+C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
