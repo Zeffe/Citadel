@@ -11,3 +11,6 @@ C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\bi
 C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.Form1.resources
 C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.exe
 C:\Users\spider\Documents\Visual Studio 2015\Projects\Citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
+C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
+C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.exe
+C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
