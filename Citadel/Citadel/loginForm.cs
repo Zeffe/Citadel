@@ -76,7 +76,7 @@ namespace Citadel
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "admin" && txtPass.Text == "password")
+            if (txtPass.Text == "password")
             {
                 main = new formMain(txtUser.Text);
                 this.Hide();

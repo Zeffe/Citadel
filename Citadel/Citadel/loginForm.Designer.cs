@@ -77,6 +77,7 @@
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtPass.ForeColor = System.Drawing.Color.White;
             this.txtPass.Location = new System.Drawing.Point(47, 78);
+            this.txtPass.MaxLength = 15;
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(129, 22);
             this.txtPass.TabIndex = 2;
@@ -89,6 +90,7 @@
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUser.ForeColor = System.Drawing.Color.White;
             this.txtUser.Location = new System.Drawing.Point(47, 50);
+            this.txtUser.MaxLength = 15;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(129, 22);
             this.txtUser.TabIndex = 1;

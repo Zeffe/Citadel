@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.thirteenForm1 = new asset.ThirteenForm();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.divider1 = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.Controls.Add(this.divider1);
             this.thirteenForm1.Controls.Add(this.lblUser);
             this.thirteenForm1.Controls.Add(this.label1);
             this.thirteenForm1.Controls.Add(this.thirteenControlBox1);
@@ -53,6 +55,26 @@
             this.thirteenForm1.Size = new System.Drawing.Size(841, 638);
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblUser.Location = new System.Drawing.Point(84, 40);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(83, 16);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "placeHolder";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome";
             // 
             // thirteenControlBox1
             // 
@@ -67,26 +89,6 @@
             this.thirteenControlBox1.TabIndex = 0;
             this.thirteenControlBox1.Text = "thirteenControlBox1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(12, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblUser.Location = new System.Drawing.Point(84, 40);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(83, 16);
-            this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "placeHolder";
-            // 
             // pnlContainer
             // 
             this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -94,6 +96,18 @@
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(78, 28);
             this.pnlContainer.TabIndex = 3;
+            // 
+            // divider1
+            // 
+            this.divider1.AutoSize = true;
+            this.divider1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.divider1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.divider1.Font = new System.Drawing.Font("Microsoft Sans Serif", 395F);
+            this.divider1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.divider1.Location = new System.Drawing.Point(229, 34);
+            this.divider1.Name = "divider1";
+            this.divider1.Size = new System.Drawing.Size(2, 599);
+            this.divider1.TabIndex = 4;
             // 
             // formMain
             // 
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContainer;
+        private System.Windows.Forms.Label divider1;
     }
 }

@@ -28,8 +28,24 @@ namespace Citadel
 
         private void formMain_Load(object sender, EventArgs e)
         {
-            lblUser.Text = currentUser;
+            int _x; string _user = "";
+            if (currentUser.Length < 12)
+            {
+                lblUser.Text = currentUser;
+            } else
+            {
+                for (int i = 0; i < 12; i++)
+                {
+                    _user += currentUser[i];
+                }
+                lblUser.Text = _user + "...";
+            }
             pnlContainer.Width = 85 + lblUser.Width;
+            _x = pnlContainer.Location.X;
+            pnlContainer.Location = new Point( (divider1.Location.X - pnlContainer.Width)/2, pnlContainer.Location.Y);
+            _x = pnlContainer.Location.X - _x;
+            label1.Location = new Point(label1.Location.X + _x, label1.Location.Y);
+            lblUser.Location = new Point(lblUser.Location.X + _x, label1.Location.Y);
         }
     }
 }
