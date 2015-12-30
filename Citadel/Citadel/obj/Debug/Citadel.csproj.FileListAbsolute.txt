@@ -55,6 +55,7 @@ C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensio
 C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\bin\Debug\Zlib.Portable.xml
 C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.csprojResolveAssemblyReference.cache
-C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.Form1.resources
 C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
 C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
+C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.rformLogin.resources
+C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.formMain.resources
