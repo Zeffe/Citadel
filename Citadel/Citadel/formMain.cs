@@ -12,14 +12,24 @@ namespace Citadel
 {
     public partial class formMain : Form
     {
-        public formMain(string user, string pass)
+
+        string currentUser;
+
+        public formMain(string user)
         {
             InitializeComponent();
+            currentUser = user;
         }
 
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void formMain_Load(object sender, EventArgs e)
+        {
+            lblUser.Text = currentUser;
+            pnlContainer.Width = 85 + lblUser.Width;
         }
     }
 }

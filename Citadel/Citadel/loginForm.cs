@@ -78,7 +78,7 @@ namespace Citadel
         {
             if (txtUser.Text == "admin" && txtPass.Text == "password")
             {
-                main = new formMain(txtUser.Text, txtPass.Text);
+                main = new formMain(txtUser.Text);
                 this.Hide();
                 main.Show();
             }
