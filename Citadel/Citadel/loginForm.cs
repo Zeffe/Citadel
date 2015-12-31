@@ -68,7 +68,7 @@ namespace Citadel
             TextBox textbox = sender as TextBox;
             if (textbox.Text == "")
             {
-                if (textbox.PasswordChar == '*')
+                if (textbox.UseSystemPasswordChar == true)
                 {
                     textbox.UseSystemPasswordChar = false;
                 }
@@ -100,6 +100,8 @@ namespace Citadel
         {
             if (e.KeyCode == Keys.Enter)
             {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 txtPass.Focus();
             }
         }
@@ -108,6 +110,8 @@ namespace Citadel
         {
             if (e.KeyCode == Keys.Enter)
             {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 btnLogin.PerformClick();
             }
         }
