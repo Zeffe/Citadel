@@ -41,22 +41,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pnlTest = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pnlbDashboard = new System.Windows.Forms.Panel();
-            this.lblDashboard = new System.Windows.Forms.Label();
-            this.pnlbTest = new System.Windows.Forms.Panel();
-            this.lblTest = new System.Windows.Forms.Label();
             this.pctPointer = new System.Windows.Forms.PictureBox();
             this.pctPointer2 = new System.Windows.Forms.PictureBox();
+            this.pnlbDashboard = new System.Windows.Forms.Panel();
             this.pctDashboard = new System.Windows.Forms.PictureBox();
+            this.lblDashboard = new System.Windows.Forms.Label();
+            this.pnlbTest = new System.Windows.Forms.Panel();
             this.pctTest = new System.Windows.Forms.PictureBox();
+            this.lblTest = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             this.pnlTest.SuspendLayout();
-            this.pnlbDashboard.SuspendLayout();
-            this.pnlbTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).BeginInit();
+            this.pnlbDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).BeginInit();
+            this.pnlbTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctTest)).BeginInit();
             this.SuspendLayout();
             // 
@@ -204,6 +204,29 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "test worked";
             // 
+            // pctPointer
+            // 
+            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
+            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer.Location = new System.Drawing.Point(219, 85);
+            this.pctPointer.Name = "pctPointer";
+            this.pctPointer.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer.TabIndex = 8;
+            this.pctPointer.TabStop = false;
+            // 
+            // pctPointer2
+            // 
+            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
+            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
+            this.pctPointer2.Name = "pctPointer2";
+            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer2.TabIndex = 10;
+            this.pctPointer2.TabStop = false;
+            this.pctPointer2.Visible = false;
+            // 
             // pnlbDashboard
             // 
             this.pnlbDashboard.BackColor = System.Drawing.Color.DodgerBlue;
@@ -213,6 +236,16 @@
             this.pnlbDashboard.Name = "pnlbDashboard";
             this.pnlbDashboard.Size = new System.Drawing.Size(229, 49);
             this.pnlbDashboard.TabIndex = 7;
+            // 
+            // pctDashboard
+            // 
+            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
+            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
+            this.pctDashboard.Name = "pctDashboard";
+            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
+            this.pctDashboard.TabIndex = 1;
+            this.pctDashboard.TabStop = false;
             // 
             // lblDashboard
             // 
@@ -233,49 +266,6 @@
             this.pnlbTest.Size = new System.Drawing.Size(229, 49);
             this.pnlbTest.TabIndex = 8;
             // 
-            // lblTest
-            // 
-            this.lblTest.AutoSize = true;
-            this.lblTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblTest.Location = new System.Drawing.Point(62, 13);
-            this.lblTest.Name = "lblTest";
-            this.lblTest.Size = new System.Drawing.Size(101, 24);
-            this.lblTest.TabIndex = 0;
-            this.lblTest.Text = "Temp Test";
-            // 
-            // pctPointer
-            // 
-            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
-            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer.Location = new System.Drawing.Point(219, 85);
-            this.pctPointer.Name = "pctPointer";
-            this.pctPointer.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer.TabIndex = 8;
-            this.pctPointer.TabStop = false;
-            // 
-            // pctPointer2
-            // 
-            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
-            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
-            this.pctPointer2.Name = "pctPointer2";
-            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer2.TabIndex = 10;
-            this.pctPointer2.TabStop = false;
-            this.pctPointer2.Visible = false;
-            // 
-            // pctDashboard
-            // 
-            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
-            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
-            this.pctDashboard.Name = "pctDashboard";
-            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
-            this.pctDashboard.TabIndex = 1;
-            this.pctDashboard.TabStop = false;
-            // 
             // pctTest
             // 
             this.pctTest.BackgroundImage = global::Citadel.Properties.Resources.home168;
@@ -285,6 +275,16 @@
             this.pctTest.Size = new System.Drawing.Size(24, 24);
             this.pctTest.TabIndex = 1;
             this.pctTest.TabStop = false;
+            // 
+            // lblTest
+            // 
+            this.lblTest.AutoSize = true;
+            this.lblTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblTest.Location = new System.Drawing.Point(62, 13);
+            this.lblTest.Name = "lblTest";
+            this.lblTest.Size = new System.Drawing.Size(101, 24);
+            this.lblTest.TabIndex = 0;
+            this.lblTest.Text = "Temp Test";
             // 
             // formMain
             // 
@@ -304,13 +304,13 @@
             this.pnlDashboard.PerformLayout();
             this.pnlTest.ResumeLayout(false);
             this.pnlTest.PerformLayout();
-            this.pnlbDashboard.ResumeLayout(false);
-            this.pnlbDashboard.PerformLayout();
-            this.pnlbTest.ResumeLayout(false);
-            this.pnlbTest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
+            this.pnlbDashboard.ResumeLayout(false);
+            this.pnlbDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).EndInit();
+            this.pnlbTest.ResumeLayout(false);
+            this.pnlbTest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctTest)).EndInit();
             this.ResumeLayout(false);
 

@@ -30,11 +30,22 @@ namespace Citadel
         {
             if (draw)
             {
-                pctPointer2.Visible = true;
-                pctPointer2.Location = heights[pnl];
+                if (activePanel != pnl)
+                {
+                    pctPointer2.Visible = true;
+                    pctPointer2.Location = heights[pnl];
+                    pnl.BackColor = Color.FromArgb(75, 75, 75);
+                }
             } else
             {
                 pctPointer2.Visible = false;
+                if (activePanel != pnl)
+                {
+                    pnl.BackColor = Color.FromArgb(50, 50, 50);
+                } else
+                {
+                    pnl.BackColor = Color.DodgerBlue;
+                }
             }
         }
 
