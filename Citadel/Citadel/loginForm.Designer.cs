@@ -81,6 +81,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(129, 22);
             this.txtPass.TabIndex = 2;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // txtUser
             // 
@@ -94,6 +95,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(129, 22);
             this.txtUser.TabIndex = 1;
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // thirteenControlBox1
             // 

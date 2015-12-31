@@ -23,6 +23,15 @@ namespace Citadel
         public static int count = 0; public static int cur;
         public static bool[] passChar = new bool[100];
         formMain main;
+        public static msgbox _message;
+
+        public static void message(string msg, string title, int type)
+        {
+            _message = new msgbox(msg, title, type);
+            _message.Show();
+            //_message.ifExit = ifExit;
+            //_message.Start();
+        }
 
         public static void placeHolder(asset.ThirteenTextBox textbox, String text, bool pass)
         {
@@ -81,6 +90,25 @@ namespace Citadel
                 main = new formMain(txtUser.Text);
                 this.Hide();
                 main.Show();
+            } else
+            {
+                message("Invalid username or password.", "Error", 1);
+            }
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPass.Focus();
+            }
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
             }
         }
     }

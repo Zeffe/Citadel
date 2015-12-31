@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.thirteenForm1 = new asset.ThirteenForm();
+            this.divider1 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.divider1 = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,11 +56,23 @@
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
             // 
+            // divider1
+            // 
+            this.divider1.AutoSize = true;
+            this.divider1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.divider1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.divider1.Font = new System.Drawing.Font("Microsoft Sans Serif", 395F);
+            this.divider1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.divider1.Location = new System.Drawing.Point(229, 34);
+            this.divider1.Name = "divider1";
+            this.divider1.Size = new System.Drawing.Size(2, 599);
+            this.divider1.TabIndex = 4;
+            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblUser.Location = new System.Drawing.Point(84, 40);
+            this.lblUser.Location = new System.Drawing.Point(84, 42);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(83, 16);
             this.lblUser.TabIndex = 2;
@@ -70,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(12, 40);
+            this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 1;
@@ -92,22 +104,10 @@
             // pnlContainer
             // 
             this.pnlContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.pnlContainer.Location = new System.Drawing.Point(6, 34);
+            this.pnlContainer.Location = new System.Drawing.Point(6, 36);
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(78, 28);
             this.pnlContainer.TabIndex = 3;
-            // 
-            // divider1
-            // 
-            this.divider1.AutoSize = true;
-            this.divider1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.divider1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.divider1.Font = new System.Drawing.Font("Microsoft Sans Serif", 395F);
-            this.divider1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.divider1.Location = new System.Drawing.Point(229, 34);
-            this.divider1.Name = "divider1";
-            this.divider1.Size = new System.Drawing.Size(2, 599);
-            this.divider1.TabIndex = 4;
             // 
             // formMain
             // 
