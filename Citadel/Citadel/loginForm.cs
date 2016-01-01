@@ -25,12 +25,14 @@ namespace Citadel
         formMain main;
         public static msgbox _message;
 
-        public static void message(string msg, string title, int type)
+        public static void message(string msg, string title, int type, int returnVal)
         {
-            _message = new msgbox(msg, title, type);
-            _message.Show();
-            //_message.ifExit = ifExit;
-            //_message.Start();
+            _message = new msgbox(msg, title, type, returnVal);
+            if (returnVal != -1)
+            {
+                _message.Show();
+            }
+            formMain.tmrResult.Start();
         }
 
         public static void placeHolder(asset.ThirteenTextBox textbox, String text, bool pass)
@@ -92,7 +94,7 @@ namespace Citadel
                 main.Show();
             } else
             {
-                message("Invalid username or password.", "Error", 1);
+                message("Invalid username or password.", "Error", 1, -1);
             }
         }
 

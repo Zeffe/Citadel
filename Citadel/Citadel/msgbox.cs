@@ -13,10 +13,13 @@ namespace Citadel
     public partial class msgbox : Form
     {
 
-        string msgOut;
+        string msgOut; int _returnVal; bool GO;
+        public static int _return = 0;
 
-        public msgbox(String msg, String title, int type)
+        public msgbox(String msg, String title, int type, int returnVal)
         {
+            _returnVal = returnVal;
+            _return = 0;
             InitializeComponent();
             int cur = -1;
             for (int j = 1; j < msg.Length; j++)
@@ -53,8 +56,8 @@ namespace Citadel
                     break;
                 case 2:
                     this.Height += lblMessage.Height + 10; btnYes.Visible = true; btnNo.Visible = true;
-                    btnYes.Location = new System.Drawing.Point(this.Width / 3 + this.Width / 12, this.Height - this.Height / 3 - 5);
-                    btnNo.Location = new System.Drawing.Point((this.Width / 3) * 2 - this.Width / 12, this.Height - this.Height / 3 - 5);
+                    btnYes.Location = new System.Drawing.Point(this.Width / 3 - this.Width/8, this.Height - this.Height / 3);
+                    btnNo.Location = new System.Drawing.Point((this.Width / 3) * 2 - this.Width/8, this.Height - this.Height / 3);
                     break;
             }
             // this.Icon later
@@ -64,6 +67,18 @@ namespace Citadel
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            _return = _returnVal;
+            this.Close();
+        }
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            _return = -1;
             this.Close();
         }
     }

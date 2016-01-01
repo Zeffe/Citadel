@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.thirteenForm1 = new asset.ThirteenForm();
-            this.lblMessage = new System.Windows.Forms.Label();
-            this.btnOk = new asset.ThirteenButton();
-            this.btnNo = new asset.ThirteenButton();
             this.btnYes = new asset.ThirteenButton();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();
+            this.btnNo = new asset.ThirteenButton();
+            this.btnOk = new asset.ThirteenButton();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.thirteenControlBox1 = new asset.ThirteenControlBox();          
             this.thirteenForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,14 +57,37 @@
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "thirteenForm1";
             // 
-            // lblMessage
+            // btnYes
             // 
-            this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(12, 44);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(83, 16);
-            this.lblMessage.TabIndex = 1;
-            this.lblMessage.Text = "placeHolder";
+            this.btnYes.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnYes.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnYes.ForeColor = System.Drawing.Color.White;
+            this.btnYes.Location = new System.Drawing.Point(53, 37);
+            this.btnYes.Name = "btnYes";
+            this.btnYes.Size = new System.Drawing.Size(51, 23);
+            this.btnYes.TabIndex = 4;
+            this.btnYes.Text = "Yes";
+            this.btnYes.UseVisualStyleBackColor = false;
+            this.btnYes.Visible = false;
+            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
+            // 
+            // btnNo
+            // 
+            this.btnNo.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnNo.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnNo.ForeColor = System.Drawing.Color.White;
+            this.btnNo.Location = new System.Drawing.Point(76, 37);
+            this.btnNo.Name = "btnNo";
+            this.btnNo.Size = new System.Drawing.Size(51, 23);
+            this.btnNo.TabIndex = 3;
+            this.btnNo.Text = "No";
+            this.btnNo.UseVisualStyleBackColor = false;
+            this.btnNo.Visible = false;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
             // btnOk
             // 
@@ -81,35 +105,14 @@
             this.btnOk.Visible = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // btnNo
+            // lblMessage
             // 
-            this.btnNo.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnNo.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
-            this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnNo.ForeColor = System.Drawing.Color.White;
-            this.btnNo.Location = new System.Drawing.Point(76, 37);
-            this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(51, 23);
-            this.btnNo.TabIndex = 3;
-            this.btnNo.Text = "No";
-            this.btnNo.UseVisualStyleBackColor = false;
-            this.btnNo.Visible = false;
-            // 
-            // btnYes
-            // 
-            this.btnYes.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnYes.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
-            this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnYes.ForeColor = System.Drawing.Color.White;
-            this.btnYes.Location = new System.Drawing.Point(53, 37);
-            this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(51, 23);
-            this.btnYes.TabIndex = 4;
-            this.btnYes.Text = "Yes";
-            this.btnYes.UseVisualStyleBackColor = false;
-            this.btnYes.Visible = false;
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(12, 44);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(83, 16);
+            this.lblMessage.TabIndex = 1;
+            this.lblMessage.Text = "placeHolder";
             // 
             // thirteenControlBox1
             // 

@@ -23,7 +23,11 @@ namespace Citadel
 
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (msgbox._return != 1)
+            {
+                rformLogin.message("Are you sure you want to exit Citadel?", "Exit", 2, 1);
+                e.Cancel = true;
+            }
         }
 
         void drawIndicator(Panel pnl, bool draw)
@@ -36,13 +40,15 @@ namespace Citadel
                     pctPointer2.Location = heights[pnl];
                     pnl.BackColor = Color.FromArgb(75, 75, 75);
                 }
-            } else
+            }
+            else
             {
                 pctPointer2.Visible = false;
                 if (activePanel != pnl)
                 {
                     pnl.BackColor = Color.FromArgb(50, 50, 50);
-                } else
+                }
+                else
                 {
                     pnl.BackColor = Color.DodgerBlue;
                 }
@@ -116,14 +122,20 @@ namespace Citadel
             updateSelected(_lbl.Parent as Panel);
         }
 
+        public static System.Timers.Timer tmrResult = new System.Timers.Timer();
+
         private void formMain_Load(object sender, EventArgs e)
         {
+            tmrResult.Interval = 100;
+            tmrResult.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
             activePanel = pnlbDashboard;
+            pnlDashboard.BringToFront();
             int _x; string _user = "";
             if (currentUser.Length < 12)
             {
                 lblUser.Text = currentUser;
-            } else
+            }
+            else
             {
                 for (int i = 0; i < 12; i++)
                 {
@@ -133,12 +145,21 @@ namespace Citadel
             }
             pnlContainer.Width = 85 + lblUser.Width;
             _x = pnlContainer.Location.X;
-            pnlContainer.Location = new Point( (divider1.Location.X - pnlContainer.Width)/2, pnlContainer.Location.Y);
+            pnlContainer.Location = new Point((divider1.Location.X - pnlContainer.Width) / 2, pnlContainer.Location.Y);
             _x = pnlContainer.Location.X - _x;
             label1.Location = new Point(label1.Location.X + _x, label1.Location.Y);
             lblUser.Location = new Point(lblUser.Location.X + _x, label1.Location.Y);
             panelButton(pnlbDashboard, lblDashboard, pctDashboard, pnlDashboard);
-            panelButton(pnlbTest, lblTest, pctTest, pnlTest);
+            panelButton(pnlbStats, lblStats, pctStats, pnlStats);
+        }
+
+        public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
+        {
+            switch(msgbox._return)
+            {
+                case -1: tmrResult.Stop(); break;
+                case 1: Application.Exit(); break;
+            }        
         }
     }
 }
