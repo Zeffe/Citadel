@@ -30,7 +30,7 @@ namespace Citadel
             _message = new msgbox(msg, title, type, returnVal);
             if (returnVal != -1)
             {
-                _message.Show();
+               // _message.Show();
             }
             formMain.tmrResult.Start();
         }

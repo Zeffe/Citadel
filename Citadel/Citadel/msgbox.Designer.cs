@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.thirteenForm1 = new asset.ThirteenForm();
             this.btnYes = new asset.ThirteenButton();
             this.btnNo = new asset.ThirteenButton();
             this.btnOk = new asset.ThirteenButton();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();          
+            this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.thirteenForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +61,7 @@
             this.btnYes.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnYes.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnYes.ForeColor = System.Drawing.Color.White;
             this.btnYes.Location = new System.Drawing.Point(53, 37);
@@ -78,6 +78,7 @@
             this.btnNo.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnNo.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnNo.ForeColor = System.Drawing.Color.White;
             this.btnNo.Location = new System.Drawing.Point(76, 37);

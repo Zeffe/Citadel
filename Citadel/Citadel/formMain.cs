@@ -21,13 +21,11 @@ namespace Citadel
             currentUser = user;
         }
 
+        bool closing = false;
+
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (msgbox._return != 1)
-            {
-                rformLogin.message("Are you sure you want to exit Citadel?", "Exit", 2, 1);
-                e.Cancel = true;
-            }
+            Application.Exit();
         }
 
         void drawIndicator(Panel pnl, bool draw)

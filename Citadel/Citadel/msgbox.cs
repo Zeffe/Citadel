@@ -18,8 +18,8 @@ namespace Citadel
 
         public msgbox(String msg, String title, int type, int returnVal)
         {
-            _returnVal = returnVal;
-            _return = 0;
+            //_returnVal = returnVal;
+            //_return = 0;
             InitializeComponent();
             int cur = -1;
             for (int j = 1; j < msg.Length; j++)
