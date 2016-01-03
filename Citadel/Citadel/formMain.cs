@@ -148,6 +148,9 @@ namespace Citadel
             panelButton(pnlbDashboard, lblDashboard, pctDashboard, pnlDashboard);
             panelButton(pnlbStats, lblStats, pctStats, pnlStats);
             panelButton(pnlbStudents, lblStudents, pctStudents, pnlStudents);
+            panelButton(pnlbSource, lblSource, pctSource, pnlSource);
+            panelButton(pnlbUsers, lblUsers, pctUsers, pnlUsers);
+            panelButton(pnlbSettings, lblSettings, pctSettings, pnlSettings);
         }
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)

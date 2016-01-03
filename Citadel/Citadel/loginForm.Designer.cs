@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rformLogin));
             this.formLogin = new asset.ThirteenForm();
             this.btnLogin = new asset.ThirteenButton();
             this.txtPass = new asset.ThirteenTextBox();
@@ -117,6 +118,7 @@
             this.ClientSize = new System.Drawing.Size(225, 153);
             this.Controls.Add(this.formLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rformLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Citadel - [ Login ]";
