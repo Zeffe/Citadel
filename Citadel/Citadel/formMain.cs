@@ -21,8 +21,6 @@ namespace Citadel
             currentUser = user;
         }
 
-        bool closing = false;
-
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -149,6 +147,7 @@ namespace Citadel
             lblUser.Location = new Point(lblUser.Location.X + _x, label1.Location.Y);
             panelButton(pnlbDashboard, lblDashboard, pctDashboard, pnlDashboard);
             panelButton(pnlbStats, lblStats, pctStats, pnlStats);
+            panelButton(pnlbStudents, lblStudents, pctStudents, pnlStudents);
         }
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
