@@ -122,6 +122,7 @@
             this.Name = "rformLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Citadel - [ Login ]";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.rformLogin_FormClosing);
             this.Load += new System.EventHandler(this.rformLogin_Load);
             this.formLogin.ResumeLayout(false);
             this.formLogin.PerformLayout();

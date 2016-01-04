@@ -14,6 +14,7 @@ namespace Citadel
     {
 
         string currentUser;
+        bool logout = false;
 
         public formMain(string user)
         {
@@ -23,10 +24,13 @@ namespace Citadel
 
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (!logout)
+            {
+                Application.Exit();
+            }
         }
 
-        void gbTitle(GroupBox groupbox, Label title)
+        void gbTitle(GroupBox groupbox, Control title)
         {
             Point _temp = groupbox.DisplayRectangle.Location;
             _temp.X += (groupbox.DisplayRectangle.Width - title.Width) / 2;
@@ -127,6 +131,11 @@ namespace Citadel
             updateSelected(_lbl.Parent as Panel);
         }
 
+        void _onClick(object sender, EventArgs e)
+        {
+            updateSelected(pnlbUsers);
+        }
+
         public static System.Timers.Timer tmrResult = new System.Timers.Timer();
 
         private void formMain_Load(object sender, EventArgs e)
@@ -151,6 +160,11 @@ namespace Citadel
                 lblCuruser.Text = _user + "...";
             }
             gbTitle(gbCuruser, lblCuruser);
+            gbTitle(gbCuruser, lblEmail);
+            gbTitle(gbCuruser, btnLogout);
+            lblUser.Click += new System.EventHandler(_onClick);
+            pnlContainer.Click += new System.EventHandler(_onClick);
+            label1.Click += new System.EventHandler(_onClick);
             pnlContainer.Width = 85 + lblUser.Width;
             _x = pnlContainer.Location.X;
             pnlContainer.Location = new Point((divider1.Location.X - pnlContainer.Width) / 2, pnlContainer.Location.Y);
@@ -163,6 +177,7 @@ namespace Citadel
             panelButton(pnlbSource, lblSource, pctSource, pnlSource);
             panelButton(pnlbUsers, lblUsers, pctUsers, pnlUsers);
             panelButton(pnlbSettings, lblSettings, pctSettings, pnlSettings);
+            panelButton(pnlbInfo, lblInfo, pctInfo, pnlInfo);
         }
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
@@ -172,6 +187,14 @@ namespace Citadel
                 case -1: tmrResult.Stop(); break;
                 case 1: Application.Exit(); break;
             }        
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            rformLogin _login = new rformLogin();
+            _login.Show();
+            logout = true;
+            this.Close();
         }
     }
 }

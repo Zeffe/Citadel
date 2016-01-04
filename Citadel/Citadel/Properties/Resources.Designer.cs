@@ -103,6 +103,16 @@ namespace Citadel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info28 {
+            get {
+                object obj = ResourceManager.GetObject("info28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap manager3 {
             get {
                 object obj = ResourceManager.GetObject("manager3", resourceCulture);

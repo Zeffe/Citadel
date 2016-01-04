@@ -28,10 +28,7 @@ namespace Citadel
         public static void message(string msg, string title, int type, int returnVal)
         {
             _message = new msgbox(msg, title, type, returnVal);
-            if (returnVal != -1)
-            {
-               // _message.Show();
-            }
+            _message.Show();
             formMain.tmrResult.Start();
         }
 
@@ -116,6 +113,11 @@ namespace Citadel
                 e.SuppressKeyPress = true;
                 btnLogin.PerformClick();
             }
+        }
+
+        private void rformLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
