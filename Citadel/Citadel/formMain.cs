@@ -31,6 +31,7 @@ namespace Citadel
             Point _temp = groupbox.DisplayRectangle.Location;
             _temp.X += (groupbox.DisplayRectangle.Width - title.Width) / 2;
             _temp.Y = title.Location.Y;
+            groupbox.ForeColor = Color.White;
             title.Location = _temp;
         }
 
