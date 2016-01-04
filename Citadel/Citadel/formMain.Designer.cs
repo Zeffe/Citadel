@@ -186,7 +186,7 @@
             this.groupBox1.Size = new System.Drawing.Size(265, 196);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Current User";
+            this.groupBox1.Text = "User List";
             // 
             // label15
             // 
@@ -217,7 +217,7 @@
             this.gbCuruser.Size = new System.Drawing.Size(265, 196);
             this.gbCuruser.TabIndex = 2;
             this.gbCuruser.TabStop = false;
-            this.gbCuruser.Text = "Current User";
+            this.gbCuruser.Text = "Selected User";
             // 
             // lblCuruser
             // 
