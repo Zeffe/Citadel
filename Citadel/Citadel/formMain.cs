@@ -26,6 +26,14 @@ namespace Citadel
             Application.Exit();
         }
 
+        void gbTitle(GroupBox groupbox, Label title)
+        {
+            Point _temp = groupbox.DisplayRectangle.Location;
+            _temp.X += (groupbox.DisplayRectangle.Width - title.Width) / 2;
+            _temp.Y = title.Location.Y;
+            title.Location = _temp;
+        }
+
         void drawIndicator(Panel pnl, bool draw)
         {
             if (draw)
@@ -130,6 +138,7 @@ namespace Citadel
             if (currentUser.Length < 12)
             {
                 lblUser.Text = currentUser;
+                lblCuruser.Text = currentUser;
             }
             else
             {
@@ -138,7 +147,9 @@ namespace Citadel
                     _user += currentUser[i];
                 }
                 lblUser.Text = _user + "...";
+                lblCuruser.Text = _user + "...";
             }
+            gbTitle(gbCuruser, lblCuruser);
             pnlContainer.Width = 85 + lblUser.Width;
             _x = pnlContainer.Location.X;
             pnlContainer.Location = new Point((divider1.Location.X - pnlContainer.Width) / 2, pnlContainer.Location.Y);

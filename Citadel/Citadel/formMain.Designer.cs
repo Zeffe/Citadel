@@ -49,7 +49,6 @@
             this.pnlStudents = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlDashboard = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlStats = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pctPointer = new System.Windows.Forms.PictureBox();
@@ -74,6 +73,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pctSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.gbCuruser = new System.Windows.Forms.GroupBox();
+            this.lblCuruser = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlUsers.SuspendLayout();
@@ -95,6 +101,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).BeginInit();
             this.pnlbSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
+            this.gbCuruser.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // thirteenForm1
@@ -102,8 +111,8 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
-            this.thirteenForm1.Controls.Add(this.pnlSettings);
             this.thirteenForm1.Controls.Add(this.pnlUsers);
+            this.thirteenForm1.Controls.Add(this.pnlSettings);
             this.thirteenForm1.Controls.Add(this.pnlSource);
             this.thirteenForm1.Controls.Add(this.label9);
             this.thirteenForm1.Controls.Add(this.label8);
@@ -157,7 +166,10 @@
             // pnlUsers
             // 
             this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlUsers.Controls.Add(this.groupBox2);
+            this.pnlUsers.Controls.Add(this.groupBox1);
             this.pnlUsers.Controls.Add(this.label11);
+            this.pnlUsers.Controls.Add(this.gbCuruser);
             this.pnlUsers.Location = new System.Drawing.Point(229, 33);
             this.pnlUsers.Name = "pnlUsers";
             this.pnlUsers.Size = new System.Drawing.Size(609, 599);
@@ -317,16 +329,6 @@
             this.pnlDashboard.Name = "pnlDashboard";
             this.pnlDashboard.Size = new System.Drawing.Size(609, 599);
             this.pnlDashboard.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label6.Location = new System.Drawing.Point(190, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(244, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Citadel - [ Dashboard ]";
             // 
             // pnlStats
             // 
@@ -567,6 +569,79 @@
             this.lblSettings.Text = "Settings";
             this.lblSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label6.Location = new System.Drawing.Point(190, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(244, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Citadel - [ Dashboard ]";
+            // 
+            // gbCuruser
+            // 
+            this.gbCuruser.Controls.Add(this.lblCuruser);
+            this.gbCuruser.Location = new System.Drawing.Point(20, 77);
+            this.gbCuruser.Name = "gbCuruser";
+            this.gbCuruser.Size = new System.Drawing.Size(265, 196);
+            this.gbCuruser.TabIndex = 2;
+            this.gbCuruser.TabStop = false;
+            this.gbCuruser.Text = "Current User";
+            // 
+            // lblCuruser
+            // 
+            this.lblCuruser.AutoSize = true;
+            this.lblCuruser.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblCuruser.Location = new System.Drawing.Point(83, 29);
+            this.lblCuruser.Name = "lblCuruser";
+            this.lblCuruser.Size = new System.Drawing.Size(113, 24);
+            this.lblCuruser.TabIndex = 0;
+            this.lblCuruser.Text = "placeHolder";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Location = new System.Drawing.Point(326, 77);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(265, 196);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Current User";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label15.Location = new System.Drawing.Point(83, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 24);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "placeHolder";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Location = new System.Drawing.Point(20, 298);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(571, 282);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "New User";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label16.Location = new System.Drawing.Point(83, 29);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(113, 24);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "placeHolder";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,6 +689,12 @@
             this.pnlbSettings.ResumeLayout(false);
             this.pnlbSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).EndInit();
+            this.gbCuruser.ResumeLayout(false);
+            this.gbCuruser.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -640,7 +721,6 @@
         private System.Windows.Forms.Label lblStats;
         private System.Windows.Forms.PictureBox pctPointer2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnlbStudents;
         private System.Windows.Forms.PictureBox pctStudents;
         private System.Windows.Forms.Label lblStudents;
@@ -665,5 +745,12 @@
         private System.Windows.Forms.Label lblSettings;
         private System.Windows.Forms.Panel pnlSettings;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox gbCuruser;
+        private System.Windows.Forms.Label lblCuruser;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label15;
     }
 }
