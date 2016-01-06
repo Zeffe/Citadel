@@ -34,9 +34,20 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gbCuruser = new System.Windows.Forms.GroupBox();
+            this.btnLogout = new asset.ThirteenButton();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblFirstname = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblCuruser = new System.Windows.Forms.Label();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.pnlStats = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlSettings = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.pnlSource = new System.Windows.Forms.Panel();
@@ -55,69 +66,58 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pnlStats = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pctPointer = new System.Windows.Forms.PictureBox();
+            this.pctPointer2 = new System.Windows.Forms.PictureBox();
             this.pnlbStats = new System.Windows.Forms.Panel();
+            this.pctStats = new System.Windows.Forms.PictureBox();
             this.lblStats = new System.Windows.Forms.Label();
             this.pnlbStudents = new System.Windows.Forms.Panel();
+            this.pctStudents = new System.Windows.Forms.PictureBox();
             this.lblStudents = new System.Windows.Forms.Label();
             this.pnlbSource = new System.Windows.Forms.Panel();
+            this.pctSource = new System.Windows.Forms.PictureBox();
             this.lblSource = new System.Windows.Forms.Label();
             this.pnlbDashboard = new System.Windows.Forms.Panel();
+            this.pctDashboard = new System.Windows.Forms.PictureBox();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.pnlbUsers = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pctUsers = new System.Windows.Forms.PictureBox();
             this.lblUsers = new System.Windows.Forms.Label();
             this.pnlbSettings = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.pctSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblFirstname = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblLastname = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.btnLogout = new asset.ThirteenButton();
             this.pnlbInfo = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.lblInfo = new System.Windows.Forms.Label();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.pctPointer = new System.Windows.Forms.PictureBox();
-            this.pctPointer2 = new System.Windows.Forms.PictureBox();
-            this.pctStats = new System.Windows.Forms.PictureBox();
-            this.pctStudents = new System.Windows.Forms.PictureBox();
-            this.pctSource = new System.Windows.Forms.PictureBox();
-            this.pctDashboard = new System.Windows.Forms.PictureBox();
-            this.pctUsers = new System.Windows.Forms.PictureBox();
-            this.pctSettings = new System.Windows.Forms.PictureBox();
             this.pctInfo = new System.Windows.Forms.PictureBox();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbCuruser.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
+            this.pnlStats.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlSource.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
-            this.pnlStats.SuspendLayout();
-            this.pnlbStats.SuspendLayout();
-            this.pnlbStudents.SuspendLayout();
-            this.pnlbSource.SuspendLayout();
-            this.pnlbDashboard.SuspendLayout();
-            this.pnlbUsers.SuspendLayout();
-            this.pnlbSettings.SuspendLayout();
-            this.pnlbInfo.SuspendLayout();
-            this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).BeginInit();
+            this.pnlbStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStats)).BeginInit();
+            this.pnlbStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).BeginInit();
+            this.pnlbSource.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSource)).BeginInit();
+            this.pnlbDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).BeginInit();
+            this.pnlbUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).BeginInit();
+            this.pnlbSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
+            this.pnlbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,6 +205,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User List";
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(6, 21);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(253, 164);
+            this.listBox1.TabIndex = 0;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -231,16 +242,124 @@
             this.gbCuruser.TabStop = false;
             this.gbCuruser.Text = "Selected User";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnLogout.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(90, 160);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(73, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblEmail.Location = new System.Drawing.Point(97, 126);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(63, 20);
+            this.lblEmail.TabIndex = 5;
+            this.lblEmail.Text = "lblEmail";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLastname
+            // 
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblLastname.Location = new System.Drawing.Point(172, 96);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(71, 18);
+            this.lblLastname.TabIndex = 4;
+            this.lblLastname.Text = "lastName";
+            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label17.Location = new System.Drawing.Point(7, 96);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 18);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Last Name:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblFirstname
+            // 
+            this.lblFirstname.AutoSize = true;
+            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblFirstname.Location = new System.Drawing.Point(172, 66);
+            this.lblFirstname.Name = "lblFirstname";
+            this.lblFirstname.Size = new System.Drawing.Size(72, 18);
+            this.lblFirstname.TabIndex = 2;
+            this.lblFirstname.Text = "firstName";
+            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label15.Location = new System.Drawing.Point(6, 66);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 18);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "First Name:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblCuruser
             // 
             this.lblCuruser.AutoSize = true;
-            this.lblCuruser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblCuruser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblCuruser.Location = new System.Drawing.Point(83, 29);
             this.lblCuruser.Name = "lblCuruser";
-            this.lblCuruser.Size = new System.Drawing.Size(113, 24);
+            this.lblCuruser.Size = new System.Drawing.Size(124, 24);
             this.lblCuruser.TabIndex = 0;
             this.lblCuruser.Text = "placeHolder";
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlInfo.Controls.Add(this.label19);
+            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
+            this.pnlInfo.TabIndex = 3;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label19.Location = new System.Drawing.Point(194, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(256, 25);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Citadel - [ Information ]";
+            // 
+            // pnlStats
+            // 
+            this.pnlStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlStats.Controls.Add(this.label7);
+            this.pnlStats.Location = new System.Drawing.Point(229, 34);
+            this.pnlStats.Name = "pnlStats";
+            this.pnlStats.Size = new System.Drawing.Size(609, 599);
+            this.pnlStats.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label7.Location = new System.Drawing.Point(200, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(229, 25);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Citadel - [ Statistics ]";
             // 
             // pnlSettings
             // 
@@ -416,24 +535,28 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Citadel - [ Dashboard ]";
             // 
-            // pnlStats
+            // pctPointer
             // 
-            this.pnlStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlStats.Controls.Add(this.label7);
-            this.pnlStats.Location = new System.Drawing.Point(229, 34);
-            this.pnlStats.Name = "pnlStats";
-            this.pnlStats.Size = new System.Drawing.Size(609, 599);
-            this.pnlStats.TabIndex = 2;
+            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
+            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer.Location = new System.Drawing.Point(219, 85);
+            this.pctPointer.Name = "pctPointer";
+            this.pctPointer.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer.TabIndex = 8;
+            this.pctPointer.TabStop = false;
             // 
-            // label7
+            // pctPointer2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label7.Location = new System.Drawing.Point(200, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(229, 25);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Citadel - [ Statistics ]";
+            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
+            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
+            this.pctPointer2.Name = "pctPointer2";
+            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer2.TabIndex = 10;
+            this.pctPointer2.TabStop = false;
+            this.pctPointer2.Visible = false;
             // 
             // pnlbStats
             // 
@@ -443,6 +566,16 @@
             this.pnlbStats.Name = "pnlbStats";
             this.pnlbStats.Size = new System.Drawing.Size(229, 49);
             this.pnlbStats.TabIndex = 8;
+            // 
+            // pctStats
+            // 
+            this.pctStats.BackgroundImage = global::Citadel.Properties.Resources.chart;
+            this.pctStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctStats.Location = new System.Drawing.Point(14, 13);
+            this.pctStats.Name = "pctStats";
+            this.pctStats.Size = new System.Drawing.Size(24, 24);
+            this.pctStats.TabIndex = 1;
+            this.pctStats.TabStop = false;
             // 
             // lblStats
             // 
@@ -463,6 +596,16 @@
             this.pnlbStudents.Size = new System.Drawing.Size(229, 49);
             this.pnlbStudents.TabIndex = 9;
             // 
+            // pctStudents
+            // 
+            this.pctStudents.BackgroundImage = global::Citadel.Properties.Resources.students17;
+            this.pctStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctStudents.Location = new System.Drawing.Point(14, 13);
+            this.pctStudents.Name = "pctStudents";
+            this.pctStudents.Size = new System.Drawing.Size(24, 24);
+            this.pctStudents.TabIndex = 1;
+            this.pctStudents.TabStop = false;
+            // 
             // lblStudents
             // 
             this.lblStudents.AutoSize = true;
@@ -481,6 +624,16 @@
             this.pnlbSource.Name = "pnlbSource";
             this.pnlbSource.Size = new System.Drawing.Size(229, 49);
             this.pnlbSource.TabIndex = 10;
+            // 
+            // pctSource
+            // 
+            this.pctSource.BackgroundImage = global::Citadel.Properties.Resources.folder265;
+            this.pctSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctSource.Location = new System.Drawing.Point(14, 13);
+            this.pctSource.Name = "pctSource";
+            this.pctSource.Size = new System.Drawing.Size(24, 24);
+            this.pctSource.TabIndex = 1;
+            this.pctSource.TabStop = false;
             // 
             // lblSource
             // 
@@ -501,6 +654,16 @@
             this.pnlbDashboard.Name = "pnlbDashboard";
             this.pnlbDashboard.Size = new System.Drawing.Size(229, 49);
             this.pnlbDashboard.TabIndex = 7;
+            // 
+            // pctDashboard
+            // 
+            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
+            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
+            this.pctDashboard.Name = "pctDashboard";
+            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
+            this.pctDashboard.TabIndex = 1;
+            this.pctDashboard.TabStop = false;
             // 
             // lblDashboard
             // 
@@ -530,6 +693,16 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(229, 2);
             this.label10.TabIndex = 13;
+            // 
+            // pctUsers
+            // 
+            this.pctUsers.BackgroundImage = global::Citadel.Properties.Resources.manager3;
+            this.pctUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctUsers.Location = new System.Drawing.Point(14, 13);
+            this.pctUsers.Name = "pctUsers";
+            this.pctUsers.Size = new System.Drawing.Size(24, 24);
+            this.pctUsers.TabIndex = 1;
+            this.pctUsers.TabStop = false;
             // 
             // lblUsers
             // 
@@ -561,6 +734,16 @@
             this.label13.Size = new System.Drawing.Size(229, 2);
             this.label13.TabIndex = 13;
             // 
+            // pctSettings
+            // 
+            this.pctSettings.BackgroundImage = global::Citadel.Properties.Resources.gear39;
+            this.pctSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctSettings.Location = new System.Drawing.Point(14, 13);
+            this.pctSettings.Name = "pctSettings";
+            this.pctSettings.Size = new System.Drawing.Size(24, 24);
+            this.pctSettings.TabIndex = 1;
+            this.pctSettings.TabStop = false;
+            // 
             // lblSettings
             // 
             this.lblSettings.AutoSize = true;
@@ -571,87 +754,6 @@
             this.lblSettings.TabIndex = 0;
             this.lblSettings.Text = "Settings";
             this.lblSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(6, 21);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(253, 164);
-            this.listBox1.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label15.Location = new System.Drawing.Point(6, 66);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 18);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "First Name:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblFirstname
-            // 
-            this.lblFirstname.AutoSize = true;
-            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblFirstname.Location = new System.Drawing.Point(172, 66);
-            this.lblFirstname.Name = "lblFirstname";
-            this.lblFirstname.Size = new System.Drawing.Size(72, 18);
-            this.lblFirstname.TabIndex = 2;
-            this.lblFirstname.Text = "firstName";
-            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label17.Location = new System.Drawing.Point(7, 96);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 18);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Last Name:";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblLastname
-            // 
-            this.lblLastname.AutoSize = true;
-            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblLastname.Location = new System.Drawing.Point(172, 96);
-            this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(71, 18);
-            this.lblLastname.TabIndex = 4;
-            this.lblLastname.Text = "lastName";
-            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblEmail.Location = new System.Drawing.Point(97, 126);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(63, 20);
-            this.lblEmail.TabIndex = 5;
-            this.lblEmail.Text = "lblEmail";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogout.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(90, 160);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(73, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Log Out";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pnlbInfo
             // 
@@ -672,6 +774,16 @@
             this.label18.Size = new System.Drawing.Size(229, 2);
             this.label18.TabIndex = 13;
             // 
+            // pctInfo
+            // 
+            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
+            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctInfo.Location = new System.Drawing.Point(14, 13);
+            this.pctInfo.Name = "pctInfo";
+            this.pctInfo.Size = new System.Drawing.Size(24, 24);
+            this.pctInfo.TabIndex = 1;
+            this.pctInfo.TabStop = false;
+            // 
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
@@ -682,118 +794,6 @@
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlInfo
-            // 
-            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlInfo.Controls.Add(this.label19);
-            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
-            this.pnlInfo.TabIndex = 3;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label19.Location = new System.Drawing.Point(194, 16);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(256, 25);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Citadel - [ Information ]";
-            // 
-            // pctPointer
-            // 
-            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
-            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer.Location = new System.Drawing.Point(219, 85);
-            this.pctPointer.Name = "pctPointer";
-            this.pctPointer.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer.TabIndex = 8;
-            this.pctPointer.TabStop = false;
-            // 
-            // pctPointer2
-            // 
-            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
-            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
-            this.pctPointer2.Name = "pctPointer2";
-            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer2.TabIndex = 10;
-            this.pctPointer2.TabStop = false;
-            this.pctPointer2.Visible = false;
-            // 
-            // pctStats
-            // 
-            this.pctStats.BackgroundImage = global::Citadel.Properties.Resources.chart;
-            this.pctStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctStats.Location = new System.Drawing.Point(14, 13);
-            this.pctStats.Name = "pctStats";
-            this.pctStats.Size = new System.Drawing.Size(24, 24);
-            this.pctStats.TabIndex = 1;
-            this.pctStats.TabStop = false;
-            // 
-            // pctStudents
-            // 
-            this.pctStudents.BackgroundImage = global::Citadel.Properties.Resources.students17;
-            this.pctStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctStudents.Location = new System.Drawing.Point(14, 13);
-            this.pctStudents.Name = "pctStudents";
-            this.pctStudents.Size = new System.Drawing.Size(24, 24);
-            this.pctStudents.TabIndex = 1;
-            this.pctStudents.TabStop = false;
-            // 
-            // pctSource
-            // 
-            this.pctSource.BackgroundImage = global::Citadel.Properties.Resources.folder265;
-            this.pctSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctSource.Location = new System.Drawing.Point(14, 13);
-            this.pctSource.Name = "pctSource";
-            this.pctSource.Size = new System.Drawing.Size(24, 24);
-            this.pctSource.TabIndex = 1;
-            this.pctSource.TabStop = false;
-            // 
-            // pctDashboard
-            // 
-            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
-            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
-            this.pctDashboard.Name = "pctDashboard";
-            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
-            this.pctDashboard.TabIndex = 1;
-            this.pctDashboard.TabStop = false;
-            // 
-            // pctUsers
-            // 
-            this.pctUsers.BackgroundImage = global::Citadel.Properties.Resources.manager3;
-            this.pctUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctUsers.Location = new System.Drawing.Point(14, 13);
-            this.pctUsers.Name = "pctUsers";
-            this.pctUsers.Size = new System.Drawing.Size(24, 24);
-            this.pctUsers.TabIndex = 1;
-            this.pctUsers.TabStop = false;
-            // 
-            // pctSettings
-            // 
-            this.pctSettings.BackgroundImage = global::Citadel.Properties.Resources.gear39;
-            this.pctSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctSettings.Location = new System.Drawing.Point(14, 13);
-            this.pctSettings.Name = "pctSettings";
-            this.pctSettings.Size = new System.Drawing.Size(24, 24);
-            this.pctSettings.TabIndex = 1;
-            this.pctSettings.TabStop = false;
-            // 
-            // pctInfo
-            // 
-            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
-            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctInfo.Location = new System.Drawing.Point(14, 13);
-            this.pctInfo.Name = "pctInfo";
-            this.pctInfo.Size = new System.Drawing.Size(24, 24);
-            this.pctInfo.TabIndex = 1;
-            this.pctInfo.TabStop = false;
             // 
             // formMain
             // 
@@ -817,6 +817,10 @@
             this.groupBox1.ResumeLayout(false);
             this.gbCuruser.ResumeLayout(false);
             this.gbCuruser.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            this.pnlStats.ResumeLayout(false);
+            this.pnlStats.PerformLayout();
             this.pnlSettings.ResumeLayout(false);
             this.pnlSettings.PerformLayout();
             this.pnlSource.ResumeLayout(false);
@@ -825,32 +829,28 @@
             this.pnlStudents.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
             this.pnlDashboard.PerformLayout();
-            this.pnlStats.ResumeLayout(false);
-            this.pnlStats.PerformLayout();
-            this.pnlbStats.ResumeLayout(false);
-            this.pnlbStats.PerformLayout();
-            this.pnlbStudents.ResumeLayout(false);
-            this.pnlbStudents.PerformLayout();
-            this.pnlbSource.ResumeLayout(false);
-            this.pnlbSource.PerformLayout();
-            this.pnlbDashboard.ResumeLayout(false);
-            this.pnlbDashboard.PerformLayout();
-            this.pnlbUsers.ResumeLayout(false);
-            this.pnlbUsers.PerformLayout();
-            this.pnlbSettings.ResumeLayout(false);
-            this.pnlbSettings.PerformLayout();
-            this.pnlbInfo.ResumeLayout(false);
-            this.pnlbInfo.PerformLayout();
-            this.pnlInfo.ResumeLayout(false);
-            this.pnlInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
+            this.pnlbStats.ResumeLayout(false);
+            this.pnlbStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStats)).EndInit();
+            this.pnlbStudents.ResumeLayout(false);
+            this.pnlbStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).EndInit();
+            this.pnlbSource.ResumeLayout(false);
+            this.pnlbSource.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSource)).EndInit();
+            this.pnlbDashboard.ResumeLayout(false);
+            this.pnlbDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).EndInit();
+            this.pnlbUsers.ResumeLayout(false);
+            this.pnlbUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).EndInit();
+            this.pnlbSettings.ResumeLayout(false);
+            this.pnlbSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).EndInit();
+            this.pnlbInfo.ResumeLayout(false);
+            this.pnlbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).EndInit();
             this.ResumeLayout(false);
 

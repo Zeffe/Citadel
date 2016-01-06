@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,9 @@ namespace Citadel
     public partial class formMain : Form
     {
 
-        string currentUser;
+
+        string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        string currentUser; string appData;
         bool logout = false;
 
         public formMain(string user)
@@ -136,10 +139,44 @@ namespace Citadel
             updateSelected(pnlbUsers);
         }
 
+        bool _firstLoad;
+
+        private bool firstLoad()
+        {
+            bool _first = false;
+            if (!File.Exists(appData))
+            {
+                Directory.CreateDirectory(appData);
+                _first = true;
+            }
+            if (!File.Exists(appData + "/data"))
+            {
+                Directory.CreateDirectory(appData + "/data");
+                File.Create(appData + "/data/students.fbla").Dispose();
+                _first = true;
+            }
+            if (!File.Exists(appData + "/sourceSettings.fbla"))
+            {
+                File.Create(appData + "/sourceSettings.fbla").Dispose();
+                StreamWriter _initial = new StreamWriter(appData + "/sourceSettings.fbla");
+                _initial.WriteLine("students.fbla\\0");
+                _initial.Close();
+                _first = true;
+            }
+            if (!File.Exists(appData + "/log.fbla"))
+            {
+                File.Create(appData + "/log.fbla").Dispose();
+                _first = true;
+            }
+            return _first;
+        }
+
         public static System.Timers.Timer tmrResult = new System.Timers.Timer();
 
         private void formMain_Load(object sender, EventArgs e)
         {
+            appData = Path.Combine(folder, "Citadel");
+            _firstLoad = firstLoad();
             tmrResult.Interval = 100;
             tmrResult.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
             activePanel = pnlbDashboard;
