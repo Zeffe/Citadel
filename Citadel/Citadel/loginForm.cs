@@ -152,7 +152,7 @@ namespace Citadel
             {
                 File.Create(appData + "/users.fbla").Dispose();
                 StreamWriter _initial = new StreamWriter(appData + "/users.fbla");
-                _initial.WriteLine(Encrypt("admin\\password\\First\\Last\\Email") + "\r\n");
+                _initial.WriteLine(Encrypt("admin1\\password\\First\\Last\\Email") + "\r\n");
                 _initial.Close();
             }
             placeHolder(txtUser, "Username", false);
@@ -164,9 +164,15 @@ namespace Citadel
         {
             for (int i = 0; i <= users.GetLength(0) - 1; i++)
             {
-                if (users[i, 0] == txtUser.Text && users[i, 1] == txtPass.Text)
+                if (users[i, 0] == txtUser.Text + "1" && users[i, 1] == txtPass.Text)
                 {
-                    main = new formMain(i);
+                    main = new formMain(i, 1);
+                    this.Hide();
+                    main.Show();
+                    break;
+                } else if (users[i, 0] == txtUser.Text + "0" && users[i, 1] == txtPass.Text)
+                {
+                    main = new formMain(i, 0);
                     this.Hide();
                     main.Show();
                     break;

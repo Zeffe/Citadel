@@ -17,12 +17,13 @@ namespace Citadel
 
         string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         int currentUser; string appData;
-        bool logout = false;
+        bool logout = false; int perms;
 
-        public formMain(int user)
+        public formMain(int user, int _perms)
         {
             InitializeComponent();
             currentUser = user;
+            perms = _perms;
         }
 
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -145,7 +146,7 @@ namespace Citadel
 
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
             {
-                listUsers.Items.Add(rformLogin.users[i, 0]);
+                listUsers.Items.Add(getUser(i));
             }
         }
 
@@ -186,6 +187,11 @@ namespace Citadel
             return _first;
         }
 
+        private string getUser(int userNum)
+        {
+            return rformLogin.users[userNum, 0].Substring(0, rformLogin.users[userNum, 0].Length - 1);
+        }
+
         public static System.Timers.Timer tmrResult = new System.Timers.Timer();
 
         private void formMain_Load(object sender, EventArgs e)
@@ -201,16 +207,16 @@ namespace Citadel
             pnlContainer.Click += new System.EventHandler(_onClick);
             label1.Click += new System.EventHandler(_onClick);
             int _x; string _user = "";
-            if (rformLogin.users[currentUser, 0].Length < 12)
+            if (getUser(currentUser).Length < 12)
             {
-                lblUser.Text = rformLogin.users[currentUser, 0];
-                lblCuruser.Text = rformLogin.users[currentUser, 0];
+                lblUser.Text = getUser(currentUser);
+                lblCuruser.Text = getUser(currentUser);
             }
             else
             {
                 for (int i = 0; i < 12; i++)
                 {
-                    _user += rformLogin.users[currentUser, 0][i];
+                    _user += getUser(currentUser)[i];
                 }
                 lblUser.Text = _user + "...";
                 lblCuruser.Text = _user + "...";
