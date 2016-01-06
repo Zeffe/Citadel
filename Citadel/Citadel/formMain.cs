@@ -134,6 +134,21 @@ namespace Citadel
             updateSelected(_lbl.Parent as Panel);
         }
 
+        void updateUserPage()
+        {
+            lblFirstname.Text = rformLogin.users[currentUser, 2];
+            lblLastname.Text = rformLogin.users[currentUser, 3];
+            lblEmail.Text = rformLogin.users[currentUser, 4];
+
+            gbTitle(gbCuruser, lblCuruser);
+            gbTitle(gbCuruser, lblEmail);
+
+            for (int i = 0; i < rformLogin.users.GetLength(0); i++)
+            {
+                listUsers.Items.Add(rformLogin.users[i, 0]);
+            }
+        }
+
         void _onClick(object sender, EventArgs e)
         {
             updateSelected(pnlbUsers);
@@ -180,7 +195,11 @@ namespace Citadel
             tmrResult.Interval = 100;
             tmrResult.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
             activePanel = pnlbDashboard;
-            pnlDashboard.BringToFront();
+            pnlDashboard.BringToFront();      
+            gbTitle(gbCuruser, btnLogout);
+            lblUser.Click += new System.EventHandler(_onClick);
+            pnlContainer.Click += new System.EventHandler(_onClick);
+            label1.Click += new System.EventHandler(_onClick);
             int _x; string _user = "";
             if (rformLogin.users[currentUser, 0].Length < 12)
             {
@@ -196,15 +215,6 @@ namespace Citadel
                 lblUser.Text = _user + "...";
                 lblCuruser.Text = _user + "...";
             }
-            lblFirstname.Text = rformLogin.users[currentUser, 2];
-            lblLastname.Text = rformLogin.users[currentUser, 3];
-            lblEmail.Text = rformLogin.users[currentUser, 4];
-            gbTitle(gbCuruser, lblCuruser);
-            gbTitle(gbCuruser, lblEmail);
-            gbTitle(gbCuruser, btnLogout);
-            lblUser.Click += new System.EventHandler(_onClick);
-            pnlContainer.Click += new System.EventHandler(_onClick);
-            label1.Click += new System.EventHandler(_onClick);
             pnlContainer.Width = 85 + lblUser.Width;
             _x = pnlContainer.Location.X;
             pnlContainer.Location = new Point((divider1.Location.X - pnlContainer.Width) / 2, pnlContainer.Location.Y);
@@ -218,6 +228,7 @@ namespace Citadel
             panelButton(pnlbUsers, lblUsers, pctUsers, pnlUsers);
             panelButton(pnlbSettings, lblSettings, pctSettings, pnlSettings);
             panelButton(pnlbInfo, lblInfo, pctInfo, pnlInfo);
+            updateUserPage();
         }
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)

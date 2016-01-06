@@ -152,7 +152,7 @@ namespace Citadel
             {
                 File.Create(appData + "/users.fbla").Dispose();
                 StreamWriter _initial = new StreamWriter(appData + "/users.fbla");
-                _initial.WriteLine(Encrypt("admin\\password\\First\\Last\\Email"));
+                _initial.WriteLine(Encrypt("admin\\password\\First\\Last\\Email") + "\r\n");
                 _initial.Close();
             }
             placeHolder(txtUser, "Username", false);

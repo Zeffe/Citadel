@@ -34,7 +34,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listUsers = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gbCuruser = new System.Windows.Forms.GroupBox();
             this.btnLogout = new asset.ThirteenButton();
@@ -197,7 +197,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.listUsers);
             this.groupBox1.Location = new System.Drawing.Point(326, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(265, 196);
@@ -205,16 +205,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User List";
             // 
-            // listBox1
+            // listUsers
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(6, 21);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(253, 164);
-            this.listBox1.TabIndex = 0;
+            this.listUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listUsers.ForeColor = System.Drawing.Color.White;
+            this.listUsers.FormattingEnabled = true;
+            this.listUsers.ItemHeight = 16;
+            this.listUsers.Location = new System.Drawing.Point(6, 21);
+            this.listUsers.Name = "listUsers";
+            this.listUsers.Size = new System.Drawing.Size(253, 164);
+            this.listUsers.TabIndex = 0;
             // 
             // label11
             // 
@@ -908,7 +908,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listUsers;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLastname;
         private System.Windows.Forms.Label label17;
