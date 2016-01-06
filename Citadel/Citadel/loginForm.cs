@@ -28,6 +28,7 @@ namespace Citadel
         public static msgbox _message;
         public static string PasswordHash; public static string SaltKey = "S@LT&KEY";
         public static string VIKey = "@1B2c3D4e5F6g7H8";
+        String[,] users = new String[50, 4];
 
         public static string Encrypt(string plainText)
         {
@@ -121,31 +122,58 @@ namespace Citadel
             }
         }
 
+        StreamReader _reader;
+
+        void readToArray(string file, String[,] array2d)
+        {
+            string str;
+            _reader = File.OpenText(file);
+            int i = 0;
+            int j = 0;
+            while ((str = _reader.ReadLine()) != null)
+            {
+                str = Decrypt(str);
+                String[] strArray = new String[str.Split('\\').Length];
+                strArray = str.Split('\\');
+                foreach (string element in strArray)
+                {
+                    array2d[i, j] = element;
+                    j++;
+                }
+                i++;
+            }
+        }
+
         private void rformLogin_Load(object sender, EventArgs e)
         {
             string appData = Path.Combine(folder, "Citadel");
-            if(!File.Exists(appData + "/users.fbla"))
+            PasswordHash = "admin";
+            if (!File.Exists(appData + "/users.fbla"))
             {
                 File.Create(appData + "/users.fbla").Dispose();
-                StreamWriter _initial = new StreamWriter(appData + "/sourceSettings.fbla");
-                PasswordHash = "admin";
+                StreamWriter _initial = new StreamWriter(appData + "/users.fbla");
                 _initial.WriteLine(Encrypt("admin\\password\\First\\Last\\Email"));
                 _initial.Close();
             }
             placeHolder(txtUser, "Username", false);
             placeHolder(txtPass, "Password", true);
+            readToArray(appData + "/users.fbla", users);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtPass.Text == "password")
+            for (int i = 0; i <= users.GetLength(0) - 1; i++)
             {
-                main = new formMain(txtUser.Text);
-                this.Hide();
-                main.Show();
-            } else
-            {
-                message("Invalid username or password.", "Error", 1, -1);
+                if (users[i, 0] == txtUser.Text && users[i, 1] == txtPass.Text)
+                {
+                    main = new formMain(txtUser.Text);
+                    this.Hide();
+                    main.Show();
+                    break;
+                } else if (i == users.GetLength(0) - 1)
+                {
+                    message("Invalid username or password.", "Error", 1, -1);
+                }
             }
         }
 
