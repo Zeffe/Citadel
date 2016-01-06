@@ -16,10 +16,10 @@ namespace Citadel
 
 
         string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        string currentUser; string appData;
+        int currentUser; string appData;
         bool logout = false;
 
-        public formMain(string user)
+        public formMain(int user)
         {
             InitializeComponent();
             currentUser = user;
@@ -182,20 +182,23 @@ namespace Citadel
             activePanel = pnlbDashboard;
             pnlDashboard.BringToFront();
             int _x; string _user = "";
-            if (currentUser.Length < 12)
+            if (rformLogin.users[currentUser, 0].Length < 12)
             {
-                lblUser.Text = currentUser;
-                lblCuruser.Text = currentUser;
+                lblUser.Text = rformLogin.users[currentUser, 0];
+                lblCuruser.Text = rformLogin.users[currentUser, 0];
             }
             else
             {
                 for (int i = 0; i < 12; i++)
                 {
-                    _user += currentUser[i];
+                    _user += rformLogin.users[currentUser, 0][i];
                 }
                 lblUser.Text = _user + "...";
                 lblCuruser.Text = _user + "...";
             }
+            lblFirstname.Text = rformLogin.users[currentUser, 2];
+            lblLastname.Text = rformLogin.users[currentUser, 3];
+            lblEmail.Text = rformLogin.users[currentUser, 4];
             gbTitle(gbCuruser, lblCuruser);
             gbTitle(gbCuruser, lblEmail);
             gbTitle(gbCuruser, btnLogout);

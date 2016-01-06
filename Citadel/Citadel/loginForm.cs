@@ -28,7 +28,7 @@ namespace Citadel
         public static msgbox _message;
         public static string PasswordHash; public static string SaltKey = "S@LT&KEY";
         public static string VIKey = "@1B2c3D4e5F6g7H8";
-        String[,] users = new String[50, 4];
+        public static String[,] users = new String[50, 5];
 
         public static string Encrypt(string plainText)
         {
@@ -166,7 +166,7 @@ namespace Citadel
             {
                 if (users[i, 0] == txtUser.Text && users[i, 1] == txtPass.Text)
                 {
-                    main = new formMain(txtUser.Text);
+                    main = new formMain(i);
                     this.Hide();
                     main.Show();
                     break;
