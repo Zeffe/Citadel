@@ -310,7 +310,7 @@ namespace Citadel
                 
                 if (rformLogin.users[i, 0] == null)
                 {
-                    confBox(npnlUser, Color.Green);
+                    confBox(npnlUser, Color.DodgerBlue);
                     userOk = true;
                     break;
                 }
@@ -329,7 +329,7 @@ namespace Citadel
         {
             if (txtPassword.Text.Length >= 5)
             {
-                confBox(npnlPass, Color.Green);
+                confBox(npnlPass, Color.DodgerBlue);
                 ttMaster.Hide(txtPassword);
             } else
             {
@@ -338,9 +338,9 @@ namespace Citadel
             }
             if (_pass)
             {
-                if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length > 5)
+                if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length >= 5)
                 {
-                    confBox(npnlPassconf, Color.Green);
+                    confBox(npnlPassconf, Color.DodgerBlue);
                     passOk = true;
                 }
                 else
@@ -353,9 +353,9 @@ namespace Citadel
 
         private void txtPassconf_Leave(object sender, EventArgs e)
         {
-            if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length > 5)
+            if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length >= 5)
             {
-                confBox(npnlPassconf, Color.Green);
+                confBox(npnlPassconf, Color.DodgerBlue);
                 passOk = true;
             } else
             {
@@ -376,8 +376,8 @@ namespace Citadel
                 emailOk = false;
             } else
             {
-                confBox(npnlEmailconf, Color.Green);
-                confBox(npnlEmail, Color.Green);
+                confBox(npnlEmailconf, Color.DodgerBlue);
+                confBox(npnlEmail, Color.DodgerBlue);
                 emailOk = true;
             }
             _emails = true;
@@ -395,8 +395,8 @@ namespace Citadel
                 }
                 else
                 {
-                    confBox(npnlEmailconf, Color.Green);
-                    confBox(npnlEmail, Color.Green);
+                    confBox(npnlEmailconf, Color.DodgerBlue);
+                    confBox(npnlEmail, Color.DodgerBlue);
                     emailOk = true;
                 }
             }
