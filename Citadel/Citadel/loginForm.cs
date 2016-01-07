@@ -20,10 +20,8 @@ namespace Citadel
         }
 
         string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        public static String[] placeText = new String[100];
         public static asset.ThirteenTextBox[] textboxA = new asset.ThirteenTextBox[50];
-        public static int count = 0; public static int cur;
-        public static bool[] passChar = new bool[100];
+        public static int count = 0;
         formMain main;
         public static msgbox _message;
         public static string PasswordHash; public static string SaltKey = "S@LT&KEY";
@@ -78,33 +76,43 @@ namespace Citadel
             formMain.tmrResult.Start();
         }
 
+        public static Dictionary<TextBox, String> placeText = new Dictionary<TextBox, string>();
+        public static Dictionary<TextBox, bool> passChar = new Dictionary<TextBox, bool>();
+
         public static void placeHolder(asset.ThirteenTextBox textbox, String text, bool pass)
         {
-            placeText[count] = text;
+            placeText.Add(textbox, text);
             textbox.Text = text;
             textboxA[count] = textbox;
-            passChar[count] = pass;
+            passChar[textbox] = pass;
             textbox.ForeColor = SystemColors.WindowFrame;
             textboxA[count].Enter += new System.EventHandler(onEnter);
+            textboxA[count].MouseEnter += new System.EventHandler(mouseEnter);
+            textboxA[count].MouseLeave += new System.EventHandler(mouseLeave);
             textboxA[count].Leave += new System.EventHandler(onLeave);
             count++;
+        }
+
+        public static void mouseEnter(object sender, EventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            textbox.Parent.Invalidate();
+        }
+
+        public static void mouseLeave(object sender, EventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            textbox.Parent.Invalidate();
         }
 
         public static void onEnter(object sender, EventArgs e)
         {
             TextBox textbox = sender as TextBox;
-            for (int i = 0; i < placeText.Length; i++)
+            if (textbox.Text == placeText[textbox])
             {
-                if (textbox.Text == placeText[i])
-                {
-                    if (passChar[i])
-                    {
-                        textbox.UseSystemPasswordChar = true;
-                    }
-                    textbox.ForeColor = Color.White;
-                    textbox.Text = "";
-                    cur = i;
-                }
+                textbox.UseSystemPasswordChar = passChar[textbox];
+                textbox.ForeColor = Color.White;
+                textbox.Text = "";
             }
         }
 
@@ -118,7 +126,7 @@ namespace Citadel
                     textbox.UseSystemPasswordChar = false;
                 }
                 textbox.ForeColor = SystemColors.WindowFrame;
-                textbox.Text = placeText[cur];
+                textbox.Text = placeText[textbox];
             }
         }
 

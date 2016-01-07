@@ -43,7 +43,6 @@ namespace Citadel
             title.Location = _temp;
         }
 
-
         void drawIndicator(Panel pnl, bool draw)
         {
             if (draw)
@@ -201,6 +200,19 @@ namespace Citadel
             return rformLogin.users[userNum, 0].Substring(0, rformLogin.users[userNum, 0].Length - 1);
         }
 
+        void confBoxInit(TextBox textbox, Panel box)
+        {
+            box.Location = new Point(textbox.Location.X - 1, textbox.Location.Y - 1);
+            box.Size = new Size(textbox.Width + 2, textbox.Height + 2);
+            textbox.BringToFront();
+        }
+
+        void confBox(Panel box, Color color)
+        {
+            box.BackColor = color;
+            //box.Update();
+        }
+
         public static System.Timers.Timer tmrResult = new System.Timers.Timer();
 
         private void formMain_Load(object sender, EventArgs e)
@@ -250,6 +262,21 @@ namespace Citadel
             panelButton(pnlbUsers, lblUsers, pctUsers, pnlUsers);
             panelButton(pnlbSettings, lblSettings, pctSettings, pnlSettings);
             panelButton(pnlbInfo, lblInfo, pctInfo, pnlInfo);
+            confBoxInit(txtUsername, npnlUser);
+            confBoxInit(txtPassword, npnlPass);
+            confBoxInit(txtPassconf, npnlPassconf);
+            confBoxInit(txtFirstname, npnlFirst);
+            confBoxInit(txtLastname, npnlLast);
+            confBoxInit(txtEmail, npnlEmail);
+            confBoxInit(txtEmailconf, npnlEmailconf);
+            rformLogin.placeHolder(txtUsername, "Username", false);
+            rformLogin.placeHolder(txtPassword, "Password", true);
+            rformLogin.placeHolder(txtPassconf, "Confirm Password", true);
+            rformLogin.placeHolder(txtFirstname, "First Name", false);
+            rformLogin.placeHolder(txtLastname, "Last Name", false);
+            rformLogin.placeHolder(txtEmail, "Email", false);
+            rformLogin.placeHolder(txtEmailconf, "Confirm Email", false);
+            cmbPerms.SelectedIndex = 0;
             if (perms != 1)
             {
                 gbNewuser.Enabled = false;
@@ -272,6 +299,116 @@ namespace Citadel
             _login.Show();
             logout = true;
             this.Close();
+        }
+
+        bool userOk, passOk, firstOk, lastOk, emailOk;
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            for (int i = 0; i < rformLogin.users.GetLength(0); i++)
+            {
+                
+                if (rformLogin.users[i, 0] == null)
+                {
+                    confBox(npnlUser, Color.Green);
+                    userOk = true;
+                    break;
+                }
+                else if (txtUsername.Text == getUser(i))
+                {
+                    confBox(npnlUser, Color.Red);
+                    userOk = false;
+                    break;
+                }
+            }
+        }
+
+        bool _pass = false;
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text.Length >= 5)
+            {
+                confBox(npnlPass, Color.Green);
+            } else
+            {
+                confBox(npnlPass, Color.Red);
+            }
+            if (_pass)
+            {
+                if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length > 5)
+                {
+                    confBox(npnlPassconf, Color.Green);
+                    passOk = true;
+                }
+                else
+                {
+                    confBox(npnlPassconf, Color.Red);
+                    passOk = false;
+                }
+            }
+        }
+
+        private void txtPassconf_Leave(object sender, EventArgs e)
+        {
+            if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length > 5)
+            {
+                confBox(npnlPassconf, Color.Green);
+                passOk = true;
+            } else
+            {
+                confBox(npnlPassconf, Color.Red);
+                passOk = false;
+            }
+            _pass = true;
+        }
+
+        bool _emails = false;
+
+        private void txtEmailconf_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text != txtEmailconf.Text)
+            {
+                confBox(npnlEmailconf, Color.Red);
+                confBox(npnlEmail, Color.Red);
+                emailOk = false;
+            } else
+            {
+                confBox(npnlEmailconf, Color.Green);
+                confBox(npnlEmail, Color.Green);
+                emailOk = true;
+            }
+            _emails = true;
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (_emails)
+            {
+                if (txtEmail.Text != txtEmailconf.Text)
+                {
+                    confBox(npnlEmailconf, Color.Red);
+                    confBox(npnlEmail, Color.Red);
+                    emailOk = false;
+                }
+                else
+                {
+                    confBox(npnlEmailconf, Color.Green);
+                    confBox(npnlEmail, Color.Green);
+                    emailOk = true;
+                }
+            }
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (userOk && passOk && emailOk && txtFirstname.Text != rformLogin.placeText[txtFirstname] && txtLastname.Text != rformLogin.placeText[txtLastname])
+            {
+                MessageBox.Show("Go!");
+            } else
+            {
+                MessageBox.Show("error");
+            }
         }
     }
 }
