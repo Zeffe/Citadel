@@ -43,6 +43,7 @@ namespace Citadel
             title.Location = _temp;
         }
 
+
         void drawIndicator(Panel pnl, bool draw)
         {
             if (draw)
@@ -135,15 +136,23 @@ namespace Citadel
             updateSelected(_lbl.Parent as Panel);
         }
 
-        void updateUserPage()
+        void updateUserPage(int user)
         {
-            lblFirstname.Text = rformLogin.users[currentUser, 2];
-            lblLastname.Text = rformLogin.users[currentUser, 3];
-            lblEmail.Text = rformLogin.users[currentUser, 4];
+            lblFirstname.Text = rformLogin.users[user, 2];
+            lblLastname.Text = rformLogin.users[user, 3];
+            lblEmail.Text = rformLogin.users[user, 4];
 
             gbTitle(gbCuruser, lblCuruser);
             gbTitle(gbCuruser, lblEmail);
 
+            int _x = gbCuruser.Width - lblFirstname.Width - 15;
+            int _x2 = gbCuruser.Width - lblLastname.Width - 15;
+            lblFirstname.Location = new Point(_x, lblFirstname.Location.Y);
+            lblLastname.Location = new Point(_x2, lblLastname.Location.Y);
+        }
+
+        void newUser()
+        {
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
             {
                 listUsers.Items.Add(getUser(i));
@@ -203,6 +212,8 @@ namespace Citadel
             activePanel = pnlbDashboard;
             pnlDashboard.BringToFront();      
             gbTitle(gbCuruser, btnLogout);
+            gbNewuser.ForeColor = Color.White;
+            gbUserlist.ForeColor = Color.White;
             lblUser.Click += new System.EventHandler(_onClick);
             pnlContainer.Click += new System.EventHandler(_onClick);
             label1.Click += new System.EventHandler(_onClick);
@@ -227,6 +238,11 @@ namespace Citadel
             _x = pnlContainer.Location.X - _x;
             label1.Location = new Point(label1.Location.X + _x, label1.Location.Y);
             lblUser.Location = new Point(lblUser.Location.X + _x, label1.Location.Y);
+            for (int i = 0; i < rformLogin.users.GetLength(0); i++)
+            {
+                if (rformLogin.users[i, 0] == null) break;
+                listUsers.Items.Add(getUser(i));
+            }
             panelButton(pnlbDashboard, lblDashboard, pctDashboard, pnlDashboard);
             panelButton(pnlbStats, lblStats, pctStats, pnlStats);
             panelButton(pnlbStudents, lblStudents, pctStudents, pnlStudents);
@@ -234,7 +250,11 @@ namespace Citadel
             panelButton(pnlbUsers, lblUsers, pctUsers, pnlUsers);
             panelButton(pnlbSettings, lblSettings, pctSettings, pnlSettings);
             panelButton(pnlbInfo, lblInfo, pctInfo, pnlInfo);
-            updateUserPage();
+            if (perms != 1)
+            {
+                gbNewuser.Enabled = false;
+            }
+            updateUserPage(currentUser);
         }
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)

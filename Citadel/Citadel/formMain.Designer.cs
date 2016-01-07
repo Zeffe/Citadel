@@ -31,9 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.thirteenForm1 = new asset.ThirteenForm();
             this.pnlUsers = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbNewuser = new System.Windows.Forms.GroupBox();
+            this.gbUserlist = new System.Windows.Forms.GroupBox();
             this.listUsers = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gbCuruser = new System.Windows.Forms.GroupBox();
@@ -94,8 +93,7 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.pnlUsers.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbUserlist.SuspendLayout();
             this.gbCuruser.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlStats.SuspendLayout();
@@ -164,8 +162,8 @@
             // pnlUsers
             // 
             this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlUsers.Controls.Add(this.groupBox2);
-            this.pnlUsers.Controls.Add(this.groupBox1);
+            this.pnlUsers.Controls.Add(this.gbNewuser);
+            this.pnlUsers.Controls.Add(this.gbUserlist);
             this.pnlUsers.Controls.Add(this.label11);
             this.pnlUsers.Controls.Add(this.gbCuruser);
             this.pnlUsers.Location = new System.Drawing.Point(229, 33);
@@ -173,37 +171,24 @@
             this.pnlUsers.Size = new System.Drawing.Size(609, 599);
             this.pnlUsers.TabIndex = 5;
             // 
-            // groupBox2
+            // gbNewuser
             // 
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Location = new System.Drawing.Point(20, 298);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(571, 282);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "New User";
+            this.gbNewuser.Location = new System.Drawing.Point(20, 298);
+            this.gbNewuser.Name = "gbNewuser";
+            this.gbNewuser.Size = new System.Drawing.Size(571, 282);
+            this.gbNewuser.TabIndex = 4;
+            this.gbNewuser.TabStop = false;
+            this.gbNewuser.Text = "New User";
             // 
-            // label16
+            // gbUserlist
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(83, 29);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(113, 24);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "placeHolder";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.listUsers);
-            this.groupBox1.Location = new System.Drawing.Point(326, 77);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(265, 196);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "User List";
+            this.gbUserlist.Controls.Add(this.listUsers);
+            this.gbUserlist.Location = new System.Drawing.Point(326, 77);
+            this.gbUserlist.Name = "gbUserlist";
+            this.gbUserlist.Size = new System.Drawing.Size(265, 196);
+            this.gbUserlist.TabIndex = 3;
+            this.gbUserlist.TabStop = false;
+            this.gbUserlist.Text = "User List";
             // 
             // listUsers
             // 
@@ -812,9 +797,7 @@
             this.thirteenForm1.PerformLayout();
             this.pnlUsers.ResumeLayout(false);
             this.pnlUsers.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gbUserlist.ResumeLayout(false);
             this.gbCuruser.ResumeLayout(false);
             this.gbCuruser.PerformLayout();
             this.pnlInfo.ResumeLayout(false);
@@ -905,9 +888,8 @@
         private System.Windows.Forms.GroupBox gbCuruser;
         private System.Windows.Forms.Label lblCuruser;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbNewuser;
+        private System.Windows.Forms.GroupBox gbUserlist;
         private System.Windows.Forms.ListBox listUsers;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLastname;
