@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.thirteenForm1 = new asset.ThirteenForm();
             this.pnlUsers = new System.Windows.Forms.Panel();
             this.gbNewuser = new System.Windows.Forms.GroupBox();
-            this.npnlUser = new System.Windows.Forms.Panel();
-            this.npnlPass = new System.Windows.Forms.Panel();
-            this.npnlPassconf = new System.Windows.Forms.Panel();
-            this.npnlFirst = new System.Windows.Forms.Panel();
-            this.npnlLast = new System.Windows.Forms.Panel();
-            this.npnlEmail = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.npnlEmailconf = new System.Windows.Forms.Panel();
+            this.npnlEmail = new System.Windows.Forms.Panel();
+            this.npnlLast = new System.Windows.Forms.Panel();
+            this.npnlFirst = new System.Windows.Forms.Panel();
+            this.npnlPassconf = new System.Windows.Forms.Panel();
+            this.npnlPass = new System.Windows.Forms.Panel();
+            this.npnlUser = new System.Windows.Forms.Panel();
             this.txtEmailconf = new asset.ThirteenTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnCreate = new asset.ThirteenButton();
@@ -108,7 +110,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pctInfo = new System.Windows.Forms.PictureBox();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
             this.thirteenForm1.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.gbNewuser.SuspendLayout();
@@ -217,47 +219,14 @@
             this.gbNewuser.TabStop = false;
             this.gbNewuser.Text = "New User";
             // 
-            // npnlUser
+            // label20
             // 
-            this.npnlUser.Location = new System.Drawing.Point(505, 34);
-            this.npnlUser.Name = "npnlUser";
-            this.npnlUser.Size = new System.Drawing.Size(35, 15);
-            this.npnlUser.TabIndex = 11;
-            // 
-            // npnlPass
-            // 
-            this.npnlPass.Location = new System.Drawing.Point(0, 0);
-            this.npnlPass.Name = "npnlPass";
-            this.npnlPass.Size = new System.Drawing.Size(35, 15);
-            this.npnlPass.TabIndex = 12;
-            // 
-            // npnlPassconf
-            // 
-            this.npnlPassconf.Location = new System.Drawing.Point(0, 0);
-            this.npnlPassconf.Name = "npnlPassconf";
-            this.npnlPassconf.Size = new System.Drawing.Size(35, 15);
-            this.npnlPassconf.TabIndex = 13;
-            // 
-            // npnlFirst
-            // 
-            this.npnlFirst.Location = new System.Drawing.Point(0, 0);
-            this.npnlFirst.Name = "npnlFirst";
-            this.npnlFirst.Size = new System.Drawing.Size(35, 15);
-            this.npnlFirst.TabIndex = 13;
-            // 
-            // npnlLast
-            // 
-            this.npnlLast.Location = new System.Drawing.Point(0, 0);
-            this.npnlLast.Name = "npnlLast";
-            this.npnlLast.Size = new System.Drawing.Size(35, 15);
-            this.npnlLast.TabIndex = 13;
-            // 
-            // npnlEmail
-            // 
-            this.npnlEmail.Location = new System.Drawing.Point(0, 0);
-            this.npnlEmail.Name = "npnlEmail";
-            this.npnlEmail.Size = new System.Drawing.Size(35, 15);
-            this.npnlEmail.TabIndex = 13;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(27, 92);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(191, 16);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "* No greater than 15 characters";
             // 
             // npnlEmailconf
             // 
@@ -266,6 +235,48 @@
             this.npnlEmailconf.Size = new System.Drawing.Size(35, 15);
             this.npnlEmailconf.TabIndex = 13;
             // 
+            // npnlEmail
+            // 
+            this.npnlEmail.Location = new System.Drawing.Point(0, 0);
+            this.npnlEmail.Name = "npnlEmail";
+            this.npnlEmail.Size = new System.Drawing.Size(35, 15);
+            this.npnlEmail.TabIndex = 13;
+            // 
+            // npnlLast
+            // 
+            this.npnlLast.Location = new System.Drawing.Point(0, 0);
+            this.npnlLast.Name = "npnlLast";
+            this.npnlLast.Size = new System.Drawing.Size(35, 15);
+            this.npnlLast.TabIndex = 13;
+            // 
+            // npnlFirst
+            // 
+            this.npnlFirst.Location = new System.Drawing.Point(0, 0);
+            this.npnlFirst.Name = "npnlFirst";
+            this.npnlFirst.Size = new System.Drawing.Size(35, 15);
+            this.npnlFirst.TabIndex = 13;
+            // 
+            // npnlPassconf
+            // 
+            this.npnlPassconf.Location = new System.Drawing.Point(0, 0);
+            this.npnlPassconf.Name = "npnlPassconf";
+            this.npnlPassconf.Size = new System.Drawing.Size(35, 15);
+            this.npnlPassconf.TabIndex = 13;
+            // 
+            // npnlPass
+            // 
+            this.npnlPass.Location = new System.Drawing.Point(0, 0);
+            this.npnlPass.Name = "npnlPass";
+            this.npnlPass.Size = new System.Drawing.Size(35, 15);
+            this.npnlPass.TabIndex = 12;
+            // 
+            // npnlUser
+            // 
+            this.npnlUser.Location = new System.Drawing.Point(505, 34);
+            this.npnlUser.Name = "npnlUser";
+            this.npnlUser.Size = new System.Drawing.Size(35, 15);
+            this.npnlUser.TabIndex = 11;
+            // 
             // txtEmailconf
             // 
             this.txtEmailconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -273,7 +284,7 @@
             this.txtEmailconf.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
             this.txtEmailconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEmailconf.ForeColor = System.Drawing.Color.White;
-            this.txtEmailconf.Location = new System.Drawing.Point(266, 171);
+            this.txtEmailconf.Location = new System.Drawing.Point(285, 162);
             this.txtEmailconf.Name = "txtEmailconf";
             this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
             this.txtEmailconf.TabIndex = 10;
@@ -329,7 +340,7 @@
             this.txtEmail.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(266, 139);
+            this.txtEmail.Location = new System.Drawing.Point(285, 130);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(255, 26);
             this.txtEmail.TabIndex = 5;
@@ -342,7 +353,7 @@
             this.txtLastname.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
             this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtLastname.ForeColor = System.Drawing.Color.White;
-            this.txtLastname.Location = new System.Drawing.Point(306, 87);
+            this.txtLastname.Location = new System.Drawing.Point(30, 162);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(166, 26);
             this.txtLastname.TabIndex = 4;
@@ -354,7 +365,7 @@
             this.txtFirstname.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
             this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtFirstname.ForeColor = System.Drawing.Color.White;
-            this.txtFirstname.Location = new System.Drawing.Point(306, 55);
+            this.txtFirstname.Location = new System.Drawing.Point(30, 130);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(166, 26);
             this.txtFirstname.TabIndex = 3;
@@ -366,7 +377,7 @@
             this.txtPassconf.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
             this.txtPassconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPassconf.ForeColor = System.Drawing.Color.White;
-            this.txtPassconf.Location = new System.Drawing.Point(30, 171);
+            this.txtPassconf.Location = new System.Drawing.Point(328, 87);
             this.txtPassconf.Name = "txtPassconf";
             this.txtPassconf.Size = new System.Drawing.Size(166, 26);
             this.txtPassconf.TabIndex = 2;
@@ -379,7 +390,7 @@
             this.txtPassword.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(30, 139);
+            this.txtPassword.Location = new System.Drawing.Point(328, 55);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(166, 26);
             this.txtPassword.TabIndex = 1;
@@ -424,7 +435,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label11.Location = new System.Drawing.Point(217, 17);
+            this.label11.Location = new System.Drawing.Point(215, 17);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(193, 25);
             this.label11.TabIndex = 1;
@@ -999,15 +1010,6 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(27, 92);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(191, 16);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "* No greater than 15 characters";
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1151,5 +1153,6 @@
         private System.Windows.Forms.Panel npnlEmail;
         private System.Windows.Forms.Panel npnlEmailconf;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ToolTip ttMaster;
     }
 }

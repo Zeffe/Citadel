@@ -145,7 +145,11 @@ namespace Citadel
                 strArray = str.Split('\\');
                 foreach (string element in strArray)
                 {
-                    array2d[i, j] = element;
+                    try
+                    {
+                        array2d[i, j] = element;
+                    }
+                    catch { }
                     j++;
                 }
                 i++;

@@ -330,9 +330,11 @@ namespace Citadel
             if (txtPassword.Text.Length >= 5)
             {
                 confBox(npnlPass, Color.Green);
+                ttMaster.Hide(txtPassword);
             } else
             {
                 confBox(npnlPass, Color.Red);
+                ttMaster.Show("Passwords must be at least 5 characters long.", txtPassword);
             }
             if (_pass)
             {
