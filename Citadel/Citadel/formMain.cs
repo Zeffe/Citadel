@@ -163,38 +163,6 @@ namespace Citadel
             updateSelected(pnlbUsers);
         }
 
-        bool _firstLoad;
-
-        private bool firstLoad()
-        {
-            bool _first = false;
-            if (!File.Exists(appData))
-            {
-                Directory.CreateDirectory(appData);
-                _first = true;
-            }
-            if (!File.Exists(appData + "/data"))
-            {
-                Directory.CreateDirectory(appData + "/data");
-                File.Create(appData + "/data/students.fbla").Dispose();
-                _first = true;
-            }
-            if (!File.Exists(appData + "/sourceSettings.fbla"))
-            {
-                File.Create(appData + "/sourceSettings.fbla").Dispose();
-                StreamWriter _initial = new StreamWriter(appData + "/sourceSettings.fbla");
-                _initial.WriteLine("students.fbla\\0");
-                _initial.Close();
-                _first = true;
-            }
-            if (!File.Exists(appData + "/log.fbla"))
-            {
-                File.Create(appData + "/log.fbla").Dispose();
-                _first = true;
-            }
-            return _first;
-        }
-
         private string getUser(int userNum)
         {
             return rformLogin.users[userNum, 0].Substring(0, rformLogin.users[userNum, 0].Length - 1);
@@ -218,7 +186,6 @@ namespace Citadel
         private void formMain_Load(object sender, EventArgs e)
         {
             appData = Path.Combine(folder, "Citadel");
-            _firstLoad = firstLoad();
             tmrResult.Interval = 100;
             tmrResult.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
             activePanel = pnlbDashboard;
@@ -402,14 +369,21 @@ namespace Citadel
             }
         }
 
+        void writeUser(string user, string pass, string first, string last, string email)
+        {
+            File.AppendAllText(appData + "/users.fbla", rformLogin.Encrypt(user + '\\' + pass + '\\' + first + '\\' + last + '\\' + email + "\r\n"));
+            listUsers.Items.Add(user.Substring(0, user.Length - 1));
+            rformLogin.message(txtUsername.Text + " was successfully created!", "Success", 1, -1);
+        }
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             if (userOk && passOk && emailOk && txtFirstname.Text != rformLogin.placeText[txtFirstname] && txtLastname.Text != rformLogin.placeText[txtLastname])
             {
-                MessageBox.Show("Go!");
+                writeUser(txtUsername.Text + cmbPerms.SelectedIndex.ToString(), txtPassconf.Text, txtFirstname.Text, txtLastname.Text, txtEmail.Text);
             } else
             {
-                MessageBox.Show("error");
+                rformLogin.message("Please make sure all entries are complete and correct.", "Error", 1, -1);
             }
         }
     }

@@ -137,9 +137,9 @@ namespace Citadel
             string str;
             _reader = File.OpenText(file);
             int i = 0;
-            int j = 0;
             while ((str = _reader.ReadLine()) != null)
             {
+                int j = 0;
                 str = Decrypt(str);
                 String[] strArray = new String[str.Split('\\').Length];
                 strArray = str.Split('\\');
@@ -154,11 +154,45 @@ namespace Citadel
                 }
                 i++;
             }
+            _reader.Close();
+        }
+
+        string appData;
+
+        private bool firstLoad()
+        {
+            bool _first = false;
+            if (!File.Exists(appData))
+            {
+                Directory.CreateDirectory(appData);
+                _first = true;
+            }
+            if (!File.Exists(appData + "/data"))
+            {
+                Directory.CreateDirectory(appData + "/data");
+                File.Create(appData + "/data/students.fbla").Dispose();
+                _first = true;
+            }
+            if (!File.Exists(appData + "/sourceSettings.fbla"))
+            {
+                File.Create(appData + "/sourceSettings.fbla").Dispose();
+                StreamWriter _initial = new StreamWriter(appData + "/sourceSettings.fbla");
+                _initial.WriteLine("students.fbla\\0");
+                _initial.Close();
+                _first = true;
+            }
+            if (!File.Exists(appData + "/log.fbla"))
+            {
+                File.Create(appData + "/log.fbla").Dispose();
+                _first = true;
+            }
+            return _first;
         }
 
         private void rformLogin_Load(object sender, EventArgs e)
         {
-            string appData = Path.Combine(folder, "Citadel");
+            appData = Path.Combine(folder, "Citadel");
+            firstLoad();
             PasswordHash = "admin";
             if (!File.Exists(appData + "/users.fbla"))
             {
