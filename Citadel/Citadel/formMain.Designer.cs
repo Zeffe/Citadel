@@ -52,6 +52,7 @@
             this.txtPassword = new asset.ThirteenTextBox();
             this.txtUsername = new asset.ThirteenTextBox();
             this.gbUserlist = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new asset.ThirteenButton();
             this.listUsers = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.gbCuruser = new System.Windows.Forms.GroupBox();
@@ -412,6 +413,7 @@
             // 
             // gbUserlist
             // 
+            this.gbUserlist.Controls.Add(this.btnDelete);
             this.gbUserlist.Controls.Add(this.listUsers);
             this.gbUserlist.Location = new System.Drawing.Point(326, 77);
             this.gbUserlist.Name = "gbUserlist";
@@ -419,6 +421,21 @@
             this.gbUserlist.TabIndex = 3;
             this.gbUserlist.TabStop = false;
             this.gbUserlist.Text = "User List";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnDelete.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(72, 162);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(116, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete Selected";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // listUsers
             // 
@@ -428,8 +445,9 @@
             this.listUsers.ItemHeight = 16;
             this.listUsers.Location = new System.Drawing.Point(6, 21);
             this.listUsers.Name = "listUsers";
-            this.listUsers.Size = new System.Drawing.Size(253, 164);
+            this.listUsers.Size = new System.Drawing.Size(253, 132);
             this.listUsers.TabIndex = 0;
+            this.listUsers.SelectedIndexChanged += new System.EventHandler(this.listUsers_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -1154,5 +1172,6 @@
         private System.Windows.Forms.Panel npnlEmailconf;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ToolTip ttMaster;
+        private asset.ThirteenButton btnDelete;
     }
 }

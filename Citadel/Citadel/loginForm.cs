@@ -78,6 +78,7 @@ namespace Citadel
 
         public static Dictionary<TextBox, String> placeText = new Dictionary<TextBox, string>();
         public static Dictionary<TextBox, bool> passChar = new Dictionary<TextBox, bool>();
+        public static Dictionary<String, int> userNums = new Dictionary<String, int>();
 
         public static void placeHolder(asset.ThirteenTextBox textbox, String text, bool pass)
         {
@@ -146,11 +147,15 @@ namespace Citadel
                 foreach (string element in strArray)
                 {
                     try
-                    {
+                    { 
                         array2d[i, j] = element;
                     }
                     catch { }
                     j++;
+                }
+                if (array2d == users)
+                {
+                    userNums.Add(strArray[0].Substring(0, strArray[0].Length - 1), i);
                 }
                 i++;
             }
@@ -206,6 +211,8 @@ namespace Citadel
             readToArray(appData + "/users.fbla", users);
         }
 
+        bool GO = true;
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             for (int i = 0; i <= users.GetLength(0) - 1; i++)
@@ -213,14 +220,16 @@ namespace Citadel
                 if (users[i, 0] == txtUser.Text + "1" && users[i, 1] == txtPass.Text)
                 {
                     main = new formMain(i, 1);
-                    this.Hide();
                     main.Show();
+                    GO = false;
+                    this.Hide();
                     break;
                 } else if (users[i, 0] == txtUser.Text + "0" && users[i, 1] == txtPass.Text)
                 {
                     main = new formMain(i, 0);
-                    this.Hide();
                     main.Show();
+                    GO = false;
+                    this.Hide();
                     break;
                 } else if (i == users.GetLength(0) - 1)
                 {

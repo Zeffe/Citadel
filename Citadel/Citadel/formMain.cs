@@ -140,6 +140,7 @@ namespace Citadel
             lblFirstname.Text = rformLogin.users[user, 2];
             lblLastname.Text = rformLogin.users[user, 3];
             lblEmail.Text = rformLogin.users[user, 4];
+            lblCuruser.Text = getUser(user);
 
             gbTitle(gbCuruser, lblCuruser);
             gbTitle(gbCuruser, lblEmail);
@@ -148,14 +149,6 @@ namespace Citadel
             int _x2 = gbCuruser.Width - lblLastname.Width - 15;
             lblFirstname.Location = new Point(_x, lblFirstname.Location.Y);
             lblLastname.Location = new Point(_x2, lblLastname.Location.Y);
-        }
-
-        void newUser()
-        {
-            for (int i = 0; i < rformLogin.users.GetLength(0); i++)
-            {
-                listUsers.Items.Add(getUser(i));
-            }
         }
 
         void _onClick(object sender, EventArgs e)
@@ -189,7 +182,8 @@ namespace Citadel
             tmrResult.Interval = 100;
             tmrResult.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
             activePanel = pnlbDashboard;
-            pnlDashboard.BringToFront();      
+            pnlDashboard.BringToFront();
+            gbTitle(gbUserlist, btnDelete);
             gbTitle(gbCuruser, btnLogout);
             gbNewuser.ForeColor = Color.White;
             gbUserlist.ForeColor = Color.White;
@@ -268,24 +262,27 @@ namespace Citadel
             this.Close();
         }
 
-        bool userOk, passOk, firstOk, lastOk, emailOk;
+        bool userOk, passOk, emailOk;
 
         private void txtUsername_Leave(object sender, EventArgs e)
         {
-            for (int i = 0; i < rformLogin.users.GetLength(0); i++)
+            if (txtUsername.Text.Length >= 5 && txtUsername.Text != "Username")
             {
-                
-                if (rformLogin.users[i, 0] == null)
+                for (int i = 0; i < rformLogin.users.GetLength(0); i++)
                 {
-                    confBox(npnlUser, Color.DodgerBlue);
-                    userOk = true;
-                    break;
-                }
-                else if (txtUsername.Text == getUser(i))
-                {
-                    confBox(npnlUser, Color.Red);
-                    userOk = false;
-                    break;
+
+                    if (rformLogin.users[i, 0] == null)
+                    {
+                        confBox(npnlUser, Color.DodgerBlue);
+                        userOk = true;
+                        break;
+                    }
+                    else if (txtUsername.Text == getUser(i))
+                    {
+                        confBox(npnlUser, Color.Red);
+                        userOk = false;
+                        break;
+                    }
                 }
             }
         }
@@ -334,6 +331,49 @@ namespace Citadel
 
         bool _emails = false;
 
+        void delete(int userNum)
+        {
+            // Create temporary file.
+            var tempFile = Path.GetTempFileName();
+            // Create an array of lines to keep if it doesn't contain the selected student.
+            var linesToKeep = File.ReadLines(appData + "/users.fbla").Where(l => !(rformLogin.Decrypt(l).Contains(rformLogin.users[userNum, 0] + '\\' + rformLogin.users[userNum, 1] + '\\' + rformLogin.users[userNum, 2])));
+
+            // Write the kept lines to the temporary file.
+            File.WriteAllLines(tempFile, linesToKeep);
+
+            // Delete current file.
+            File.Delete(appData + "/users.fbla");
+
+            //Replace old file with temporary file.
+            File.Move(tempFile, appData + "/users.fbla");
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (perms == 1)
+            {
+                if (listUsers.SelectedItem != null)
+                {
+                    delete(rformLogin.userNums[listUsers.SelectedItem.ToString()]);
+                    rformLogin.users[rformLogin.userNums[listUsers.SelectedItem.ToString()], 1] = rformLogin.Encrypt("disable");
+                    updateUserPage(currentUser);
+                    listUsers.Items.Remove(listUsers.SelectedItem);
+                }
+            } else
+            {
+                rformLogin.message("You do not have permission to delete users.", "Insufficient Permission", 1, -1);
+            }
+        }
+
+        private void listUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                updateUserPage(rformLogin.userNums[listUsers.SelectedItem.ToString()]);
+            }
+            catch { }
+        }
+
         private void txtEmailconf_Leave(object sender, EventArgs e)
         {
             if (txtEmail.Text != txtEmailconf.Text)
@@ -372,7 +412,12 @@ namespace Citadel
         void writeUser(string user, string pass, string first, string last, string email)
         {
             File.AppendAllText(appData + "/users.fbla", rformLogin.Encrypt(user + '\\' + pass + '\\' + first + '\\' + last + '\\' + email + "\r\n"));
-            listUsers.Items.Add(user.Substring(0, user.Length - 1));
+            int newUserNum = rformLogin.userNums.Count() + 1;
+            string rawUser = user.Substring(0, user.Length - 1);          
+            listUsers.Items.Add(rawUser);
+            rformLogin.userNums.Add(rawUser, newUserNum);
+            rformLogin.users[newUserNum, 0] = user; rformLogin.users[newUserNum, 1] = pass; rformLogin.users[newUserNum, 2] = first;
+            rformLogin.users[newUserNum, 3] = last; rformLogin.users[newUserNum, 4] = email;
             rformLogin.message(txtUsername.Text + " was successfully created!", "Success", 1, -1);
         }
 
