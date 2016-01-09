@@ -19,17 +19,15 @@ namespace Citadel
             InitializeComponent();
         }
 
-        string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // %APPDATA% path
-        string specificFolder; // A string used to store the Citadel folder in appData.
-        public static asset.ThirteenTextBox[] textboxA = new asset.ThirteenTextBox[50]; // Array of textboxes for placeholder method
-        public static int count = 0; // Counts placeholder array members.
+        string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        public static asset.ThirteenTextBox[] textboxA = new asset.ThirteenTextBox[50];
+        public static int count = 0;
         formMain main;
         public static msgbox _message;
-        public static string PasswordHash; public static string SaltKey = "S@LT&KEY"; // Encryption keys.
+        public static string PasswordHash; public static string SaltKey = "S@LT&KEY";
         public static string VIKey = "@1B2c3D4e5F6g7H8";
         public static String[,] users = new String[50, 5];
 
-        // Method used to encrypt a string.
         public static string Encrypt(string plainText)
         {
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
@@ -54,7 +52,6 @@ namespace Citadel
             return Convert.ToBase64String(cipherTextBytes);
         }
 
-        // Method used to decrypt a string.
         public static string Decrypt(string encryptedText)
         {
             byte[] cipherTextBytes = Convert.FromBase64String(encryptedText);
@@ -72,22 +69,17 @@ namespace Citadel
             return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
         }
 
-        // Used to call the custom message box.
         public static void message(string msg, string title, int type, int returnVal)
         {
             _message = new msgbox(msg, title, type, returnVal);
             _message.Show();
+            formMain.tmrResult.Start();
         }
 
-        // Stores the place text for the respective TextBoxes.
         public static Dictionary<TextBox, String> placeText = new Dictionary<TextBox, string>();
-        // Stores whether or not the respective TextBox uses password characters.
         public static Dictionary<TextBox, bool> passChar = new Dictionary<TextBox, bool>();
-
-        // Stores usernames with their respective user numbers.
         public static Dictionary<String, int> userNums = new Dictionary<String, int>();
 
-        // Declares all necessarry events for placeholder TextBoxes to work.
         public static void placeHolder(asset.ThirteenTextBox textbox, String text, bool pass)
         {
             placeText.Add(textbox, text);
@@ -96,8 +88,22 @@ namespace Citadel
             passChar[textbox] = pass;
             textbox.ForeColor = SystemColors.WindowFrame;
             textboxA[count].Enter += new System.EventHandler(onEnter);
+            textboxA[count].MouseEnter += new System.EventHandler(mouseEnter);
+            textboxA[count].MouseLeave += new System.EventHandler(mouseLeave);
             textboxA[count].Leave += new System.EventHandler(onLeave);
             count++;
+        }
+
+        public static void mouseEnter(object sender, EventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            textbox.Parent.Invalidate();
+        }
+
+        public static void mouseLeave(object sender, EventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            textbox.Parent.Invalidate();
         }
 
         public static void onEnter(object sender, EventArgs e)
@@ -125,9 +131,8 @@ namespace Citadel
             }
         }
 
-        StreamReader _reader; // Reader used when reading to array.
+        StreamReader _reader;
 
-        // Reads a plaintext file into a 2D array.
         void readToArray(string file, String[,] array2d)
         {
             string str;
@@ -150,8 +155,6 @@ namespace Citadel
                 }
                 if (array2d == users)
                 {
-                    // Match usernames with their respective user numbers
-                    // if being read to the users array.
                     userNums.Add(strArray[0].Substring(0, strArray[0].Length - 1), i);
                 }
                 i++;
@@ -159,33 +162,33 @@ namespace Citadel
             _reader.Close();
         }
 
-        // Checks if it is a users first time loading the
-        // program and initializes necessarry files.
+        string appData;
+
         private bool firstLoad()
         {
             bool _first = false;
-            if (!File.Exists(specificFolder))
+            if (!File.Exists(appData))
             {
-                Directory.CreateDirectory(specificFolder);
+                Directory.CreateDirectory(appData);
                 _first = true;
             }
-            if (!File.Exists(specificFolder + "/data"))
+            if (!File.Exists(appData + "/data"))
             {
-                Directory.CreateDirectory(specificFolder + "/data");
-                File.Create(specificFolder + "/data/students.fbla").Dispose();
+                Directory.CreateDirectory(appData + "/data");
+                File.Create(appData + "/data/students.fbla").Dispose();
                 _first = true;
             }
-            if (!File.Exists(specificFolder + "/sourceSettings.fbla"))
+            if (!File.Exists(appData + "/sourceSettings.fbla"))
             {
-                File.Create(specificFolder + "/sourceSettings.fbla").Dispose();
-                StreamWriter _initial = new StreamWriter(specificFolder + "/sourceSettings.fbla");
+                File.Create(appData + "/sourceSettings.fbla").Dispose();
+                StreamWriter _initial = new StreamWriter(appData + "/sourceSettings.fbla");
                 _initial.WriteLine("students.fbla\\0");
                 _initial.Close();
                 _first = true;
             }
-            if (!File.Exists(specificFolder + "/log.fbla"))
+            if (!File.Exists(appData + "/log.fbla"))
             {
-                File.Create(specificFolder + "/log.fbla").Dispose();
+                File.Create(appData + "/log.fbla").Dispose();
                 _first = true;
             }
             return _first;
@@ -193,20 +196,22 @@ namespace Citadel
 
         private void rformLogin_Load(object sender, EventArgs e)
         {
-            specificFolder = Path.Combine(folder, "Citadel");
+            appData = Path.Combine(folder, "Citadel");
             firstLoad();
             PasswordHash = "admin";
-            if (!File.Exists(specificFolder + "/users.fbla"))
+            if (!File.Exists(appData + "/users.fbla"))
             {
-                File.Create(specificFolder + "/users.fbla").Dispose();
-                StreamWriter _initial = new StreamWriter(specificFolder + "/users.fbla");
+                File.Create(appData + "/users.fbla").Dispose();
+                StreamWriter _initial = new StreamWriter(appData + "/users.fbla");
                 _initial.WriteLine(Encrypt("admin1\\password\\First\\Last\\Email") + "\r\n");
                 _initial.Close();
             }
             placeHolder(txtUser, "Username", false);
             placeHolder(txtPass, "Password", true);
-            readToArray(specificFolder + "/users.fbla", users);
+            readToArray(appData + "/users.fbla", users);
         }
+
+        bool GO = true;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -216,12 +221,14 @@ namespace Citadel
                 {
                     main = new formMain(i, 1);
                     main.Show();
+                    GO = false;
                     this.Hide();
                     break;
                 } else if (users[i, 0] == txtUser.Text + "0" && users[i, 1] == txtPass.Text)
                 {
                     main = new formMain(i, 0);
                     main.Show();
+                    GO = false;
                     this.Hide();
                     break;
                 } else if (i == users.GetLength(0) - 1)

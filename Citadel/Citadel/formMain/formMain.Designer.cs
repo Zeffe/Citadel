@@ -78,7 +78,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.divider1 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlStudents = new System.Windows.Forms.Panel();
@@ -158,7 +158,7 @@
             this.thirteenForm1.Controls.Add(this.label2);
             this.thirteenForm1.Controls.Add(this.divider1);
             this.thirteenForm1.Controls.Add(this.lblUser);
-            this.thirteenForm1.Controls.Add(this.lblWelcome);
+            this.thirteenForm1.Controls.Add(this.label1);
             this.thirteenForm1.Controls.Add(this.thirteenControlBox1);
             this.thirteenForm1.Controls.Add(this.pnlContainer);
             this.thirteenForm1.Controls.Add(this.pnlStudents);
@@ -288,7 +288,7 @@
             this.txtEmailconf.Location = new System.Drawing.Point(285, 162);
             this.txtEmailconf.Name = "txtEmailconf";
             this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
-            this.txtEmailconf.TabIndex = 6;
+            this.txtEmailconf.TabIndex = 10;
             this.txtEmailconf.Leave += new System.EventHandler(this.txtEmailconf_Leave);
             // 
             // label16
@@ -332,7 +332,7 @@
             this.cmbPerms.Location = new System.Drawing.Point(179, 240);
             this.cmbPerms.Name = "cmbPerms";
             this.cmbPerms.Size = new System.Drawing.Size(221, 23);
-            this.cmbPerms.TabIndex = 7;
+            this.cmbPerms.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -699,15 +699,15 @@
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "placeHolder";
             // 
-            // lblWelcome
+            // label1
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.lblWelcome.Location = new System.Drawing.Point(12, 42);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(66, 16);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Welcome";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome";
             // 
             // thirteenControlBox1
             // 
@@ -1094,7 +1094,7 @@
         private asset.ThirteenForm thirteenForm1;
         private asset.ThirteenControlBox thirteenControlBox1;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Label divider1;
         private System.Windows.Forms.Label label2;
