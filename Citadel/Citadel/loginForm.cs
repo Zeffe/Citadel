@@ -193,9 +193,16 @@ namespace Citadel
 
         private void rformLogin_Load(object sender, EventArgs e)
         {
-            specificFolder = Path.Combine(folder, "Citadel");
+            specificFolder = Path.Combine(folder, "Citadel"); // %APPDATA%/Citadel home path
+            // Checks that all existing files are created.
             firstLoad();
+
+            // Sets the hash for encryption.
             PasswordHash = "admin";
+
+            // Initializes an administrator account if the 
+            // users file does not exist. 
+            // User: admin  Pass: password
             if (!File.Exists(specificFolder + "/users.fbla"))
             {
                 File.Create(specificFolder + "/users.fbla").Dispose();
@@ -203,21 +210,28 @@ namespace Citadel
                 _initial.WriteLine(Encrypt("admin1\\password\\First\\Last\\Email") + "\r\n");
                 _initial.Close();
             }
+
+            // Places the placeholder text into given TextBoxes.
             placeHolder(txtUser, "Username", false);
             placeHolder(txtPass, "Password", true);
+
+            // Reads the data from users.fbla to the users array.
             readToArray(specificFolder + "/users.fbla", users);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // Loops through each user.
             for (int i = 0; i <= users.GetLength(0) - 1; i++)
             {
+                // If the user matches and ends in 1, give admin permissions.
                 if (users[i, 0] == txtUser.Text + "1" && users[i, 1] == txtPass.Text)
                 {
                     main = new formMain(i, 1);
                     main.Show();
                     this.Hide();
                     break;
+                // If the user matches and ends in 0, give normal user permissions.
                 } else if (users[i, 0] == txtUser.Text + "0" && users[i, 1] == txtPass.Text)
                 {
                     main = new formMain(i, 0);
@@ -231,6 +245,7 @@ namespace Citadel
             }
         }
 
+        // Focus password TextBox on enter key press.
         private void txtUser_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -241,6 +256,7 @@ namespace Citadel
             }
         }
 
+        // Simulate a login click on enter key press.
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
