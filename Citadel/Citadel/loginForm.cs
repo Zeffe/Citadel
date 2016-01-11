@@ -152,7 +152,11 @@ namespace Citadel
                 {
                     // Match usernames with their respective user numbers
                     // if being read to the users array.
-                    userNums.Add(strArray[0].Substring(0, strArray[0].Length - 1), i);
+                    try
+                    {
+                        userNums.Add(strArray[0].Substring(0, strArray[0].Length - 1), i);
+                    }
+                    catch { }
                 }
                 i++;
             }
@@ -206,9 +210,7 @@ namespace Citadel
             if (!File.Exists(specificFolder + "/users.fbla"))
             {
                 File.Create(specificFolder + "/users.fbla").Dispose();
-                StreamWriter _initial = new StreamWriter(specificFolder + "/users.fbla");
-                _initial.WriteLine(Encrypt("admin1\\password\\First\\Last\\Email") + "\r\n");
-                _initial.Close();
+                File.AppendAllText(specificFolder + "/users.fbla", Encrypt("admin1\\password\\First\\Last\\Email" + "\r\n"));
             }
 
             // Places the placeholder text into given TextBoxes.

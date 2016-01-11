@@ -19,10 +19,7 @@ namespace Citadel
         int currentUser;       // Usernumber of the logged in user.
         int perms;             // Used to recognize permissions of a user, only 1 = administrator.
         string specificFolder; // A string used to store the Citadel folder in appData.
-        bool logout = false;   // Checks if application needs to exit or only form.
         Panel activePanel;     // Panel used to find the height to move indicator.
-        bool _emails = false;  // Checks that both emails have been filled out in new user form.
-        bool _pass = false;    // Checks that both passwords have been filled out in new user form.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -93,6 +90,25 @@ namespace Citadel
             pctPointer.Location = heights[pnl];
         }
 
+        // Method for highlighting of buttons on mouse enter.
+        void pbHighlight(PictureBox pb)
+        {
+            pb.MouseEnter += new EventHandler(pbEnter);
+            pb.MouseLeave += new EventHandler(pbLeave);
+        }
+
+        void pbEnter(object sender, EventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            pb.BackColor = Color.DodgerBlue;
+        }
+
+        void pbLeave(object sender, EventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            pb.BackColor = pb.Parent.BackColor;
+        }
+
         void panelButton(Panel panelb, Label label, PictureBox picture, Panel display)
         {
             displays.Add(panelb, display);
@@ -146,24 +162,6 @@ namespace Citadel
             updateSelected(_lbl.Parent as Panel);
         }
 
-        // Changes selected user information to match
-        // a given user number.
-        void updateUserPage(int user)
-        {
-            lblFirstname.Text = rformLogin.users[user, 2];
-            lblLastname.Text = rformLogin.users[user, 3];
-            lblEmail.Text = rformLogin.users[user, 4];
-            lblCuruser.Text = getUser(user);
-
-            gbTitle(gbCuruser, lblCuruser);
-            gbTitle(gbCuruser, lblEmail);
-
-            int _x = gbCuruser.Width - lblFirstname.Width - 15;
-            int _x2 = gbCuruser.Width - lblLastname.Width - 15;
-            lblFirstname.Location = new Point(_x, lblFirstname.Location.Y);
-            lblLastname.Location = new Point(_x2, lblLastname.Location.Y);
-        }
-
         void _onClick(object sender, EventArgs e)
         {
             updateSelected(pnlbUsers);
@@ -204,6 +202,9 @@ namespace Citadel
             gbTitle(gbCuruser, btnLogout);
             gbNewuser.ForeColor = Color.White;
             gbUserlist.ForeColor = Color.White;
+            gbSourceinfo.ForeColor = Color.White;
+            gbStudentList.ForeColor = Color.White;
+            gbNewStudent.ForeColor = Color.White;
 
             // Click event handlers that open the user page
             // when the welcome message is clicked.
@@ -236,7 +237,7 @@ namespace Citadel
             // Adds all users to the user list on user page.
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
             {
-                if (rformLogin.users[i, 0] == null) break;
+                if (rformLogin.users[i, 1] == null) break;
                 listUsers.Items.Add(getUser(i));
             }
 
@@ -248,6 +249,12 @@ namespace Citadel
             panelButton(pnlbUsers, lblUsers, pctUsers, pnlUsers);
             panelButton(pnlbSettings, lblSettings, pctSettings, pnlSettings);
             panelButton(pnlbInfo, lblInfo, pctInfo, pnlInfo);
+
+            // Initialize highlighting for picture box buttons.
+            pbHighlight(btnCopyQf);
+            pbHighlight(btnEdit);
+            pbHighlight(btnDelStudent);
+            pbHighlight(btnView);
 
             // Moves panels behind the given textboxes in order to
             // easily draw a colored signifier around the textboxes.
@@ -268,6 +275,17 @@ namespace Citadel
             rformLogin.placeHolder(txtEmail, "Email", false);
             rformLogin.placeHolder(txtEmailconf, "Confirm Email", false);
 
+            // tabUser events.
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            this.txtPassconf.Leave += new System.EventHandler(this.txtPassconf_Leave);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.listUsers.SelectedIndexChanged += new System.EventHandler(this.listUsers_SelectedIndexChanged);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
+            this.txtEmailconf.Leave += new System.EventHandler(this.txtEmailconf_Leave);
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+
             cmbPerms.SelectedIndex = 0;
 
             // Disables new user form and user delete if user is not administrator.
@@ -278,84 +296,7 @@ namespace Citadel
             }
 
             updateUserPage(currentUser);
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            rformLogin _login = new rformLogin();
-            _login.Show();
-            logout = true;
-            this.Close();
-        }
-
-        // Checks if the given fields meet their requirements.
-        bool userOk, passOk, emailOk;
-
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
-            // Checks that username is not already taken.
-            if (txtUsername.Text.Length >= 5 && txtUsername.Text != "Username")
-            {
-                for (int i = 0; i < rformLogin.users.GetLength(0); i++)
-                {
-
-                    if (rformLogin.users[i, 0] == null)
-                    {
-                        confBox(npnlUser, Color.DodgerBlue);
-                        userOk = true;
-                        break;
-                    }
-                    else if (txtUsername.Text == getUser(i))
-                    {
-                        confBox(npnlUser, Color.Red);
-                        userOk = false;
-                        break;
-                    }
-                }
-            }
-        }
-
-        private void txtPassword_Leave(object sender, EventArgs e)
-        {
-            // Checks that password is greater than 5 characters.
-            if (txtPassword.Text.Length >= 5)
-            {
-                confBox(npnlPass, Color.DodgerBlue);
-                ttMaster.Hide(txtPassword);
-            } else
-            {
-                confBox(npnlPass, Color.Red);
-                ttMaster.Show("Passwords must be at least 5 characters long.", txtPassword);
-            }
-            if (_pass)
-            {
-                if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length >= 5)
-                {
-                    confBox(npnlPassconf, Color.DodgerBlue);
-                    passOk = true;
-                }
-                else
-                {
-                    confBox(npnlPassconf, Color.Red);
-                    passOk = false;
-                }
-            }
-        }
-
-        private void txtPassconf_Leave(object sender, EventArgs e)
-        {
-            // Checks that password fields match.
-            if (txtPassconf.Text == txtPassword.Text && txtPassword.Text.Length >= 5)
-            {
-                confBox(npnlPassconf, Color.DodgerBlue);
-                passOk = true;
-            } else
-            {
-                confBox(npnlPassconf, Color.Red);
-                passOk = false;
-            }
-            _pass = true;
-        }        
+        }   
 
         void delete(string contains, string path, bool decrypt)
         {
@@ -379,108 +320,6 @@ namespace Citadel
 
             //Replace old file with temporary file.
             File.Move(tempFile, path);
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            // Removes the selected item from the
-            // user file, user array, and listbox.
-            if (listUsers.SelectedItem != null)
-            {
-                int _userNum = rformLogin.userNums[listUsers.SelectedItem.ToString()];
-                delete(rformLogin.users[_userNum, 0] + '\\' + rformLogin.users[_userNum, 1] + '\\' + rformLogin.users[_userNum, 2], specificFolder + "/users.fbla", true);
-                rformLogin.users[rformLogin.userNums[listUsers.SelectedItem.ToString()], 1] = rformLogin.Encrypt("disable");
-                updateUserPage(currentUser);
-                listUsers.Items.Remove(listUsers.SelectedItem);
-            }
-        }
-
-        private void listUsers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Displays user information when clicking
-            // on a user in user list.
-            try
-            {
-                updateUserPage(rformLogin.userNums[listUsers.SelectedItem.ToString()]);
-            } catch { }
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-            // Checks that email is filled out correctly.
-            if (_emails)
-            {
-                if (txtEmail.Text != txtEmailconf.Text)
-                {
-                    confBox(npnlEmailconf, Color.Red);
-                    confBox(npnlEmail, Color.Red);
-                    emailOk = false;
-                }
-                else
-                {
-                    confBox(npnlEmailconf, Color.DodgerBlue);
-                    confBox(npnlEmail, Color.DodgerBlue);
-                    emailOk = true;
-                }
-            }
-        }
-
-        private void txtEmailconf_Leave(object sender, EventArgs e)
-        {
-            // Checks that emails match.
-            if (txtEmail.Text != txtEmailconf.Text)
-            {
-                confBox(npnlEmailconf, Color.Red);
-                confBox(npnlEmail, Color.Red);
-                emailOk = false;
-            } else
-            {
-                confBox(npnlEmailconf, Color.DodgerBlue);
-                confBox(npnlEmail, Color.DodgerBlue);
-                emailOk = true;
-            }
-            _emails = true;
-        }
-
-        void writeUser(string user, string pass, string first, string last, string email)
-        {
-            // Writes the text to the user file.
-            File.AppendAllText(specificFolder + "/users.fbla", rformLogin.Encrypt(user + '\\' + pass + '\\' + first + '\\' + last + '\\' + email + "\r\n"));
-
-            // Sets the user number for the new user and the
-            // username without the permission number.
-            int newUserNum = rformLogin.userNums.Count() + 1;
-            string rawUser = user.Substring(0, user.Length - 1);     
-                 
-            // Adds the new user to the users array and listbox.
-            listUsers.Items.Add(rawUser);
-            rformLogin.userNums.Add(rawUser, newUserNum);
-            rformLogin.users[newUserNum, 0] = user; rformLogin.users[newUserNum, 1] = pass; rformLogin.users[newUserNum, 2] = first;
-            rformLogin.users[newUserNum, 3] = last; rformLogin.users[newUserNum, 4] = email;
-            rformLogin.message(txtUsername.Text + " was successfully created!", "Success", 1, -1);
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            // Creates the new user if all fields throw no errors.
-            if (userOk && passOk && emailOk && txtFirstname.Text !=
-                rformLogin.placeText[txtFirstname] && txtLastname.Text != rformLogin.placeText[txtLastname])
-            {
-                writeUser(txtUsername.Text + cmbPerms.SelectedIndex.ToString(), txtPassconf.Text, txtFirstname.Text, txtLastname.Text, txtEmail.Text);
-            } else
-            {
-                rformLogin.message("Please make sure all entries are complete and correct.", "Error", 1, -1);
-            }
-        }
-
-        private void btnCopyQf_MouseEnter(object sender, EventArgs e)
-        {
-            btnCopyQf.BackColor = Color.DodgerBlue;
-        }
-
-        private void btnCopyQf_MouseLeave(object sender, EventArgs e)
-        {
-            btnCopyQf.BackColor = Color.FromArgb(35,35,35);
         }
     }
 }

@@ -35,11 +35,27 @@
             this.gbNewStudent = new System.Windows.Forms.GroupBox();
             this.tcNewStudent = new asset.ThirteenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCopyQf = new System.Windows.Forms.PictureBox();
+            this.txtComment = new asset.ThirteenTextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.thirteenTextBox4 = new asset.ThirteenTextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.thirteenTextBox3 = new asset.ThirteenTextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblGrade = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.thirteenTextBox2 = new asset.ThirteenTextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.lblEmail2 = new System.Windows.Forms.Label();
             this.lblSchool = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.thirteenTextBox1 = new asset.ThirteenTextBox();
@@ -54,6 +70,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.lblSourcename = new System.Windows.Forms.Label();
             this.gbStudentList = new System.Windows.Forms.GroupBox();
+            this.btnView = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.btnDelStudent = new System.Windows.Forms.PictureBox();
+            this.cmbTreeview = new asset.ThirteenComboBox();
             this.tvStudents = new System.Windows.Forms.TreeView();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlUsers = new System.Windows.Forms.Panel();
@@ -108,58 +128,51 @@
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.pctPointer = new System.Windows.Forms.PictureBox();
+            this.pctPointer2 = new System.Windows.Forms.PictureBox();
             this.pnlbStats = new System.Windows.Forms.Panel();
+            this.pctStats = new System.Windows.Forms.PictureBox();
             this.lblStats = new System.Windows.Forms.Label();
             this.pnlbStudents = new System.Windows.Forms.Panel();
+            this.pctStudents = new System.Windows.Forms.PictureBox();
             this.lblStudents = new System.Windows.Forms.Label();
             this.pnlbSource = new System.Windows.Forms.Panel();
+            this.pctSource = new System.Windows.Forms.PictureBox();
             this.lblSource = new System.Windows.Forms.Label();
             this.pnlbDashboard = new System.Windows.Forms.Panel();
+            this.pctDashboard = new System.Windows.Forms.PictureBox();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.pnlbUsers = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pctUsers = new System.Windows.Forms.PictureBox();
             this.lblUsers = new System.Windows.Forms.Label();
             this.pnlbSettings = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.pctSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
             this.pnlbInfo = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
+            this.pctInfo = new System.Windows.Forms.PictureBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
-            this.label28 = new System.Windows.Forms.Label();
-            this.thirteenTextBox2 = new asset.ThirteenTextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblGrade = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.thirteenTextBox3 = new asset.ThirteenTextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.thirteenTextBox4 = new asset.ThirteenTextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.txtComment = new asset.ThirteenTextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pctPointer = new System.Windows.Forms.PictureBox();
-            this.pctPointer2 = new System.Windows.Forms.PictureBox();
-            this.pctStats = new System.Windows.Forms.PictureBox();
-            this.pctStudents = new System.Windows.Forms.PictureBox();
-            this.pctSource = new System.Windows.Forms.PictureBox();
-            this.pctDashboard = new System.Windows.Forms.PictureBox();
-            this.pctUsers = new System.Windows.Forms.PictureBox();
-            this.pctSettings = new System.Windows.Forms.PictureBox();
-            this.pctInfo = new System.Windows.Forms.PictureBox();
-            this.btnCopyQf = new System.Windows.Forms.PictureBox();
             this.thirteenForm1.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
             this.tcNewStudent.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbSourceinfo.SuspendLayout();
             this.gbStudentList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
             this.pnlUsers.SuspendLayout();
             this.gbNewuser.SuspendLayout();
             this.gbUserlist.SuspendLayout();
@@ -169,28 +182,22 @@
             this.pnlSettings.SuspendLayout();
             this.pnlSource.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
-            this.pnlbStats.SuspendLayout();
-            this.pnlbStudents.SuspendLayout();
-            this.pnlbSource.SuspendLayout();
-            this.pnlbDashboard.SuspendLayout();
-            this.pnlbUsers.SuspendLayout();
-            this.pnlbSettings.SuspendLayout();
-            this.pnlbInfo.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).BeginInit();
+            this.pnlbStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStats)).BeginInit();
+            this.pnlbStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).BeginInit();
+            this.pnlbSource.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSource)).BeginInit();
+            this.pnlbDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).BeginInit();
+            this.pnlbUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).BeginInit();
+            this.pnlbSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
+            this.pnlbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).BeginInit();
             this.SuspendLayout();
             // 
             // thirteenForm1
@@ -298,6 +305,134 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View";
             // 
+            // btnCopyQf
+            // 
+            this.btnCopyQf.BackgroundImage = global::Citadel.Properties.Resources.medical50;
+            this.btnCopyQf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCopyQf.Location = new System.Drawing.Point(488, 46);
+            this.btnCopyQf.Name = "btnCopyQf";
+            this.btnCopyQf.Size = new System.Drawing.Size(42, 42);
+            this.btnCopyQf.TabIndex = 13;
+            this.btnCopyQf.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnCopyQf, "Copy QuickAdd Code");
+            // 
+            // txtComment
+            // 
+            this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtComment.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtComment.ForeColor = System.Drawing.Color.White;
+            this.txtComment.Location = new System.Drawing.Point(302, 116);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.ReadOnly = true;
+            this.txtComment.Size = new System.Drawing.Size(241, 105);
+            this.txtComment.TabIndex = 25;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(299, 97);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 16);
+            this.label32.TabIndex = 24;
+            this.label32.Text = "Comments";
+            // 
+            // thirteenTextBox4
+            // 
+            this.thirteenTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox4.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox4.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox4.Location = new System.Drawing.Point(302, 65);
+            this.thirteenTextBox4.Name = "thirteenTextBox4";
+            this.thirteenTextBox4.ReadOnly = true;
+            this.thirteenTextBox4.Size = new System.Drawing.Size(65, 22);
+            this.thirteenTextBox4.TabIndex = 23;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(299, 46);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(67, 16);
+            this.label31.TabIndex = 22;
+            this.label31.Text = "Fees Due";
+            // 
+            // thirteenTextBox3
+            // 
+            this.thirteenTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox3.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox3.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox3.Location = new System.Drawing.Point(379, 65);
+            this.thirteenTextBox3.Name = "thirteenTextBox3";
+            this.thirteenTextBox3.ReadOnly = true;
+            this.thirteenTextBox3.Size = new System.Drawing.Size(78, 22);
+            this.thirteenTextBox3.TabIndex = 21;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(376, 46);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(81, 16);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Year Joined";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel3.Controls.Add(this.lblGrade);
+            this.panel3.Location = new System.Drawing.Point(226, 116);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(65, 43);
+            this.panel3.TabIndex = 15;
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
+            this.lblGrade.Location = new System.Drawing.Point(0, 5);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(65, 32);
+            this.lblGrade.TabIndex = 0;
+            this.lblGrade.Text = "#";
+            this.lblGrade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(223, 97);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(46, 16);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Grade";
+            // 
+            // thirteenTextBox2
+            // 
+            this.thirteenTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox2.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox2.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox2.Location = new System.Drawing.Point(226, 65);
+            this.thirteenTextBox2.Name = "thirteenTextBox2";
+            this.thirteenTextBox2.ReadOnly = true;
+            this.thirteenTextBox2.Size = new System.Drawing.Size(65, 22);
+            this.thirteenTextBox2.TabIndex = 18;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(223, 46);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(68, 16);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "Member #";
+            // 
             // lblEmail2
             // 
             this.lblEmail2.AutoSize = true;
@@ -328,6 +463,28 @@
             this.panel2.Size = new System.Drawing.Size(83, 43);
             this.panel2.TabIndex = 14;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Citadel.Properties.Resources.checked21;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox3, "Active");
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Location = new System.Drawing.Point(48, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox4, "Not Active");
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -346,6 +503,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(83, 43);
             this.panel1.TabIndex = 13;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox2, "Male");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox1, "Female");
             // 
             // label26
             // 
@@ -497,6 +676,10 @@
             // 
             // gbStudentList
             // 
+            this.gbStudentList.Controls.Add(this.btnView);
+            this.gbStudentList.Controls.Add(this.btnEdit);
+            this.gbStudentList.Controls.Add(this.btnDelStudent);
+            this.gbStudentList.Controls.Add(this.cmbTreeview);
             this.gbStudentList.Controls.Add(this.tvStudents);
             this.gbStudentList.Location = new System.Drawing.Point(326, 77);
             this.gbStudentList.Name = "gbStudentList";
@@ -505,12 +688,61 @@
             this.gbStudentList.TabStop = false;
             this.gbStudentList.Text = "Student List";
             // 
+            // btnView
+            // 
+            this.btnView.BackgroundImage = global::Citadel.Properties.Resources.eyeball15;
+            this.btnView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnView.Location = new System.Drawing.Point(169, 163);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(26, 26);
+            this.btnView.TabIndex = 4;
+            this.btnView.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnView, "View");
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackgroundImage = global::Citadel.Properties.Resources.edit45;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEdit.Location = new System.Drawing.Point(201, 163);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(26, 26);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnEdit, "Edit");
+            // 
+            // btnDelStudent
+            // 
+            this.btnDelStudent.BackgroundImage = global::Citadel.Properties.Resources.delete96;
+            this.btnDelStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnDelStudent.Location = new System.Drawing.Point(233, 163);
+            this.btnDelStudent.Name = "btnDelStudent";
+            this.btnDelStudent.Size = new System.Drawing.Size(26, 26);
+            this.btnDelStudent.TabIndex = 2;
+            this.btnDelStudent.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnDelStudent, "Delete");
+            // 
+            // cmbTreeview
+            // 
+            this.cmbTreeview.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.cmbTreeview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cmbTreeview.ColorScheme = asset.ThirteenComboBox.ColorSchemes.Dark;
+            this.cmbTreeview.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTreeview.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTreeview.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.cmbTreeview.ForeColor = System.Drawing.Color.White;
+            this.cmbTreeview.FormattingEnabled = true;
+            this.cmbTreeview.Location = new System.Drawing.Point(6, 163);
+            this.cmbTreeview.Name = "cmbTreeview";
+            this.cmbTreeview.Size = new System.Drawing.Size(155, 26);
+            this.cmbTreeview.TabIndex = 1;
+            this.ttMaster.SetToolTip(this.cmbTreeview, "Second piece of information to display.");
+            // 
             // tvStudents
             // 
             this.tvStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.tvStudents.Location = new System.Drawing.Point(6, 21);
             this.tvStudents.Name = "tvStudents";
-            this.tvStudents.Size = new System.Drawing.Size(253, 168);
+            this.tvStudents.Size = new System.Drawing.Size(253, 137);
             this.tvStudents.TabIndex = 0;
             // 
             // label12
@@ -631,7 +863,6 @@
             this.txtEmailconf.Name = "txtEmailconf";
             this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
             this.txtEmailconf.TabIndex = 6;
-            this.txtEmailconf.Leave += new System.EventHandler(this.txtEmailconf_Leave);
             // 
             // label16
             // 
@@ -656,7 +887,6 @@
             this.btnCreate.TabIndex = 8;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // cmbPerms
             // 
@@ -687,7 +917,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(255, 26);
             this.txtEmail.TabIndex = 5;
-            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // txtLastname
             // 
@@ -724,7 +953,6 @@
             this.txtPassconf.Name = "txtPassconf";
             this.txtPassconf.Size = new System.Drawing.Size(166, 26);
             this.txtPassconf.TabIndex = 2;
-            this.txtPassconf.Leave += new System.EventHandler(this.txtPassconf_Leave);
             // 
             // txtPassword
             // 
@@ -737,7 +965,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(166, 26);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // txtUsername
             // 
@@ -751,7 +978,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(166, 26);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // gbUserlist
             // 
@@ -777,7 +1003,6 @@
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete Selected";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // listUsers
             // 
@@ -789,7 +1014,6 @@
             this.listUsers.Name = "listUsers";
             this.listUsers.Size = new System.Drawing.Size(253, 132);
             this.listUsers.TabIndex = 0;
-            this.listUsers.SelectedIndexChanged += new System.EventHandler(this.listUsers_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -1091,6 +1315,29 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Citadel - [ Dashboard ]";
             // 
+            // pctPointer
+            // 
+            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
+            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer.Location = new System.Drawing.Point(219, 85);
+            this.pctPointer.Name = "pctPointer";
+            this.pctPointer.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer.TabIndex = 8;
+            this.pctPointer.TabStop = false;
+            // 
+            // pctPointer2
+            // 
+            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
+            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
+            this.pctPointer2.Name = "pctPointer2";
+            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer2.TabIndex = 10;
+            this.pctPointer2.TabStop = false;
+            this.pctPointer2.Visible = false;
+            // 
             // pnlbStats
             // 
             this.pnlbStats.Controls.Add(this.pctStats);
@@ -1099,6 +1346,16 @@
             this.pnlbStats.Name = "pnlbStats";
             this.pnlbStats.Size = new System.Drawing.Size(229, 49);
             this.pnlbStats.TabIndex = 8;
+            // 
+            // pctStats
+            // 
+            this.pctStats.BackgroundImage = global::Citadel.Properties.Resources.chart;
+            this.pctStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctStats.Location = new System.Drawing.Point(14, 13);
+            this.pctStats.Name = "pctStats";
+            this.pctStats.Size = new System.Drawing.Size(24, 24);
+            this.pctStats.TabIndex = 1;
+            this.pctStats.TabStop = false;
             // 
             // lblStats
             // 
@@ -1119,6 +1376,16 @@
             this.pnlbStudents.Size = new System.Drawing.Size(229, 49);
             this.pnlbStudents.TabIndex = 9;
             // 
+            // pctStudents
+            // 
+            this.pctStudents.BackgroundImage = global::Citadel.Properties.Resources.students17;
+            this.pctStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctStudents.Location = new System.Drawing.Point(14, 13);
+            this.pctStudents.Name = "pctStudents";
+            this.pctStudents.Size = new System.Drawing.Size(24, 24);
+            this.pctStudents.TabIndex = 1;
+            this.pctStudents.TabStop = false;
+            // 
             // lblStudents
             // 
             this.lblStudents.AutoSize = true;
@@ -1137,6 +1404,16 @@
             this.pnlbSource.Name = "pnlbSource";
             this.pnlbSource.Size = new System.Drawing.Size(229, 49);
             this.pnlbSource.TabIndex = 10;
+            // 
+            // pctSource
+            // 
+            this.pctSource.BackgroundImage = global::Citadel.Properties.Resources.folder265;
+            this.pctSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctSource.Location = new System.Drawing.Point(14, 13);
+            this.pctSource.Name = "pctSource";
+            this.pctSource.Size = new System.Drawing.Size(24, 24);
+            this.pctSource.TabIndex = 1;
+            this.pctSource.TabStop = false;
             // 
             // lblSource
             // 
@@ -1157,6 +1434,16 @@
             this.pnlbDashboard.Name = "pnlbDashboard";
             this.pnlbDashboard.Size = new System.Drawing.Size(229, 49);
             this.pnlbDashboard.TabIndex = 7;
+            // 
+            // pctDashboard
+            // 
+            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
+            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
+            this.pctDashboard.Name = "pctDashboard";
+            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
+            this.pctDashboard.TabIndex = 1;
+            this.pctDashboard.TabStop = false;
             // 
             // lblDashboard
             // 
@@ -1186,6 +1473,16 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(229, 2);
             this.label10.TabIndex = 13;
+            // 
+            // pctUsers
+            // 
+            this.pctUsers.BackgroundImage = global::Citadel.Properties.Resources.manager3;
+            this.pctUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctUsers.Location = new System.Drawing.Point(14, 13);
+            this.pctUsers.Name = "pctUsers";
+            this.pctUsers.Size = new System.Drawing.Size(24, 24);
+            this.pctUsers.TabIndex = 1;
+            this.pctUsers.TabStop = false;
             // 
             // lblUsers
             // 
@@ -1217,6 +1514,16 @@
             this.label13.Size = new System.Drawing.Size(229, 2);
             this.label13.TabIndex = 13;
             // 
+            // pctSettings
+            // 
+            this.pctSettings.BackgroundImage = global::Citadel.Properties.Resources.gear39;
+            this.pctSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctSettings.Location = new System.Drawing.Point(14, 13);
+            this.pctSettings.Name = "pctSettings";
+            this.pctSettings.Size = new System.Drawing.Size(24, 24);
+            this.pctSettings.TabIndex = 1;
+            this.pctSettings.TabStop = false;
+            // 
             // lblSettings
             // 
             this.lblSettings.AutoSize = true;
@@ -1247,261 +1554,6 @@
             this.label18.Size = new System.Drawing.Size(229, 2);
             this.label18.TabIndex = 13;
             // 
-            // lblInfo
-            // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblInfo.Location = new System.Drawing.Point(65, 13);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(102, 24);
-            this.lblInfo.TabIndex = 0;
-            this.lblInfo.Text = "Information";
-            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(223, 46);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 16);
-            this.label28.TabIndex = 17;
-            this.label28.Text = "Member #";
-            // 
-            // thirteenTextBox2
-            // 
-            this.thirteenTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox2.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox2.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox2.Location = new System.Drawing.Point(226, 65);
-            this.thirteenTextBox2.Name = "thirteenTextBox2";
-            this.thirteenTextBox2.ReadOnly = true;
-            this.thirteenTextBox2.Size = new System.Drawing.Size(65, 22);
-            this.thirteenTextBox2.TabIndex = 18;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(223, 97);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(46, 16);
-            this.label29.TabIndex = 19;
-            this.label29.Text = "Grade";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.lblGrade);
-            this.panel3.Location = new System.Drawing.Point(226, 116);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(65, 43);
-            this.panel3.TabIndex = 15;
-            // 
-            // lblGrade
-            // 
-            this.lblGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
-            this.lblGrade.Location = new System.Drawing.Point(0, 5);
-            this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(65, 32);
-            this.lblGrade.TabIndex = 0;
-            this.lblGrade.Text = "#";
-            this.lblGrade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(376, 46);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(81, 16);
-            this.label30.TabIndex = 20;
-            this.label30.Text = "Year Joined";
-            // 
-            // thirteenTextBox3
-            // 
-            this.thirteenTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox3.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox3.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox3.Location = new System.Drawing.Point(379, 65);
-            this.thirteenTextBox3.Name = "thirteenTextBox3";
-            this.thirteenTextBox3.ReadOnly = true;
-            this.thirteenTextBox3.Size = new System.Drawing.Size(78, 22);
-            this.thirteenTextBox3.TabIndex = 21;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(299, 46);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(67, 16);
-            this.label31.TabIndex = 22;
-            this.label31.Text = "Fees Due";
-            // 
-            // thirteenTextBox4
-            // 
-            this.thirteenTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox4.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox4.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox4.Location = new System.Drawing.Point(302, 65);
-            this.thirteenTextBox4.Name = "thirteenTextBox4";
-            this.thirteenTextBox4.ReadOnly = true;
-            this.thirteenTextBox4.Size = new System.Drawing.Size(65, 22);
-            this.thirteenTextBox4.TabIndex = 23;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(299, 97);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(72, 16);
-            this.label32.TabIndex = 24;
-            this.label32.Text = "Comments";
-            // 
-            // txtComment
-            // 
-            this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtComment.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtComment.ForeColor = System.Drawing.Color.White;
-            this.txtComment.Location = new System.Drawing.Point(302, 116);
-            this.txtComment.Multiline = true;
-            this.txtComment.Name = "txtComment";
-            this.txtComment.ReadOnly = true;
-            this.txtComment.Size = new System.Drawing.Size(241, 105);
-            this.txtComment.TabIndex = 25;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Citadel.Properties.Resources.checked21;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox3, "Active");
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(48, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox4, "Not Active");
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox2, "Male");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox1, "Female");
-            // 
-            // pctPointer
-            // 
-            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
-            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer.Location = new System.Drawing.Point(219, 85);
-            this.pctPointer.Name = "pctPointer";
-            this.pctPointer.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer.TabIndex = 8;
-            this.pctPointer.TabStop = false;
-            // 
-            // pctPointer2
-            // 
-            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
-            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
-            this.pctPointer2.Name = "pctPointer2";
-            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer2.TabIndex = 10;
-            this.pctPointer2.TabStop = false;
-            this.pctPointer2.Visible = false;
-            // 
-            // pctStats
-            // 
-            this.pctStats.BackgroundImage = global::Citadel.Properties.Resources.chart;
-            this.pctStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctStats.Location = new System.Drawing.Point(14, 13);
-            this.pctStats.Name = "pctStats";
-            this.pctStats.Size = new System.Drawing.Size(24, 24);
-            this.pctStats.TabIndex = 1;
-            this.pctStats.TabStop = false;
-            // 
-            // pctStudents
-            // 
-            this.pctStudents.BackgroundImage = global::Citadel.Properties.Resources.students17;
-            this.pctStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctStudents.Location = new System.Drawing.Point(14, 13);
-            this.pctStudents.Name = "pctStudents";
-            this.pctStudents.Size = new System.Drawing.Size(24, 24);
-            this.pctStudents.TabIndex = 1;
-            this.pctStudents.TabStop = false;
-            // 
-            // pctSource
-            // 
-            this.pctSource.BackgroundImage = global::Citadel.Properties.Resources.folder265;
-            this.pctSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctSource.Location = new System.Drawing.Point(14, 13);
-            this.pctSource.Name = "pctSource";
-            this.pctSource.Size = new System.Drawing.Size(24, 24);
-            this.pctSource.TabIndex = 1;
-            this.pctSource.TabStop = false;
-            // 
-            // pctDashboard
-            // 
-            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
-            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
-            this.pctDashboard.Name = "pctDashboard";
-            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
-            this.pctDashboard.TabIndex = 1;
-            this.pctDashboard.TabStop = false;
-            // 
-            // pctUsers
-            // 
-            this.pctUsers.BackgroundImage = global::Citadel.Properties.Resources.manager3;
-            this.pctUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctUsers.Location = new System.Drawing.Point(14, 13);
-            this.pctUsers.Name = "pctUsers";
-            this.pctUsers.Size = new System.Drawing.Size(24, 24);
-            this.pctUsers.TabIndex = 1;
-            this.pctUsers.TabStop = false;
-            // 
-            // pctSettings
-            // 
-            this.pctSettings.BackgroundImage = global::Citadel.Properties.Resources.gear39;
-            this.pctSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctSettings.Location = new System.Drawing.Point(14, 13);
-            this.pctSettings.Name = "pctSettings";
-            this.pctSettings.Size = new System.Drawing.Size(24, 24);
-            this.pctSettings.TabIndex = 1;
-            this.pctSettings.TabStop = false;
-            // 
             // pctInfo
             // 
             this.pctInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -1513,18 +1565,16 @@
             this.pctInfo.TabIndex = 1;
             this.pctInfo.TabStop = false;
             // 
-            // btnCopyQf
+            // lblInfo
             // 
-            this.btnCopyQf.BackgroundImage = global::Citadel.Properties.Resources.medical50;
-            this.btnCopyQf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCopyQf.Location = new System.Drawing.Point(488, 46);
-            this.btnCopyQf.Name = "btnCopyQf";
-            this.btnCopyQf.Size = new System.Drawing.Size(42, 42);
-            this.btnCopyQf.TabIndex = 13;
-            this.btnCopyQf.TabStop = false;
-            this.ttMaster.SetToolTip(this.btnCopyQf, "Copy QuickAdd Code");
-            this.btnCopyQf.MouseEnter += new System.EventHandler(this.btnCopyQf_MouseEnter);
-            this.btnCopyQf.MouseLeave += new System.EventHandler(this.btnCopyQf_MouseLeave);
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblInfo.Location = new System.Drawing.Point(65, 13);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(102, 24);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Text = "Information";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formMain
             // 
@@ -1547,11 +1597,20 @@
             this.tcNewStudent.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbSourceinfo.ResumeLayout(false);
             this.gbSourceinfo.PerformLayout();
             this.gbStudentList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).EndInit();
             this.pnlUsers.ResumeLayout(false);
             this.pnlUsers.PerformLayout();
             this.gbNewuser.ResumeLayout(false);
@@ -1569,35 +1628,29 @@
             this.pnlSource.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
             this.pnlDashboard.PerformLayout();
-            this.pnlbStats.ResumeLayout(false);
-            this.pnlbStats.PerformLayout();
-            this.pnlbStudents.ResumeLayout(false);
-            this.pnlbStudents.PerformLayout();
-            this.pnlbSource.ResumeLayout(false);
-            this.pnlbSource.PerformLayout();
-            this.pnlbDashboard.ResumeLayout(false);
-            this.pnlbDashboard.PerformLayout();
-            this.pnlbUsers.ResumeLayout(false);
-            this.pnlbUsers.PerformLayout();
-            this.pnlbSettings.ResumeLayout(false);
-            this.pnlbSettings.PerformLayout();
-            this.pnlbInfo.ResumeLayout(false);
-            this.pnlbInfo.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
+            this.pnlbStats.ResumeLayout(false);
+            this.pnlbStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStats)).EndInit();
+            this.pnlbStudents.ResumeLayout(false);
+            this.pnlbStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).EndInit();
+            this.pnlbSource.ResumeLayout(false);
+            this.pnlbSource.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSource)).EndInit();
+            this.pnlbDashboard.ResumeLayout(false);
+            this.pnlbDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).EndInit();
+            this.pnlbUsers.ResumeLayout(false);
+            this.pnlbUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).EndInit();
+            this.pnlbSettings.ResumeLayout(false);
+            this.pnlbSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).EndInit();
+            this.pnlbInfo.ResumeLayout(false);
+            this.pnlbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1725,5 +1778,9 @@
         private asset.ThirteenTextBox thirteenTextBox3;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox btnCopyQf;
+        private asset.ThirteenComboBox cmbTreeview;
+        private System.Windows.Forms.PictureBox btnDelStudent;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnView;
     }
 }
