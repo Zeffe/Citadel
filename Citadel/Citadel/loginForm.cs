@@ -83,7 +83,6 @@ namespace Citadel
         public static Dictionary<TextBox, String> placeText = new Dictionary<TextBox, string>();
         // Stores whether or not the respective TextBox uses password characters.
         public static Dictionary<TextBox, bool> passChar = new Dictionary<TextBox, bool>();
-
         // Stores usernames with their respective user numbers.
         public static Dictionary<String, int> userNums = new Dictionary<String, int>();
 
