@@ -442,8 +442,6 @@ namespace Citadel
             _emails = true;
         }
 
-        
-
         void writeUser(string user, string pass, string first, string last, string email)
         {
             // Writes the text to the user file.
@@ -473,6 +471,16 @@ namespace Citadel
             {
                 rformLogin.message("Please make sure all entries are complete and correct.", "Error", 1, -1);
             }
+        }
+
+        private void btnCopyQf_MouseEnter(object sender, EventArgs e)
+        {
+            btnCopyQf.BackColor = Color.DodgerBlue;
+        }
+
+        private void btnCopyQf_MouseLeave(object sender, EventArgs e)
+        {
+            btnCopyQf.BackColor = Color.FromArgb(35,35,35);
         }
     }
 }

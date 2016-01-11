@@ -156,6 +156,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="castle.ico" />
+    <None Include="Resources\medical50.png" />
+    <None Include="Resources\cancel30.png" />
+    <None Include="Resources\checked21.png" />
+    <None Include="Resources\male244.png" />
+    <None Include="Resources\female128.png" />
     <None Include="Resources\info28.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

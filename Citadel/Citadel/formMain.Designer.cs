@@ -31,6 +31,31 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.thirteenForm1 = new asset.ThirteenForm();
+            this.pnlStudents = new System.Windows.Forms.Panel();
+            this.gbNewStudent = new System.Windows.Forms.GroupBox();
+            this.tcNewStudent = new asset.ThirteenTabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblEmail2 = new System.Windows.Forms.Label();
+            this.lblSchool = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.thirteenTextBox1 = new asset.ThirteenTextBox();
+            this.lblStudentName = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gbSourceinfo = new System.Windows.Forms.GroupBox();
+            this.btnChangesrc = new asset.ThirteenButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lblSourcename = new System.Windows.Forms.Label();
+            this.gbStudentList = new System.Windows.Forms.GroupBox();
+            this.tvStudents = new System.Windows.Forms.TreeView();
+            this.label12 = new System.Windows.Forms.Label();
             this.pnlUsers = new System.Windows.Forms.Panel();
             this.gbNewuser = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -81,38 +106,60 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.pnlStudents = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pctPointer = new System.Windows.Forms.PictureBox();
-            this.pctPointer2 = new System.Windows.Forms.PictureBox();
             this.pnlbStats = new System.Windows.Forms.Panel();
-            this.pctStats = new System.Windows.Forms.PictureBox();
             this.lblStats = new System.Windows.Forms.Label();
             this.pnlbStudents = new System.Windows.Forms.Panel();
-            this.pctStudents = new System.Windows.Forms.PictureBox();
             this.lblStudents = new System.Windows.Forms.Label();
             this.pnlbSource = new System.Windows.Forms.Panel();
-            this.pctSource = new System.Windows.Forms.PictureBox();
             this.lblSource = new System.Windows.Forms.Label();
             this.pnlbDashboard = new System.Windows.Forms.Panel();
-            this.pctDashboard = new System.Windows.Forms.PictureBox();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.pnlbUsers = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pctUsers = new System.Windows.Forms.PictureBox();
             this.lblUsers = new System.Windows.Forms.Label();
             this.pnlbSettings = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.pctSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
             this.pnlbInfo = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.pctInfo = new System.Windows.Forms.PictureBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
+            this.label28 = new System.Windows.Forms.Label();
+            this.thirteenTextBox2 = new asset.ThirteenTextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblGrade = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.thirteenTextBox3 = new asset.ThirteenTextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.thirteenTextBox4 = new asset.ThirteenTextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtComment = new asset.ThirteenTextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctPointer = new System.Windows.Forms.PictureBox();
+            this.pctPointer2 = new System.Windows.Forms.PictureBox();
+            this.pctStats = new System.Windows.Forms.PictureBox();
+            this.pctStudents = new System.Windows.Forms.PictureBox();
+            this.pctSource = new System.Windows.Forms.PictureBox();
+            this.pctDashboard = new System.Windows.Forms.PictureBox();
+            this.pctUsers = new System.Windows.Forms.PictureBox();
+            this.pctSettings = new System.Windows.Forms.PictureBox();
+            this.pctInfo = new System.Windows.Forms.PictureBox();
+            this.btnCopyQf = new System.Windows.Forms.PictureBox();
             this.thirteenForm1.SuspendLayout();
+            this.pnlStudents.SuspendLayout();
+            this.gbNewStudent.SuspendLayout();
+            this.tcNewStudent.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.gbSourceinfo.SuspendLayout();
+            this.gbStudentList.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.gbNewuser.SuspendLayout();
             this.gbUserlist.SuspendLayout();
@@ -121,24 +168,29 @@
             this.pnlStats.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlSource.SuspendLayout();
-            this.pnlStudents.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
+            this.pnlbStats.SuspendLayout();
+            this.pnlbStudents.SuspendLayout();
+            this.pnlbSource.SuspendLayout();
+            this.pnlbDashboard.SuspendLayout();
+            this.pnlbUsers.SuspendLayout();
+            this.pnlbSettings.SuspendLayout();
+            this.pnlbInfo.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).BeginInit();
-            this.pnlbStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStats)).BeginInit();
-            this.pnlbStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).BeginInit();
-            this.pnlbSource.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSource)).BeginInit();
-            this.pnlbDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).BeginInit();
-            this.pnlbUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).BeginInit();
-            this.pnlbSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
-            this.pnlbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).BeginInit();
             this.SuspendLayout();
             // 
             // thirteenForm1
@@ -146,6 +198,7 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.pnlInfo);
             this.thirteenForm1.Controls.Add(this.pnlStats);
@@ -161,7 +214,6 @@
             this.thirteenForm1.Controls.Add(this.lblWelcome);
             this.thirteenForm1.Controls.Add(this.thirteenControlBox1);
             this.thirteenForm1.Controls.Add(this.pnlContainer);
-            this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlDashboard);
             this.thirteenForm1.Controls.Add(this.pctPointer);
             this.thirteenForm1.Controls.Add(this.pctPointer2);
@@ -180,6 +232,296 @@
             this.thirteenForm1.Size = new System.Drawing.Size(841, 638);
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
+            // 
+            // pnlStudents
+            // 
+            this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlStudents.Controls.Add(this.gbNewStudent);
+            this.pnlStudents.Controls.Add(this.gbSourceinfo);
+            this.pnlStudents.Controls.Add(this.gbStudentList);
+            this.pnlStudents.Controls.Add(this.label12);
+            this.pnlStudents.Location = new System.Drawing.Point(229, 34);
+            this.pnlStudents.Name = "pnlStudents";
+            this.pnlStudents.Size = new System.Drawing.Size(609, 599);
+            this.pnlStudents.TabIndex = 3;
+            // 
+            // gbNewStudent
+            // 
+            this.gbNewStudent.Controls.Add(this.tcNewStudent);
+            this.gbNewStudent.Location = new System.Drawing.Point(20, 298);
+            this.gbNewStudent.Name = "gbNewStudent";
+            this.gbNewStudent.Size = new System.Drawing.Size(571, 282);
+            this.gbNewStudent.TabIndex = 6;
+            this.gbNewStudent.TabStop = false;
+            this.gbNewStudent.Text = "New Student";
+            // 
+            // tcNewStudent
+            // 
+            this.tcNewStudent.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcNewStudent.ColorScheme = asset.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcNewStudent.Controls.Add(this.tabPage1);
+            this.tcNewStudent.Controls.Add(this.tabPage2);
+            this.tcNewStudent.ForeColor = System.Drawing.Color.White;
+            this.tcNewStudent.Location = new System.Drawing.Point(6, 20);
+            this.tcNewStudent.Name = "tcNewStudent";
+            this.tcNewStudent.SelectedIndex = 0;
+            this.tcNewStudent.Size = new System.Drawing.Size(559, 256);
+            this.tcNewStudent.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage1.Controls.Add(this.btnCopyQf);
+            this.tabPage1.Controls.Add(this.txtComment);
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.thirteenTextBox4);
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.thirteenTextBox3);
+            this.tabPage1.Controls.Add(this.label30);
+            this.tabPage1.Controls.Add(this.panel3);
+            this.tabPage1.Controls.Add(this.label29);
+            this.tabPage1.Controls.Add(this.thirteenTextBox2);
+            this.tabPage1.Controls.Add(this.label28);
+            this.tabPage1.Controls.Add(this.lblEmail2);
+            this.tabPage1.Controls.Add(this.lblSchool);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.label27);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.label26);
+            this.tabPage1.Controls.Add(this.label25);
+            this.tabPage1.Controls.Add(this.thirteenTextBox1);
+            this.tabPage1.Controls.Add(this.lblStudentName);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(551, 227);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "View";
+            // 
+            // lblEmail2
+            // 
+            this.lblEmail2.AutoSize = true;
+            this.lblEmail2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblEmail2.Location = new System.Drawing.Point(21, 194);
+            this.lblEmail2.Name = "lblEmail2";
+            this.lblEmail2.Size = new System.Drawing.Size(56, 20);
+            this.lblEmail2.TabIndex = 16;
+            this.lblEmail2.Text = "Email: ";
+            // 
+            // lblSchool
+            // 
+            this.lblSchool.AutoSize = true;
+            this.lblSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblSchool.Location = new System.Drawing.Point(21, 171);
+            this.lblSchool.Name = "lblSchool";
+            this.lblSchool.Size = new System.Drawing.Size(66, 20);
+            this.lblSchool.TabIndex = 15;
+            this.lblSchool.Text = "School: ";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Location = new System.Drawing.Point(126, 116);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(83, 43);
+            this.panel2.TabIndex = 14;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(123, 97);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(45, 16);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Active";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(25, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(83, 43);
+            this.panel1.TabIndex = 13;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(22, 97);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(53, 16);
+            this.label26.TabIndex = 10;
+            this.label26.Text = "Gender";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(22, 46);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(69, 16);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Full Name";
+            // 
+            // thirteenTextBox1
+            // 
+            this.thirteenTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox1.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox1.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox1.Location = new System.Drawing.Point(25, 65);
+            this.thirteenTextBox1.Name = "thirteenTextBox1";
+            this.thirteenTextBox1.ReadOnly = true;
+            this.thirteenTextBox1.Size = new System.Drawing.Size(184, 22);
+            this.thirteenTextBox1.TabIndex = 8;
+            // 
+            // lblStudentName
+            // 
+            this.lblStudentName.AutoSize = true;
+            this.lblStudentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.lblStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblStudentName.Location = new System.Drawing.Point(14, 11);
+            this.lblStudentName.Name = "lblStudentName";
+            this.lblStudentName.Size = new System.Drawing.Size(482, 24);
+            this.lblStudentName.TabIndex = 7;
+            this.lblStudentName.Text = "Double click a student to view detailed information.";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(551, 227);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "New Student";
+            // 
+            // gbSourceinfo
+            // 
+            this.gbSourceinfo.Controls.Add(this.btnChangesrc);
+            this.gbSourceinfo.Controls.Add(this.label1);
+            this.gbSourceinfo.Controls.Add(this.label21);
+            this.gbSourceinfo.Controls.Add(this.label22);
+            this.gbSourceinfo.Controls.Add(this.label23);
+            this.gbSourceinfo.Controls.Add(this.label24);
+            this.gbSourceinfo.Controls.Add(this.lblSourcename);
+            this.gbSourceinfo.Location = new System.Drawing.Point(20, 77);
+            this.gbSourceinfo.Name = "gbSourceinfo";
+            this.gbSourceinfo.Size = new System.Drawing.Size(265, 196);
+            this.gbSourceinfo.TabIndex = 5;
+            this.gbSourceinfo.TabStop = false;
+            this.gbSourceinfo.Text = "Source Information";
+            // 
+            // btnChangesrc
+            // 
+            this.btnChangesrc.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnChangesrc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnChangesrc.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnChangesrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnChangesrc.ForeColor = System.Drawing.Color.White;
+            this.btnChangesrc.Location = new System.Drawing.Point(90, 160);
+            this.btnChangesrc.Name = "btnChangesrc";
+            this.btnChangesrc.Size = new System.Drawing.Size(73, 23);
+            this.btnChangesrc.TabIndex = 6;
+            this.btnChangesrc.Text = "Change";
+            this.btnChangesrc.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(97, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label21.Location = new System.Drawing.Point(172, 96);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(71, 18);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "lastName";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label22.Location = new System.Drawing.Point(7, 96);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(84, 18);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "Last Name:";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label23.Location = new System.Drawing.Point(172, 66);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(72, 18);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "firstName";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label24.Location = new System.Drawing.Point(6, 66);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(85, 18);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "First Name:";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSourcename
+            // 
+            this.lblSourcename.AutoSize = true;
+            this.lblSourcename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.lblSourcename.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblSourcename.Location = new System.Drawing.Point(83, 29);
+            this.lblSourcename.Name = "lblSourcename";
+            this.lblSourcename.Size = new System.Drawing.Size(124, 24);
+            this.lblSourcename.TabIndex = 0;
+            this.lblSourcename.Text = "placeHolder";
+            // 
+            // gbStudentList
+            // 
+            this.gbStudentList.Controls.Add(this.tvStudents);
+            this.gbStudentList.Location = new System.Drawing.Point(326, 77);
+            this.gbStudentList.Name = "gbStudentList";
+            this.gbStudentList.Size = new System.Drawing.Size(265, 196);
+            this.gbStudentList.TabIndex = 4;
+            this.gbStudentList.TabStop = false;
+            this.gbStudentList.Text = "Student List";
+            // 
+            // tvStudents
+            // 
+            this.tvStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tvStudents.Location = new System.Drawing.Point(6, 21);
+            this.tvStudents.Name = "tvStudents";
+            this.tvStudents.Size = new System.Drawing.Size(253, 168);
+            this.tvStudents.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label12.Location = new System.Drawing.Point(200, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(227, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Citadel - [ Students ]";
             // 
             // pnlUsers
             // 
@@ -730,25 +1072,6 @@
             this.pnlContainer.Size = new System.Drawing.Size(78, 28);
             this.pnlContainer.TabIndex = 3;
             // 
-            // pnlStudents
-            // 
-            this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlStudents.Controls.Add(this.label12);
-            this.pnlStudents.Location = new System.Drawing.Point(229, 34);
-            this.pnlStudents.Name = "pnlStudents";
-            this.pnlStudents.Size = new System.Drawing.Size(609, 599);
-            this.pnlStudents.TabIndex = 3;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label12.Location = new System.Drawing.Point(200, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(227, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Citadel - [ Students ]";
-            // 
             // pnlDashboard
             // 
             this.pnlDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -768,29 +1091,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Citadel - [ Dashboard ]";
             // 
-            // pctPointer
-            // 
-            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
-            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer.Location = new System.Drawing.Point(219, 85);
-            this.pctPointer.Name = "pctPointer";
-            this.pctPointer.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer.TabIndex = 8;
-            this.pctPointer.TabStop = false;
-            // 
-            // pctPointer2
-            // 
-            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
-            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
-            this.pctPointer2.Name = "pctPointer2";
-            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
-            this.pctPointer2.TabIndex = 10;
-            this.pctPointer2.TabStop = false;
-            this.pctPointer2.Visible = false;
-            // 
             // pnlbStats
             // 
             this.pnlbStats.Controls.Add(this.pctStats);
@@ -799,16 +1099,6 @@
             this.pnlbStats.Name = "pnlbStats";
             this.pnlbStats.Size = new System.Drawing.Size(229, 49);
             this.pnlbStats.TabIndex = 8;
-            // 
-            // pctStats
-            // 
-            this.pctStats.BackgroundImage = global::Citadel.Properties.Resources.chart;
-            this.pctStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctStats.Location = new System.Drawing.Point(14, 13);
-            this.pctStats.Name = "pctStats";
-            this.pctStats.Size = new System.Drawing.Size(24, 24);
-            this.pctStats.TabIndex = 1;
-            this.pctStats.TabStop = false;
             // 
             // lblStats
             // 
@@ -829,16 +1119,6 @@
             this.pnlbStudents.Size = new System.Drawing.Size(229, 49);
             this.pnlbStudents.TabIndex = 9;
             // 
-            // pctStudents
-            // 
-            this.pctStudents.BackgroundImage = global::Citadel.Properties.Resources.students17;
-            this.pctStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctStudents.Location = new System.Drawing.Point(14, 13);
-            this.pctStudents.Name = "pctStudents";
-            this.pctStudents.Size = new System.Drawing.Size(24, 24);
-            this.pctStudents.TabIndex = 1;
-            this.pctStudents.TabStop = false;
-            // 
             // lblStudents
             // 
             this.lblStudents.AutoSize = true;
@@ -857,16 +1137,6 @@
             this.pnlbSource.Name = "pnlbSource";
             this.pnlbSource.Size = new System.Drawing.Size(229, 49);
             this.pnlbSource.TabIndex = 10;
-            // 
-            // pctSource
-            // 
-            this.pctSource.BackgroundImage = global::Citadel.Properties.Resources.folder265;
-            this.pctSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctSource.Location = new System.Drawing.Point(14, 13);
-            this.pctSource.Name = "pctSource";
-            this.pctSource.Size = new System.Drawing.Size(24, 24);
-            this.pctSource.TabIndex = 1;
-            this.pctSource.TabStop = false;
             // 
             // lblSource
             // 
@@ -887,16 +1157,6 @@
             this.pnlbDashboard.Name = "pnlbDashboard";
             this.pnlbDashboard.Size = new System.Drawing.Size(229, 49);
             this.pnlbDashboard.TabIndex = 7;
-            // 
-            // pctDashboard
-            // 
-            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
-            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
-            this.pctDashboard.Name = "pctDashboard";
-            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
-            this.pctDashboard.TabIndex = 1;
-            this.pctDashboard.TabStop = false;
             // 
             // lblDashboard
             // 
@@ -926,16 +1186,6 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(229, 2);
             this.label10.TabIndex = 13;
-            // 
-            // pctUsers
-            // 
-            this.pctUsers.BackgroundImage = global::Citadel.Properties.Resources.manager3;
-            this.pctUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctUsers.Location = new System.Drawing.Point(14, 13);
-            this.pctUsers.Name = "pctUsers";
-            this.pctUsers.Size = new System.Drawing.Size(24, 24);
-            this.pctUsers.TabIndex = 1;
-            this.pctUsers.TabStop = false;
             // 
             // lblUsers
             // 
@@ -967,16 +1217,6 @@
             this.label13.Size = new System.Drawing.Size(229, 2);
             this.label13.TabIndex = 13;
             // 
-            // pctSettings
-            // 
-            this.pctSettings.BackgroundImage = global::Citadel.Properties.Resources.gear39;
-            this.pctSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctSettings.Location = new System.Drawing.Point(14, 13);
-            this.pctSettings.Name = "pctSettings";
-            this.pctSettings.Size = new System.Drawing.Size(24, 24);
-            this.pctSettings.TabIndex = 1;
-            this.pctSettings.TabStop = false;
-            // 
             // lblSettings
             // 
             this.lblSettings.AutoSize = true;
@@ -1007,16 +1247,6 @@
             this.label18.Size = new System.Drawing.Size(229, 2);
             this.label18.TabIndex = 13;
             // 
-            // pctInfo
-            // 
-            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
-            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctInfo.Location = new System.Drawing.Point(14, 13);
-            this.pctInfo.Name = "pctInfo";
-            this.pctInfo.Size = new System.Drawing.Size(24, 24);
-            this.pctInfo.TabIndex = 1;
-            this.pctInfo.TabStop = false;
-            // 
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
@@ -1027,6 +1257,274 @@
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(223, 46);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(68, 16);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "Member #";
+            // 
+            // thirteenTextBox2
+            // 
+            this.thirteenTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox2.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox2.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox2.Location = new System.Drawing.Point(226, 65);
+            this.thirteenTextBox2.Name = "thirteenTextBox2";
+            this.thirteenTextBox2.ReadOnly = true;
+            this.thirteenTextBox2.Size = new System.Drawing.Size(65, 22);
+            this.thirteenTextBox2.TabIndex = 18;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(223, 97);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(46, 16);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Grade";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel3.Controls.Add(this.lblGrade);
+            this.panel3.Location = new System.Drawing.Point(226, 116);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(65, 43);
+            this.panel3.TabIndex = 15;
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
+            this.lblGrade.Location = new System.Drawing.Point(0, 5);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(65, 32);
+            this.lblGrade.TabIndex = 0;
+            this.lblGrade.Text = "#";
+            this.lblGrade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(376, 46);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(81, 16);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Year Joined";
+            // 
+            // thirteenTextBox3
+            // 
+            this.thirteenTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox3.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox3.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox3.Location = new System.Drawing.Point(379, 65);
+            this.thirteenTextBox3.Name = "thirteenTextBox3";
+            this.thirteenTextBox3.ReadOnly = true;
+            this.thirteenTextBox3.Size = new System.Drawing.Size(78, 22);
+            this.thirteenTextBox3.TabIndex = 21;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(299, 46);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(67, 16);
+            this.label31.TabIndex = 22;
+            this.label31.Text = "Fees Due";
+            // 
+            // thirteenTextBox4
+            // 
+            this.thirteenTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox4.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox4.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox4.Location = new System.Drawing.Point(302, 65);
+            this.thirteenTextBox4.Name = "thirteenTextBox4";
+            this.thirteenTextBox4.ReadOnly = true;
+            this.thirteenTextBox4.Size = new System.Drawing.Size(65, 22);
+            this.thirteenTextBox4.TabIndex = 23;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(299, 97);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(72, 16);
+            this.label32.TabIndex = 24;
+            this.label32.Text = "Comments";
+            // 
+            // txtComment
+            // 
+            this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtComment.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtComment.ForeColor = System.Drawing.Color.White;
+            this.txtComment.Location = new System.Drawing.Point(302, 116);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.ReadOnly = true;
+            this.txtComment.Size = new System.Drawing.Size(241, 105);
+            this.txtComment.TabIndex = 25;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Citadel.Properties.Resources.checked21;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox3, "Active");
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Location = new System.Drawing.Point(48, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox4, "Not Active");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox2, "Male");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox1, "Female");
+            // 
+            // pctPointer
+            // 
+            this.pctPointer.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pctPointer.BackgroundImage = global::Citadel.Properties.Resources.shape46;
+            this.pctPointer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer.Location = new System.Drawing.Point(219, 85);
+            this.pctPointer.Name = "pctPointer";
+            this.pctPointer.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer.TabIndex = 8;
+            this.pctPointer.TabStop = false;
+            // 
+            // pctPointer2
+            // 
+            this.pctPointer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.pctPointer2.BackgroundImage = global::Citadel.Properties.Resources.shape46U;
+            this.pctPointer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPointer2.Location = new System.Drawing.Point(219, 135);
+            this.pctPointer2.Name = "pctPointer2";
+            this.pctPointer2.Size = new System.Drawing.Size(24, 24);
+            this.pctPointer2.TabIndex = 10;
+            this.pctPointer2.TabStop = false;
+            this.pctPointer2.Visible = false;
+            // 
+            // pctStats
+            // 
+            this.pctStats.BackgroundImage = global::Citadel.Properties.Resources.chart;
+            this.pctStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctStats.Location = new System.Drawing.Point(14, 13);
+            this.pctStats.Name = "pctStats";
+            this.pctStats.Size = new System.Drawing.Size(24, 24);
+            this.pctStats.TabIndex = 1;
+            this.pctStats.TabStop = false;
+            // 
+            // pctStudents
+            // 
+            this.pctStudents.BackgroundImage = global::Citadel.Properties.Resources.students17;
+            this.pctStudents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctStudents.Location = new System.Drawing.Point(14, 13);
+            this.pctStudents.Name = "pctStudents";
+            this.pctStudents.Size = new System.Drawing.Size(24, 24);
+            this.pctStudents.TabIndex = 1;
+            this.pctStudents.TabStop = false;
+            // 
+            // pctSource
+            // 
+            this.pctSource.BackgroundImage = global::Citadel.Properties.Resources.folder265;
+            this.pctSource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctSource.Location = new System.Drawing.Point(14, 13);
+            this.pctSource.Name = "pctSource";
+            this.pctSource.Size = new System.Drawing.Size(24, 24);
+            this.pctSource.TabIndex = 1;
+            this.pctSource.TabStop = false;
+            // 
+            // pctDashboard
+            // 
+            this.pctDashboard.BackgroundImage = global::Citadel.Properties.Resources.home168;
+            this.pctDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctDashboard.Location = new System.Drawing.Point(14, 13);
+            this.pctDashboard.Name = "pctDashboard";
+            this.pctDashboard.Size = new System.Drawing.Size(24, 24);
+            this.pctDashboard.TabIndex = 1;
+            this.pctDashboard.TabStop = false;
+            // 
+            // pctUsers
+            // 
+            this.pctUsers.BackgroundImage = global::Citadel.Properties.Resources.manager3;
+            this.pctUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctUsers.Location = new System.Drawing.Point(14, 13);
+            this.pctUsers.Name = "pctUsers";
+            this.pctUsers.Size = new System.Drawing.Size(24, 24);
+            this.pctUsers.TabIndex = 1;
+            this.pctUsers.TabStop = false;
+            // 
+            // pctSettings
+            // 
+            this.pctSettings.BackgroundImage = global::Citadel.Properties.Resources.gear39;
+            this.pctSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctSettings.Location = new System.Drawing.Point(14, 13);
+            this.pctSettings.Name = "pctSettings";
+            this.pctSettings.Size = new System.Drawing.Size(24, 24);
+            this.pctSettings.TabIndex = 1;
+            this.pctSettings.TabStop = false;
+            // 
+            // pctInfo
+            // 
+            this.pctInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
+            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctInfo.Location = new System.Drawing.Point(14, 13);
+            this.pctInfo.Name = "pctInfo";
+            this.pctInfo.Size = new System.Drawing.Size(24, 24);
+            this.pctInfo.TabIndex = 1;
+            this.pctInfo.TabStop = false;
+            // 
+            // btnCopyQf
+            // 
+            this.btnCopyQf.BackgroundImage = global::Citadel.Properties.Resources.medical50;
+            this.btnCopyQf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCopyQf.Location = new System.Drawing.Point(488, 46);
+            this.btnCopyQf.Name = "btnCopyQf";
+            this.btnCopyQf.Size = new System.Drawing.Size(42, 42);
+            this.btnCopyQf.TabIndex = 13;
+            this.btnCopyQf.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnCopyQf, "Copy QuickAdd Code");
+            this.btnCopyQf.MouseEnter += new System.EventHandler(this.btnCopyQf_MouseEnter);
+            this.btnCopyQf.MouseLeave += new System.EventHandler(this.btnCopyQf_MouseLeave);
             // 
             // formMain
             // 
@@ -1043,6 +1541,17 @@
             this.Load += new System.EventHandler(this.formMain_Load);
             this.thirteenForm1.ResumeLayout(false);
             this.thirteenForm1.PerformLayout();
+            this.pnlStudents.ResumeLayout(false);
+            this.pnlStudents.PerformLayout();
+            this.gbNewStudent.ResumeLayout(false);
+            this.tcNewStudent.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.gbSourceinfo.ResumeLayout(false);
+            this.gbSourceinfo.PerformLayout();
+            this.gbStudentList.ResumeLayout(false);
             this.pnlUsers.ResumeLayout(false);
             this.pnlUsers.PerformLayout();
             this.gbNewuser.ResumeLayout(false);
@@ -1058,33 +1567,37 @@
             this.pnlSettings.PerformLayout();
             this.pnlSource.ResumeLayout(false);
             this.pnlSource.PerformLayout();
-            this.pnlStudents.ResumeLayout(false);
-            this.pnlStudents.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
             this.pnlDashboard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
             this.pnlbStats.ResumeLayout(false);
             this.pnlbStats.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStats)).EndInit();
             this.pnlbStudents.ResumeLayout(false);
             this.pnlbStudents.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).EndInit();
             this.pnlbSource.ResumeLayout(false);
             this.pnlbSource.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSource)).EndInit();
             this.pnlbDashboard.ResumeLayout(false);
             this.pnlbDashboard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).EndInit();
             this.pnlbUsers.ResumeLayout(false);
             this.pnlbUsers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).EndInit();
             this.pnlbSettings.ResumeLayout(false);
             this.pnlbSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).EndInit();
             this.pnlbInfo.ResumeLayout(false);
             this.pnlbInfo.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStats)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctDashboard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1173,5 +1686,44 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ToolTip ttMaster;
         private asset.ThirteenButton btnDelete;
+        private System.Windows.Forms.GroupBox gbStudentList;
+        private System.Windows.Forms.TreeView tvStudents;
+        private System.Windows.Forms.GroupBox gbSourceinfo;
+        private asset.ThirteenButton btnChangesrc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblSourcename;
+        private System.Windows.Forms.GroupBox gbNewStudent;
+        private asset.ThirteenTabControl tcNewStudent;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lblStudentName;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private asset.ThirteenTextBox thirteenTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblEmail2;
+        private System.Windows.Forms.Label lblSchool;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblGrade;
+        private System.Windows.Forms.Label label29;
+        private asset.ThirteenTextBox thirteenTextBox2;
+        private System.Windows.Forms.Label label28;
+        private asset.ThirteenTextBox txtComment;
+        private System.Windows.Forms.Label label32;
+        private asset.ThirteenTextBox thirteenTextBox4;
+        private System.Windows.Forms.Label label31;
+        private asset.ThirteenTextBox thirteenTextBox3;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox btnCopyQf;
     }
 }
