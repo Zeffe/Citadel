@@ -321,5 +321,14 @@ namespace Citadel
             //Replace old file with temporary file.
             File.Move(tempFile, path);
         }
+
+        private void pnlStudents_LocationChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < rformLogin.users.GetLength(0); i++)
+            {
+                if (rformLogin.users[i, 1] == null) break;
+                listUsers.Items.Add(getUser(i));
+            }
+        }
     }
 }

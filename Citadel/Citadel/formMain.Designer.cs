@@ -251,6 +251,7 @@
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.Size = new System.Drawing.Size(609, 599);
             this.pnlStudents.TabIndex = 3;
+            this.pnlStudents.LocationChanged += new System.EventHandler(this.pnlStudents_LocationChanged);
             // 
             // gbNewStudent
             // 

@@ -210,7 +210,7 @@ namespace Citadel
             if (!File.Exists(specificFolder + "/users.fbla"))
             {
                 File.Create(specificFolder + "/users.fbla").Dispose();
-                File.AppendAllText(specificFolder + "/users.fbla", Encrypt("admin1\\password\\First\\Last\\Email" + "\r\n"));
+                File.AppendAllText(specificFolder + "/users.fbla", Encrypt("admin1\\password\\First\\Last\\Email") + "\r\n");
             }
 
             // Places the placeholder text into given TextBoxes.

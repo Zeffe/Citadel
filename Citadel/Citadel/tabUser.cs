@@ -36,7 +36,10 @@ namespace Citadel
         private void btnLogout_Click(object sender, EventArgs e)
         {
             rformLogin _login = new rformLogin();
-            _login.Show();
+            if (!logout)
+            {
+                _login.Show();
+            }
             logout = true;
             this.Close();
         }
