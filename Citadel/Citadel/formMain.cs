@@ -202,7 +202,7 @@ namespace Citadel
             gbTitle(gbCuruser, btnLogout);
             gbNewuser.ForeColor = Color.White;
             gbUserlist.ForeColor = Color.White;
-            gbSourceinfo.ForeColor = Color.White;
+            gbSearch.ForeColor = Color.White;
             gbStudentList.ForeColor = Color.White;
             gbNewStudent.ForeColor = Color.White;
 

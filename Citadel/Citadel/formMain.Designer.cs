@@ -84,14 +84,7 @@
             this.btnClear = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.PictureBox();
             this.btnNew2 = new System.Windows.Forms.PictureBox();
-            this.gbSourceinfo = new System.Windows.Forms.GroupBox();
-            this.btnChangesrc = new asset.ThirteenButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lblSourcename = new System.Windows.Forms.Label();
+            this.gbSearch = new System.Windows.Forms.GroupBox();
             this.gbStudentList = new System.Windows.Forms.GroupBox();
             this.btnNew1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.PictureBox();
@@ -206,7 +199,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).BeginInit();
-            this.gbSourceinfo.SuspendLayout();
             this.gbStudentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
@@ -282,7 +274,7 @@
             // 
             this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.pnlStudents.Controls.Add(this.gbNewStudent);
-            this.pnlStudents.Controls.Add(this.gbSourceinfo);
+            this.pnlStudents.Controls.Add(this.gbSearch);
             this.pnlStudents.Controls.Add(this.gbStudentList);
             this.pnlStudents.Controls.Add(this.label12);
             this.pnlStudents.Location = new System.Drawing.Point(229, 34);
@@ -873,101 +865,14 @@
             this.btnNew2.TabStop = false;
             this.ttMaster.SetToolTip(this.btnNew2, "New Student");
             // 
-            // gbSourceinfo
+            // gbSearch
             // 
-            this.gbSourceinfo.Controls.Add(this.btnChangesrc);
-            this.gbSourceinfo.Controls.Add(this.label1);
-            this.gbSourceinfo.Controls.Add(this.label21);
-            this.gbSourceinfo.Controls.Add(this.label22);
-            this.gbSourceinfo.Controls.Add(this.label23);
-            this.gbSourceinfo.Controls.Add(this.label24);
-            this.gbSourceinfo.Controls.Add(this.lblSourcename);
-            this.gbSourceinfo.Location = new System.Drawing.Point(20, 77);
-            this.gbSourceinfo.Name = "gbSourceinfo";
-            this.gbSourceinfo.Size = new System.Drawing.Size(265, 196);
-            this.gbSourceinfo.TabIndex = 5;
-            this.gbSourceinfo.TabStop = false;
-            this.gbSourceinfo.Text = "Source Information";
-            // 
-            // btnChangesrc
-            // 
-            this.btnChangesrc.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnChangesrc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnChangesrc.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
-            this.btnChangesrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnChangesrc.ForeColor = System.Drawing.Color.White;
-            this.btnChangesrc.Location = new System.Drawing.Point(90, 160);
-            this.btnChangesrc.Name = "btnChangesrc";
-            this.btnChangesrc.Size = new System.Drawing.Size(73, 23);
-            this.btnChangesrc.TabIndex = 6;
-            this.btnChangesrc.Text = "Change";
-            this.btnChangesrc.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(97, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label21.Location = new System.Drawing.Point(172, 96);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 18);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "lastName";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label22.Location = new System.Drawing.Point(7, 96);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 18);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Last Name:";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label23.Location = new System.Drawing.Point(172, 66);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(72, 18);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "firstName";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label24.Location = new System.Drawing.Point(6, 66);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(85, 18);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "First Name:";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSourcename
-            // 
-            this.lblSourcename.AutoSize = true;
-            this.lblSourcename.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.lblSourcename.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lblSourcename.Location = new System.Drawing.Point(83, 29);
-            this.lblSourcename.Name = "lblSourcename";
-            this.lblSourcename.Size = new System.Drawing.Size(124, 24);
-            this.lblSourcename.TabIndex = 0;
-            this.lblSourcename.Text = "placeHolder";
+            this.gbSearch.Location = new System.Drawing.Point(20, 77);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Size = new System.Drawing.Size(265, 196);
+            this.gbSearch.TabIndex = 5;
+            this.gbSearch.TabStop = false;
+            this.gbSearch.Text = "Search / Filter";
             // 
             // gbStudentList
             // 
@@ -1916,8 +1821,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).EndInit();
-            this.gbSourceinfo.ResumeLayout(false);
-            this.gbSourceinfo.PerformLayout();
             this.gbStudentList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
@@ -2052,14 +1955,7 @@
         private asset.ThirteenButton btnDelete;
         private System.Windows.Forms.GroupBox gbStudentList;
         private System.Windows.Forms.TreeView tvStudents;
-        private System.Windows.Forms.GroupBox gbSourceinfo;
-        private asset.ThirteenButton btnChangesrc;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label lblSourcename;
+        private System.Windows.Forms.GroupBox gbSearch;
         private System.Windows.Forms.GroupBox gbNewStudent;
         private asset.ThirteenTabControl tcNewStudent;
         private System.Windows.Forms.TabPage tabPage1;
