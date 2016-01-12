@@ -264,6 +264,7 @@ namespace Citadel
             pbHighlight(btnActivePrev);
             pbHighlight(btnGradeNext);
             pbHighlight(btnGradePrev);
+            pbHighlight(btnSearch);
 
             // Moves panels behind the given textboxes in order to
             // easily draw a colored signifier around the textboxes.

@@ -61,6 +61,16 @@
             this.thirteenTextBox1 = new asset.ThirteenTextBox();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.thirteenTextBox11 = new asset.ThirteenTextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.thirteenTextBox10 = new asset.ThirteenTextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.thirteenTextBox9 = new asset.ThirteenTextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.thirteenTextBox8 = new asset.ThirteenTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.thirteenTextBox7 = new asset.ThirteenTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnGradePrev = new System.Windows.Forms.PictureBox();
             this.btnGradeNext = new System.Windows.Forms.PictureBox();
@@ -85,6 +95,11 @@
             this.btnSave = new System.Windows.Forms.PictureBox();
             this.btnNew2 = new System.Windows.Forms.PictureBox();
             this.gbSearch = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.PictureBox();
+            this.thirteenTextBox12 = new asset.ThirteenTextBox();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.gbStudentList = new System.Windows.Forms.GroupBox();
             this.btnNew1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.PictureBox();
@@ -171,6 +186,8 @@
             this.pctInfo = new System.Windows.Forms.PictureBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
+            this.thirteenComboBox1 = new asset.ThirteenComboBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
@@ -199,6 +216,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).BeginInit();
+            this.gbSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.gbStudentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
@@ -602,6 +621,16 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Controls.Add(this.label24);
+            this.tabPage2.Controls.Add(this.thirteenTextBox11);
+            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.thirteenTextBox10);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.thirteenTextBox9);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.thirteenTextBox8);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.thirteenTextBox7);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.label38);
             this.tabPage2.Controls.Add(this.label37);
@@ -622,6 +651,112 @@
             this.tabPage2.Size = new System.Drawing.Size(551, 227);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Student";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(315, 97);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(72, 16);
+            this.label24.TabIndex = 37;
+            this.label24.Text = "Comments";
+            // 
+            // thirteenTextBox11
+            // 
+            this.thirteenTextBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox11.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox11.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox11.Location = new System.Drawing.Point(318, 113);
+            this.thirteenTextBox11.Multiline = true;
+            this.thirteenTextBox11.Name = "thirteenTextBox11";
+            this.thirteenTextBox11.Size = new System.Drawing.Size(227, 108);
+            this.thirteenTextBox11.TabIndex = 36;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(229, 141);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 16);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "Year Joined";
+            // 
+            // thirteenTextBox10
+            // 
+            this.thirteenTextBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox10.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox10.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox10.Location = new System.Drawing.Point(232, 160);
+            this.thirteenTextBox10.Name = "thirteenTextBox10";
+            this.thirteenTextBox10.Size = new System.Drawing.Size(64, 22);
+            this.thirteenTextBox10.TabIndex = 34;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(229, 94);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(67, 16);
+            this.label22.TabIndex = 33;
+            this.label22.Text = "Fees Due";
+            // 
+            // thirteenTextBox9
+            // 
+            this.thirteenTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox9.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox9.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox9.Location = new System.Drawing.Point(232, 113);
+            this.thirteenTextBox9.Name = "thirteenTextBox9";
+            this.thirteenTextBox9.Size = new System.Drawing.Size(64, 22);
+            this.thirteenTextBox9.TabIndex = 32;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(229, 46);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(42, 16);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "Email";
+            // 
+            // thirteenTextBox8
+            // 
+            this.thirteenTextBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox8.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox8.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox8.Location = new System.Drawing.Point(232, 65);
+            this.thirteenTextBox8.Name = "thirteenTextBox8";
+            this.thirteenTextBox8.Size = new System.Drawing.Size(311, 22);
+            this.thirteenTextBox8.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(229, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "School";
+            // 
+            // thirteenTextBox7
+            // 
+            this.thirteenTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox7.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox7.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox7.Location = new System.Drawing.Point(232, 21);
+            this.thirteenTextBox7.Name = "thirteenTextBox7";
+            this.thirteenTextBox7.Size = new System.Drawing.Size(311, 22);
+            this.thirteenTextBox7.TabIndex = 28;
             // 
             // panel6
             // 
@@ -867,12 +1002,72 @@
             // 
             // gbSearch
             // 
+            this.gbSearch.Controls.Add(this.label39);
+            this.gbSearch.Controls.Add(this.thirteenComboBox1);
+            this.gbSearch.Controls.Add(this.btnSearch);
+            this.gbSearch.Controls.Add(this.thirteenTextBox12);
+            this.gbSearch.Controls.Add(this.lblFilter);
+            this.gbSearch.Controls.Add(this.label40);
+            this.gbSearch.Controls.Add(this.lblSearch);
             this.gbSearch.Location = new System.Drawing.Point(20, 77);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Size = new System.Drawing.Size(265, 196);
             this.gbSearch.TabIndex = 5;
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "Search / Filter";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::Citadel.Properties.Resources.magnifier13;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSearch.Location = new System.Drawing.Point(225, 47);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(30, 30);
+            this.btnSearch.TabIndex = 13;
+            this.btnSearch.TabStop = false;
+            // 
+            // thirteenTextBox12
+            // 
+            this.thirteenTextBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox12.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox12.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox12.Location = new System.Drawing.Point(15, 38);
+            this.thirteenTextBox12.Name = "thirteenTextBox12";
+            this.thirteenTextBox12.ReadOnly = true;
+            this.thirteenTextBox12.Size = new System.Drawing.Size(204, 22);
+            this.thirteenTextBox12.TabIndex = 12;
+            // 
+            // lblFilter
+            // 
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblFilter.Location = new System.Drawing.Point(11, 110);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(57, 24);
+            this.lblFilter.TabIndex = 11;
+            this.lblFilter.Text = "Filter";
+            // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label40.Location = new System.Drawing.Point(6, 97);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(253, 5);
+            this.label40.TabIndex = 10;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSearch.Location = new System.Drawing.Point(11, 18);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(66, 20);
+            this.lblSearch.TabIndex = 0;
+            this.lblSearch.Text = "Search";
             // 
             // gbStudentList
             // 
@@ -1776,6 +1971,31 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // thirteenComboBox1
+            // 
+            this.thirteenComboBox1.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.thirteenComboBox1.ColorScheme = asset.ThirteenComboBox.ColorSchemes.Dark;
+            this.thirteenComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.thirteenComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.thirteenComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenComboBox1.ForeColor = System.Drawing.Color.White;
+            this.thirteenComboBox1.FormattingEnabled = true;
+            this.thirteenComboBox1.Location = new System.Drawing.Point(91, 65);
+            this.thirteenComboBox1.Name = "thirteenComboBox1";
+            this.thirteenComboBox1.Size = new System.Drawing.Size(128, 23);
+            this.thirteenComboBox1.TabIndex = 5;
+            this.ttMaster.SetToolTip(this.thirteenComboBox1, "Second piece of information to display.");
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(12, 68);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(73, 16);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "Search By:";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1821,6 +2041,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).EndInit();
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.gbStudentList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
@@ -2012,5 +2235,22 @@
         private System.Windows.Forms.PictureBox btnGradeNext;
         private System.Windows.Forms.Label lblGradeSel;
         private System.Windows.Forms.Label label38;
+        private asset.ThirteenTextBox thirteenTextBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label24;
+        private asset.ThirteenTextBox thirteenTextBox11;
+        private System.Windows.Forms.Label label23;
+        private asset.ThirteenTextBox thirteenTextBox10;
+        private System.Windows.Forms.Label label22;
+        private asset.ThirteenTextBox thirteenTextBox9;
+        private System.Windows.Forms.Label label21;
+        private asset.ThirteenTextBox thirteenTextBox8;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Label lblFilter;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.PictureBox btnSearch;
+        private asset.ThirteenTextBox thirteenTextBox12;
+        private System.Windows.Forms.Label label39;
+        private asset.ThirteenComboBox thirteenComboBox1;
     }
 }

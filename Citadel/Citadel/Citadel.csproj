@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="castle.ico" />
+    <None Include="Resources\magnifier13.png" />
     <None Include="Resources\chevronU.png" />
     <None Include="Resources\chevron.png" />
     <None Include="Resources\clear5.png" />

@@ -223,6 +223,16 @@ namespace Citadel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap magnifier13 {
+            get {
+                object obj = ResourceManager.GetObject("magnifier13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap male244 {
             get {
                 object obj = ResourceManager.GetObject("male244", resourceCulture);
