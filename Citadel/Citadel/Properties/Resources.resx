@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="archive44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archive44.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archive44U" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archive44U.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cancel30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +132,15 @@
   </data>
   <data name="checked21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chevron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chevron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chevronU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chevronU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,6 +174,9 @@
   </data>
   <data name="medical50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\medical50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shape46" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shape46.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

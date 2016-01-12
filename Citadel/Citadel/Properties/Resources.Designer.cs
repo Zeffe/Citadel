@@ -63,6 +63,26 @@ namespace Citadel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archive44 {
+            get {
+                object obj = ResourceManager.GetObject("archive44", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archive44U {
+            get {
+                object obj = ResourceManager.GetObject("archive44U", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel30 {
             get {
                 object obj = ResourceManager.GetObject("cancel30", resourceCulture);
@@ -86,6 +106,36 @@ namespace Citadel.Properties {
         internal static System.Drawing.Bitmap checked21 {
             get {
                 object obj = ResourceManager.GetObject("checked21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chevron {
+            get {
+                object obj = ResourceManager.GetObject("chevron", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chevronU {
+            get {
+                object obj = ResourceManager.GetObject("chevronU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clear5 {
+            get {
+                object obj = ResourceManager.GetObject("clear5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +246,16 @@ namespace Citadel.Properties {
         internal static System.Drawing.Bitmap medical50 {
             get {
                 object obj = ResourceManager.GetObject("medical50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save31 {
+            get {
+                object obj = ResourceManager.GetObject("save31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

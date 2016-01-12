@@ -50,17 +50,40 @@
             this.lblEmail2 = new System.Windows.Forms.Label();
             this.lblSchool = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbActive = new System.Windows.Forms.PictureBox();
+            this.pbNotActive = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbMale = new System.Windows.Forms.PictureBox();
+            this.pbFemale = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.thirteenTextBox1 = new asset.ThirteenTextBox();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnGradePrev = new System.Windows.Forms.PictureBox();
+            this.btnGradeNext = new System.Windows.Forms.PictureBox();
+            this.lblGradeSel = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnActivePrev = new System.Windows.Forms.PictureBox();
+            this.btnActiveNext = new System.Windows.Forms.PictureBox();
+            this.pbActiveSel = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnGenderPrev = new System.Windows.Forms.PictureBox();
+            this.btnGenderNext = new System.Windows.Forms.PictureBox();
+            this.pbGenderSel = new System.Windows.Forms.PictureBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.thirteenTextBox6 = new asset.ThirteenTextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.thirteenTextBox5 = new asset.ThirteenTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.PictureBox();
+            this.btnNew2 = new System.Windows.Forms.PictureBox();
             this.gbSourceinfo = new System.Windows.Forms.GroupBox();
             this.btnChangesrc = new asset.ThirteenButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +93,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.lblSourcename = new System.Windows.Forms.Label();
             this.gbStudentList = new System.Windows.Forms.GroupBox();
-            this.btnView = new System.Windows.Forms.PictureBox();
+            this.btnNew1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.PictureBox();
             this.btnDelStudent = new System.Windows.Forms.PictureBox();
             this.cmbTreeview = new asset.ThirteenComboBox();
@@ -163,14 +186,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotActive)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMale)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFemale)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGradePrev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGradeNext)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActivePrev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActiveNext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActiveSel)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenderPrev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenderNext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGenderSel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).BeginInit();
             this.gbSourceinfo.SuspendLayout();
             this.gbStudentList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
             this.pnlUsers.SuspendLayout();
@@ -457,34 +495,34 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.pbActive);
+            this.panel2.Controls.Add(this.pbNotActive);
             this.panel2.Location = new System.Drawing.Point(126, 116);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(83, 43);
             this.panel2.TabIndex = 14;
             // 
-            // pictureBox3
+            // pbActive
             // 
-            this.pictureBox3.BackgroundImage = global::Citadel.Properties.Resources.checked21;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox3, "Active");
+            this.pbActive.BackgroundImage = global::Citadel.Properties.Resources.checked21;
+            this.pbActive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbActive.Location = new System.Drawing.Point(0, 0);
+            this.pbActive.Name = "pbActive";
+            this.pbActive.Size = new System.Drawing.Size(41, 43);
+            this.pbActive.TabIndex = 12;
+            this.pbActive.TabStop = false;
+            this.ttMaster.SetToolTip(this.pbActive, "Active");
             // 
-            // pictureBox4
+            // pbNotActive
             // 
-            this.pictureBox4.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(48, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox4, "Not Active");
+            this.pbNotActive.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
+            this.pbNotActive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbNotActive.Location = new System.Drawing.Point(42, 0);
+            this.pbNotActive.Name = "pbNotActive";
+            this.pbNotActive.Size = new System.Drawing.Size(41, 43);
+            this.pbNotActive.TabIndex = 11;
+            this.pbNotActive.TabStop = false;
+            this.ttMaster.SetToolTip(this.pbNotActive, "Not Active");
             // 
             // label27
             // 
@@ -498,34 +536,34 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbMale);
+            this.panel1.Controls.Add(this.pbFemale);
             this.panel1.Location = new System.Drawing.Point(25, 116);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(83, 43);
             this.panel1.TabIndex = 13;
             // 
-            // pictureBox2
+            // pbMale
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox2, "Male");
+            this.pbMale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbMale.BackgroundImage")));
+            this.pbMale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbMale.Location = new System.Drawing.Point(0, 0);
+            this.pbMale.Name = "pbMale";
+            this.pbMale.Size = new System.Drawing.Size(41, 43);
+            this.pbMale.TabIndex = 12;
+            this.pbMale.TabStop = false;
+            this.ttMaster.SetToolTip(this.pbMale, "Male");
             // 
-            // pictureBox1
+            // pbFemale
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox1, "Female");
+            this.pbFemale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbFemale.BackgroundImage")));
+            this.pbFemale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbFemale.Location = new System.Drawing.Point(42, 0);
+            this.pbFemale.Name = "pbFemale";
+            this.pbFemale.Size = new System.Drawing.Size(41, 43);
+            this.pbFemale.TabIndex = 11;
+            this.pbFemale.TabStop = false;
+            this.ttMaster.SetToolTip(this.pbFemale, "Female");
             // 
             // label26
             // 
@@ -572,12 +610,268 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Controls.Add(this.panel6);
+            this.tabPage2.Controls.Add(this.label38);
+            this.tabPage2.Controls.Add(this.label37);
+            this.tabPage2.Controls.Add(this.label36);
+            this.tabPage2.Controls.Add(this.panel5);
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Controls.Add(this.label35);
+            this.tabPage2.Controls.Add(this.thirteenTextBox6);
+            this.tabPage2.Controls.Add(this.label34);
+            this.tabPage2.Controls.Add(this.thirteenTextBox5);
+            this.tabPage2.Controls.Add(this.label33);
+            this.tabPage2.Controls.Add(this.btnClear);
+            this.tabPage2.Controls.Add(this.btnSave);
+            this.tabPage2.Controls.Add(this.btnNew2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(551, 227);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Student";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel6.Controls.Add(this.btnGradePrev);
+            this.panel6.Controls.Add(this.btnGradeNext);
+            this.panel6.Controls.Add(this.lblGradeSel);
+            this.panel6.Location = new System.Drawing.Point(80, 177);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(117, 44);
+            this.panel6.TabIndex = 25;
+            // 
+            // btnGradePrev
+            // 
+            this.btnGradePrev.BackgroundImage = global::Citadel.Properties.Resources.chevronU;
+            this.btnGradePrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGradePrev.Location = new System.Drawing.Point(6, 5);
+            this.btnGradePrev.Name = "btnGradePrev";
+            this.btnGradePrev.Size = new System.Drawing.Size(18, 34);
+            this.btnGradePrev.TabIndex = 23;
+            this.btnGradePrev.TabStop = false;
+            this.btnGradePrev.Click += new System.EventHandler(this.btnGradePrev_Click);
+            // 
+            // btnGradeNext
+            // 
+            this.btnGradeNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGradeNext.BackgroundImage")));
+            this.btnGradeNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGradeNext.Location = new System.Drawing.Point(93, 5);
+            this.btnGradeNext.Name = "btnGradeNext";
+            this.btnGradeNext.Size = new System.Drawing.Size(18, 34);
+            this.btnGradeNext.TabIndex = 22;
+            this.btnGradeNext.TabStop = false;
+            this.btnGradeNext.Click += new System.EventHandler(this.btnGradeNext_Click);
+            // 
+            // lblGradeSel
+            // 
+            this.lblGradeSel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
+            this.lblGradeSel.Location = new System.Drawing.Point(0, 7);
+            this.lblGradeSel.Name = "lblGradeSel";
+            this.lblGradeSel.Size = new System.Drawing.Size(117, 32);
+            this.lblGradeSel.TabIndex = 28;
+            this.lblGradeSel.Text = "9";
+            this.lblGradeSel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(77, 158);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(46, 16);
+            this.label38.TabIndex = 27;
+            this.label38.Text = "Grade";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(139, 94);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(45, 16);
+            this.label37.TabIndex = 26;
+            this.label37.Text = "Active";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(49, 94);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(53, 16);
+            this.label36.TabIndex = 25;
+            this.label36.Text = "Gender";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel5.Controls.Add(this.btnActivePrev);
+            this.panel5.Controls.Add(this.btnActiveNext);
+            this.panel5.Controls.Add(this.pbActiveSel);
+            this.panel5.Location = new System.Drawing.Point(142, 113);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(84, 44);
+            this.panel5.TabIndex = 24;
+            // 
+            // btnActivePrev
+            // 
+            this.btnActivePrev.BackgroundImage = global::Citadel.Properties.Resources.chevronU;
+            this.btnActivePrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnActivePrev.Location = new System.Drawing.Point(3, 5);
+            this.btnActivePrev.Name = "btnActivePrev";
+            this.btnActivePrev.Size = new System.Drawing.Size(18, 34);
+            this.btnActivePrev.TabIndex = 23;
+            this.btnActivePrev.TabStop = false;
+            this.btnActivePrev.Click += new System.EventHandler(this.btnActivePrev_Click);
+            // 
+            // btnActiveNext
+            // 
+            this.btnActiveNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActiveNext.BackgroundImage")));
+            this.btnActiveNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnActiveNext.Location = new System.Drawing.Point(63, 5);
+            this.btnActiveNext.Name = "btnActiveNext";
+            this.btnActiveNext.Size = new System.Drawing.Size(18, 34);
+            this.btnActiveNext.TabIndex = 22;
+            this.btnActiveNext.TabStop = false;
+            this.btnActiveNext.Click += new System.EventHandler(this.btnActiveNext_Click);
+            // 
+            // pbActiveSel
+            // 
+            this.pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.checked21;
+            this.pbActiveSel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbActiveSel.Location = new System.Drawing.Point(25, 6);
+            this.pbActiveSel.Name = "pbActiveSel";
+            this.pbActiveSel.Size = new System.Drawing.Size(32, 32);
+            this.pbActiveSel.TabIndex = 12;
+            this.pbActiveSel.TabStop = false;
+            this.ttMaster.SetToolTip(this.pbActiveSel, "Active");
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel4.Controls.Add(this.btnGenderPrev);
+            this.panel4.Controls.Add(this.btnGenderNext);
+            this.panel4.Controls.Add(this.pbGenderSel);
+            this.panel4.Location = new System.Drawing.Point(52, 113);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(84, 44);
+            this.panel4.TabIndex = 21;
+            // 
+            // btnGenderPrev
+            // 
+            this.btnGenderPrev.BackgroundImage = global::Citadel.Properties.Resources.chevronU;
+            this.btnGenderPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGenderPrev.Location = new System.Drawing.Point(3, 5);
+            this.btnGenderPrev.Name = "btnGenderPrev";
+            this.btnGenderPrev.Size = new System.Drawing.Size(18, 34);
+            this.btnGenderPrev.TabIndex = 23;
+            this.btnGenderPrev.TabStop = false;
+            this.btnGenderPrev.Click += new System.EventHandler(this.btnGenderPrev_Click);
+            // 
+            // btnGenderNext
+            // 
+            this.btnGenderNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenderNext.BackgroundImage")));
+            this.btnGenderNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGenderNext.Location = new System.Drawing.Point(63, 5);
+            this.btnGenderNext.Name = "btnGenderNext";
+            this.btnGenderNext.Size = new System.Drawing.Size(18, 34);
+            this.btnGenderNext.TabIndex = 22;
+            this.btnGenderNext.TabStop = false;
+            this.btnGenderNext.Click += new System.EventHandler(this.btnGenderNext_Click);
+            // 
+            // pbGenderSel
+            // 
+            this.pbGenderSel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbGenderSel.BackgroundImage")));
+            this.pbGenderSel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbGenderSel.Location = new System.Drawing.Point(25, 6);
+            this.pbGenderSel.Name = "pbGenderSel";
+            this.pbGenderSel.Size = new System.Drawing.Size(32, 32);
+            this.pbGenderSel.TabIndex = 12;
+            this.pbGenderSel.TabStop = false;
+            this.ttMaster.SetToolTip(this.pbGenderSel, "Male");
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(49, 46);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(73, 16);
+            this.label35.TabIndex = 20;
+            this.label35.Text = "Last Name";
+            // 
+            // thirteenTextBox6
+            // 
+            this.thirteenTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox6.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox6.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox6.Location = new System.Drawing.Point(52, 65);
+            this.thirteenTextBox6.Name = "thirteenTextBox6";
+            this.thirteenTextBox6.Size = new System.Drawing.Size(174, 22);
+            this.thirteenTextBox6.TabIndex = 19;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(49, 3);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(73, 16);
+            this.label34.TabIndex = 18;
+            this.label34.Text = "First Name";
+            // 
+            // thirteenTextBox5
+            // 
+            this.thirteenTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox5.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox5.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox5.Location = new System.Drawing.Point(52, 21);
+            this.thirteenTextBox5.Name = "thirteenTextBox5";
+            this.thirteenTextBox5.Size = new System.Drawing.Size(174, 22);
+            this.thirteenTextBox5.TabIndex = 15;
+            // 
+            // label33
+            // 
+            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label33.Location = new System.Drawing.Point(44, 3);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(2, 224);
+            this.label33.TabIndex = 14;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackgroundImage = global::Citadel.Properties.Resources.clear5;
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClear.Location = new System.Drawing.Point(6, 85);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(32, 32);
+            this.btnClear.TabIndex = 2;
+            this.btnClear.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnClear, "Clear All");
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackgroundImage = global::Citadel.Properties.Resources.save31;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSave.Location = new System.Drawing.Point(6, 47);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(32, 32);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnSave, "Save");
+            // 
+            // btnNew2
+            // 
+            this.btnNew2.BackgroundImage = global::Citadel.Properties.Resources.archive44;
+            this.btnNew2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnNew2.Location = new System.Drawing.Point(6, 9);
+            this.btnNew2.Name = "btnNew2";
+            this.btnNew2.Size = new System.Drawing.Size(32, 32);
+            this.btnNew2.TabIndex = 0;
+            this.btnNew2.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnNew2, "New Student");
             // 
             // gbSourceinfo
             // 
@@ -677,7 +971,7 @@
             // 
             // gbStudentList
             // 
-            this.gbStudentList.Controls.Add(this.btnView);
+            this.gbStudentList.Controls.Add(this.btnNew1);
             this.gbStudentList.Controls.Add(this.btnEdit);
             this.gbStudentList.Controls.Add(this.btnDelStudent);
             this.gbStudentList.Controls.Add(this.cmbTreeview);
@@ -689,16 +983,16 @@
             this.gbStudentList.TabStop = false;
             this.gbStudentList.Text = "Student List";
             // 
-            // btnView
+            // btnNew1
             // 
-            this.btnView.BackgroundImage = global::Citadel.Properties.Resources.eyeball15;
-            this.btnView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnView.Location = new System.Drawing.Point(169, 163);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(26, 26);
-            this.btnView.TabIndex = 4;
-            this.btnView.TabStop = false;
-            this.ttMaster.SetToolTip(this.btnView, "View");
+            this.btnNew1.BackgroundImage = global::Citadel.Properties.Resources.archive44U;
+            this.btnNew1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnNew1.Location = new System.Drawing.Point(169, 163);
+            this.btnNew1.Name = "btnNew1";
+            this.btnNew1.Size = new System.Drawing.Size(26, 26);
+            this.btnNew1.TabIndex = 4;
+            this.btnNew1.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnNew1, "New Student");
             // 
             // btnEdit
             // 
@@ -729,12 +1023,12 @@
             this.cmbTreeview.ColorScheme = asset.ThirteenComboBox.ColorSchemes.Dark;
             this.cmbTreeview.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbTreeview.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTreeview.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.cmbTreeview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cmbTreeview.ForeColor = System.Drawing.Color.White;
             this.cmbTreeview.FormattingEnabled = true;
             this.cmbTreeview.Location = new System.Drawing.Point(6, 163);
             this.cmbTreeview.Name = "cmbTreeview";
-            this.cmbTreeview.Size = new System.Drawing.Size(155, 26);
+            this.cmbTreeview.Size = new System.Drawing.Size(155, 23);
             this.cmbTreeview.TabIndex = 1;
             this.ttMaster.SetToolTip(this.cmbTreeview, "Second piece of information to display.");
             // 
@@ -1601,15 +1895,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCopyQf)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNotActive)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMale)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFemale)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnGradePrev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGradeNext)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnActivePrev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActiveNext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbActiveSel)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenderPrev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenderNext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGenderSel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).EndInit();
             this.gbSourceinfo.ResumeLayout(false);
             this.gbSourceinfo.PerformLayout();
             this.gbStudentList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).EndInit();
             this.pnlUsers.ResumeLayout(false);
@@ -1758,12 +2068,12 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private asset.ThirteenTextBox thirteenTextBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbFemale;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbMale;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbActive;
+        private System.Windows.Forms.PictureBox pbNotActive;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblEmail2;
         private System.Windows.Forms.Label lblSchool;
@@ -1782,6 +2092,29 @@
         private asset.ThirteenComboBox cmbTreeview;
         private System.Windows.Forms.PictureBox btnDelStudent;
         private System.Windows.Forms.PictureBox btnEdit;
-        private System.Windows.Forms.PictureBox btnView;
+        private System.Windows.Forms.PictureBox btnNew1;
+        private System.Windows.Forms.PictureBox btnNew2;
+        private System.Windows.Forms.PictureBox btnSave;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.PictureBox btnClear;
+        private System.Windows.Forms.Label label35;
+        private asset.ThirteenTextBox thirteenTextBox6;
+        private System.Windows.Forms.Label label34;
+        private asset.ThirteenTextBox thirteenTextBox5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pbGenderSel;
+        private System.Windows.Forms.PictureBox btnGenderNext;
+        private System.Windows.Forms.PictureBox btnGenderPrev;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox btnActivePrev;
+        private System.Windows.Forms.PictureBox btnActiveNext;
+        private System.Windows.Forms.PictureBox pbActiveSel;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox btnGradePrev;
+        private System.Windows.Forms.PictureBox btnGradeNext;
+        private System.Windows.Forms.Label lblGradeSel;
+        private System.Windows.Forms.Label label38;
     }
 }

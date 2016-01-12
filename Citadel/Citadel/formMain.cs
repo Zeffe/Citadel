@@ -254,7 +254,16 @@ namespace Citadel
             pbHighlight(btnCopyQf);
             pbHighlight(btnEdit);
             pbHighlight(btnDelStudent);
-            pbHighlight(btnView);
+            pbHighlight(btnNew1);
+            pbHighlight(btnNew2);
+            pbHighlight(btnSave);
+            pbHighlight(btnClear);
+            pbHighlight(btnGenderNext);
+            pbHighlight(btnGenderPrev);
+            pbHighlight(btnActiveNext);
+            pbHighlight(btnActivePrev);
+            pbHighlight(btnGradeNext);
+            pbHighlight(btnGradePrev);
 
             // Moves panels behind the given textboxes in order to
             // easily draw a colored signifier around the textboxes.
@@ -329,6 +338,111 @@ namespace Citadel
                 if (rformLogin.users[i, 1] == null) break;
                 listUsers.Items.Add(getUser(i));
             }
+        }
+
+        bool gender = false; bool active = false; int grade = 9;
+
+        void changeGender()
+        {
+            if (!gender)
+            {
+                pbGenderSel.BackgroundImage = global::Citadel.Properties.Resources.female128;
+                ttMaster.SetToolTip(pbGenderSel, "Female");
+            }
+            else
+            {
+                pbGenderSel.BackgroundImage = global::Citadel.Properties.Resources.male244;
+                ttMaster.SetToolTip(pbGenderSel, "Male");
+            }
+
+            gender = !gender;
+        }
+
+        void changeActive()
+        {
+            if (!active)
+            {
+                pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
+                ttMaster.SetToolTip(pbActiveSel, "Not Active");
+            }
+            else
+            {
+                pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.checked21;
+                ttMaster.SetToolTip(pbActiveSel, "Active");
+            }
+
+            active = !active;
+        }
+
+        void changeGrade(int _grade)
+        {
+            switch(_grade)
+            {
+                case 9:
+                    lblGradeSel.Text = "9";
+                    ttMaster.SetToolTip(lblGradeSel, "Freshman");
+                    break;
+                case 10:
+                    lblGradeSel.Text = "10";
+                    ttMaster.SetToolTip(lblGradeSel, "Sophomore");
+                    break;
+                case 11:
+                    lblGradeSel.Text = "11";
+                    ttMaster.SetToolTip(lblGradeSel, "Junior");
+                    break;
+                case 12:
+                    lblGradeSel.Text = "12";
+                    ttMaster.SetToolTip(lblGradeSel, "Senior");
+                    break;
+                case 13:
+                    lblGradeSel.Text = "13+";
+                    ttMaster.SetToolTip(lblGradeSel, "College Level");
+                    break;
+            }
+        }
+
+        private void btnGenderNext_Click(object sender, EventArgs e)
+        {
+            changeGender();
+        }
+
+        private void btnGenderPrev_Click(object sender, EventArgs e)
+        {
+            changeGender();
+        }
+
+        private void btnActiveNext_Click(object sender, EventArgs e)
+        {
+            changeActive();
+        }
+
+        private void btnActivePrev_Click(object sender, EventArgs e)
+        {
+            changeActive();
+        }
+
+        private void btnGradeNext_Click(object sender, EventArgs e)
+        {
+            if (grade != 13)
+            {
+                grade++;
+            } else
+            {
+                grade = 9;
+            }
+            changeGrade(grade);
+        }
+
+        private void btnGradePrev_Click(object sender, EventArgs e)
+        {
+            if (grade != 9)
+            {
+                grade--;
+            } else
+            {
+                grade = 13;
+            }
+            changeGrade(grade);
         }
     }
 }
