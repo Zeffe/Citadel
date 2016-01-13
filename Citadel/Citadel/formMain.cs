@@ -278,11 +278,17 @@ namespace Citadel
             readToArray(specificFolder + "/data/students.fbla", students, "NA");
 
             // Add students to the student tab tree view.
-            TreeNode student;     
+            TreeNode student;
+            TreeNode display1;
+            TreeNode display2;
+            TreeNode[] studentChildren;     
             for (int i = 0; i < students.GetLength(0); i++)
             {
                 if (students[i, 4] == null) break;
-                student = new TreeNode(students[i, 1] + " " + students[i, 2]);
+                display1 = new TreeNode("Year Joined: " + students[i, 4]);
+                display2 = new TreeNode("Grade: " + students[i, 7]);
+                studentChildren = new TreeNode[] { display2, display1 };
+                student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
                 tvStudents.Nodes.Add(student);
             }
 

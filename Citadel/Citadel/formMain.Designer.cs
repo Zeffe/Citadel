@@ -1254,13 +1254,9 @@
             this.cmbTreeview.ForeColor = System.Drawing.Color.White;
             this.cmbTreeview.FormattingEnabled = true;
             this.cmbTreeview.Items.AddRange(new object[] {
-            "Last Name",
-            "First Name",
             "Year Joined",
-            "Member #",
             "Email",
-            "School",
-            "Grade"});
+            "School"});
             this.cmbTreeview.Location = new System.Drawing.Point(6, 163);
             this.cmbTreeview.Name = "cmbTreeview";
             this.cmbTreeview.Size = new System.Drawing.Size(155, 23);
