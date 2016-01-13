@@ -1270,6 +1270,7 @@
             // tvStudents
             // 
             this.tvStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tvStudents.ForeColor = System.Drawing.Color.White;
             this.tvStudents.Location = new System.Drawing.Point(6, 21);
             this.tvStudents.Name = "tvStudents";
             this.tvStudents.Size = new System.Drawing.Size(253, 137);

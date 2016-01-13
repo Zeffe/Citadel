@@ -277,6 +277,15 @@ namespace Citadel
             // Read the students data file into an array.
             readToArray(specificFolder + "/data/students.fbla", students, "NA");
 
+            // Add students to the student tab tree view.
+            TreeNode student;     
+            for (int i = 0; i < students.GetLength(0); i++)
+            {
+                if (students[i, 4] == null) break;
+                student = new TreeNode(students[i, 1] + " " + students[i, 2]);
+                tvStudents.Nodes.Add(student);
+            }
+
             // Adds all users to the user list on user page.
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
             {
@@ -354,6 +363,7 @@ namespace Citadel
                 btnDelete.Enabled = false;
             }
 
+            viewStudent(0);
             updateUserPage(currentUser);
         }   
 
@@ -507,16 +517,19 @@ namespace Citadel
             txtYearJoined.Text = students[studentNum, 4];
             switch (Convert.ToInt32(students[studentNum, 5]))
             {
-                case 0: pbFemale.BackColor = Color.DodgerBlue; break;
-                case 1: pbMale.BackColor = Color.DodgerBlue; break;
-            }
-            switch (Convert.ToInt32(students[studentNum, 6]))
-            {
                 case 0: pbNotActive.BackColor = Color.DodgerBlue; break;
                 case 1: pbActive.BackColor = Color.DodgerBlue; break;
             }
+            switch (Convert.ToInt32(students[studentNum, 6]))
+            {
+                case 0: pbFemale.BackColor = Color.DodgerBlue; break;
+                case 1: pbMale.BackColor = Color.DodgerBlue; break;
+            }
+           
             lblGrade.Text = students[studentNum, 7];
             lblSchool.Text = "School: " + students[studentNum, 8];
+            txtEmail.Text = "Email: " + students[studentNum, 9];
+            txtComment.Text = students[studentNum, 10];
         }
     }
 }
