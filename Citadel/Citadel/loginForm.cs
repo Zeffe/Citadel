@@ -167,15 +167,16 @@ namespace Citadel
         private bool firstLoad()
         {
             bool _first = false;
-            if (!File.Exists(specificFolder))
+            if (!Directory.Exists(specificFolder))
             {
                 Directory.CreateDirectory(specificFolder);
                 _first = true;
             }
-            if (!File.Exists(specificFolder + "/data"))
+            string _data = Path.Combine(specificFolder, "data");
+            if (!Directory.Exists(_data))
             {
-                Directory.CreateDirectory(specificFolder + "/data");
-                File.Create(specificFolder + "/data/students.fbla").Dispose();
+                Directory.CreateDirectory(_data);
+                File.Create(_data + "/students.fbla").Dispose();
                 _first = true;
             }
             if (!File.Exists(specificFolder + "/sourceSettings.fbla"))

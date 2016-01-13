@@ -20,6 +20,7 @@ namespace Citadel
         int perms;             // Used to recognize permissions of a user, only 1 = administrator.
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
+        String[,] students = new String[50, 11]; // 2D array that stores students.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -42,12 +43,12 @@ namespace Citadel
         }
 
         // Centers a control inside a group box.
-        void gbTitle(GroupBox groupbox, Control title)
+        void gbTitle(Control parent, Control title)
         {
-            Point _temp = groupbox.DisplayRectangle.Location;
-            _temp.X += (groupbox.DisplayRectangle.Width - title.Width) / 2;
+            Point _temp = parent.DisplayRectangle.Location;
+            _temp.X += (parent.DisplayRectangle.Width - title.Width) / 2;
             _temp.Y = title.Location.Y;
-            groupbox.ForeColor = Color.White;
+            parent.ForeColor = Color.White;
             title.Location = _temp;
         }
 
@@ -78,10 +79,42 @@ namespace Citadel
             }
         }
 
+        StreamReader _reader;
 
-        // Updates the selected tab and draws the
-        // necessarry indicator.
-        void updateSelected(Panel pnl)
+        // Reads a plaintext file into a 2D array.
+        void readToArray(string file, String[,] array2d, string hash)
+        {
+            if (hash != "NA")
+            {
+                rformLogin.PasswordHash = hash;
+            }
+            string str;
+            _reader = File.OpenText(file);
+            int i = 0;
+            while ((str = _reader.ReadLine()) != null)
+            {
+                int j = 0;
+                //str = rformLogin.Decrypt(str);
+                String[] strArray = new String[str.Split('\\').Length];
+                strArray = str.Split('\\');
+                foreach (string element in strArray)
+                {
+                    try
+                    {
+                        array2d[i, j] = element;
+                    }
+                    catch { }
+                    j++;
+                }
+                i++;
+            }
+            rformLogin.PasswordHash = "admin";
+            _reader.Close();
+        }
+
+            // Updates the selected tab and draws the
+            // necessarry indicator.
+            void updateSelected(Panel pnl)
         {
             activePanel.BackColor = Color.FromArgb(50, 50, 50);
             displays[pnl].BringToFront();
@@ -198,9 +231,13 @@ namespace Citadel
             activePanel = pnlbDashboard;
             pnlDashboard.BringToFront();
 
-            // Centers and colors the user page groupboxes and controls.
+            // Centers controls inside their parents.
             gbTitle(gbUserlist, btnDelete);
             gbTitle(gbCuruser, btnLogout);
+            gbTitle(pnlStudents, lblReadingFrom);
+            gbTitle(pnlStudents, lblStudentsTitle);
+
+            // Sets the text color of group boxes to white.
             gbNewuser.ForeColor = Color.White;
             gbUserlist.ForeColor = Color.White;
             gbSearch.ForeColor = Color.White;
@@ -236,6 +273,9 @@ namespace Citadel
             _x = pnlContainer.Location.X - _x;
             lblWelcome.Location = new Point(lblWelcome.Location.X + _x, lblWelcome.Location.Y);
             lblUser.Location = new Point(lblUser.Location.X + _x, lblWelcome.Location.Y);
+
+            // Read the students data file into an array.
+            readToArray(specificFolder + "/data/students.fbla", students, "NA");
 
             // Adds all users to the user list on user page.
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
@@ -453,6 +493,30 @@ namespace Citadel
                 grade = 13;
             }
             changeGrade(grade);
+        }
+
+        void viewStudent(int studentNum)
+        {
+            // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
+            // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
+            // 8 = School, 9 = Email, 10 = Comments
+
+            txtMemberNum.Text = students[studentNum, 0];
+            txtFullName.Text = students[studentNum, 1] + " " + students[studentNum, 2];
+            txtFees.Text = students[studentNum, 3];
+            txtYearJoined.Text = students[studentNum, 4];
+            switch (Convert.ToInt32(students[studentNum, 5]))
+            {
+                case 0: pbFemale.BackColor = Color.DodgerBlue; break;
+                case 1: pbMale.BackColor = Color.DodgerBlue; break;
+            }
+            switch (Convert.ToInt32(students[studentNum, 6]))
+            {
+                case 0: pbNotActive.BackColor = Color.DodgerBlue; break;
+                case 1: pbActive.BackColor = Color.DodgerBlue; break;
+            }
+            lblGrade.Text = students[studentNum, 7];
+            lblSchool.Text = "School: " + students[studentNum, 8];
         }
     }
 }

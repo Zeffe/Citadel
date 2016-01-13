@@ -31,30 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.thirteenForm1 = new asset.ThirteenForm();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbVersion = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.gbProjSumm = new System.Windows.Forms.GroupBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.pnlStudents = new System.Windows.Forms.Panel();
+            this.lblReadingFrom = new System.Windows.Forms.Label();
             this.gbNewStudent = new System.Windows.Forms.GroupBox();
             this.tcNewStudent = new asset.ThirteenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnCopyQf = new System.Windows.Forms.PictureBox();
             this.txtComment = new asset.ThirteenTextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.thirteenTextBox4 = new asset.ThirteenTextBox();
+            this.txtFees = new asset.ThirteenTextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.thirteenTextBox3 = new asset.ThirteenTextBox();
+            this.txtYearJoined = new asset.ThirteenTextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblGrade = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.thirteenTextBox2 = new asset.ThirteenTextBox();
+            this.txtMemberNum = new asset.ThirteenTextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.lblEmail2 = new System.Windows.Forms.Label();
             this.lblSchool = new System.Windows.Forms.Label();
@@ -67,7 +59,7 @@
             this.pbFemale = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.thirteenTextBox1 = new asset.ThirteenTextBox();
+            this.txtFullName = new asset.ThirteenTextBox();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
@@ -121,7 +113,16 @@
             this.btnDelStudent = new System.Windows.Forms.PictureBox();
             this.cmbTreeview = new asset.ThirteenComboBox();
             this.tvStudents = new System.Windows.Forms.TreeView();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblStudentsTitle = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbVersion = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.gbProjSumm = new System.Windows.Forms.GroupBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.pnlUsers = new System.Windows.Forms.Panel();
             this.gbNewuser = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -195,15 +196,11 @@
             this.pctSettings = new System.Windows.Forms.PictureBox();
             this.lblSettings = new System.Windows.Forms.Label();
             this.pnlbInfo = new System.Windows.Forms.Panel();
+            this.pctInfo = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
-            this.pctInfo = new System.Windows.Forms.PictureBox();
             this.thirteenForm1.SuspendLayout();
-            this.pnlInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbVersion.SuspendLayout();
-            this.gbProjSumm.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
             this.tcNewStudent.SuspendLayout();
@@ -238,6 +235,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
+            this.pnlInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbVersion.SuspendLayout();
+            this.gbProjSumm.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.gbNewuser.SuspendLayout();
             this.gbUserlist.SuspendLayout();
@@ -269,10 +270,10 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.label45);
             this.thirteenForm1.Controls.Add(this.label44);
             this.thirteenForm1.Controls.Add(this.pnlInfo);
-            this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.pnlStats);
             this.thirteenForm1.Controls.Add(this.pnlSettings);
@@ -306,111 +307,28 @@
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
             // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label45.Location = new System.Drawing.Point(3, 622);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(119, 13);
-            this.label45.TabIndex = 17;
-            this.label45.Text = "Icons From flaticon.com";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label44.Location = new System.Drawing.Point(3, 604);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(135, 13);
-            this.label44.TabIndex = 16;
-            this.label44.Text = "Programmed by Seth Dixon";
-            // 
-            // pnlInfo
-            // 
-            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlInfo.Controls.Add(this.pictureBox1);
-            this.pnlInfo.Controls.Add(this.gbVersion);
-            this.pnlInfo.Controls.Add(this.gbProjSumm);
-            this.pnlInfo.Controls.Add(this.label19);
-            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
-            this.pnlInfo.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Citadel.Properties.Resources.LoginScreen;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(270, 316);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 248);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.ttMaster.SetToolTip(this.pictureBox1, "Version 1 Login Screen");
-            // 
-            // gbVersion
-            // 
-            this.gbVersion.Controls.Add(this.label43);
-            this.gbVersion.Location = new System.Drawing.Point(20, 284);
-            this.gbVersion.Name = "gbVersion";
-            this.gbVersion.Size = new System.Drawing.Size(244, 308);
-            this.gbVersion.TabIndex = 8;
-            this.gbVersion.TabStop = false;
-            this.gbVersion.Text = "Version 1";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label43.Location = new System.Drawing.Point(6, 21);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(225, 260);
-            this.label43.TabIndex = 0;
-            this.label43.Text = resources.GetString("label43.Text");
-            // 
-            // gbProjSumm
-            // 
-            this.gbProjSumm.Controls.Add(this.label42);
-            this.gbProjSumm.Location = new System.Drawing.Point(20, 55);
-            this.gbProjSumm.Name = "gbProjSumm";
-            this.gbProjSumm.Size = new System.Drawing.Size(571, 218);
-            this.gbProjSumm.TabIndex = 7;
-            this.gbProjSumm.TabStop = false;
-            this.gbProjSumm.Text = "Project Summary";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label42.Location = new System.Drawing.Point(11, 36);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(549, 144);
-            this.label42.TabIndex = 0;
-            this.label42.Text = resources.GetString("label42.Text");
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label19.Location = new System.Drawing.Point(194, 16);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(256, 25);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Citadel - [ Information ]";
-            // 
             // pnlStudents
             // 
             this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlStudents.Controls.Add(this.lblReadingFrom);
             this.pnlStudents.Controls.Add(this.gbNewStudent);
             this.pnlStudents.Controls.Add(this.gbSearch);
             this.pnlStudents.Controls.Add(this.gbStudentList);
-            this.pnlStudents.Controls.Add(this.label12);
+            this.pnlStudents.Controls.Add(this.lblStudentsTitle);
             this.pnlStudents.Location = new System.Drawing.Point(229, 34);
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.Size = new System.Drawing.Size(609, 599);
             this.pnlStudents.TabIndex = 3;
             this.pnlStudents.LocationChanged += new System.EventHandler(this.pnlStudents_LocationChanged);
+            // 
+            // lblReadingFrom
+            // 
+            this.lblReadingFrom.AutoSize = true;
+            this.lblReadingFrom.Location = new System.Drawing.Point(61, 45);
+            this.lblReadingFrom.Name = "lblReadingFrom";
+            this.lblReadingFrom.Size = new System.Drawing.Size(119, 13);
+            this.lblReadingFrom.TabIndex = 7;
+            this.lblReadingFrom.Text = "Reading From: students";
             // 
             // gbNewStudent
             // 
@@ -441,13 +359,13 @@
             this.tabPage1.Controls.Add(this.btnCopyQf);
             this.tabPage1.Controls.Add(this.txtComment);
             this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.thirteenTextBox4);
+            this.tabPage1.Controls.Add(this.txtFees);
             this.tabPage1.Controls.Add(this.label31);
-            this.tabPage1.Controls.Add(this.thirteenTextBox3);
+            this.tabPage1.Controls.Add(this.txtYearJoined);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.thirteenTextBox2);
+            this.tabPage1.Controls.Add(this.txtMemberNum);
             this.tabPage1.Controls.Add(this.label28);
             this.tabPage1.Controls.Add(this.lblEmail2);
             this.tabPage1.Controls.Add(this.lblSchool);
@@ -456,7 +374,7 @@
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.label25);
-            this.tabPage1.Controls.Add(this.thirteenTextBox1);
+            this.tabPage1.Controls.Add(this.txtFullName);
             this.tabPage1.Controls.Add(this.lblStudentName);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -499,18 +417,18 @@
             this.label32.TabIndex = 24;
             this.label32.Text = "Comments";
             // 
-            // thirteenTextBox4
+            // txtFees
             // 
-            this.thirteenTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox4.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox4.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox4.Location = new System.Drawing.Point(302, 65);
-            this.thirteenTextBox4.Name = "thirteenTextBox4";
-            this.thirteenTextBox4.ReadOnly = true;
-            this.thirteenTextBox4.Size = new System.Drawing.Size(65, 22);
-            this.thirteenTextBox4.TabIndex = 23;
+            this.txtFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFees.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtFees.ForeColor = System.Drawing.Color.White;
+            this.txtFees.Location = new System.Drawing.Point(302, 65);
+            this.txtFees.Name = "txtFees";
+            this.txtFees.ReadOnly = true;
+            this.txtFees.Size = new System.Drawing.Size(65, 22);
+            this.txtFees.TabIndex = 23;
             // 
             // label31
             // 
@@ -521,18 +439,18 @@
             this.label31.TabIndex = 22;
             this.label31.Text = "Fees Due";
             // 
-            // thirteenTextBox3
+            // txtYearJoined
             // 
-            this.thirteenTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox3.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox3.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox3.Location = new System.Drawing.Point(379, 65);
-            this.thirteenTextBox3.Name = "thirteenTextBox3";
-            this.thirteenTextBox3.ReadOnly = true;
-            this.thirteenTextBox3.Size = new System.Drawing.Size(78, 22);
-            this.thirteenTextBox3.TabIndex = 21;
+            this.txtYearJoined.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtYearJoined.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtYearJoined.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtYearJoined.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtYearJoined.ForeColor = System.Drawing.Color.White;
+            this.txtYearJoined.Location = new System.Drawing.Point(379, 65);
+            this.txtYearJoined.Name = "txtYearJoined";
+            this.txtYearJoined.ReadOnly = true;
+            this.txtYearJoined.Size = new System.Drawing.Size(78, 22);
+            this.txtYearJoined.TabIndex = 21;
             // 
             // label30
             // 
@@ -571,18 +489,18 @@
             this.label29.TabIndex = 19;
             this.label29.Text = "Grade";
             // 
-            // thirteenTextBox2
+            // txtMemberNum
             // 
-            this.thirteenTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox2.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox2.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox2.Location = new System.Drawing.Point(226, 65);
-            this.thirteenTextBox2.Name = "thirteenTextBox2";
-            this.thirteenTextBox2.ReadOnly = true;
-            this.thirteenTextBox2.Size = new System.Drawing.Size(65, 22);
-            this.thirteenTextBox2.TabIndex = 18;
+            this.txtMemberNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtMemberNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMemberNum.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtMemberNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtMemberNum.ForeColor = System.Drawing.Color.White;
+            this.txtMemberNum.Location = new System.Drawing.Point(226, 65);
+            this.txtMemberNum.Name = "txtMemberNum";
+            this.txtMemberNum.ReadOnly = true;
+            this.txtMemberNum.Size = new System.Drawing.Size(65, 22);
+            this.txtMemberNum.TabIndex = 18;
             // 
             // label28
             // 
@@ -704,18 +622,18 @@
             this.label25.TabIndex = 9;
             this.label25.Text = "Full Name";
             // 
-            // thirteenTextBox1
+            // txtFullName
             // 
-            this.thirteenTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox1.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox1.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox1.Location = new System.Drawing.Point(25, 65);
-            this.thirteenTextBox1.Name = "thirteenTextBox1";
-            this.thirteenTextBox1.ReadOnly = true;
-            this.thirteenTextBox1.Size = new System.Drawing.Size(184, 22);
-            this.thirteenTextBox1.TabIndex = 8;
+            this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFullName.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtFullName.ForeColor = System.Drawing.Color.White;
+            this.txtFullName.Location = new System.Drawing.Point(25, 65);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.ReadOnly = true;
+            this.txtFullName.Size = new System.Drawing.Size(184, 22);
+            this.txtFullName.TabIndex = 8;
             // 
             // lblStudentName
             // 
@@ -1357,15 +1275,108 @@
             this.tvStudents.Size = new System.Drawing.Size(253, 137);
             this.tvStudents.TabIndex = 0;
             // 
-            // label12
+            // lblStudentsTitle
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label12.Location = new System.Drawing.Point(200, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(227, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Citadel - [ Students ]";
+            this.lblStudentsTitle.AutoSize = true;
+            this.lblStudentsTitle.Font = new System.Drawing.Font("Verdana", 15F);
+            this.lblStudentsTitle.Location = new System.Drawing.Point(200, 16);
+            this.lblStudentsTitle.Name = "lblStudentsTitle";
+            this.lblStudentsTitle.Size = new System.Drawing.Size(227, 25);
+            this.lblStudentsTitle.TabIndex = 1;
+            this.lblStudentsTitle.Text = "Citadel - [ Students ]";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label45.Location = new System.Drawing.Point(3, 622);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(119, 13);
+            this.label45.TabIndex = 17;
+            this.label45.Text = "Icons From flaticon.com";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label44.Location = new System.Drawing.Point(3, 604);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(135, 13);
+            this.label44.TabIndex = 16;
+            this.label44.Text = "Programmed by Seth Dixon";
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlInfo.Controls.Add(this.pictureBox1);
+            this.pnlInfo.Controls.Add(this.gbVersion);
+            this.pnlInfo.Controls.Add(this.gbProjSumm);
+            this.pnlInfo.Controls.Add(this.label19);
+            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
+            this.pnlInfo.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Citadel.Properties.Resources.LoginScreen;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(270, 316);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(321, 248);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox1, "Version 1 Login Screen");
+            // 
+            // gbVersion
+            // 
+            this.gbVersion.Controls.Add(this.label43);
+            this.gbVersion.Location = new System.Drawing.Point(20, 284);
+            this.gbVersion.Name = "gbVersion";
+            this.gbVersion.Size = new System.Drawing.Size(244, 308);
+            this.gbVersion.TabIndex = 8;
+            this.gbVersion.TabStop = false;
+            this.gbVersion.Text = "Version 1";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label43.Location = new System.Drawing.Point(6, 21);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(225, 260);
+            this.label43.TabIndex = 0;
+            this.label43.Text = resources.GetString("label43.Text");
+            // 
+            // gbProjSumm
+            // 
+            this.gbProjSumm.Controls.Add(this.label42);
+            this.gbProjSumm.Location = new System.Drawing.Point(20, 55);
+            this.gbProjSumm.Name = "gbProjSumm";
+            this.gbProjSumm.Size = new System.Drawing.Size(571, 218);
+            this.gbProjSumm.TabIndex = 7;
+            this.gbProjSumm.TabStop = false;
+            this.gbProjSumm.Text = "Project Summary";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label42.Location = new System.Drawing.Point(11, 36);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(549, 144);
+            this.label42.TabIndex = 0;
+            this.label42.Text = resources.GetString("label42.Text");
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label19.Location = new System.Drawing.Point(194, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(256, 25);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Citadel - [ Information ]";
             // 
             // pnlUsers
             // 
@@ -2139,6 +2150,16 @@
             this.pnlbInfo.Size = new System.Drawing.Size(229, 49);
             this.pnlbInfo.TabIndex = 15;
             // 
+            // pctInfo
+            // 
+            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
+            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctInfo.Location = new System.Drawing.Point(14, 13);
+            this.pctInfo.Name = "pctInfo";
+            this.pctInfo.Size = new System.Drawing.Size(24, 24);
+            this.pctInfo.TabIndex = 14;
+            this.pctInfo.TabStop = false;
+            // 
             // label18
             // 
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -2159,16 +2180,6 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pctInfo
-            // 
-            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
-            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctInfo.Location = new System.Drawing.Point(14, 13);
-            this.pctInfo.Name = "pctInfo";
-            this.pctInfo.Size = new System.Drawing.Size(24, 24);
-            this.pctInfo.TabIndex = 14;
-            this.pctInfo.TabStop = false;
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2184,13 +2195,6 @@
             this.Load += new System.EventHandler(this.formMain_Load);
             this.thirteenForm1.ResumeLayout(false);
             this.thirteenForm1.PerformLayout();
-            this.pnlInfo.ResumeLayout(false);
-            this.pnlInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbVersion.ResumeLayout(false);
-            this.gbVersion.PerformLayout();
-            this.gbProjSumm.ResumeLayout(false);
-            this.gbProjSumm.PerformLayout();
             this.pnlStudents.ResumeLayout(false);
             this.pnlStudents.PerformLayout();
             this.gbNewStudent.ResumeLayout(false);
@@ -2229,6 +2233,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).EndInit();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbVersion.ResumeLayout(false);
+            this.gbVersion.PerformLayout();
+            this.gbProjSumm.ResumeLayout(false);
+            this.gbProjSumm.PerformLayout();
             this.pnlUsers.ResumeLayout(false);
             this.pnlUsers.PerformLayout();
             this.gbNewuser.ResumeLayout(false);
@@ -2298,7 +2309,7 @@
         private System.Windows.Forms.Label lblStudents;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnlStudents;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblStudentsTitle;
         private System.Windows.Forms.Panel pnlbSource;
         private System.Windows.Forms.PictureBox pctSource;
         private System.Windows.Forms.Label lblSource;
@@ -2364,7 +2375,7 @@
         private System.Windows.Forms.Label lblStudentName;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private asset.ThirteenTextBox thirteenTextBox1;
+        private asset.ThirteenTextBox txtFullName;
         private System.Windows.Forms.PictureBox pbFemale;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbMale;
@@ -2377,13 +2388,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label label29;
-        private asset.ThirteenTextBox thirteenTextBox2;
+        private asset.ThirteenTextBox txtMemberNum;
         private System.Windows.Forms.Label label28;
         private asset.ThirteenTextBox txtComment;
         private System.Windows.Forms.Label label32;
-        private asset.ThirteenTextBox thirteenTextBox4;
+        private asset.ThirteenTextBox txtFees;
         private System.Windows.Forms.Label label31;
-        private asset.ThirteenTextBox thirteenTextBox3;
+        private asset.ThirteenTextBox txtYearJoined;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox btnCopyQf;
         private asset.ThirteenComboBox cmbTreeview;
@@ -2442,5 +2453,6 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.PictureBox pctInfo;
+        private System.Windows.Forms.Label lblReadingFrom;
     }
 }
