@@ -31,6 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.thirteenForm1 = new asset.ThirteenForm();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbVersion = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.gbProjSumm = new System.Windows.Forms.GroupBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.pnlStudents = new System.Windows.Forms.Panel();
             this.gbNewStudent = new System.Windows.Forms.GroupBox();
             this.tcNewStudent = new asset.ThirteenTabControl();
@@ -95,6 +104,12 @@
             this.btnSave = new System.Windows.Forms.PictureBox();
             this.btnNew2 = new System.Windows.Forms.PictureBox();
             this.gbSearch = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.cmbFilterBy = new asset.ThirteenComboBox();
+            this.btnFilter = new System.Windows.Forms.PictureBox();
+            this.thirteenTextBox13 = new asset.ThirteenTextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cmbSearchBy = new asset.ThirteenComboBox();
             this.btnSearch = new System.Windows.Forms.PictureBox();
             this.thirteenTextBox12 = new asset.ThirteenTextBox();
             this.lblFilter = new System.Windows.Forms.Label();
@@ -139,8 +154,6 @@
             this.lblFirstname = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblCuruser = new System.Windows.Forms.Label();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
             this.pnlStats = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlSettings = new System.Windows.Forms.Panel();
@@ -183,12 +196,14 @@
             this.lblSettings = new System.Windows.Forms.Label();
             this.pnlbInfo = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.pctInfo = new System.Windows.Forms.PictureBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
-            this.thirteenComboBox1 = new asset.ThirteenComboBox();
-            this.label39 = new System.Windows.Forms.Label();
+            this.pctInfo = new System.Windows.Forms.PictureBox();
             this.thirteenForm1.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbVersion.SuspendLayout();
+            this.gbProjSumm.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
             this.tcNewStudent.SuspendLayout();
@@ -217,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).BeginInit();
             this.gbSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.gbStudentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).BeginInit();
@@ -226,7 +242,6 @@
             this.gbNewuser.SuspendLayout();
             this.gbUserlist.SuspendLayout();
             this.gbCuruser.SuspendLayout();
-            this.pnlInfo.SuspendLayout();
             this.pnlStats.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlSource.SuspendLayout();
@@ -254,9 +269,11 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.Controls.Add(this.label45);
+            this.thirteenForm1.Controls.Add(this.label44);
+            this.thirteenForm1.Controls.Add(this.pnlInfo);
             this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlUsers);
-            this.thirteenForm1.Controls.Add(this.pnlInfo);
             this.thirteenForm1.Controls.Add(this.pnlStats);
             this.thirteenForm1.Controls.Add(this.pnlSettings);
             this.thirteenForm1.Controls.Add(this.pnlSource);
@@ -281,13 +298,106 @@
             this.thirteenForm1.Controls.Add(this.pnlbSettings);
             this.thirteenForm1.Controls.Add(this.pnlbInfo);
             this.thirteenForm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thirteenForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenForm1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.thirteenForm1.ForeColor = System.Drawing.Color.White;
             this.thirteenForm1.Location = new System.Drawing.Point(0, 0);
             this.thirteenForm1.Name = "thirteenForm1";
             this.thirteenForm1.Size = new System.Drawing.Size(841, 638);
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label45.Location = new System.Drawing.Point(3, 622);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(119, 13);
+            this.label45.TabIndex = 17;
+            this.label45.Text = "Icons From flaticon.com";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label44.Location = new System.Drawing.Point(3, 604);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(135, 13);
+            this.label44.TabIndex = 16;
+            this.label44.Text = "Programmed by Seth Dixon";
+            // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlInfo.Controls.Add(this.pictureBox1);
+            this.pnlInfo.Controls.Add(this.gbVersion);
+            this.pnlInfo.Controls.Add(this.gbProjSumm);
+            this.pnlInfo.Controls.Add(this.label19);
+            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
+            this.pnlInfo.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Citadel.Properties.Resources.LoginScreen;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(270, 316);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(321, 248);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.ttMaster.SetToolTip(this.pictureBox1, "Version 1 Login Screen");
+            // 
+            // gbVersion
+            // 
+            this.gbVersion.Controls.Add(this.label43);
+            this.gbVersion.Location = new System.Drawing.Point(20, 284);
+            this.gbVersion.Name = "gbVersion";
+            this.gbVersion.Size = new System.Drawing.Size(244, 308);
+            this.gbVersion.TabIndex = 8;
+            this.gbVersion.TabStop = false;
+            this.gbVersion.Text = "Version 1";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label43.Location = new System.Drawing.Point(6, 21);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(225, 260);
+            this.label43.TabIndex = 0;
+            this.label43.Text = resources.GetString("label43.Text");
+            // 
+            // gbProjSumm
+            // 
+            this.gbProjSumm.Controls.Add(this.label42);
+            this.gbProjSumm.Location = new System.Drawing.Point(20, 55);
+            this.gbProjSumm.Name = "gbProjSumm";
+            this.gbProjSumm.Size = new System.Drawing.Size(571, 218);
+            this.gbProjSumm.TabIndex = 7;
+            this.gbProjSumm.TabStop = false;
+            this.gbProjSumm.Text = "Project Summary";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label42.Location = new System.Drawing.Point(11, 36);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(549, 144);
+            this.label42.TabIndex = 0;
+            this.label42.Text = resources.GetString("label42.Text");
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label19.Location = new System.Drawing.Point(194, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(256, 25);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Citadel - [ Information ]";
             // 
             // pnlStudents
             // 
@@ -385,7 +495,7 @@
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(299, 97);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(72, 16);
+            this.label32.Size = new System.Drawing.Size(56, 13);
             this.label32.TabIndex = 24;
             this.label32.Text = "Comments";
             // 
@@ -407,7 +517,7 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(299, 46);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(67, 16);
+            this.label31.Size = new System.Drawing.Size(53, 13);
             this.label31.TabIndex = 22;
             this.label31.Text = "Fees Due";
             // 
@@ -429,7 +539,7 @@
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(376, 46);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(81, 16);
+            this.label30.Size = new System.Drawing.Size(63, 13);
             this.label30.TabIndex = 20;
             this.label30.Text = "Year Joined";
             // 
@@ -457,7 +567,7 @@
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(223, 97);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(46, 16);
+            this.label29.Size = new System.Drawing.Size(36, 13);
             this.label29.TabIndex = 19;
             this.label29.Text = "Grade";
             // 
@@ -479,7 +589,7 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(223, 46);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 16);
+            this.label28.Size = new System.Drawing.Size(55, 13);
             this.label28.TabIndex = 17;
             this.label28.Text = "Member #";
             // 
@@ -540,7 +650,7 @@
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(123, 97);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(45, 16);
+            this.label27.Size = new System.Drawing.Size(37, 13);
             this.label27.TabIndex = 14;
             this.label27.Text = "Active";
             // 
@@ -581,7 +691,7 @@
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(22, 97);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 16);
+            this.label26.Size = new System.Drawing.Size(42, 13);
             this.label26.TabIndex = 10;
             this.label26.Text = "Gender";
             // 
@@ -590,7 +700,7 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(22, 46);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 16);
+            this.label25.Size = new System.Drawing.Size(54, 13);
             this.label25.TabIndex = 9;
             this.label25.Text = "Full Name";
             // 
@@ -657,7 +767,7 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(315, 97);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 16);
+            this.label24.Size = new System.Drawing.Size(56, 13);
             this.label24.TabIndex = 37;
             this.label24.Text = "Comments";
             // 
@@ -679,7 +789,7 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(229, 141);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 16);
+            this.label23.Size = new System.Drawing.Size(63, 13);
             this.label23.TabIndex = 35;
             this.label23.Text = "Year Joined";
             // 
@@ -700,7 +810,7 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(229, 94);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(67, 16);
+            this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 33;
             this.label22.Text = "Fees Due";
             // 
@@ -721,7 +831,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(229, 46);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 16);
+            this.label21.Size = new System.Drawing.Size(32, 13);
             this.label21.TabIndex = 31;
             this.label21.Text = "Email";
             // 
@@ -742,7 +852,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(229, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "School";
             // 
@@ -806,7 +916,7 @@
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(77, 158);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(46, 16);
+            this.label38.Size = new System.Drawing.Size(36, 13);
             this.label38.TabIndex = 27;
             this.label38.Text = "Grade";
             // 
@@ -815,7 +925,7 @@
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(139, 94);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(45, 16);
+            this.label37.Size = new System.Drawing.Size(37, 13);
             this.label37.TabIndex = 26;
             this.label37.Text = "Active";
             // 
@@ -824,7 +934,7 @@
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(49, 94);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(53, 16);
+            this.label36.Size = new System.Drawing.Size(42, 13);
             this.label36.TabIndex = 25;
             this.label36.Text = "Gender";
             // 
@@ -921,7 +1031,7 @@
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(49, 46);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(73, 16);
+            this.label35.Size = new System.Drawing.Size(58, 13);
             this.label35.TabIndex = 20;
             this.label35.Text = "Last Name";
             // 
@@ -942,7 +1052,7 @@
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(49, 3);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(73, 16);
+            this.label34.Size = new System.Drawing.Size(57, 13);
             this.label34.TabIndex = 18;
             this.label34.Text = "First Name";
             // 
@@ -1002,8 +1112,12 @@
             // 
             // gbSearch
             // 
+            this.gbSearch.Controls.Add(this.label41);
+            this.gbSearch.Controls.Add(this.cmbFilterBy);
+            this.gbSearch.Controls.Add(this.btnFilter);
+            this.gbSearch.Controls.Add(this.thirteenTextBox13);
             this.gbSearch.Controls.Add(this.label39);
-            this.gbSearch.Controls.Add(this.thirteenComboBox1);
+            this.gbSearch.Controls.Add(this.cmbSearchBy);
             this.gbSearch.Controls.Add(this.btnSearch);
             this.gbSearch.Controls.Add(this.thirteenTextBox12);
             this.gbSearch.Controls.Add(this.lblFilter);
@@ -1016,6 +1130,100 @@
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "Search / Filter";
             // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(12, 160);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(47, 13);
+            this.label41.TabIndex = 18;
+            this.label41.Text = "Filter By:";
+            // 
+            // cmbFilterBy
+            // 
+            this.cmbFilterBy.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.cmbFilterBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cmbFilterBy.ColorScheme = asset.ThirteenComboBox.ColorSchemes.Dark;
+            this.cmbFilterBy.DisplayMember = "0";
+            this.cmbFilterBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFilterBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilterBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbFilterBy.ForeColor = System.Drawing.Color.White;
+            this.cmbFilterBy.FormattingEnabled = true;
+            this.cmbFilterBy.Items.AddRange(new object[] {
+            "Last Name",
+            "First Name",
+            "Year Joined",
+            "Member #",
+            "Email",
+            "School",
+            "Grade",
+            "Is Active",
+            "Has Fees"});
+            this.cmbFilterBy.Location = new System.Drawing.Point(91, 157);
+            this.cmbFilterBy.Name = "cmbFilterBy";
+            this.cmbFilterBy.Size = new System.Drawing.Size(128, 23);
+            this.cmbFilterBy.TabIndex = 16;
+            this.cmbFilterBy.Tag = "";
+            this.ttMaster.SetToolTip(this.cmbFilterBy, "Second piece of information to display.");
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackgroundImage = global::Citadel.Properties.Resources.filter3;
+            this.btnFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFilter.Location = new System.Drawing.Point(225, 139);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(30, 30);
+            this.btnFilter.TabIndex = 17;
+            this.btnFilter.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnFilter, "Filter");
+            // 
+            // thirteenTextBox13
+            // 
+            this.thirteenTextBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.thirteenTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thirteenTextBox13.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.thirteenTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.thirteenTextBox13.ForeColor = System.Drawing.Color.White;
+            this.thirteenTextBox13.Location = new System.Drawing.Point(15, 131);
+            this.thirteenTextBox13.Name = "thirteenTextBox13";
+            this.thirteenTextBox13.ReadOnly = true;
+            this.thirteenTextBox13.Size = new System.Drawing.Size(204, 22);
+            this.thirteenTextBox13.TabIndex = 15;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(12, 68);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(59, 13);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "Search By:";
+            // 
+            // cmbSearchBy
+            // 
+            this.cmbSearchBy.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.cmbSearchBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cmbSearchBy.ColorScheme = asset.ThirteenComboBox.ColorSchemes.Dark;
+            this.cmbSearchBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSearchBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbSearchBy.ForeColor = System.Drawing.Color.White;
+            this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            "Last Name",
+            "First Name",
+            "Year Joined",
+            "Member #",
+            "Email",
+            "School",
+            "Grade"});
+            this.cmbSearchBy.Location = new System.Drawing.Point(91, 65);
+            this.cmbSearchBy.Name = "cmbSearchBy";
+            this.cmbSearchBy.Size = new System.Drawing.Size(128, 23);
+            this.cmbSearchBy.TabIndex = 5;
+            this.ttMaster.SetToolTip(this.cmbSearchBy, "Second piece of information to display.");
+            // 
             // btnSearch
             // 
             this.btnSearch.BackgroundImage = global::Citadel.Properties.Resources.magnifier13;
@@ -1025,6 +1233,7 @@
             this.btnSearch.Size = new System.Drawing.Size(30, 30);
             this.btnSearch.TabIndex = 13;
             this.btnSearch.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnSearch, "Search");
             // 
             // thirteenTextBox12
             // 
@@ -1043,7 +1252,7 @@
             // 
             this.lblFilter.AutoSize = true;
             this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lblFilter.Location = new System.Drawing.Point(11, 110);
+            this.lblFilter.Location = new System.Drawing.Point(11, 107);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(57, 24);
             this.lblFilter.TabIndex = 11;
@@ -1126,6 +1335,14 @@
             this.cmbTreeview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cmbTreeview.ForeColor = System.Drawing.Color.White;
             this.cmbTreeview.FormattingEnabled = true;
+            this.cmbTreeview.Items.AddRange(new object[] {
+            "Last Name",
+            "First Name",
+            "Year Joined",
+            "Member #",
+            "Email",
+            "School",
+            "Grade"});
             this.cmbTreeview.Location = new System.Drawing.Point(6, 163);
             this.cmbTreeview.Name = "cmbTreeview";
             this.cmbTreeview.Size = new System.Drawing.Size(155, 23);
@@ -1194,7 +1411,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(27, 92);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(191, 16);
+            this.label20.Size = new System.Drawing.Size(156, 13);
             this.label20.TabIndex = 14;
             this.label20.Text = "* No greater than 15 characters";
             // 
@@ -1404,10 +1621,9 @@
             this.listUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.listUsers.ForeColor = System.Drawing.Color.White;
             this.listUsers.FormattingEnabled = true;
-            this.listUsers.ItemHeight = 16;
             this.listUsers.Location = new System.Drawing.Point(6, 21);
             this.listUsers.Name = "listUsers";
-            this.listUsers.Size = new System.Drawing.Size(253, 132);
+            this.listUsers.Size = new System.Drawing.Size(253, 121);
             this.listUsers.TabIndex = 0;
             // 
             // label11
@@ -1516,25 +1732,6 @@
             this.lblCuruser.Size = new System.Drawing.Size(124, 24);
             this.lblCuruser.TabIndex = 0;
             this.lblCuruser.Text = "placeHolder";
-            // 
-            // pnlInfo
-            // 
-            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlInfo.Controls.Add(this.label19);
-            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
-            this.pnlInfo.TabIndex = 3;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label19.Location = new System.Drawing.Point(194, 16);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(256, 25);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Citadel - [ Information ]";
             // 
             // pnlStats
             // 
@@ -1654,6 +1851,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblUser.Location = new System.Drawing.Point(84, 42);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(83, 16);
@@ -1664,6 +1862,7 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblWelcome.Location = new System.Drawing.Point(12, 42);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(66, 16);
@@ -1932,8 +2131,8 @@
             // 
             // pnlbInfo
             // 
-            this.pnlbInfo.Controls.Add(this.label18);
             this.pnlbInfo.Controls.Add(this.pctInfo);
+            this.pnlbInfo.Controls.Add(this.label18);
             this.pnlbInfo.Controls.Add(this.lblInfo);
             this.pnlbInfo.Location = new System.Drawing.Point(1, 367);
             this.pnlbInfo.Name = "pnlbInfo";
@@ -1949,17 +2148,6 @@
             this.label18.Size = new System.Drawing.Size(229, 2);
             this.label18.TabIndex = 13;
             // 
-            // pctInfo
-            // 
-            this.pctInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
-            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctInfo.Location = new System.Drawing.Point(14, 13);
-            this.pctInfo.Name = "pctInfo";
-            this.pctInfo.Size = new System.Drawing.Size(24, 24);
-            this.pctInfo.TabIndex = 1;
-            this.pctInfo.TabStop = false;
-            // 
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
@@ -1971,30 +2159,15 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // thirteenComboBox1
+            // pctInfo
             // 
-            this.thirteenComboBox1.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.thirteenComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenComboBox1.ColorScheme = asset.ThirteenComboBox.ColorSchemes.Dark;
-            this.thirteenComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.thirteenComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.thirteenComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenComboBox1.ForeColor = System.Drawing.Color.White;
-            this.thirteenComboBox1.FormattingEnabled = true;
-            this.thirteenComboBox1.Location = new System.Drawing.Point(91, 65);
-            this.thirteenComboBox1.Name = "thirteenComboBox1";
-            this.thirteenComboBox1.Size = new System.Drawing.Size(128, 23);
-            this.thirteenComboBox1.TabIndex = 5;
-            this.ttMaster.SetToolTip(this.thirteenComboBox1, "Second piece of information to display.");
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(12, 68);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(73, 16);
-            this.label39.TabIndex = 14;
-            this.label39.Text = "Search By:";
+            this.pctInfo.BackgroundImage = global::Citadel.Properties.Resources.info28;
+            this.pctInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctInfo.Location = new System.Drawing.Point(14, 13);
+            this.pctInfo.Name = "pctInfo";
+            this.pctInfo.Size = new System.Drawing.Size(24, 24);
+            this.pctInfo.TabIndex = 14;
+            this.pctInfo.TabStop = false;
             // 
             // formMain
             // 
@@ -2011,6 +2184,13 @@
             this.Load += new System.EventHandler(this.formMain_Load);
             this.thirteenForm1.ResumeLayout(false);
             this.thirteenForm1.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbVersion.ResumeLayout(false);
+            this.gbVersion.PerformLayout();
+            this.gbProjSumm.ResumeLayout(false);
+            this.gbProjSumm.PerformLayout();
             this.pnlStudents.ResumeLayout(false);
             this.pnlStudents.PerformLayout();
             this.gbNewStudent.ResumeLayout(false);
@@ -2043,6 +2223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).EndInit();
             this.gbSearch.ResumeLayout(false);
             this.gbSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFilter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.gbStudentList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).EndInit();
@@ -2055,8 +2236,6 @@
             this.gbUserlist.ResumeLayout(false);
             this.gbCuruser.ResumeLayout(false);
             this.gbCuruser.PerformLayout();
-            this.pnlInfo.ResumeLayout(false);
-            this.pnlInfo.PerformLayout();
             this.pnlStats.ResumeLayout(false);
             this.pnlStats.PerformLayout();
             this.pnlSettings.ResumeLayout(false);
@@ -2152,7 +2331,6 @@
         private asset.ThirteenButton btnLogout;
         private System.Windows.Forms.Panel pnlbInfo;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.PictureBox pctInfo;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Label label19;
@@ -2251,6 +2429,18 @@
         private System.Windows.Forms.PictureBox btnSearch;
         private asset.ThirteenTextBox thirteenTextBox12;
         private System.Windows.Forms.Label label39;
-        private asset.ThirteenComboBox thirteenComboBox1;
+        private asset.ThirteenComboBox cmbSearchBy;
+        private System.Windows.Forms.Label label41;
+        private asset.ThirteenComboBox cmbFilterBy;
+        private System.Windows.Forms.PictureBox btnFilter;
+        private asset.ThirteenTextBox thirteenTextBox13;
+        private System.Windows.Forms.GroupBox gbVersion;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.GroupBox gbProjSumm;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.PictureBox pctInfo;
     }
 }

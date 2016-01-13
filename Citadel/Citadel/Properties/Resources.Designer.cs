@@ -183,6 +183,16 @@ namespace Citadel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filter3 {
+            get {
+                object obj = ResourceManager.GetObject("filter3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder265 {
             get {
                 object obj = ResourceManager.GetObject("folder265", resourceCulture);
@@ -216,6 +226,16 @@ namespace Citadel.Properties {
         internal static System.Drawing.Bitmap info28 {
             get {
                 object obj = ResourceManager.GetObject("info28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginScreen {
+            get {
+                object obj = ResourceManager.GetObject("LoginScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -122,6 +122,7 @@ namespace Citadel
             panelb.MouseLeave += new System.EventHandler(pnlLeave);
         }
 
+
         void pctEnter(object sender, EventArgs e)
         {
             PictureBox _pct = sender as PictureBox;
@@ -205,6 +206,8 @@ namespace Citadel
             gbSearch.ForeColor = Color.White;
             gbStudentList.ForeColor = Color.White;
             gbNewStudent.ForeColor = Color.White;
+            gbVersion.ForeColor = Color.White;
+            gbProjSumm.ForeColor = Color.White;
 
             // Click event handlers that open the user page
             // when the welcome message is clicked.
@@ -265,6 +268,12 @@ namespace Citadel
             pbHighlight(btnGradeNext);
             pbHighlight(btnGradePrev);
             pbHighlight(btnSearch);
+            pbHighlight(btnFilter);
+
+            // Initialize student tab combobox values.
+            cmbFilterBy.SelectedIndex = 0;
+            cmbSearchBy.SelectedIndex = 0;
+            cmbTreeview.SelectedIndex = 0;
 
             // Moves panels behind the given textboxes in order to
             // easily draw a colored signifier around the textboxes.
