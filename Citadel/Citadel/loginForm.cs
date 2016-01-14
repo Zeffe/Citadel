@@ -73,9 +73,9 @@ namespace Citadel
         }
 
         // Used to call the custom message box.
-        public static void message(string msg, string title, int type, int returnVal)
+        public static void message(string msg, string title, int type)
         {
-            _message = new msgbox(msg, title, type, returnVal);
+            _message = new msgbox(msg, title, type);
             _message.Show();
         }
 
@@ -242,7 +242,7 @@ namespace Citadel
                     break;
                 } else if (i == users.GetLength(0) - 1)
                 {
-                    message("Invalid username or password.", "Error", 1, -1);
+                    message("Invalid username or password.", "Error", 1);
                 }
             }
         }

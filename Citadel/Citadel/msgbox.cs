@@ -13,10 +13,10 @@ namespace Citadel
     public partial class msgbox : Form
     {
 
-        string msgOut; int _returnVal; bool GO;
+        string msgOut; bool GO;
         public static int _return = 0;
 
-        public msgbox(String msg, String title, int type, int returnVal)
+        public msgbox(String msg, String title, int type)
         {
             //_returnVal = returnVal;
             //_return = 0;
@@ -49,15 +49,20 @@ namespace Citadel
             this.Width = lblMessage.Width + 20;
             switch (type)
             {
+                // Standard MessageBox
                 case 0: this.Height += lblMessage.Height - 10; break;
+                // OK Dialog
                 case 1:
                     this.Height += lblMessage.Height + 10; btnOk.Visible = true;
                     btnOk.Location = new System.Drawing.Point(this.Width / 2 - btnOk.Width / 2, this.Height - 30);
                     break;
+                // Yes/No Dialog
                 case 2:
-                    this.Height += lblMessage.Height + 10; btnYes.Visible = true; btnNo.Visible = true;
-                    btnYes.Location = new System.Drawing.Point(this.Width / 3 - this.Width/8, this.Height - this.Height / 3);
-                    btnNo.Location = new System.Drawing.Point((this.Width / 3) * 2 - this.Width/8, this.Height - this.Height / 3);
+                    this.Height += lblMessage.Height + btnNo.Height - 10; btnYes.Visible = true; btnNo.Visible = true;
+                    btnNo.Location = new System.Drawing.Point(this.Width - btnNo.Width - 10, this.Height - btnNo.Height - 10);
+                    btnYes.Location = new System.Drawing.Point(btnNo.Location.X - btnYes.Width - 5, btnNo.Location.Y);              
+                    //btnYes.Location = new System.Drawing.Point(this.Width / 3 - this.Width/8, this.Height - this.Height / 3);
+                    //btnNo.Location = new System.Drawing.Point((this.Width / 3) * 2 - this.Width/8, this.Height - this.Height / 3);
                     break;
             }
             // this.Icon later
@@ -72,13 +77,11 @@ namespace Citadel
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            _return = _returnVal;
             this.Close();
         }
 
         private void btnNo_Click(object sender, EventArgs e)
         {
-            _return = -1;
             this.Close();
         }
     }

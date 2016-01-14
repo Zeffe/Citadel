@@ -35,12 +35,23 @@ namespace Citadel
             perms = _perms;
         }
 
+        msgbox logConf = new msgbox("Are you sure you wish to exit Citadel?", "Exit", 2);
+        bool exit = true;
+
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!logout)
+            if (!logout && exit)
             {
-                Application.Exit();
+                if (logConf.ShowDialog() == DialogResult.Yes)
+                {
+                    exit = false;
+                    Application.Exit();
+                } else
+                {
+                    e.Cancel = true;
+                }
             }
+
         }
 
         // Centers a control inside a group box.
@@ -325,6 +336,7 @@ namespace Citadel
             pbHighlight(btnGradePrev);
             pbHighlight(btnSearch);
             pbHighlight(btnFilter);
+            pbHighlight(btnQuickAdd);
 
             // Initialize student tab combobox values.
             cmbFilterBy.SelectedIndex = 0;
@@ -559,7 +571,22 @@ namespace Citadel
                 }
             }
             Clipboard.SetText(_temp);
-            rformLogin.message("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1, -1);
+            rformLogin.message("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1);
+        }
+
+        void toggleNewStudent()
+        {
+            msgbox _conf = new msgbox("Creating a new user will erase any data currently filled in.", "Erase Data?", 2);
+            _conf.ShowDialog();
+            if (_conf.DialogResult == DialogResult.Yes)
+            {
+                //MessageBox.Show("You said yes!");
+            } 
+        }
+
+        private void btnNew2_Click(object sender, EventArgs e)
+        {
+            toggleNewStudent();
         }
     }
 }

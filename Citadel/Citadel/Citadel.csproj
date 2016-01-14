@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="castle.ico" />
+    <None Include="Resources\add30.png" />
     <None Include="Resources\ReadForm.png" />
     <None Include="Resources\StudentFormScreen.png" />
     <None Include="Resources\HomeScreen.png" />

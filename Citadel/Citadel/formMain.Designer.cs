@@ -62,6 +62,7 @@
             this.txtFullName = new asset.ThirteenTextBox();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnQuickAdd = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.thirteenTextBox11 = new asset.ThirteenTextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -214,6 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFemale)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnQuickAdd)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGradePrev)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGradeNext)).BeginInit();
@@ -650,6 +652,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Controls.Add(this.btnQuickAdd);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.thirteenTextBox11);
             this.tabPage2.Controls.Add(this.label23);
@@ -680,6 +683,17 @@
             this.tabPage2.Size = new System.Drawing.Size(551, 227);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Student";
+            // 
+            // btnQuickAdd
+            // 
+            this.btnQuickAdd.BackgroundImage = global::Citadel.Properties.Resources.add30;
+            this.btnQuickAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnQuickAdd.Location = new System.Drawing.Point(6, 123);
+            this.btnQuickAdd.Name = "btnQuickAdd";
+            this.btnQuickAdd.Size = new System.Drawing.Size(32, 32);
+            this.btnQuickAdd.TabIndex = 38;
+            this.btnQuickAdd.TabStop = false;
+            this.ttMaster.SetToolTip(this.btnQuickAdd, "Quick Add");
             // 
             // label24
             // 
@@ -1028,6 +1042,7 @@
             this.btnNew2.TabIndex = 0;
             this.btnNew2.TabStop = false;
             this.ttMaster.SetToolTip(this.btnNew2, "New Student");
+            this.btnNew2.Click += new System.EventHandler(this.btnNew2_Click);
             // 
             // gbSearch
             // 
@@ -2210,6 +2225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFemale)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnQuickAdd)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGradePrev)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGradeNext)).EndInit();
@@ -2453,5 +2469,6 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.PictureBox pctInfo;
         private System.Windows.Forms.Label lblReadingFrom;
+        private System.Windows.Forms.PictureBox btnQuickAdd;
     }
 }

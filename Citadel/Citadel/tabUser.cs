@@ -41,6 +41,7 @@ namespace Citadel
                 _login.Show();
             }
             logout = true;
+            exit = false;
             this.Close();
         }
 
@@ -193,7 +194,7 @@ namespace Citadel
             rformLogin.userNums.Add(rawUser, newUserNum);
             rformLogin.users[newUserNum, 0] = user; rformLogin.users[newUserNum, 1] = pass; rformLogin.users[newUserNum, 2] = first;
             rformLogin.users[newUserNum, 3] = last; rformLogin.users[newUserNum, 4] = email;
-            rformLogin.message(txtUsername.Text + " was successfully created!", "Success", 1, -1);
+            rformLogin.message(txtUsername.Text + " was successfully created!", "Success", 1);
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -206,7 +207,7 @@ namespace Citadel
             }
             else
             {
-                rformLogin.message("Please make sure all entries are complete and correct.", "Error", 1, -1);
+                rformLogin.message("Please make sure all entries are complete and correct.", "Error", 1);
             }
         }
     }
