@@ -393,6 +393,7 @@
             this.btnCopyQf.TabIndex = 13;
             this.btnCopyQf.TabStop = false;
             this.ttMaster.SetToolTip(this.btnCopyQf, "Copy QuickAdd Code");
+            this.btnCopyQf.Click += new System.EventHandler(this.btnCopyQf_Click);
             // 
             // txtComment
             // 
@@ -642,9 +643,9 @@
             this.lblStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.lblStudentName.Location = new System.Drawing.Point(14, 11);
             this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(482, 24);
+            this.lblStudentName.Size = new System.Drawing.Size(412, 24);
             this.lblStudentName.TabIndex = 7;
-            this.lblStudentName.Text = "Double click a student to view detailed information.";
+            this.lblStudentName.Text = "Click a student to view detailed information.";
             // 
             // tabPage2
             // 
@@ -1271,6 +1272,7 @@
             this.tvStudents.Name = "tvStudents";
             this.tvStudents.Size = new System.Drawing.Size(253, 137);
             this.tvStudents.TabIndex = 0;
+            this.tvStudents.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvStudents_AfterSelect);
             // 
             // lblStudentsTitle
             // 

@@ -21,6 +21,7 @@ namespace Citadel
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
         String[,] students = new String[50, 11]; // 2D array that stores students.
+        int currentView;       // The Student that is currently being viewed
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -517,6 +518,7 @@ namespace Citadel
             // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
             // 8 = School, 9 = Email, 10 = Comments
 
+            currentView = studentNum;
             txtMemberNum.Text = students[studentNum, 0];
             txtFullName.Text = students[studentNum, 1] + " " + students[studentNum, 2];
             txtFees.Text = students[studentNum, 3];
@@ -536,6 +538,28 @@ namespace Citadel
             lblSchool.Text = "School: " + students[studentNum, 8];
             txtEmail.Text = "Email: " + students[studentNum, 9];
             txtComment.Text = students[studentNum, 10];
+        }
+
+        private void tvStudents_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string _nodeText = e.Node.Text;
+            int _memNum = Convert.ToInt32(_nodeText[_nodeText.Length - 1].ToString());
+            viewStudent(_memNum - 1);
+        }
+
+        private void btnCopyQf_Click(object sender, EventArgs e)
+        {
+            string _temp = "";
+            for (int i = 0; i < 11; i++)
+            {
+                _temp += students[currentView, i];
+                if (i != 10)
+                {
+                    _temp += "\\";
+                }
+            }
+            Clipboard.SetText(_temp);
+            rformLogin.message("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1, -1);
         }
     }
 }
