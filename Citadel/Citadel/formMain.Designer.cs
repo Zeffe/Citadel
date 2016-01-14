@@ -62,17 +62,18 @@
             this.txtFullName = new asset.ThirteenTextBox();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblNewMemNum = new System.Windows.Forms.Label();
             this.btnQuickAdd = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.thirteenTextBox11 = new asset.ThirteenTextBox();
+            this.txtNewComment = new asset.ThirteenTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.thirteenTextBox10 = new asset.ThirteenTextBox();
+            this.txtNewYear = new asset.ThirteenTextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.thirteenTextBox9 = new asset.ThirteenTextBox();
+            this.txtNewFees = new asset.ThirteenTextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.thirteenTextBox8 = new asset.ThirteenTextBox();
+            this.txtNewEmail = new asset.ThirteenTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.thirteenTextBox7 = new asset.ThirteenTextBox();
+            this.txtNewSchool = new asset.ThirteenTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnGradePrev = new System.Windows.Forms.PictureBox();
             this.btnGradeNext = new System.Windows.Forms.PictureBox();
@@ -89,9 +90,9 @@
             this.btnGenderNext = new System.Windows.Forms.PictureBox();
             this.pbGenderSel = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.thirteenTextBox6 = new asset.ThirteenTextBox();
+            this.txtNewLast = new asset.ThirteenTextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.thirteenTextBox5 = new asset.ThirteenTextBox();
+            this.txtNewFirst = new asset.ThirteenTextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.PictureBox();
@@ -652,17 +653,18 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Controls.Add(this.lblNewMemNum);
             this.tabPage2.Controls.Add(this.btnQuickAdd);
             this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.thirteenTextBox11);
+            this.tabPage2.Controls.Add(this.txtNewComment);
             this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.thirteenTextBox10);
+            this.tabPage2.Controls.Add(this.txtNewYear);
             this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.thirteenTextBox9);
+            this.tabPage2.Controls.Add(this.txtNewFees);
             this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.thirteenTextBox8);
+            this.tabPage2.Controls.Add(this.txtNewEmail);
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.thirteenTextBox7);
+            this.tabPage2.Controls.Add(this.txtNewSchool);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Controls.Add(this.label38);
             this.tabPage2.Controls.Add(this.label37);
@@ -670,9 +672,9 @@
             this.tabPage2.Controls.Add(this.panel5);
             this.tabPage2.Controls.Add(this.panel4);
             this.tabPage2.Controls.Add(this.label35);
-            this.tabPage2.Controls.Add(this.thirteenTextBox6);
+            this.tabPage2.Controls.Add(this.txtNewLast);
             this.tabPage2.Controls.Add(this.label34);
-            this.tabPage2.Controls.Add(this.thirteenTextBox5);
+            this.tabPage2.Controls.Add(this.txtNewFirst);
             this.tabPage2.Controls.Add(this.label33);
             this.tabPage2.Controls.Add(this.btnClear);
             this.tabPage2.Controls.Add(this.btnSave);
@@ -683,6 +685,17 @@
             this.tabPage2.Size = new System.Drawing.Size(551, 227);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Student";
+            // 
+            // lblNewMemNum
+            // 
+            this.lblNewMemNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblNewMemNum.Location = new System.Drawing.Point(232, 191);
+            this.lblNewMemNum.Name = "lblNewMemNum";
+            this.lblNewMemNum.Size = new System.Drawing.Size(64, 27);
+            this.lblNewMemNum.TabIndex = 29;
+            this.lblNewMemNum.Text = "#";
+            this.lblNewMemNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ttMaster.SetToolTip(this.lblNewMemNum, "The member number assigned by Citadel.");
             // 
             // btnQuickAdd
             // 
@@ -704,18 +717,18 @@
             this.label24.TabIndex = 37;
             this.label24.Text = "Comments";
             // 
-            // thirteenTextBox11
+            // txtNewComment
             // 
-            this.thirteenTextBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox11.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox11.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox11.Location = new System.Drawing.Point(318, 113);
-            this.thirteenTextBox11.Multiline = true;
-            this.thirteenTextBox11.Name = "thirteenTextBox11";
-            this.thirteenTextBox11.Size = new System.Drawing.Size(227, 108);
-            this.thirteenTextBox11.TabIndex = 36;
+            this.txtNewComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewComment.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewComment.ForeColor = System.Drawing.Color.White;
+            this.txtNewComment.Location = new System.Drawing.Point(318, 113);
+            this.txtNewComment.Multiline = true;
+            this.txtNewComment.Name = "txtNewComment";
+            this.txtNewComment.Size = new System.Drawing.Size(227, 108);
+            this.txtNewComment.TabIndex = 36;
             // 
             // label23
             // 
@@ -726,17 +739,17 @@
             this.label23.TabIndex = 35;
             this.label23.Text = "Year Joined";
             // 
-            // thirteenTextBox10
+            // txtNewYear
             // 
-            this.thirteenTextBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox10.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox10.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox10.Location = new System.Drawing.Point(232, 160);
-            this.thirteenTextBox10.Name = "thirteenTextBox10";
-            this.thirteenTextBox10.Size = new System.Drawing.Size(64, 22);
-            this.thirteenTextBox10.TabIndex = 34;
+            this.txtNewYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewYear.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewYear.ForeColor = System.Drawing.Color.White;
+            this.txtNewYear.Location = new System.Drawing.Point(232, 160);
+            this.txtNewYear.Name = "txtNewYear";
+            this.txtNewYear.Size = new System.Drawing.Size(64, 22);
+            this.txtNewYear.TabIndex = 34;
             // 
             // label22
             // 
@@ -747,17 +760,17 @@
             this.label22.TabIndex = 33;
             this.label22.Text = "Fees Due";
             // 
-            // thirteenTextBox9
+            // txtNewFees
             // 
-            this.thirteenTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox9.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox9.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox9.Location = new System.Drawing.Point(232, 113);
-            this.thirteenTextBox9.Name = "thirteenTextBox9";
-            this.thirteenTextBox9.Size = new System.Drawing.Size(64, 22);
-            this.thirteenTextBox9.TabIndex = 32;
+            this.txtNewFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewFees.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewFees.ForeColor = System.Drawing.Color.White;
+            this.txtNewFees.Location = new System.Drawing.Point(232, 113);
+            this.txtNewFees.Name = "txtNewFees";
+            this.txtNewFees.Size = new System.Drawing.Size(64, 22);
+            this.txtNewFees.TabIndex = 32;
             // 
             // label21
             // 
@@ -768,17 +781,17 @@
             this.label21.TabIndex = 31;
             this.label21.Text = "Email";
             // 
-            // thirteenTextBox8
+            // txtNewEmail
             // 
-            this.thirteenTextBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox8.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox8.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox8.Location = new System.Drawing.Point(232, 65);
-            this.thirteenTextBox8.Name = "thirteenTextBox8";
-            this.thirteenTextBox8.Size = new System.Drawing.Size(311, 22);
-            this.thirteenTextBox8.TabIndex = 30;
+            this.txtNewEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewEmail.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewEmail.ForeColor = System.Drawing.Color.White;
+            this.txtNewEmail.Location = new System.Drawing.Point(232, 65);
+            this.txtNewEmail.Name = "txtNewEmail";
+            this.txtNewEmail.Size = new System.Drawing.Size(311, 22);
+            this.txtNewEmail.TabIndex = 30;
             // 
             // label1
             // 
@@ -789,17 +802,17 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "School";
             // 
-            // thirteenTextBox7
+            // txtNewSchool
             // 
-            this.thirteenTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox7.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox7.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox7.Location = new System.Drawing.Point(232, 21);
-            this.thirteenTextBox7.Name = "thirteenTextBox7";
-            this.thirteenTextBox7.Size = new System.Drawing.Size(311, 22);
-            this.thirteenTextBox7.TabIndex = 28;
+            this.txtNewSchool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewSchool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewSchool.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewSchool.ForeColor = System.Drawing.Color.White;
+            this.txtNewSchool.Location = new System.Drawing.Point(232, 21);
+            this.txtNewSchool.Name = "txtNewSchool";
+            this.txtNewSchool.Size = new System.Drawing.Size(311, 22);
+            this.txtNewSchool.TabIndex = 28;
             // 
             // panel6
             // 
@@ -968,17 +981,17 @@
             this.label35.TabIndex = 20;
             this.label35.Text = "Last Name";
             // 
-            // thirteenTextBox6
+            // txtNewLast
             // 
-            this.thirteenTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox6.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox6.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox6.Location = new System.Drawing.Point(52, 65);
-            this.thirteenTextBox6.Name = "thirteenTextBox6";
-            this.thirteenTextBox6.Size = new System.Drawing.Size(174, 22);
-            this.thirteenTextBox6.TabIndex = 19;
+            this.txtNewLast.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewLast.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewLast.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewLast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewLast.ForeColor = System.Drawing.Color.White;
+            this.txtNewLast.Location = new System.Drawing.Point(52, 65);
+            this.txtNewLast.Name = "txtNewLast";
+            this.txtNewLast.Size = new System.Drawing.Size(174, 22);
+            this.txtNewLast.TabIndex = 19;
             // 
             // label34
             // 
@@ -989,17 +1002,17 @@
             this.label34.TabIndex = 18;
             this.label34.Text = "First Name";
             // 
-            // thirteenTextBox5
+            // txtNewFirst
             // 
-            this.thirteenTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox5.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox5.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox5.Location = new System.Drawing.Point(52, 21);
-            this.thirteenTextBox5.Name = "thirteenTextBox5";
-            this.thirteenTextBox5.Size = new System.Drawing.Size(174, 22);
-            this.thirteenTextBox5.TabIndex = 15;
+            this.txtNewFirst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtNewFirst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNewFirst.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtNewFirst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtNewFirst.ForeColor = System.Drawing.Color.White;
+            this.txtNewFirst.Location = new System.Drawing.Point(52, 21);
+            this.txtNewFirst.Name = "txtNewFirst";
+            this.txtNewFirst.Size = new System.Drawing.Size(174, 22);
+            this.txtNewFirst.TabIndex = 15;
             // 
             // label33
             // 
@@ -1020,6 +1033,7 @@
             this.btnClear.TabIndex = 2;
             this.btnClear.TabStop = false;
             this.ttMaster.SetToolTip(this.btnClear, "Clear All");
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -2421,9 +2435,9 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.PictureBox btnClear;
         private System.Windows.Forms.Label label35;
-        private asset.ThirteenTextBox thirteenTextBox6;
+        private asset.ThirteenTextBox txtNewLast;
         private System.Windows.Forms.Label label34;
-        private asset.ThirteenTextBox thirteenTextBox5;
+        private asset.ThirteenTextBox txtNewFirst;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pbGenderSel;
         private System.Windows.Forms.PictureBox btnGenderNext;
@@ -2439,16 +2453,16 @@
         private System.Windows.Forms.PictureBox btnGradeNext;
         private System.Windows.Forms.Label lblGradeSel;
         private System.Windows.Forms.Label label38;
-        private asset.ThirteenTextBox thirteenTextBox7;
+        private asset.ThirteenTextBox txtNewSchool;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label24;
-        private asset.ThirteenTextBox thirteenTextBox11;
+        private asset.ThirteenTextBox txtNewComment;
         private System.Windows.Forms.Label label23;
-        private asset.ThirteenTextBox thirteenTextBox10;
+        private asset.ThirteenTextBox txtNewYear;
         private System.Windows.Forms.Label label22;
-        private asset.ThirteenTextBox thirteenTextBox9;
+        private asset.ThirteenTextBox txtNewFees;
         private System.Windows.Forms.Label label21;
-        private asset.ThirteenTextBox thirteenTextBox8;
+        private asset.ThirteenTextBox txtNewEmail;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.Label label40;
@@ -2470,5 +2484,6 @@
         private System.Windows.Forms.PictureBox pctInfo;
         private System.Windows.Forms.Label lblReadingFrom;
         private System.Windows.Forms.PictureBox btnQuickAdd;
+        private System.Windows.Forms.Label lblNewMemNum;
     }
 }

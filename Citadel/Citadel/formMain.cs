@@ -22,6 +22,7 @@ namespace Citadel
         Panel activePanel;     // Panel used to find the height to move indicator.
         String[,] students = new String[50, 11]; // 2D array that stores students.
         int currentView;       // The Student that is currently being viewed
+        int studentLength;     // Number of valid student accounts.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -117,6 +118,11 @@ namespace Citadel
                     }
                     catch { }
                     j++;
+                }
+
+                if (array2d == students)
+                {
+                    studentLength++;
                 }
                 i++;
             }
@@ -362,6 +368,9 @@ namespace Citadel
             rformLogin.placeHolder(txtEmail, "Email", false);
             rformLogin.placeHolder(txtEmailconf, "Confirm Email", false);
 
+            // Disables controls on New Student Page.
+            enableNewStudent(false);
+
             // tabUser events.
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
@@ -423,60 +432,69 @@ namespace Citadel
 
         void changeGender()
         {
-            if (!gender)
+            if (txtFirstname.Enabled)
             {
-                pbGenderSel.BackgroundImage = global::Citadel.Properties.Resources.female128;
-                ttMaster.SetToolTip(pbGenderSel, "Female");
-            }
-            else
-            {
-                pbGenderSel.BackgroundImage = global::Citadel.Properties.Resources.male244;
-                ttMaster.SetToolTip(pbGenderSel, "Male");
-            }
+                if (!gender)
+                {
+                    pbGenderSel.BackgroundImage = global::Citadel.Properties.Resources.female128;
+                    ttMaster.SetToolTip(pbGenderSel, "Female");
+                }
+                else
+                {
+                    pbGenderSel.BackgroundImage = global::Citadel.Properties.Resources.male244;
+                    ttMaster.SetToolTip(pbGenderSel, "Male");
+                }
 
-            gender = !gender;
+                gender = !gender;
+            }
         }
 
         void changeActive()
         {
-            if (!active)
+            if (txtFirstname.Enabled)
             {
-                pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
-                ttMaster.SetToolTip(pbActiveSel, "Not Active");
-            }
-            else
-            {
-                pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.checked21;
-                ttMaster.SetToolTip(pbActiveSel, "Active");
-            }
+                if (!active)
+                {
+                    pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.cancel30;
+                    ttMaster.SetToolTip(pbActiveSel, "Not Active");
+                }
+                else
+                {
+                    pbActiveSel.BackgroundImage = global::Citadel.Properties.Resources.checked21;
+                    ttMaster.SetToolTip(pbActiveSel, "Active");
+                }
 
-            active = !active;
+                active = !active;
+            }
         }
 
         void changeGrade(int _grade)
         {
-            switch(_grade)
+            if (txtFirstname.Enabled)
             {
-                case 9:
-                    lblGradeSel.Text = "9";
-                    ttMaster.SetToolTip(lblGradeSel, "Freshman");
-                    break;
-                case 10:
-                    lblGradeSel.Text = "10";
-                    ttMaster.SetToolTip(lblGradeSel, "Sophomore");
-                    break;
-                case 11:
-                    lblGradeSel.Text = "11";
-                    ttMaster.SetToolTip(lblGradeSel, "Junior");
-                    break;
-                case 12:
-                    lblGradeSel.Text = "12";
-                    ttMaster.SetToolTip(lblGradeSel, "Senior");
-                    break;
-                case 13:
-                    lblGradeSel.Text = "13+";
-                    ttMaster.SetToolTip(lblGradeSel, "College Level");
-                    break;
+                switch (_grade)
+                {
+                    case 9:
+                        lblGradeSel.Text = "9";
+                        ttMaster.SetToolTip(lblGradeSel, "Freshman");
+                        break;
+                    case 10:
+                        lblGradeSel.Text = "10";
+                        ttMaster.SetToolTip(lblGradeSel, "Sophomore");
+                        break;
+                    case 11:
+                        lblGradeSel.Text = "11";
+                        ttMaster.SetToolTip(lblGradeSel, "Junior");
+                        break;
+                    case 12:
+                        lblGradeSel.Text = "12";
+                        ttMaster.SetToolTip(lblGradeSel, "Senior");
+                        break;
+                    case 13:
+                        lblGradeSel.Text = "13+";
+                        ttMaster.SetToolTip(lblGradeSel, "College Level");
+                        break;
+                }
             }
         }
 
@@ -574,19 +592,50 @@ namespace Citadel
             rformLogin.message("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1);
         }
 
-        void toggleNewStudent()
+        void clearNewStudent()
         {
-            msgbox _conf = new msgbox("Creating a new user will erase any data currently filled in.", "Erase Data?", 2);
+            txtNewFirst.Clear(); txtNewLast.Clear(); txtNewSchool.Clear();
+            txtNewEmail.Clear(); txtNewYear.Clear(); txtNewFees.Clear();
+            txtNewComment.Clear();
+        }
+
+        void enableNewStudent(bool enable)
+        {
+            txtNewFirst.Enabled = enable; txtNewLast.Enabled = enable; txtNewSchool.Enabled = enable;
+            txtNewEmail.Enabled = enable; txtNewYear.Enabled = enable; txtNewFees.Enabled = enable;
+            txtNewComment.Enabled = enable;
+        }
+
+        msgbox _conf;
+
+        void newStudent()
+        {
+            _conf = new msgbox("Creating a new user will erase any filled in data.", "Erase Data?", 2);
             _conf.ShowDialog();
             if (_conf.DialogResult == DialogResult.Yes)
             {
-                //MessageBox.Show("You said yes!");
+                clearNewStudent();
+                if (!txtNewFirst.Enabled)
+                {
+                    enableNewStudent(true);
+                    lblNewMemNum.Text = "#" + (studentLength + 1).ToString();
+                }
             } 
         }
 
         private void btnNew2_Click(object sender, EventArgs e)
         {
-            toggleNewStudent();
+            newStudent();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            _conf = new msgbox("Are you sure you want to clear all data?", "Erase Data?", 2);
+            _conf.ShowDialog();
+            if (_conf.DialogResult == DialogResult.Yes)
+            {
+                clearNewStudent();
+            }
         }
     }
 }
