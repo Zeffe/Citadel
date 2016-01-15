@@ -67,7 +67,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtNewComment = new asset.ThirteenTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtNewYear = new asset.ThirteenTextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtNewFees = new asset.ThirteenTextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -97,6 +96,7 @@
             this.btnClear = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.PictureBox();
             this.btnNew2 = new System.Windows.Forms.PictureBox();
+            this.nmNewYear = new System.Windows.Forms.NumericUpDown();
             this.gbSearch = new System.Windows.Forms.GroupBox();
             this.label41 = new System.Windows.Forms.Label();
             this.cmbFilterBy = new asset.ThirteenComboBox();
@@ -231,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNewYear)).BeginInit();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
@@ -658,7 +659,6 @@
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.txtNewComment);
             this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.txtNewYear);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.txtNewFees);
             this.tabPage2.Controls.Add(this.label21);
@@ -679,6 +679,7 @@
             this.tabPage2.Controls.Add(this.btnClear);
             this.tabPage2.Controls.Add(this.btnSave);
             this.tabPage2.Controls.Add(this.btnNew2);
+            this.tabPage2.Controls.Add(this.nmNewYear);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -739,18 +740,6 @@
             this.label23.TabIndex = 35;
             this.label23.Text = "Year Joined";
             // 
-            // txtNewYear
-            // 
-            this.txtNewYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtNewYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewYear.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtNewYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtNewYear.ForeColor = System.Drawing.Color.White;
-            this.txtNewYear.Location = new System.Drawing.Point(232, 160);
-            this.txtNewYear.Name = "txtNewYear";
-            this.txtNewYear.Size = new System.Drawing.Size(64, 22);
-            this.txtNewYear.TabIndex = 34;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -771,6 +760,9 @@
             this.txtNewFees.Name = "txtNewFees";
             this.txtNewFees.Size = new System.Drawing.Size(64, 22);
             this.txtNewFees.TabIndex = 32;
+            this.txtNewFees.Text = "$0.00";
+            this.txtNewFees.Enter += new System.EventHandler(this.txtNewFees_Enter);
+            this.txtNewFees.Leave += new System.EventHandler(this.txtNewFees_Leave);
             // 
             // label21
             // 
@@ -1045,6 +1037,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.TabStop = false;
             this.ttMaster.SetToolTip(this.btnSave, "Save");
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNew2
             // 
@@ -1057,6 +1050,30 @@
             this.btnNew2.TabStop = false;
             this.ttMaster.SetToolTip(this.btnNew2, "New Student");
             this.btnNew2.Click += new System.EventHandler(this.btnNew2_Click);
+            // 
+            // nmNewYear
+            // 
+            this.nmNewYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.nmNewYear.ForeColor = System.Drawing.Color.White;
+            this.nmNewYear.Location = new System.Drawing.Point(232, 160);
+            this.nmNewYear.Maximum = new decimal(new int[] {
+            1940,
+            0,
+            0,
+            0});
+            this.nmNewYear.Minimum = new decimal(new int[] {
+            1940,
+            0,
+            0,
+            0});
+            this.nmNewYear.Name = "nmNewYear";
+            this.nmNewYear.Size = new System.Drawing.Size(64, 20);
+            this.nmNewYear.TabIndex = 39;
+            this.nmNewYear.Value = new decimal(new int[] {
+            1940,
+            0,
+            0,
+            0});
             // 
             // gbSearch
             // 
@@ -2254,6 +2271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNew2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNewYear)).EndInit();
             this.gbSearch.ResumeLayout(false);
             this.gbSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFilter)).EndInit();
@@ -2458,7 +2476,6 @@
         private System.Windows.Forms.Label label24;
         private asset.ThirteenTextBox txtNewComment;
         private System.Windows.Forms.Label label23;
-        private asset.ThirteenTextBox txtNewYear;
         private System.Windows.Forms.Label label22;
         private asset.ThirteenTextBox txtNewFees;
         private System.Windows.Forms.Label label21;
@@ -2485,5 +2502,6 @@
         private System.Windows.Forms.Label lblReadingFrom;
         private System.Windows.Forms.PictureBox btnQuickAdd;
         private System.Windows.Forms.Label lblNewMemNum;
+        private System.Windows.Forms.NumericUpDown nmNewYear;
     }
 }

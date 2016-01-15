@@ -67,3 +67,4 @@ C:\Users\SethD\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.rformLogin.reso
 C:\Users\SethD\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.msgbox.resources
 C:\Users\SethD\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
 C:\Users\SethD\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
+C:\Users\Seth\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.formQuickAdd.resources

@@ -292,6 +292,10 @@ namespace Citadel
             lblWelcome.Location = new Point(lblWelcome.Location.X + _x, lblWelcome.Location.Y);
             lblUser.Location = new Point(lblUser.Location.X + _x, lblWelcome.Location.Y);
 
+            // Initialize students tab numeric updown year.
+            nmNewYear.Maximum = DateTime.Now.Year + 1;
+            nmNewYear.Value = DateTime.Now.Year;
+
             // Read the students data file into an array.
             readToArray(specificFolder + "/data/students.fbla", students, "NA");
 
@@ -595,25 +599,30 @@ namespace Citadel
         void clearNewStudent()
         {
             txtNewFirst.Clear(); txtNewLast.Clear(); txtNewSchool.Clear();
-            txtNewEmail.Clear(); txtNewYear.Clear(); txtNewFees.Clear();
-            txtNewComment.Clear();
+            txtNewEmail.Clear(); txtNewFees.Text = "$0.00"; txtNewComment.Clear();
         }
 
         void enableNewStudent(bool enable)
         {
             txtNewFirst.Enabled = enable; txtNewLast.Enabled = enable; txtNewSchool.Enabled = enable;
-            txtNewEmail.Enabled = enable; txtNewYear.Enabled = enable; txtNewFees.Enabled = enable;
+            txtNewEmail.Enabled = enable; nmNewYear.Enabled = enable; txtNewFees.Enabled = enable;
             txtNewComment.Enabled = enable;
         }
 
         msgbox _conf;
+        // Don't prompt user on first time creating new user.
+        bool firstNew = true;
 
         void newStudent()
         {
             _conf = new msgbox("Creating a new user will erase any filled in data.", "Erase Data?", 2);
-            _conf.ShowDialog();
-            if (_conf.DialogResult == DialogResult.Yes)
+            if (!firstNew)
+            { 
+                _conf.ShowDialog();
+            }
+            if (_conf.DialogResult == DialogResult.Yes || firstNew)
             {
+                firstNew = false;
                 clearNewStudent();
                 if (!txtNewFirst.Enabled)
                 {
@@ -635,6 +644,43 @@ namespace Citadel
             if (_conf.DialogResult == DialogResult.Yes)
             {
                 clearNewStudent();
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtNewFirst.Text != "" && txtNewLast.Text != "" && txtNewSchool.Text != "" && txtNewEmail.Text != "")
+            {
+
+            }
+        }
+
+        Double feeDbl = 0;
+
+        private void txtNewFees_Leave(object sender, EventArgs e)
+        {
+            Double.TryParse(txtNewFees.Text, out feeDbl);
+            if (!txtNewFees.Text.Contains("$"))
+            {
+                txtNewFees.Text = "$" + txtNewFees.Text;
+            }
+            if (!txtNewFees.Text.Contains("."))
+            {
+                txtNewFees.Text += ".00";
+            }
+            String[] temp = txtNewFees.Text.Split('.');
+            if (temp[1].Length == 1)
+            {
+                temp[1] += "0";
+                txtNewFees.Text = temp[0] + "." + temp[1];
+            }
+        }
+
+        private void txtNewFees_Enter(object sender, EventArgs e)
+        {
+            if (txtNewFees.Text.Contains("$"))
+            {
+                txtNewFees.Text = feeDbl.ToString();
             }
         }
     }
