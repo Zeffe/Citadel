@@ -20,7 +20,7 @@ namespace Citadel
         int perms;             // Used to recognize permissions of a user, only 1 = administrator.
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
-        String[,] students = new String[50, 11]; // 2D array that stores students.
+        public static String[,] students = new String[50, 11]; // 2D array that stores students.
         int currentView;       // The Student that is currently being viewed
         int studentLength;     // Number of valid student accounts.
 
@@ -47,7 +47,8 @@ namespace Citadel
                 {
                     exit = false;
                     Application.Exit();
-                } else
+                }
+                else
                 {
                     e.Cancel = true;
                 }
@@ -130,9 +131,9 @@ namespace Citadel
             _reader.Close();
         }
 
-            // Updates the selected tab and draws the
-            // necessarry indicator.
-            void updateSelected(Panel pnl)
+        // Updates the selected tab and draws the
+        // necessarry indicator.
+        void updateSelected(Panel pnl)
         {
             activePanel.BackColor = Color.FromArgb(50, 50, 50);
             displays[pnl].BringToFront();
@@ -241,6 +242,26 @@ namespace Citadel
             //box.Update();
         }
 
+        void refreshStudentTree()
+        {
+            tvStudents.Invoke((MethodInvoker)(() => tvStudents.Nodes.Clear()));
+
+            // Add students to the student tab tree view.
+            TreeNode student;
+            TreeNode display1;
+            TreeNode display2;
+            TreeNode[] studentChildren;
+            for (int i = 0; i < students.GetLength(0); i++)
+            {
+                if (students[i, 4] == null) break;
+                display1 = new TreeNode("Year Joined: " + students[i, 4]);
+                display2 = new TreeNode("Grade: " + students[i, 7]);
+                studentChildren = new TreeNode[] { display2, display1 };
+                student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
+                tvStudents.Invoke((MethodInvoker)(() => tvStudents.Nodes.Add(student)));
+            }
+        }
+
         private void formMain_Load(object sender, EventArgs e)
         {
             specificFolder = Path.Combine(folder, "Citadel"); // %APPDATA%/Citadel home path
@@ -299,27 +320,15 @@ namespace Citadel
             // Read the students data file into an array.
             readToArray(specificFolder + "/data/students.fbla", students, "NA");
 
-            // Add students to the student tab tree view.
-            TreeNode student;
-            TreeNode display1;
-            TreeNode display2;
-            TreeNode[] studentChildren;     
-            for (int i = 0; i < students.GetLength(0); i++)
-            {
-                if (students[i, 4] == null) break;
-                display1 = new TreeNode("Year Joined: " + students[i, 4]);
-                display2 = new TreeNode("Grade: " + students[i, 7]);
-                studentChildren = new TreeNode[] { display2, display1 };
-                student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
-                tvStudents.Nodes.Add(student);
-            }
-
             // Adds all users to the user list on user page.
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
             {
                 if (rformLogin.users[i, 1] == null) break;
                 listUsers.Items.Add(getUser(i));
             }
+
+            // Adds all students to the student tree view.
+            refreshStudentTree();
 
             // Adds all the event handlers for the tabs.
             panelButton(pnlbDashboard, lblDashboard, pctDashboard, pnlDashboard);
@@ -372,6 +381,10 @@ namespace Citadel
             rformLogin.placeHolder(txtEmail, "Email", false);
             rformLogin.placeHolder(txtEmailconf, "Confirm Email", false);
 
+            // Timer for quickadd that auto updates stuent page.
+            tmrQckAdd.Interval = 1000;
+            tmrQckAdd.Elapsed += new System.Timers.ElapsedEventHandler(OnTimer);
+
             // Disables controls on New Student Page.
             enableNewStudent(false);
 
@@ -397,7 +410,7 @@ namespace Citadel
 
             viewStudent(0);
             updateUserPage(currentUser);
-        }   
+        }
 
         void delete(string contains, string path, bool decrypt)
         {
@@ -408,7 +421,8 @@ namespace Citadel
             if (decrypt)
             {
                 linesToKeep = File.ReadLines(path).Where(l => !(rformLogin.Decrypt(l).Contains(contains)));
-            } else
+            }
+            else
             {
                 linesToKeep = File.ReadLines(path).Where(l => !(l.Contains(contains)));
             }
@@ -527,7 +541,8 @@ namespace Citadel
             if (grade != 13)
             {
                 grade++;
-            } else
+            }
+            else
             {
                 grade = 9;
             }
@@ -539,7 +554,8 @@ namespace Citadel
             if (grade != 9)
             {
                 grade--;
-            } else
+            }
+            else
             {
                 grade = 13;
             }
@@ -548,30 +564,46 @@ namespace Citadel
 
         void viewStudent(int studentNum)
         {
-            // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
-            // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
-            // 8 = School, 9 = Email, 10 = Comments
+            try
+            {
+                // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
+                // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
+                // 8 = School, 9 = Email, 10 = Comments
 
-            currentView = studentNum;
-            txtMemberNum.Text = students[studentNum, 0];
-            txtFullName.Text = students[studentNum, 1] + " " + students[studentNum, 2];
-            txtFees.Text = students[studentNum, 3];
-            txtYearJoined.Text = students[studentNum, 4];
-            switch (Convert.ToInt32(students[studentNum, 5]))
-            {
-                case 0: pbNotActive.BackColor = Color.DodgerBlue; break;
-                case 1: pbActive.BackColor = Color.DodgerBlue; break;
+                currentView = studentNum;
+                txtMemberNum.Text = students[studentNum, 0];
+                txtFullName.Text = students[studentNum, 1] + " " + students[studentNum, 2];
+                txtFees.Text = students[studentNum, 3];
+                txtYearJoined.Text = students[studentNum, 4];
+                switch (Convert.ToInt32(students[studentNum, 5]))
+                {
+                    case 0:
+                        pbNotActive.BackColor = Color.DodgerBlue;
+                        pbActive.BackColor = pbActive.Parent.BackColor;
+                        break;
+                    case 1:
+                        pbActive.BackColor = Color.DodgerBlue;
+                        pbNotActive.BackColor = pbNotActive.Parent.BackColor;
+                        break;
+                }
+                switch (Convert.ToInt32(students[studentNum, 6]))
+                {
+                    case 0:
+                        pbFemale.BackColor = Color.DodgerBlue;
+                        pbMale.BackColor = pbMale.Parent.BackColor;
+                        break;
+                    case 1:
+                        pbMale.BackColor = Color.DodgerBlue;
+                        pbFemale.BackColor = pbFemale.Parent.BackColor;
+                        break;
+                }
+
+                lblGrade.Text = students[studentNum, 7];
+                lblSchool.Text = "School: " + students[studentNum, 8];
+                txtEmail.Text = "Email: " + students[studentNum, 9];
+                txtComment.Text = students[studentNum, 10];
             }
-            switch (Convert.ToInt32(students[studentNum, 6]))
-            {
-                case 0: pbFemale.BackColor = Color.DodgerBlue; break;
-                case 1: pbMale.BackColor = Color.DodgerBlue; break;
-            }
-           
-            lblGrade.Text = students[studentNum, 7];
-            lblSchool.Text = "School: " + students[studentNum, 8];
-            txtEmail.Text = "Email: " + students[studentNum, 9];
-            txtComment.Text = students[studentNum, 10];
+            catch { }
         }
 
         private void tvStudents_AfterSelect(object sender, TreeViewEventArgs e)
@@ -617,7 +649,7 @@ namespace Citadel
         {
             _conf = new msgbox("Creating a new user will erase any filled in data.", "Erase Data?", 2);
             if (!firstNew)
-            { 
+            {
                 _conf.ShowDialog();
             }
             if (_conf.DialogResult == DialogResult.Yes || firstNew)
@@ -629,7 +661,7 @@ namespace Citadel
                     enableNewStudent(true);
                     lblNewMemNum.Text = "#" + (studentLength + 1).ToString();
                 }
-            } 
+            }
         }
 
         private void btnNew2_Click(object sender, EventArgs e)
@@ -681,6 +713,34 @@ namespace Citadel
             if (txtNewFees.Text.Contains("$"))
             {
                 txtNewFees.Text = feeDbl.ToString();
+            }
+        }
+
+        public static System.Timers.Timer tmrQckAdd = new System.Timers.Timer();
+
+        public static Form quickAdd = null;
+
+        private void btnQuickAdd_Click(object sender, EventArgs e)
+        {
+            tmrQckAdd.Start();
+            if (quickAdd != null)
+            {
+                quickAdd.BringToFront();
+            }
+            else
+            {
+                quickAdd = new formQuickAdd("students.fbla", (studentLength + 1).ToString());
+                quickAdd.Show();
+            }
+        }
+
+        public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
+        {
+            if (formQuickAdd.added)
+            {
+                readToArray(specificFolder + "/data/students.fbla", students, "NA");
+                refreshStudentTree();
+                formQuickAdd.added = false;
             }
         }
     }

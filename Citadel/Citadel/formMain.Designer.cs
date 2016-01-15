@@ -708,6 +708,7 @@
             this.btnQuickAdd.TabIndex = 38;
             this.btnQuickAdd.TabStop = false;
             this.ttMaster.SetToolTip(this.btnQuickAdd, "Quick Add");
+            this.btnQuickAdd.Click += new System.EventHandler(this.btnQuickAdd_Click);
             // 
             // label24
             // 
