@@ -125,6 +125,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formQuickAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quick Add";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formQuickAdd_FormClosing);
             this.Load += new System.EventHandler(this.formQuickAdd_Load);
