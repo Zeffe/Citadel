@@ -1310,6 +1310,7 @@
             this.cmbTreeview.Size = new System.Drawing.Size(155, 23);
             this.cmbTreeview.TabIndex = 1;
             this.ttMaster.SetToolTip(this.cmbTreeview, "Second piece of information to display.");
+            this.cmbTreeview.SelectedIndexChanged += new System.EventHandler(this.cmbTreeview_SelectedIndexChanged);
             // 
             // tvStudents
             // 

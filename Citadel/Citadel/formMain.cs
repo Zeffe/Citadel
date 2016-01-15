@@ -28,6 +28,8 @@ namespace Citadel
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
         // Saves the heights necessarry to move the indicator to for a given panel.
         Dictionary<Panel, Point> heights = new Dictionary<Panel, Point>();
+        // Saves the student number with its respective property.
+        Dictionary<String, int> treeProps = new Dictionary<String, int>();
 
         public formMain(int user, int _perms)
         {
@@ -254,7 +256,7 @@ namespace Citadel
             for (int i = 0; i < students.GetLength(0); i++)
             {
                 if (students[i, 4] == null) break;
-                display1 = new TreeNode("Year Joined: " + students[i, 4]);
+                display1 = new TreeNode(cmbTreeview.Text + ": " + students[i, treeProps[cmbTreeview.Text]]);
                 display2 = new TreeNode("Grade: " + students[i, 7]);
                 studentChildren = new TreeNode[] { display2, display1 };
                 student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
@@ -327,6 +329,16 @@ namespace Citadel
                 listUsers.Items.Add(getUser(i));
             }
 
+            // Add properties to a dictionary.
+            treeProps.Add("Year Joined", 4);
+            treeProps.Add("Email", 9);
+            treeProps.Add("School", 8);
+
+            // Initialize student tab combobox values.
+            cmbFilterBy.SelectedIndex = 0;
+            cmbSearchBy.SelectedIndex = 0;
+            cmbTreeview.SelectedIndex = 0;
+
             // Adds all students to the student tree view.
             refreshStudentTree();
 
@@ -356,11 +368,6 @@ namespace Citadel
             pbHighlight(btnSearch);
             pbHighlight(btnFilter);
             pbHighlight(btnQuickAdd);
-
-            // Initialize student tab combobox values.
-            cmbFilterBy.SelectedIndex = 0;
-            cmbSearchBy.SelectedIndex = 0;
-            cmbTreeview.SelectedIndex = 0;
 
             // Moves panels behind the given textboxes in order to
             // easily draw a colored signifier around the textboxes.
@@ -742,6 +749,11 @@ namespace Citadel
                 refreshStudentTree();
                 formQuickAdd.added = false;
             }
+        }
+
+        private void cmbTreeview_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            refreshStudentTree();
         }
     }
 }
