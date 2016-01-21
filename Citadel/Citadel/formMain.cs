@@ -735,7 +735,8 @@ namespace Citadel
                     rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
                     refreshStudentTree();
                     clearNewStudent();
-                    enableNewStudent(false);         
+                    enableNewStudent(false);
+                    firstNew = true;       
                 }
                 catch
                 {
@@ -816,15 +817,18 @@ namespace Citadel
             newStudent();
         }
 
-
         private void btnDelStudent_Click(object sender, EventArgs e)
         {
-            string _contains = students[currentView, 1] + '\\' + students[currentView, 2] + '\\'
-                + students[currentView, 3] + '\\';
-            delete(_contains, specificFolder + "/data/students.fbla", false);
-            rformLogin.message("Successfully deleted " + students[currentView, 1] + " " + students[currentView, 2] + ".", "Success", 1);
-            readToArray(specificFolder + "/data/students.fbla", students, "NA");
-            refreshStudentTree();
+            msgbox logConf = new msgbox("Are you sure you want to delete " + students[currentView, 1] + " " + students[currentView, 2] + "?", "Delete", 2);
+            logConf.ShowDialog();
+            if (logConf.DialogResult == DialogResult.Yes) {
+                string _contains = students[currentView, 1] + '\\' + students[currentView, 2] + '\\'
+                    + students[currentView, 3] + '\\';
+                delete(_contains, specificFolder + "/data/students.fbla", false);
+                rformLogin.message("Successfully deleted " + students[currentView, 1] + " " + students[currentView, 2] + ".", "Success", 1);
+                readToArray(specificFolder + "/data/students.fbla", students, "NA");
+                refreshStudentTree();
+            }
         }
     }
 }
