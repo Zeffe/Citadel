@@ -17,13 +17,13 @@ namespace Citadel
         {
             InitializeComponent();
             activeSource = source;
-            memberNum = currentMemberNum;
+            memberNum = Convert.ToInt32(currentMemberNum);
         }
 
         string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // %APPDATA% path
         string studentFile;  // Path to students data file.
         string activeSource; // Currently active source.
-        string memberNum;    // Gets next member num so it can be set.
+        int  memberNum;      // Gets next member num so it can be set.
         public static bool added = false; // Communicate with formMain to update student list.
 
 
@@ -35,11 +35,11 @@ namespace Citadel
         private void btnAdd_Click(object sender, EventArgs e)
         {
             bool worked = false;
-            int newMemberNum = Convert.ToInt32(memberNum) - 1;
+            int newMemberNum = memberNum - 1;
             try {
                 String[] _check = txtAdd.Text.Split('\\');
                 string _temp = "";
-                _check[0] = memberNum;
+                _check[0] = memberNum.ToString();
                 if (_check.Length == 11)
                 {
                     for (int i = 0; i < 11; i++)
@@ -55,6 +55,7 @@ namespace Citadel
                     txtAdd.Clear();
                     rformLogin.message("Successfully added " + _check[1] + " " + _check[2] + ".", "Success", 1);
                     added = true;
+                    memberNum++;
                     worked = true;
                 }
             } catch { }

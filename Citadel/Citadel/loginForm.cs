@@ -179,6 +179,10 @@ namespace Citadel
                 File.Create(_data + "/students.fbla").Dispose();
                 _first = true;
             }
+            if (!File.Exists(_data + "/students.fbla"))
+            {
+                File.Create(_data + "/students.fbla").Dispose();
+            }
             if (!File.Exists(specificFolder + "/sourceSettings.fbla"))
             {
                 File.Create(specificFolder + "/sourceSettings.fbla").Dispose();

@@ -715,9 +715,9 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(315, 97);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 16);
+            this.label24.Size = new System.Drawing.Size(80, 16);
             this.label24.TabIndex = 37;
-            this.label24.Text = "Comments";
+            this.label24.Text = "Comments *";
             // 
             // txtNewComment
             // 
@@ -1268,6 +1268,7 @@
             this.btnNew1.TabIndex = 4;
             this.btnNew1.TabStop = false;
             this.ttMaster.SetToolTip(this.btnNew1, "New Student");
+            this.btnNew1.Click += new System.EventHandler(this.btnNew1_Click);
             // 
             // btnEdit
             // 
@@ -1290,6 +1291,7 @@
             this.btnDelStudent.TabIndex = 2;
             this.btnDelStudent.TabStop = false;
             this.ttMaster.SetToolTip(this.btnDelStudent, "Delete");
+            this.btnDelStudent.Click += new System.EventHandler(this.btnDelStudent_Click);
             // 
             // cmbTreeview
             // 

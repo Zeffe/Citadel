@@ -20,7 +20,7 @@ namespace Citadel
         int perms;             // Used to recognize permissions of a user, only 1 = administrator.
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
-        public static String[,] students = new String[50, 11]; // 2D array that stores students.
+        public static String[,] students = new String[50, 10]; // 2D array that stores students.
         int currentView;       // The Student that is currently being viewed
         int studentLength;     // Number of valid student accounts.
 
@@ -100,6 +100,11 @@ namespace Citadel
         // Reads a plaintext file into a 2D array.
         void readToArray(string file, String[,] array2d, string hash)
         {
+            Array.Clear(array2d, 0, array2d.Length);
+            if (array2d == students)
+            {
+                studentLength = 0;
+            }
             if (hash != "NA")
             {
                 rformLogin.PasswordHash = hash;
@@ -109,7 +114,7 @@ namespace Citadel
             int i = 0;
             while ((str = _reader.ReadLine()) != null)
             {
-                int j = 0;
+                int j = 1;
                 //str = rformLogin.Decrypt(str);
                 String[] strArray = new String[str.Split('\\').Length];
                 strArray = str.Split('\\');
@@ -126,6 +131,7 @@ namespace Citadel
                 if (array2d == students)
                 {
                     studentLength++;
+                    array2d[i, 0] = studentLength.ToString();
                 }
                 i++;
             }
@@ -256,8 +262,8 @@ namespace Citadel
             for (int i = 0; i < students.GetLength(0); i++)
             {
                 if (students[i, 4] == null) break;
-                display1 = new TreeNode(cmbTreeview.Text + ": " + students[i, treeProps[cmbTreeview.Text]]);
-                display2 = new TreeNode("Grade: " + students[i, 7]);
+                display1 = new TreeNode(cmbTreeview.Text + ": " + students[i, treeProps[cmbTreeview.Text]] + " ");
+                display2 = new TreeNode("Grade: " + students[i, 7] + " ");
                 studentChildren = new TreeNode[] { display2, display1 };
                 student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
                 tvStudents.Invoke((MethodInvoker)(() => tvStudents.Nodes.Add(student)));
@@ -424,7 +430,7 @@ namespace Citadel
             // Create temporary file.
             var tempFile = Path.GetTempFileName();
             // Create an array of lines to keep if it doesn't contain the selected student.
-            var linesToKeep = File.ReadLines(path);
+            IEnumerable<string> linesToKeep;
             if (decrypt)
             {
                 linesToKeep = File.ReadLines(path).Where(l => !(rformLogin.Decrypt(l).Contains(contains)));
@@ -577,6 +583,7 @@ namespace Citadel
                 // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
                 // 8 = School, 9 = Email, 10 = Comments
 
+                tcNewStudent.SelectedTab = tabPage1;
                 currentView = studentNum;
                 txtMemberNum.Text = students[studentNum, 0];
                 txtFullName.Text = students[studentNum, 1] + " " + students[studentNum, 2];
@@ -607,7 +614,7 @@ namespace Citadel
 
                 lblGrade.Text = students[studentNum, 7];
                 lblSchool.Text = "School: " + students[studentNum, 8];
-                txtEmail.Text = "Email: " + students[studentNum, 9];
+                lblEmail2.Text = "Email: " + students[studentNum, 9];
                 txtComment.Text = students[studentNum, 10];
             }
             catch { }
@@ -616,8 +623,11 @@ namespace Citadel
         private void tvStudents_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string _nodeText = e.Node.Text;
-            int _memNum = Convert.ToInt32(_nodeText[_nodeText.Length - 1].ToString());
-            viewStudent(_memNum - 1);
+            if (_nodeText[_nodeText.Length - 1] != ' ')
+            {
+                int _memNum = Convert.ToInt32(_nodeText[_nodeText.Length - 1].ToString());
+                viewStudent(_memNum - 1);
+            }
         }
 
         private void btnCopyQf_Click(object sender, EventArgs e)
@@ -686,11 +696,55 @@ namespace Citadel
             }
         }
 
+        // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
+        // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
+        // 8 = School, 9 = Email, 10 = Comments
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             if (txtNewFirst.Text != "" && txtNewLast.Text != "" && txtNewSchool.Text != "" && txtNewEmail.Text != "")
             {
+                string _active = ""; string _gender = ""; string _grade;
+                switch(!active)
+                {
+                    case true: _active = "1"; break;
+                    case false: _active = "0"; break;
+                }
+                switch (!gender)
+                {
+                    case true: _gender = "1"; break;
+                    case false: _gender = "0"; break;
+                }
+                if (lblGradeSel.Text != "13+")
+                {
+                    _grade = lblGradeSel.Text;
+                } else
+                {
+                    _grade = "13";
+                }
+                string _temp = txtNewFirst.Text + '\\' + txtNewLast.Text + '\\' + txtNewFees.Text 
+                    + '\\' + nmNewYear.Text + '\\' + _active + '\\' + _gender + '\\' + _grade
+                    + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtComment.Text;
 
+                try
+                {
+                    File.AppendAllText(specificFolder + "/data/students.fbla", _temp + "\r\n");
+                    studentLength++;
+                    readToArray(specificFolder + "/data/students.fbla", students, "NA");
+                    rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
+                    refreshStudentTree();
+                    clearNewStudent();
+                    enableNewStudent(false);         
+                }
+                catch
+                {
+                    rformLogin.message("Error writing student to the selected source.", "Error", 1);
+                }
+            }
+            else
+            {
+                rformLogin.message("Please ensure that all of the required entries have been filled in.", "Error", 1);
             }
         }
 
@@ -753,6 +807,23 @@ namespace Citadel
 
         private void cmbTreeview_SelectedIndexChanged(object sender, EventArgs e)
         {
+            refreshStudentTree();
+        }
+
+        private void btnNew1_Click(object sender, EventArgs e)
+        {
+            tcNewStudent.SelectedTab = tabPage2;
+            newStudent();
+        }
+
+
+        private void btnDelStudent_Click(object sender, EventArgs e)
+        {
+            string _contains = students[currentView, 1] + '\\' + students[currentView, 2] + '\\'
+                + students[currentView, 3] + '\\';
+            delete(_contains, specificFolder + "/data/students.fbla", false);
+            rformLogin.message("Successfully deleted " + students[currentView, 1] + " " + students[currentView, 2] + ".", "Success", 1);
+            readToArray(specificFolder + "/data/students.fbla", students, "NA");
             refreshStudentTree();
         }
     }

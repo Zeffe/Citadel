@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(msgbox));
             this.thirteenForm1 = new asset.ThirteenForm();
             this.btnYes = new asset.ThirteenButton();
             this.btnNo = new asset.ThirteenButton();
@@ -135,6 +136,7 @@
             this.ClientSize = new System.Drawing.Size(163, 75);
             this.Controls.Add(this.thirteenForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "msgbox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "msgbox";
