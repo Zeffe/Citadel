@@ -23,6 +23,10 @@ namespace Citadel
         public static String[,] students = new String[50, 10]; // 2D array that stores students.
         int currentView;       // The Student that is currently being viewed
         int studentLength;     // Number of valid student accounts.
+        int searchFor = 0;     // Value used to determine the 2nd dimension to filter by.
+        bool exit = true;      // Determine if the entire programming is exiting, or only the form.
+        bool firstNew = true;  // Determines whether the user has filled in data on the new student tab.
+        Double feeDbl = 0;     // Used as storage for the new student fee double value.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -31,15 +35,21 @@ namespace Citadel
         // Saves the student number with its respective property.
         Dictionary<String, int> treeProps = new Dictionary<String, int>();
 
+        // Confirmation box that is displayed when attempting to exit.
+        msgbox logConf = new msgbox("Are you sure you wish to exit Citadel?", "Exit", 2);
+        // Confirmation box used to confirm that the user wants to clear data on new student tab.
+        msgbox _conf;
+        // Confirmation box used when deleting a student.
+        msgbox delConf;
+
+
         public formMain(int user, int _perms)
         {
             InitializeComponent();
-            currentUser = user;
-            perms = _perms;
+            currentUser = user;     // Catch the current user from rformLogin.
+            perms = _perms;         // Catch the perms of the current user from rformLogin.
         }
 
-        msgbox logConf = new msgbox("Are you sure you wish to exit Citadel?", "Exit", 2);
-        bool exit = true;
 
         private void formMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -631,8 +641,11 @@ namespace Citadel
         private void tvStudents_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string _nodeText = e.Node.Text;
+
+            // Check that the selected node is the parent node.
             if (_nodeText[_nodeText.Length - 1] != ' ')
             {
+                // Get the membernum by looking at the last character of the node.
                 int _memNum = Convert.ToInt32(_nodeText[_nodeText.Length - 1].ToString());
                 viewStudent(_memNum - 1);
             }
@@ -641,6 +654,8 @@ namespace Citadel
         private void btnCopyQf_Click(object sender, EventArgs e)
         {
             string _temp = "";
+
+            // Generate the necesarry quickFind string.
             for (int i = 0; i < 11; i++)
             {
                 _temp += students[currentView, i];
@@ -649,6 +664,8 @@ namespace Citadel
                     _temp += "\\";
                 }
             }
+
+            // Copy the string to the clipboard.
             Clipboard.SetText(_temp);
             rformLogin.message("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1);
         }
@@ -666,10 +683,6 @@ namespace Citadel
             txtNewComment.Enabled = enable;
         }
 
-        msgbox _conf;
-        // Don't prompt user on first time creating new user.
-        bool firstNew = true;
-
         void newStudent()
         {
             _conf = new msgbox("Creating a new user will erase any filled in data.", "Erase Data?", 2);
@@ -684,6 +697,7 @@ namespace Citadel
                 if (!txtNewFirst.Enabled)
                 {
                     enableNewStudent(true);
+                    // Generate next member number in the chain (Probably temporary).
                     lblNewMemNum.Text = "#" + (studentLength + 1).ToString();
                 }
             }
@@ -704,15 +718,12 @@ namespace Citadel
             }
         }
 
-        // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
-        // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
-        // 8 = School, 9 = Email, 10 = Comments
-
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            // Check that all required fields have been filled.
             if (txtNewFirst.Text != "" && txtNewLast.Text != "" && txtNewSchool.Text != "" && txtNewEmail.Text != "")
             {
+                // Temporary strings for parsing the integer values to strings.
                 string _active = ""; string _gender = ""; string _grade;
                 switch(!active)
                 {
@@ -731,17 +742,24 @@ namespace Citadel
                 {
                     _grade = "13";
                 }
+
+                // The string that will be saved.
                 string _temp = txtNewFirst.Text + '\\' + txtNewLast.Text + '\\' + txtNewFees.Text 
                     + '\\' + nmNewYear.Text + '\\' + _active + '\\' + _gender + '\\' + _grade
                     + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtComment.Text;
 
                 try
                 {
+                    // Write the student to the source.
                     File.AppendAllText(specificFolder + "/data/students.fbla", _temp + "\r\n");
+
+                    // Add the new student to the array.
                     studentLength++;
                     readToArray(specificFolder + "/data/students.fbla", students, "NA");
-                    rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
                     refreshStudentTree("");
+                    rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
+
+                    // Reset the new student form.
                     clearNewStudent();
                     enableNewStudent(false);
                     firstNew = true;       
@@ -757,11 +775,11 @@ namespace Citadel
             }
         }
 
-        Double feeDbl = 0;
-
         private void txtNewFees_Leave(object sender, EventArgs e)
         {
             Double.TryParse(txtNewFees.Text, out feeDbl);
+
+            // Format the number, so the user doesn't have to.
             if (!txtNewFees.Text.Contains("$"))
             {
                 txtNewFees.Text = "$" + txtNewFees.Text;
@@ -780,6 +798,7 @@ namespace Citadel
 
         private void txtNewFees_Enter(object sender, EventArgs e)
         {
+            // Display only the double value of the fee.
             if (txtNewFees.Text.Contains("$"))
             {
                 txtNewFees.Text = feeDbl.ToString();
@@ -792,7 +811,10 @@ namespace Citadel
 
         private void btnQuickAdd_Click(object sender, EventArgs e)
         {
+            // Start the timer that updates when a student is added.
             tmrQckAdd.Start();
+
+            // Stop the user from opening multiple quickAdd forms.
             if (quickAdd != null)
             {
                 quickAdd.BringToFront();
@@ -806,6 +828,8 @@ namespace Citadel
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
         {
+            // Check if any students have been added in formQuickAdd.
+            // Refresh the students array and treeview if so.
             if (formQuickAdd.added)
             {
                 readToArray(specificFolder + "/data/students.fbla", students, "NA");
@@ -821,35 +845,29 @@ namespace Citadel
 
         private void btnNew1_Click(object sender, EventArgs e)
         {
+            // View the new student form and toggle newStudent()
             tcNewStudent.SelectedTab = tabPage2;
             newStudent();
         }
 
         private void btnDelStudent_Click(object sender, EventArgs e)
         {
-            msgbox logConf = new msgbox("Are you sure you want to delete " + students[currentView, 1] + " " + students[currentView, 2] + "?", "Delete", 2);
-            logConf.ShowDialog();
-            if (logConf.DialogResult == DialogResult.Yes) {
+            // Prompt the user before deleting student.
+            delConf = new msgbox("Are you sure you want to delete " + students[currentView, 1] + " " + students[currentView, 2] + "?", "Delete", 2);
+            delConf.ShowDialog();
+
+            if (delConf.DialogResult == DialogResult.Yes) {
+                // String used to find the student inside the student file.
                 string _contains = students[currentView, 1] + '\\' + students[currentView, 2] + '\\'
                     + students[currentView, 3] + '\\';
+                // Delete the line that contains _contains in the given source.
                 delete(_contains, specificFolder + "/data/students.fbla", false);
+
+                // Reset the students array and treeview.
                 readToArray(specificFolder + "/data/students.fbla", students, "NA");
                 refreshStudentTree("");
             }
-        }
-
-        /*
-        Last Name
-        First Name
-        Year Joined
-        Member #
-        Email
-        School
-        Grade
-        Is Active
-        Has Fees */
-
-        int searchFor = 0;
+        }        
 
         void filter(int field)
         {
@@ -871,27 +889,32 @@ namespace Citadel
             // the text in the txtFilter field.
             if (searchFor != 5 || searchFor != 3)
             {
+                // Update the treeview with every value that contains
+                // the text in the txtFilter field.
                 refreshStudentTree(txtFilter.Text);
             }
             else if (searchFor == 5)
             {
+                // If searching for "Is Active", search for 1, which is
+                // the value of an active member.
                 refreshStudentTree("1");
             }
             else if (searchFor == 3)
             {
+                // Pass $0.00 if searching for "Has Fees".
                 refreshStudentTree("$0.00");
             }
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            // Filter the student array using cmbFilterBy's selected
+            // index in order to determine value of the 2nd dimension.
             filter(cmbFilterBy.SelectedIndex);
+
+            // Reset searchFor in order to prevent errors when
+            // creating new users.
             searchFor = 0;
         }
-
-        // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
-        // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
-        // 8 = School, 9 = Email, 10 = Comments
-
     }
 }
