@@ -250,7 +250,7 @@ namespace Citadel
             //box.Update();
         }
 
-        void refreshStudentTree()
+        void refreshStudentTree(string contains)
         {
             tvStudents.Invoke((MethodInvoker)(() => tvStudents.Nodes.Clear()));
 
@@ -259,14 +259,22 @@ namespace Citadel
             TreeNode display1;
             TreeNode display2;
             TreeNode[] studentChildren;
+            bool skip;
             for (int i = 0; i < students.GetLength(0); i++)
             {
+                skip = false;
                 if (students[i, 4] == null) break;
-                display1 = new TreeNode(cmbTreeview.Text + ": " + students[i, treeProps[cmbTreeview.Text]] + " ");
-                display2 = new TreeNode("Grade: " + students[i, 7] + " ");
-                studentChildren = new TreeNode[] { display2, display1 };
-                student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
-                tvStudents.Invoke((MethodInvoker)(() => tvStudents.Nodes.Add(student)));
+                if (students[i, searchFor].Contains(contains) || contains == "") {
+                    if (searchFor == 3 && students[i, searchFor] == "$0.00") skip = true;
+                    if (!skip)
+                    {
+                        display1 = new TreeNode(cmbTreeview.Text + ": " + students[i, treeProps[cmbTreeview.Text]] + " ");
+                        display2 = new TreeNode("Grade: " + students[i, 7] + " ");
+                        studentChildren = new TreeNode[] { display2, display1 };
+                        student = new TreeNode(students[i, 1] + " " + students[i, 2] + " - " + students[i, 0], studentChildren);
+                        tvStudents.Invoke((MethodInvoker)(() => tvStudents.Nodes.Add(student)));
+                    }
+                }
             }
         }
 
@@ -346,7 +354,7 @@ namespace Citadel
             cmbTreeview.SelectedIndex = 0;
 
             // Adds all students to the student tree view.
-            refreshStudentTree();
+            refreshStudentTree("");
 
             // Adds all the event handlers for the tabs.
             panelButton(pnlbDashboard, lblDashboard, pctDashboard, pnlDashboard);
@@ -733,7 +741,7 @@ namespace Citadel
                     studentLength++;
                     readToArray(specificFolder + "/data/students.fbla", students, "NA");
                     rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
-                    refreshStudentTree();
+                    refreshStudentTree("");
                     clearNewStudent();
                     enableNewStudent(false);
                     firstNew = true;       
@@ -801,14 +809,14 @@ namespace Citadel
             if (formQuickAdd.added)
             {
                 readToArray(specificFolder + "/data/students.fbla", students, "NA");
-                refreshStudentTree();
+                refreshStudentTree("");
                 formQuickAdd.added = false;
             }
         }
 
         private void cmbTreeview_SelectedIndexChanged(object sender, EventArgs e)
         {
-            refreshStudentTree();
+            refreshStudentTree("");
         }
 
         private void btnNew1_Click(object sender, EventArgs e)
@@ -825,10 +833,65 @@ namespace Citadel
                 string _contains = students[currentView, 1] + '\\' + students[currentView, 2] + '\\'
                     + students[currentView, 3] + '\\';
                 delete(_contains, specificFolder + "/data/students.fbla", false);
-                rformLogin.message("Successfully deleted " + students[currentView, 1] + " " + students[currentView, 2] + ".", "Success", 1);
                 readToArray(specificFolder + "/data/students.fbla", students, "NA");
-                refreshStudentTree();
+                refreshStudentTree("");
             }
         }
+
+        /*
+        Last Name
+        First Name
+        Year Joined
+        Member #
+        Email
+        School
+        Grade
+        Is Active
+        Has Fees */
+
+        int searchFor = 0;
+
+        void filter(int field)
+        {
+            // Converts combobox data into array positions.
+            switch (field)
+            {
+                case 0: searchFor = 2; break;
+                case 1: searchFor = 1; break;
+                case 2: searchFor = 4; break;
+                case 3: searchFor = 0; break;
+                case 4: searchFor = 9; break;
+                case 5: searchFor = 8; break;
+                case 6: searchFor = 7; break;
+                case 7: searchFor = 5; break;
+                case 8: searchFor = 3; break;
+            }
+
+            // Update the treeview with every value that contains
+            // the text in the txtFilter field.
+            if (searchFor != 5 || searchFor != 3)
+            {
+                refreshStudentTree(txtFilter.Text);
+            }
+            else if (searchFor == 5)
+            {
+                refreshStudentTree("1");
+            }
+            else if (searchFor == 3)
+            {
+                refreshStudentTree("$0.00");
+            }
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            filter(cmbFilterBy.SelectedIndex);
+            searchFor = 0;
+        }
+
+        // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
+        // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
+        // 8 = School, 9 = Email, 10 = Comments
+
     }
 }

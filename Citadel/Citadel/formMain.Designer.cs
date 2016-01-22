@@ -101,11 +101,11 @@
             this.label41 = new System.Windows.Forms.Label();
             this.cmbFilterBy = new asset.ThirteenComboBox();
             this.btnFilter = new System.Windows.Forms.PictureBox();
-            this.thirteenTextBox13 = new asset.ThirteenTextBox();
+            this.txtFilter = new asset.ThirteenTextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.cmbSearchBy = new asset.ThirteenComboBox();
             this.btnSearch = new System.Windows.Forms.PictureBox();
-            this.thirteenTextBox12 = new asset.ThirteenTextBox();
+            this.txtSearch = new asset.ThirteenTextBox();
             this.lblFilter = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.lblSearch = new System.Windows.Forms.Label();
@@ -1081,11 +1081,11 @@
             this.gbSearch.Controls.Add(this.label41);
             this.gbSearch.Controls.Add(this.cmbFilterBy);
             this.gbSearch.Controls.Add(this.btnFilter);
-            this.gbSearch.Controls.Add(this.thirteenTextBox13);
+            this.gbSearch.Controls.Add(this.txtFilter);
             this.gbSearch.Controls.Add(this.label39);
             this.gbSearch.Controls.Add(this.cmbSearchBy);
             this.gbSearch.Controls.Add(this.btnSearch);
-            this.gbSearch.Controls.Add(this.thirteenTextBox12);
+            this.gbSearch.Controls.Add(this.txtSearch);
             this.gbSearch.Controls.Add(this.lblFilter);
             this.gbSearch.Controls.Add(this.label40);
             this.gbSearch.Controls.Add(this.lblSearch);
@@ -1143,19 +1143,19 @@
             this.btnFilter.TabIndex = 17;
             this.btnFilter.TabStop = false;
             this.ttMaster.SetToolTip(this.btnFilter, "Filter");
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
-            // thirteenTextBox13
+            // txtFilter
             // 
-            this.thirteenTextBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox13.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox13.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox13.Location = new System.Drawing.Point(15, 131);
-            this.thirteenTextBox13.Name = "thirteenTextBox13";
-            this.thirteenTextBox13.ReadOnly = true;
-            this.thirteenTextBox13.Size = new System.Drawing.Size(204, 22);
-            this.thirteenTextBox13.TabIndex = 15;
+            this.txtFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFilter.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtFilter.ForeColor = System.Drawing.Color.White;
+            this.txtFilter.Location = new System.Drawing.Point(15, 131);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(204, 22);
+            this.txtFilter.TabIndex = 15;
             // 
             // label39
             // 
@@ -1201,18 +1201,17 @@
             this.btnSearch.TabStop = false;
             this.ttMaster.SetToolTip(this.btnSearch, "Search");
             // 
-            // thirteenTextBox12
+            // txtSearch
             // 
-            this.thirteenTextBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.thirteenTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thirteenTextBox12.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.thirteenTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenTextBox12.ForeColor = System.Drawing.Color.White;
-            this.thirteenTextBox12.Location = new System.Drawing.Point(15, 38);
-            this.thirteenTextBox12.Name = "thirteenTextBox12";
-            this.thirteenTextBox12.ReadOnly = true;
-            this.thirteenTextBox12.Size = new System.Drawing.Size(204, 22);
-            this.thirteenTextBox12.TabIndex = 12;
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(15, 38);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(204, 22);
+            this.txtSearch.TabIndex = 12;
             // 
             // lblFilter
             // 
@@ -2489,13 +2488,13 @@
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.PictureBox btnSearch;
-        private asset.ThirteenTextBox thirteenTextBox12;
+        private asset.ThirteenTextBox txtSearch;
         private System.Windows.Forms.Label label39;
         private asset.ThirteenComboBox cmbSearchBy;
         private System.Windows.Forms.Label label41;
         private asset.ThirteenComboBox cmbFilterBy;
         private System.Windows.Forms.PictureBox btnFilter;
-        private asset.ThirteenTextBox thirteenTextBox13;
+        private asset.ThirteenTextBox txtFilter;
         private System.Windows.Forms.GroupBox gbVersion;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.GroupBox gbProjSumm;
