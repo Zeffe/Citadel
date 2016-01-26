@@ -62,7 +62,8 @@
             this.txtFullName = new asset.ThirteenTextBox();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblNewMemNum = new System.Windows.Forms.Label();
+            this.nmNewMemNum = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnQuickAdd = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.txtNewComment = new asset.ThirteenTextBox();
@@ -216,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFemale)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNewMemNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnQuickAdd)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGradePrev)).BeginInit();
@@ -654,7 +656,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage2.Controls.Add(this.lblNewMemNum);
+            this.tabPage2.Controls.Add(this.nmNewMemNum);
+            this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.btnQuickAdd);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.txtNewComment);
@@ -687,16 +690,38 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "New Student";
             // 
-            // lblNewMemNum
+            // nmNewMemNum
             // 
-            this.lblNewMemNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblNewMemNum.Location = new System.Drawing.Point(232, 191);
-            this.lblNewMemNum.Name = "lblNewMemNum";
-            this.lblNewMemNum.Size = new System.Drawing.Size(64, 27);
-            this.lblNewMemNum.TabIndex = 29;
-            this.lblNewMemNum.Text = "#";
-            this.lblNewMemNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ttMaster.SetToolTip(this.lblNewMemNum, "The member number assigned by Citadel.");
+            this.nmNewMemNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.nmNewMemNum.ForeColor = System.Drawing.Color.White;
+            this.nmNewMemNum.Location = new System.Drawing.Point(242, 196);
+            this.nmNewMemNum.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.nmNewMemNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmNewMemNum.Name = "nmNewMemNum";
+            this.nmNewMemNum.Size = new System.Drawing.Size(54, 22);
+            this.nmNewMemNum.TabIndex = 42;
+            this.nmNewMemNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(188, 201);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 16);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "Mem #";
             // 
             // btnQuickAdd
             // 
@@ -813,7 +838,7 @@
             this.panel6.Controls.Add(this.btnGradePrev);
             this.panel6.Controls.Add(this.btnGradeNext);
             this.panel6.Controls.Add(this.lblGradeSel);
-            this.panel6.Location = new System.Drawing.Point(80, 177);
+            this.panel6.Location = new System.Drawing.Point(65, 177);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(117, 44);
             this.panel6.TabIndex = 25;
@@ -853,7 +878,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(77, 158);
+            this.label38.Location = new System.Drawing.Point(62, 158);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(46, 16);
             this.label38.TabIndex = 27;
@@ -1156,6 +1181,7 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(204, 22);
             this.txtFilter.TabIndex = 15;
+            this.txtFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFilter_KeyDown);
             // 
             // label39
             // 
@@ -1200,6 +1226,7 @@
             this.btnSearch.TabIndex = 13;
             this.btnSearch.TabStop = false;
             this.ttMaster.SetToolTip(this.btnSearch, "Search");
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -1212,6 +1239,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(204, 22);
             this.txtSearch.TabIndex = 12;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // lblFilter
             // 
@@ -1279,6 +1307,7 @@
             this.btnEdit.TabIndex = 3;
             this.btnEdit.TabStop = false;
             this.ttMaster.SetToolTip(this.btnEdit, "Edit");
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelStudent
             // 
@@ -2260,6 +2289,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFemale)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNewMemNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnQuickAdd)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnGradePrev)).EndInit();
@@ -2505,7 +2535,8 @@
         private System.Windows.Forms.PictureBox pctInfo;
         private System.Windows.Forms.Label lblReadingFrom;
         private System.Windows.Forms.PictureBox btnQuickAdd;
-        private System.Windows.Forms.Label lblNewMemNum;
         private System.Windows.Forms.NumericUpDown nmNewYear;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown nmNewMemNum;
     }
 }

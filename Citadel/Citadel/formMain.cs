@@ -20,13 +20,15 @@ namespace Citadel
         int perms;             // Used to recognize permissions of a user, only 1 = administrator.
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
-        public static String[,] students = new String[50, 10]; // 2D array that stores students.
+        public static String[,] students = new String[50, 11]; // 2D array that stores students.
         int currentView;       // The Student that is currently being viewed
         int studentLength;     // Number of valid student accounts.
         int searchFor = 0;     // Value used to determine the 2nd dimension to filter by.
         bool exit = true;      // Determine if the entire programming is exiting, or only the form.
         bool firstNew = true;  // Determines whether the user has filled in data on the new student tab.
         Double feeDbl = 0;     // Used as storage for the new student fee double value.
+        bool editing = false;  // Determines if the user is editing a user or creating a new one.
+        int editStudent;       // Determines the student being edited.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -124,7 +126,7 @@ namespace Citadel
             int i = 0;
             while ((str = _reader.ReadLine()) != null)
             {
-                int j = 1;
+                int j = 0;
                 //str = rformLogin.Decrypt(str);
                 String[] strArray = new String[str.Split('\\').Length];
                 strArray = str.Split('\\');
@@ -141,7 +143,6 @@ namespace Citadel
                 if (array2d == students)
                 {
                     studentLength++;
-                    array2d[i, 0] = studentLength.ToString();
                 }
                 i++;
             }
@@ -269,11 +270,17 @@ namespace Citadel
             TreeNode display1;
             TreeNode display2;
             TreeNode[] studentChildren;
-            bool skip;
+
+            bool skip; // Skips a student when filtering the treeview.
+
+            // Loop through each student.
             for (int i = 0; i < students.GetLength(0); i++)
             {
                 skip = false;
+                // Break the loop if the student returns a null value.
                 if (students[i, 4] == null) break;
+                // Only pass if the student contains the content text or
+                // don't filter if contains is set to "".
                 if (students[i, searchFor].Contains(contains) || contains == "") {
                     if (searchFor == 3 && students[i, searchFor] == "$0.00") skip = true;
                     if (!skip)
@@ -647,7 +654,15 @@ namespace Citadel
             {
                 // Get the membernum by looking at the last character of the node.
                 int _memNum = Convert.ToInt32(_nodeText[_nodeText.Length - 1].ToString());
-                viewStudent(_memNum - 1);
+
+                for (int i = 0; i < students.GetLength(0); i++)
+                {
+                    if (students[i, 0] == null) break;
+                    if (Convert.ToInt32(students[i, 0]) == _memNum)
+                    {
+                        viewStudent(i);
+                    }
+                }
             }
         }
 
@@ -680,7 +695,7 @@ namespace Citadel
         {
             txtNewFirst.Enabled = enable; txtNewLast.Enabled = enable; txtNewSchool.Enabled = enable;
             txtNewEmail.Enabled = enable; nmNewYear.Enabled = enable; txtNewFees.Enabled = enable;
-            txtNewComment.Enabled = enable;
+            txtNewComment.Enabled = enable; nmNewMemNum.Enabled = enable;
         }
 
         void newStudent()
@@ -692,13 +707,14 @@ namespace Citadel
             }
             if (_conf.DialogResult == DialogResult.Yes || firstNew)
             {
+                editing = false;
                 firstNew = false;
                 clearNewStudent();
                 if (!txtNewFirst.Enabled)
                 {
                     enableNewStudent(true);
                     // Generate next member number in the chain (Probably temporary).
-                    lblNewMemNum.Text = "#" + (studentLength + 1).ToString();
+                    nmNewMemNum.Value = Convert.ToDecimal(studentLength + 1);
                 }
             }
         }
@@ -723,6 +739,19 @@ namespace Citadel
             // Check that all required fields have been filled.
             if (txtNewFirst.Text != "" && txtNewLast.Text != "" && txtNewSchool.Text != "" && txtNewEmail.Text != "")
             {
+
+                if (editing)
+                {
+                    int _student = editStudent;
+                    string _del = "";
+                    for (int i = 0; i < 5; i++)
+                    {
+                        _del += students[_student, i];
+                        _del += "\\";
+                    }
+                    delete(_del, specificFolder + "/data/students.fbla", false);
+                }
+
                 // Temporary strings for parsing the integer values to strings.
                 string _active = ""; string _gender = ""; string _grade;
                 switch(!active)
@@ -744,9 +773,9 @@ namespace Citadel
                 }
 
                 // The string that will be saved.
-                string _temp = txtNewFirst.Text + '\\' + txtNewLast.Text + '\\' + txtNewFees.Text 
+                string _temp = nmNewMemNum.Text + '\\' + txtNewFirst.Text + '\\' + txtNewLast.Text + '\\' + txtNewFees.Text 
                     + '\\' + nmNewYear.Text + '\\' + _active + '\\' + _gender + '\\' + _grade
-                    + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtComment.Text;
+                    + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtNewComment.Text;
 
                 try
                 {
@@ -757,9 +786,13 @@ namespace Citadel
                     studentLength++;
                     readToArray(specificFolder + "/data/students.fbla", students, "NA");
                     refreshStudentTree("");
-                    rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
+                    if (!editing)
+                    {
+                        rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
+                    }
 
                     // Reset the new student form.
+                    editing = false;
                     clearNewStudent();
                     enableNewStudent(false);
                     firstNew = true;       
@@ -867,7 +900,35 @@ namespace Citadel
                 readToArray(specificFolder + "/data/students.fbla", students, "NA");
                 refreshStudentTree("");
             }
-        }        
+        }
+
+        void search(int field)
+        {
+            // Converts combobox data into array positions.
+            switch (field)
+            {
+                case 0: searchFor = 2; break;
+                case 1: searchFor = 1; break;
+                case 2: searchFor = 4; break;
+                case 3: searchFor = 0; break;
+                case 4: searchFor = 9; break;
+                case 5: searchFor = 8; break;
+                case 6: searchFor = 7; break;
+            }
+
+            // Loop through all the students.
+            for (int i = 0; i < students.GetLength(0); i++)
+            {
+                // Break the loop if the student has a null value.
+                if (students[i, searchFor] == null) break;
+                // View the student if they contain the search text.
+                if (students[i, searchFor].Contains(txtSearch.Text))
+                {
+                    viewStudent(i);
+                }
+            }
+
+        }
 
         void filter(int field)
         {
@@ -915,6 +976,61 @@ namespace Citadel
             // Reset searchFor in order to prevent errors when
             // creating new users.
             searchFor = 0;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // View in the view menu instead of filtering treeview.
+            search(cmbSearchBy.SelectedIndex);
+            searchFor = 0;
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Search on enter press.
+            if (e.KeyCode == Keys.Enter)
+            {
+                search(cmbSearchBy.SelectedIndex);
+                searchFor = 0;
+            }
+        }
+
+        private void txtFilter_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Filter on enter press.
+            if (e.KeyCode == Keys.Enter)
+            {
+                filter(cmbFilterBy.SelectedIndex);
+                searchFor = 0;
+            }
+        }
+
+        // 0 = Member #, 1 = First Name, 2 = Last Name, 3 = Fees
+        // 4 = Year Joined, 5 = Active, 6 = Gender, 7 = Grade
+        // 8 = School, 9 = Email, 10 = Comments
+
+        void edit(int _studentNum)
+        {
+            tcNewStudent.SelectedTab = tabPage2;
+            editing = true;
+            nmNewMemNum.Value = Convert.ToDecimal(students[_studentNum, 0]);
+            txtNewFirst.Text = students[_studentNum, 1];
+            txtNewLast.Text = students[_studentNum, 2];
+            txtNewFees.Text = students[_studentNum, 3];
+            nmNewYear.Value = Convert.ToDecimal(students[_studentNum, 4]);
+            if (students[_studentNum, 5] == "1" && active) changeActive();
+            if (students[_studentNum, 6] == "1" && gender) changeGender();
+            changeGrade(Convert.ToInt32(students[_studentNum, 7]));
+            txtNewSchool.Text = students[_studentNum, 8];
+            txtNewEmail.Text = students[_studentNum, 9];
+            txtNewComment.Text = students[_studentNum, 10];
+            enableNewStudent(true);
+            editStudent = _studentNum;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            edit(currentView);
         }
     }
 }
