@@ -357,7 +357,10 @@ namespace Citadel
             for (int i = 0; i < rformLogin.users.GetLength(0); i++)
             {
                 if (rformLogin.users[i, 1] == null) break;
-                listUsers.Items.Add(getUser(i));
+                if (!listUsers.Items.Contains(getUser(i)))
+                {
+                    listUsers.Items.Add(getUser(i));
+                }
             }
 
             // Add properties to a dictionary.

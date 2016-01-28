@@ -182,7 +182,7 @@ namespace Citadel
         void writeUser(string user, string pass, string first, string last, string email)
         {
             // Writes the text to the user file.
-            File.AppendAllText(specificFolder + "/users.fbla", rformLogin.Encrypt(user + '\\' + pass + '\\' + first + '\\' + last + '\\' + email + "\r\n"));
+            File.AppendAllText(specificFolder + "/users.fbla", rformLogin.Encrypt(user + '\\' + pass + '\\' + first + '\\' + last + '\\' + email) + "\r\n");
 
             // Sets the user number for the new user and the
             // username without the permission number.
