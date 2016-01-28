@@ -21,5 +21,10 @@ namespace Extensions
                 }
             }
         }
+
+        public static String firstName(this String[,] arr, int firstDimension)
+        {
+            return arr[firstDimension, 1];
+        }
     }
 }
