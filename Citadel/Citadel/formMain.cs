@@ -347,7 +347,7 @@ namespace Citadel
             lblUser.Location = new Point(lblUser.Location.X + _x, lblWelcome.Location.Y);
 
             // Initialize students tab numeric updown year.
-            nmNewYear.Maximum = DateTime.Now.Year + 1;
+            nmNewYear.Maximum = DateTime.Now.Year;
             nmNewYear.Value = DateTime.Now.Year;
 
             // Read the students data file into an array.
@@ -652,8 +652,13 @@ namespace Citadel
             // Check that the selected node is the parent node.
             if (_nodeText[_nodeText.Length - 1] != ' ')
             {
+                // Gets the member number as a string.
+                string[] flag = { " - " };
+                string tempMemNum = _nodeText.Split(flag, StringSplitOptions.None)[1];
+                tempMemNum.Trim(' ');
+
                 // Get the membernum by looking at the last character of the node.
-                int _memNum = Convert.ToInt32(_nodeText[_nodeText.Length - 1].ToString());
+                int _memNum = Convert.ToInt32(tempMemNum.Trim(' '));
 
                 for (int i = 0; i < students.GetLength(0); i++)
                 {
