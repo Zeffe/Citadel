@@ -325,7 +325,6 @@
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.Size = new System.Drawing.Size(609, 599);
             this.pnlStudents.TabIndex = 3;
-            this.pnlStudents.LocationChanged += new System.EventHandler(this.pnlStudents_LocationChanged);
             // 
             // lblReadingFrom
             // 
@@ -399,7 +398,6 @@
             this.btnCopyQf.TabIndex = 13;
             this.btnCopyQf.TabStop = false;
             this.ttMaster.SetToolTip(this.btnCopyQf, "Copy QuickAdd Code");
-            this.btnCopyQf.Click += new System.EventHandler(this.btnCopyQf_Click);
             // 
             // txtComment
             // 
@@ -733,7 +731,6 @@
             this.btnQuickAdd.TabIndex = 38;
             this.btnQuickAdd.TabStop = false;
             this.ttMaster.SetToolTip(this.btnQuickAdd, "Quick Add");
-            this.btnQuickAdd.Click += new System.EventHandler(this.btnQuickAdd_Click);
             // 
             // label24
             // 
@@ -787,8 +784,6 @@
             this.txtNewFees.Size = new System.Drawing.Size(64, 22);
             this.txtNewFees.TabIndex = 32;
             this.txtNewFees.Text = "$0.00";
-            this.txtNewFees.Enter += new System.EventHandler(this.txtNewFees_Enter);
-            this.txtNewFees.Leave += new System.EventHandler(this.txtNewFees_Leave);
             // 
             // label21
             // 
@@ -852,7 +847,6 @@
             this.btnGradePrev.Size = new System.Drawing.Size(18, 34);
             this.btnGradePrev.TabIndex = 23;
             this.btnGradePrev.TabStop = false;
-            this.btnGradePrev.Click += new System.EventHandler(this.btnGradePrev_Click);
             // 
             // btnGradeNext
             // 
@@ -863,7 +857,6 @@
             this.btnGradeNext.Size = new System.Drawing.Size(18, 34);
             this.btnGradeNext.TabIndex = 22;
             this.btnGradeNext.TabStop = false;
-            this.btnGradeNext.Click += new System.EventHandler(this.btnGradeNext_Click);
             // 
             // lblGradeSel
             // 
@@ -922,7 +915,6 @@
             this.btnActivePrev.Size = new System.Drawing.Size(18, 34);
             this.btnActivePrev.TabIndex = 23;
             this.btnActivePrev.TabStop = false;
-            this.btnActivePrev.Click += new System.EventHandler(this.btnActivePrev_Click);
             // 
             // btnActiveNext
             // 
@@ -933,7 +925,6 @@
             this.btnActiveNext.Size = new System.Drawing.Size(18, 34);
             this.btnActiveNext.TabIndex = 22;
             this.btnActiveNext.TabStop = false;
-            this.btnActiveNext.Click += new System.EventHandler(this.btnActiveNext_Click);
             // 
             // pbActiveSel
             // 
@@ -966,7 +957,6 @@
             this.btnGenderPrev.Size = new System.Drawing.Size(18, 34);
             this.btnGenderPrev.TabIndex = 23;
             this.btnGenderPrev.TabStop = false;
-            this.btnGenderPrev.Click += new System.EventHandler(this.btnGenderPrev_Click);
             // 
             // btnGenderNext
             // 
@@ -977,7 +967,6 @@
             this.btnGenderNext.Size = new System.Drawing.Size(18, 34);
             this.btnGenderNext.TabIndex = 22;
             this.btnGenderNext.TabStop = false;
-            this.btnGenderNext.Click += new System.EventHandler(this.btnGenderNext_Click);
             // 
             // pbGenderSel
             // 
@@ -1051,7 +1040,6 @@
             this.btnClear.TabIndex = 2;
             this.btnClear.TabStop = false;
             this.ttMaster.SetToolTip(this.btnClear, "Clear All");
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -1063,7 +1051,6 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.TabStop = false;
             this.ttMaster.SetToolTip(this.btnSave, "Save");
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNew2
             // 
@@ -1075,7 +1062,6 @@
             this.btnNew2.TabIndex = 0;
             this.btnNew2.TabStop = false;
             this.ttMaster.SetToolTip(this.btnNew2, "New Student");
-            this.btnNew2.Click += new System.EventHandler(this.btnNew2_Click);
             // 
             // nmNewYear
             // 
@@ -1168,7 +1154,6 @@
             this.btnFilter.TabIndex = 17;
             this.btnFilter.TabStop = false;
             this.ttMaster.SetToolTip(this.btnFilter, "Filter");
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtFilter
             // 
@@ -1181,7 +1166,6 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(204, 22);
             this.txtFilter.TabIndex = 15;
-            this.txtFilter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFilter_KeyDown);
             // 
             // label39
             // 
@@ -1226,7 +1210,6 @@
             this.btnSearch.TabIndex = 13;
             this.btnSearch.TabStop = false;
             this.ttMaster.SetToolTip(this.btnSearch, "Search");
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -1239,7 +1222,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(204, 22);
             this.txtSearch.TabIndex = 12;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // lblFilter
             // 
@@ -1295,7 +1277,6 @@
             this.btnNew1.TabIndex = 4;
             this.btnNew1.TabStop = false;
             this.ttMaster.SetToolTip(this.btnNew1, "New Student");
-            this.btnNew1.Click += new System.EventHandler(this.btnNew1_Click);
             // 
             // btnEdit
             // 
@@ -1307,7 +1288,6 @@
             this.btnEdit.TabIndex = 3;
             this.btnEdit.TabStop = false;
             this.ttMaster.SetToolTip(this.btnEdit, "Edit");
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelStudent
             // 
@@ -1319,7 +1299,6 @@
             this.btnDelStudent.TabIndex = 2;
             this.btnDelStudent.TabStop = false;
             this.ttMaster.SetToolTip(this.btnDelStudent, "Delete");
-            this.btnDelStudent.Click += new System.EventHandler(this.btnDelStudent_Click);
             // 
             // cmbTreeview
             // 
@@ -1340,7 +1319,6 @@
             this.cmbTreeview.Size = new System.Drawing.Size(155, 23);
             this.cmbTreeview.TabIndex = 1;
             this.ttMaster.SetToolTip(this.cmbTreeview, "Second piece of information to display.");
-            this.cmbTreeview.SelectedIndexChanged += new System.EventHandler(this.cmbTreeview_SelectedIndexChanged);
             // 
             // tvStudents
             // 
