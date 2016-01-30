@@ -26,10 +26,14 @@ namespace Citadel
         int  memberNum;      // Gets next member num so it can be set.
         public static bool added = false; // Communicate with formMain to update student list.
 
-
         private void formQuickAdd_Load(object sender, EventArgs e)
         {
             studentFile = Path.Combine(folder, "Citadel", "data", activeSource);
+            dQuickList.Columns[3].DefaultCellStyle.NullValue = "$0.00";
+            for (int i = DateTime.Now.Year; i > 1950; i--)
+            {
+                hYearJoined.Items.Add(i.ToString());
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -70,6 +74,56 @@ namespace Citadel
         {
             formMain.tmrQckAdd.Stop();
             formMain.quickAdd = null;
+        }
+
+        private void tcMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tcMain.SelectedTab == tabPage2)
+            {
+                this.Size = new Size(387, 184);
+                tcMain.Size = new Size(362, 133);
+            } else
+            {
+                this.Size = new Size(616, 521);
+                tcMain.Size = new Size(592, 472);
+            }
+        }
+
+        private void dQuickList_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            dQuickList.SelectedCells[0].Style = new DataGridViewCellStyle { ForeColor = Color.Black };
+        }
+
+        private void dQuickList_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            Extensions.extensions.dFormat(e, dQuickList);
+        }
+
+        private void dQuickList_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                DataGridViewCell cell = dQuickList.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                string cellText;
+                try {
+                    cellText = cell.Value.ToString();
+                } catch
+                {
+                    cellText = "$0.00";
+                }
+
+                Double feeDbl = Convert.ToDouble(cellText.Substring(1, cellText.Length - 1));
+
+                if (cellText.Contains("$"))
+                {
+                    cell.Value = feeDbl.ToString();
+                }
+            }
+        }
+
+        private void dQuickList_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dQuickList.Columns[3].DefaultCellStyle.NullValue = "$0.00";
         }
     }
 }
