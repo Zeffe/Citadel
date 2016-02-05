@@ -501,5 +501,11 @@ namespace Citadel
             //Replace old file with temporary file.
             File.Move(tempFile, path);
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            readToArray(Path.Combine(specificFolder, "data", "students.fbla"), students, "NA");
+            refreshStudentTree("");
+        }
     }
 }

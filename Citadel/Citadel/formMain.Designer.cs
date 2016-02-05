@@ -203,6 +203,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
+            this.menuRefresh = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.thirteenForm1.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
@@ -269,6 +271,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
             this.pnlbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).BeginInit();
+            this.menuRefresh.SuspendLayout();
             this.SuspendLayout();
             // 
             // thirteenForm1
@@ -1323,6 +1326,7 @@
             // tvStudents
             // 
             this.tvStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.tvStudents.ContextMenuStrip = this.menuRefresh;
             this.tvStudents.ForeColor = System.Drawing.Color.White;
             this.tvStudents.Location = new System.Drawing.Point(6, 21);
             this.tvStudents.Name = "tvStudents";
@@ -2236,6 +2240,20 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuRefresh
+            // 
+            this.menuRefresh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRefresh});
+            this.menuRefresh.Name = "menuRefresh";
+            this.menuRefresh.Size = new System.Drawing.Size(153, 48);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(152, 22);
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2337,6 +2355,7 @@
             this.pnlbInfo.ResumeLayout(false);
             this.pnlbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).EndInit();
+            this.menuRefresh.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2516,5 +2535,7 @@
         private System.Windows.Forms.NumericUpDown nmNewYear;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.NumericUpDown nmNewMemNum;
+        private System.Windows.Forms.ContextMenuStrip menuRefresh;
+        private System.Windows.Forms.ToolStripMenuItem btnRefresh;
     }
 }

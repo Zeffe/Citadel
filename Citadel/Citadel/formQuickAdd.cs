@@ -111,8 +111,8 @@ namespace Citadel
                 {
                     cellText = "$0.00";
                 }
-
-                Double feeDbl = Convert.ToDouble(cellText.Substring(1, cellText.Length - 1));
+                Double feeDbl = 0;
+                Double.TryParse(cellText.Substring(1, cellText.Length - 1), out feeDbl);
 
                 if (cellText.Contains("$"))
                 {
@@ -124,6 +124,60 @@ namespace Citadel
         private void dQuickList_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             dQuickList.Columns[3].DefaultCellStyle.NullValue = "$0.00";
+        }
+
+        private void btnAddAll_Click(object sender, EventArgs e)
+        {
+            bool GO = false;
+            int rowsToUse = dQuickList.Rows.Count - 1;
+            String[,] tempStudents = new String[rowsToUse, 11];
+            String[] newStudents = new String[rowsToUse];
+            for (int i = 0; i < rowsToUse; i++)
+            {
+                for (int j = 0; j < tempStudents.GetLength(1) - 1; j++)
+                {
+                    try {
+                        if ((tempStudents[i, j] = dQuickList.Rows[i].Cells[j].Value.ToString()) != "" || j == 10)
+                        {
+                            if (j == 5 || j == 6)
+                            {
+                                switch (tempStudents[i, j])
+                                {
+                                    case "M": tempStudents[i, j] = "0"; break;
+                                    case "F": tempStudents[i, j] = "1"; break;
+                                    case "Yes": tempStudents[i, j] = "0"; break;
+                                    case "No": tempStudents[i, j] = "1"; break;
+                                }
+                            }
+                            GO = true;
+                        } 
+                    } catch
+                    {
+                        rformLogin.message("Please ensure all required entries are filled.", "Error", 1);
+                        GO = false; break;
+                    }
+                }
+            }
+
+            if (GO)
+            {
+                for (int j = 0; j < tempStudents.GetLength(0); j++)
+                {
+                    for (int i = 0; i < tempStudents.GetLength(1) - 1; i++)
+                    {
+                        newStudents[j] += tempStudents[0, i] + "\\";
+                    }
+                    newStudents[j] += tempStudents[0, tempStudents.GetLength(1) - 1] + "\r\n";
+                }
+                
+                foreach (String str in newStudents)
+                {
+                    File.AppendAllText(studentFile, str);
+                }
+
+                dQuickList.Rows.Clear();
+                rformLogin.message("Successfully added " + rowsToUse.ToString() + " student(s).", "Sucess", 1);
+            }
         }
     }
 }

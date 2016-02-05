@@ -32,7 +32,7 @@
             this.thirteenForm1 = new asset.ThirteenForm();
             this.tcMain = new asset.ThirteenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.thirteenButton1 = new asset.ThirteenButton();
+            this.btnAddAll = new asset.ThirteenButton();
             this.dQuickList = new System.Windows.Forms.DataGridView();
             this.hMemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +90,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage1.Controls.Add(this.thirteenButton1);
+            this.tabPage1.Controls.Add(this.btnAddAll);
             this.tabPage1.Controls.Add(this.dQuickList);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -99,19 +99,20 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Multiple";
             // 
-            // thirteenButton1
+            // btnAddAll
             // 
-            this.thirteenButton1.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.thirteenButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenButton1.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
-            this.thirteenButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.thirteenButton1.ForeColor = System.Drawing.Color.White;
-            this.thirteenButton1.Location = new System.Drawing.Point(777, 529);
-            this.thirteenButton1.Name = "thirteenButton1";
-            this.thirteenButton1.Size = new System.Drawing.Size(75, 23);
-            this.thirteenButton1.TabIndex = 5;
-            this.thirteenButton1.Text = "Add All";
-            this.thirteenButton1.UseVisualStyleBackColor = false;
+            this.btnAddAll.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnAddAll.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnAddAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnAddAll.ForeColor = System.Drawing.Color.White;
+            this.btnAddAll.Location = new System.Drawing.Point(777, 529);
+            this.btnAddAll.Name = "btnAddAll";
+            this.btnAddAll.Size = new System.Drawing.Size(75, 23);
+            this.btnAddAll.TabIndex = 5;
+            this.btnAddAll.Text = "Add All";
+            this.btnAddAll.UseVisualStyleBackColor = false;
+            this.btnAddAll.Click += new System.EventHandler(this.btnAddAll_Click);
             // 
             // dQuickList
             // 
@@ -348,7 +349,7 @@
         private asset.ThirteenTabControl tcMain;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private asset.ThirteenButton thirteenButton1;
+        private asset.ThirteenButton btnAddAll;
         private System.Windows.Forms.DataGridView dQuickList;
         private System.Windows.Forms.DataGridViewTextBoxColumn hMemNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn hFirstName;
