@@ -30,6 +30,8 @@ namespace Citadel
         Double feeDbl = 0;     // Used as storage for the new student fee double value.
         bool editing = false;  // Determines if the user is editing a user or creating a new one.
         int editStudent;       // Determines the student being edited.
+        int males, females;    // Amount of males and females for statistics.
+        int statHeight;        // Default height of graphs on statistic page.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -307,10 +309,13 @@ namespace Citadel
             // Centers controls inside their parents.
             gbTitle(gbUserlist, btnDelete);
             gbTitle(gbCuruser, btnLogout);
+            gbTitle(pnlStats, lblStatsTitle);
+            gbTitle(pnlStats, lblReadingFrom2);
             gbTitle(pnlStudents, lblReadingFrom);
             gbTitle(pnlStudents, lblStudentsTitle);
 
             // Sets the text color of group boxes to white.
+            gbGraph.ForeColor = Color.White;
             gbNewuser.ForeColor = Color.White;
             gbUserlist.ForeColor = Color.White;
             gbSearch.ForeColor = Color.White;
@@ -475,6 +480,28 @@ namespace Citadel
 
             viewStudent(0);
             updateUserPage(currentUser);
+
+            // Initialize the data on the statistic page.
+            statHeight = pnlgMale.Height;
+            lblStudentCount.Text = "Total Students: " + studentLength.ToString();
+
+            for (int i = 0; i < students.GetLength(0); i++)
+            {
+                if (students[i, 0] == null) break;
+                if (students[i, 6] == "1") females++; // Get the amount of males and females.
+                else males++;
+            }
+
+            int temp, temp2;
+            temp = (studentLength * 100) / males; // Get the percentage of males.
+            temp2 = statHeight * (temp / 100);    // Get the height of the panel.
+            lblpMale.Text = temp.ToString() + "%";
+            lblpFemale.Text = (100 - temp).ToString() + "%";
+            pnlgMale.Height = temp2;
+            pnlgFemale.Height = statHeight - temp2;
+            lblpMale.Height = pnlgMale.Height - 16;
+            lblpFemale.Height = pnlgFemale.Height - 16;
+
         }
 
         void delete(string contains, string path, bool decrypt)
