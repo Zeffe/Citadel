@@ -282,7 +282,7 @@ namespace Citadel
                 if (students[i, 4] == null) break;
                 // Only pass if the student contains the content text or
                 // don't filter if contains is set to "".
-                if (students[i, searchFor].Contains(contains) || contains == "") {
+                if (students[i, searchFor].ToLower().Contains(contains.ToLower()) || contains == "") {
                     if (searchFor == 3 && students[i, searchFor] == "$0.00") skip = true;
                     if (!skip)
                     {

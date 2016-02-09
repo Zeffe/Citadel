@@ -116,6 +116,8 @@
             this.btnDelStudent = new System.Windows.Forms.PictureBox();
             this.cmbTreeview = new asset.ThirteenComboBox();
             this.tvStudents = new System.Windows.Forms.TreeView();
+            this.menuRefresh = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.lblStudentsTitle = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -203,8 +205,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
-            this.menuRefresh = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnRefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.thirteenForm1.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
@@ -243,6 +243,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
+            this.menuRefresh.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbVersion.SuspendLayout();
@@ -271,7 +272,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
             this.pnlbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).BeginInit();
-            this.menuRefresh.SuspendLayout();
             this.SuspendLayout();
             // 
             // thirteenForm1
@@ -1334,6 +1334,20 @@
             this.tvStudents.TabIndex = 0;
             this.tvStudents.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvStudents_AfterSelect);
             // 
+            // menuRefresh
+            // 
+            this.menuRefresh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnRefresh});
+            this.menuRefresh.Name = "menuRefresh";
+            this.menuRefresh.Size = new System.Drawing.Size(114, 26);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(113, 22);
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // lblStudentsTitle
             // 
             this.lblStudentsTitle.AutoSize = true;
@@ -2240,20 +2254,6 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menuRefresh
-            // 
-            this.menuRefresh.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnRefresh});
-            this.menuRefresh.Name = "menuRefresh";
-            this.menuRefresh.Size = new System.Drawing.Size(153, 48);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(152, 22);
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2310,6 +2310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNew1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).EndInit();
+            this.menuRefresh.ResumeLayout(false);
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -2355,7 +2356,6 @@
             this.pnlbInfo.ResumeLayout(false);
             this.pnlbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).EndInit();
-            this.menuRefresh.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
