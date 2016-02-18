@@ -33,6 +33,27 @@
             this.thirteenForm1 = new asset.ThirteenForm();
             this.pnlStats = new System.Windows.Forms.Panel();
             this.gbGraph = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblpNoFees = new System.Windows.Forms.Label();
+            this.lblpFees = new System.Windows.Forms.Label();
+            this.pnlgNoFees = new System.Windows.Forms.Panel();
+            this.pnlgFees = new System.Windows.Forms.Panel();
+            this.lblgNoFees = new System.Windows.Forms.Label();
+            this.lblgFees = new System.Windows.Forms.Label();
+            this.gbGraph2 = new System.Windows.Forms.GroupBox();
+            this.lblpNonactive = new System.Windows.Forms.Label();
+            this.lblpActive = new System.Windows.Forms.Label();
+            this.pnlgNonactive = new System.Windows.Forms.Panel();
+            this.pnlgActive = new System.Windows.Forms.Panel();
+            this.lblgNonactive = new System.Windows.Forms.Label();
+            this.lblgActive = new System.Windows.Forms.Label();
+            this.gbGraph1 = new System.Windows.Forms.GroupBox();
+            this.lblpFemale = new System.Windows.Forms.Label();
+            this.lblpMale = new System.Windows.Forms.Label();
+            this.pnlgFemale = new System.Windows.Forms.Panel();
+            this.pnlgMale = new System.Windows.Forms.Panel();
+            this.lblgFemale = new System.Windows.Forms.Label();
+            this.lblgMale = new System.Windows.Forms.Label();
             this.lblStudentCount = new System.Windows.Forms.Label();
             this.lblReadingFrom2 = new System.Windows.Forms.Label();
             this.lblStatsTitle = new System.Windows.Forms.Label();
@@ -208,16 +229,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.ttMaster = new System.Windows.Forms.ToolTip(this.components);
-            this.gbGraph1 = new System.Windows.Forms.GroupBox();
-            this.lblgMale = new System.Windows.Forms.Label();
-            this.lblgFemale = new System.Windows.Forms.Label();
-            this.pnlgMale = new System.Windows.Forms.Panel();
-            this.pnlgFemale = new System.Windows.Forms.Panel();
-            this.lblpMale = new System.Windows.Forms.Label();
-            this.lblpFemale = new System.Windows.Forms.Label();
+            this.lblFeesDue = new System.Windows.Forms.Label();
             this.thirteenForm1.SuspendLayout();
             this.pnlStats.SuspendLayout();
             this.gbGraph.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gbGraph2.SuspendLayout();
+            this.gbGraph1.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.gbNewStudent.SuspendLayout();
             this.tcNewStudent.SuspendLayout();
@@ -283,7 +301,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctSettings)).BeginInit();
             this.pnlbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).BeginInit();
-            this.gbGraph1.SuspendLayout();
             this.SuspendLayout();
             // 
             // thirteenForm1
@@ -341,6 +358,9 @@
             // 
             // gbGraph
             // 
+            this.gbGraph.Controls.Add(this.lblFeesDue);
+            this.gbGraph.Controls.Add(this.groupBox1);
+            this.gbGraph.Controls.Add(this.gbGraph2);
             this.gbGraph.Controls.Add(this.gbGraph1);
             this.gbGraph.Controls.Add(this.lblStudentCount);
             this.gbGraph.Location = new System.Drawing.Point(20, 77);
@@ -349,6 +369,216 @@
             this.gbGraph.TabIndex = 9;
             this.gbGraph.TabStop = false;
             this.gbGraph.Text = "Graphs";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblpNoFees);
+            this.groupBox1.Controls.Add(this.lblpFees);
+            this.groupBox1.Controls.Add(this.pnlgNoFees);
+            this.groupBox1.Controls.Add(this.pnlgFees);
+            this.groupBox1.Controls.Add(this.lblgNoFees);
+            this.groupBox1.Controls.Add(this.lblgFees);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(388, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(165, 213);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Have Fees";
+            // 
+            // lblpNoFees
+            // 
+            this.lblpNoFees.AutoSize = true;
+            this.lblpNoFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpNoFees.Location = new System.Drawing.Point(105, 23);
+            this.lblpNoFees.Name = "lblpNoFees";
+            this.lblpNoFees.Size = new System.Drawing.Size(33, 13);
+            this.lblpNoFees.TabIndex = 4;
+            this.lblpNoFees.Text = "100%";
+            // 
+            // lblpFees
+            // 
+            this.lblpFees.AutoSize = true;
+            this.lblpFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpFees.Location = new System.Drawing.Point(28, 23);
+            this.lblpFees.Name = "lblpFees";
+            this.lblpFees.Size = new System.Drawing.Size(33, 13);
+            this.lblpFees.TabIndex = 2;
+            this.lblpFees.Text = "100%";
+            // 
+            // pnlgNoFees
+            // 
+            this.pnlgNoFees.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgNoFees.Location = new System.Drawing.Point(93, 39);
+            this.pnlgNoFees.Name = "pnlgNoFees";
+            this.pnlgNoFees.Size = new System.Drawing.Size(52, 139);
+            this.pnlgNoFees.TabIndex = 3;
+            // 
+            // pnlgFees
+            // 
+            this.pnlgFees.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgFees.Location = new System.Drawing.Point(17, 39);
+            this.pnlgFees.Name = "pnlgFees";
+            this.pnlgFees.Size = new System.Drawing.Size(52, 139);
+            this.pnlgFees.TabIndex = 2;
+            // 
+            // lblgNoFees
+            // 
+            this.lblgNoFees.AutoSize = true;
+            this.lblgNoFees.Location = new System.Drawing.Point(107, 184);
+            this.lblgNoFees.Name = "lblgNoFees";
+            this.lblgNoFees.Size = new System.Drawing.Size(26, 16);
+            this.lblgNoFees.TabIndex = 1;
+            this.lblgNoFees.Text = "No";
+            // 
+            // lblgFees
+            // 
+            this.lblgFees.AutoSize = true;
+            this.lblgFees.Location = new System.Drawing.Point(28, 184);
+            this.lblgFees.Name = "lblgFees";
+            this.lblgFees.Size = new System.Drawing.Size(32, 16);
+            this.lblgFees.TabIndex = 0;
+            this.lblgFees.Text = "Yes";
+            // 
+            // gbGraph2
+            // 
+            this.gbGraph2.Controls.Add(this.lblpNonactive);
+            this.gbGraph2.Controls.Add(this.lblpActive);
+            this.gbGraph2.Controls.Add(this.pnlgNonactive);
+            this.gbGraph2.Controls.Add(this.pnlgActive);
+            this.gbGraph2.Controls.Add(this.lblgNonactive);
+            this.gbGraph2.Controls.Add(this.lblgActive);
+            this.gbGraph2.ForeColor = System.Drawing.Color.White;
+            this.gbGraph2.Location = new System.Drawing.Point(203, 47);
+            this.gbGraph2.Name = "gbGraph2";
+            this.gbGraph2.Size = new System.Drawing.Size(165, 213);
+            this.gbGraph2.TabIndex = 5;
+            this.gbGraph2.TabStop = false;
+            this.gbGraph2.Text = "Active";
+            // 
+            // lblpNonactive
+            // 
+            this.lblpNonactive.AutoSize = true;
+            this.lblpNonactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpNonactive.Location = new System.Drawing.Point(105, 23);
+            this.lblpNonactive.Name = "lblpNonactive";
+            this.lblpNonactive.Size = new System.Drawing.Size(33, 13);
+            this.lblpNonactive.TabIndex = 4;
+            this.lblpNonactive.Text = "100%";
+            // 
+            // lblpActive
+            // 
+            this.lblpActive.AutoSize = true;
+            this.lblpActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpActive.Location = new System.Drawing.Point(28, 23);
+            this.lblpActive.Name = "lblpActive";
+            this.lblpActive.Size = new System.Drawing.Size(33, 13);
+            this.lblpActive.TabIndex = 2;
+            this.lblpActive.Text = "100%";
+            // 
+            // pnlgNonactive
+            // 
+            this.pnlgNonactive.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgNonactive.Location = new System.Drawing.Point(93, 39);
+            this.pnlgNonactive.Name = "pnlgNonactive";
+            this.pnlgNonactive.Size = new System.Drawing.Size(52, 139);
+            this.pnlgNonactive.TabIndex = 3;
+            // 
+            // pnlgActive
+            // 
+            this.pnlgActive.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgActive.Location = new System.Drawing.Point(17, 39);
+            this.pnlgActive.Name = "pnlgActive";
+            this.pnlgActive.Size = new System.Drawing.Size(52, 139);
+            this.pnlgActive.TabIndex = 2;
+            // 
+            // lblgNonactive
+            // 
+            this.lblgNonactive.AutoSize = true;
+            this.lblgNonactive.Location = new System.Drawing.Point(107, 184);
+            this.lblgNonactive.Name = "lblgNonactive";
+            this.lblgNonactive.Size = new System.Drawing.Size(26, 16);
+            this.lblgNonactive.TabIndex = 1;
+            this.lblgNonactive.Text = "No";
+            // 
+            // lblgActive
+            // 
+            this.lblgActive.AutoSize = true;
+            this.lblgActive.Location = new System.Drawing.Point(28, 184);
+            this.lblgActive.Name = "lblgActive";
+            this.lblgActive.Size = new System.Drawing.Size(32, 16);
+            this.lblgActive.TabIndex = 0;
+            this.lblgActive.Text = "Yes";
+            // 
+            // gbGraph1
+            // 
+            this.gbGraph1.Controls.Add(this.lblpFemale);
+            this.gbGraph1.Controls.Add(this.lblpMale);
+            this.gbGraph1.Controls.Add(this.pnlgFemale);
+            this.gbGraph1.Controls.Add(this.pnlgMale);
+            this.gbGraph1.Controls.Add(this.lblgFemale);
+            this.gbGraph1.Controls.Add(this.lblgMale);
+            this.gbGraph1.ForeColor = System.Drawing.Color.White;
+            this.gbGraph1.Location = new System.Drawing.Point(18, 47);
+            this.gbGraph1.Name = "gbGraph1";
+            this.gbGraph1.Size = new System.Drawing.Size(165, 213);
+            this.gbGraph1.TabIndex = 1;
+            this.gbGraph1.TabStop = false;
+            this.gbGraph1.Text = "Gender";
+            // 
+            // lblpFemale
+            // 
+            this.lblpFemale.AutoSize = true;
+            this.lblpFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpFemale.Location = new System.Drawing.Point(107, 23);
+            this.lblpFemale.Name = "lblpFemale";
+            this.lblpFemale.Size = new System.Drawing.Size(33, 13);
+            this.lblpFemale.TabIndex = 6;
+            this.lblpFemale.Text = "100%";
+            // 
+            // lblpMale
+            // 
+            this.lblpMale.AutoSize = true;
+            this.lblpMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpMale.Location = new System.Drawing.Point(30, 23);
+            this.lblpMale.Name = "lblpMale";
+            this.lblpMale.Size = new System.Drawing.Size(33, 13);
+            this.lblpMale.TabIndex = 5;
+            this.lblpMale.Text = "100%";
+            // 
+            // pnlgFemale
+            // 
+            this.pnlgFemale.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgFemale.Location = new System.Drawing.Point(93, 39);
+            this.pnlgFemale.Name = "pnlgFemale";
+            this.pnlgFemale.Size = new System.Drawing.Size(52, 139);
+            this.pnlgFemale.TabIndex = 3;
+            // 
+            // pnlgMale
+            // 
+            this.pnlgMale.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgMale.Location = new System.Drawing.Point(17, 39);
+            this.pnlgMale.Name = "pnlgMale";
+            this.pnlgMale.Size = new System.Drawing.Size(52, 139);
+            this.pnlgMale.TabIndex = 2;
+            // 
+            // lblgFemale
+            // 
+            this.lblgFemale.AutoSize = true;
+            this.lblgFemale.Location = new System.Drawing.Point(92, 184);
+            this.lblgFemale.Name = "lblgFemale";
+            this.lblgFemale.Size = new System.Drawing.Size(54, 16);
+            this.lblgFemale.TabIndex = 1;
+            this.lblgFemale.Text = "Female";
+            // 
+            // lblgMale
+            // 
+            this.lblgMale.AutoSize = true;
+            this.lblgMale.Location = new System.Drawing.Point(23, 184);
+            this.lblgMale.Name = "lblgMale";
+            this.lblgMale.Size = new System.Drawing.Size(38, 16);
+            this.lblgMale.TabIndex = 0;
+            this.lblgMale.Text = "Male";
             // 
             // lblStudentCount
             // 
@@ -2297,75 +2527,14 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gbGraph1
+            // lblFeesDue
             // 
-            this.gbGraph1.Controls.Add(this.lblpFemale);
-            this.gbGraph1.Controls.Add(this.lblpMale);
-            this.gbGraph1.Controls.Add(this.pnlgFemale);
-            this.gbGraph1.Controls.Add(this.pnlgMale);
-            this.gbGraph1.Controls.Add(this.lblgFemale);
-            this.gbGraph1.Controls.Add(this.lblgMale);
-            this.gbGraph1.ForeColor = System.Drawing.Color.White;
-            this.gbGraph1.Location = new System.Drawing.Point(18, 47);
-            this.gbGraph1.Name = "gbGraph1";
-            this.gbGraph1.Size = new System.Drawing.Size(165, 213);
-            this.gbGraph1.TabIndex = 1;
-            this.gbGraph1.TabStop = false;
-            this.gbGraph1.Text = "Gender";
-            // 
-            // lblgMale
-            // 
-            this.lblgMale.AutoSize = true;
-            this.lblgMale.Location = new System.Drawing.Point(23, 184);
-            this.lblgMale.Name = "lblgMale";
-            this.lblgMale.Size = new System.Drawing.Size(38, 16);
-            this.lblgMale.TabIndex = 0;
-            this.lblgMale.Text = "Male";
-            // 
-            // lblgFemale
-            // 
-            this.lblgFemale.AutoSize = true;
-            this.lblgFemale.Location = new System.Drawing.Point(92, 184);
-            this.lblgFemale.Name = "lblgFemale";
-            this.lblgFemale.Size = new System.Drawing.Size(54, 16);
-            this.lblgFemale.TabIndex = 1;
-            this.lblgFemale.Text = "Female";
-            // 
-            // pnlgMale
-            // 
-            this.pnlgMale.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgMale.Location = new System.Drawing.Point(17, 39);
-            this.pnlgMale.Name = "pnlgMale";
-            this.pnlgMale.Size = new System.Drawing.Size(52, 139);
-            this.pnlgMale.TabIndex = 2;
-            // 
-            // pnlgFemale
-            // 
-            this.pnlgFemale.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgFemale.Location = new System.Drawing.Point(93, 39);
-            this.pnlgFemale.Name = "pnlgFemale";
-            this.pnlgFemale.Size = new System.Drawing.Size(52, 139);
-            this.pnlgFemale.TabIndex = 3;
-            // 
-            // lblpMale
-            // 
-            this.lblpMale.AutoSize = true;
-            this.lblpMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpMale.Location = new System.Drawing.Point(26, 23);
-            this.lblpMale.Name = "lblpMale";
-            this.lblpMale.Size = new System.Drawing.Size(33, 13);
-            this.lblpMale.TabIndex = 2;
-            this.lblpMale.Text = "100%";
-            // 
-            // lblpFemale
-            // 
-            this.lblpFemale.AutoSize = true;
-            this.lblpFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpFemale.Location = new System.Drawing.Point(103, 23);
-            this.lblpFemale.Name = "lblpFemale";
-            this.lblpFemale.Size = new System.Drawing.Size(33, 13);
-            this.lblpFemale.TabIndex = 4;
-            this.lblpFemale.Text = "100%";
+            this.lblFeesDue.AutoSize = true;
+            this.lblFeesDue.Location = new System.Drawing.Point(386, 21);
+            this.lblFeesDue.Name = "lblFeesDue";
+            this.lblFeesDue.Size = new System.Drawing.Size(79, 16);
+            this.lblFeesDue.TabIndex = 7;
+            this.lblFeesDue.Text = "Total Fees: ";
             // 
             // formMain
             // 
@@ -2386,6 +2555,12 @@
             this.pnlStats.PerformLayout();
             this.gbGraph.ResumeLayout(false);
             this.gbGraph.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gbGraph2.ResumeLayout(false);
+            this.gbGraph2.PerformLayout();
+            this.gbGraph1.ResumeLayout(false);
+            this.gbGraph1.PerformLayout();
             this.pnlStudents.ResumeLayout(false);
             this.pnlStudents.PerformLayout();
             this.gbNewStudent.ResumeLayout(false);
@@ -2471,8 +2646,6 @@
             this.pnlbInfo.ResumeLayout(false);
             this.pnlbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctInfo)).EndInit();
-            this.gbGraph1.ResumeLayout(false);
-            this.gbGraph1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2658,11 +2831,26 @@
         private System.Windows.Forms.GroupBox gbGraph;
         private System.Windows.Forms.Label lblStudentCount;
         private System.Windows.Forms.GroupBox gbGraph1;
-        private System.Windows.Forms.Label lblpFemale;
-        private System.Windows.Forms.Label lblpMale;
         private System.Windows.Forms.Panel pnlgFemale;
         private System.Windows.Forms.Panel pnlgMale;
         private System.Windows.Forms.Label lblgFemale;
         private System.Windows.Forms.Label lblgMale;
+        private System.Windows.Forms.GroupBox gbGraph2;
+        private System.Windows.Forms.Label lblpNonactive;
+        private System.Windows.Forms.Label lblpActive;
+        private System.Windows.Forms.Panel pnlgNonactive;
+        private System.Windows.Forms.Panel pnlgActive;
+        private System.Windows.Forms.Label lblgNonactive;
+        private System.Windows.Forms.Label lblgActive;
+        private System.Windows.Forms.Label lblpFemale;
+        private System.Windows.Forms.Label lblpMale;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblpNoFees;
+        private System.Windows.Forms.Label lblpFees;
+        private System.Windows.Forms.Panel pnlgNoFees;
+        private System.Windows.Forms.Panel pnlgFees;
+        private System.Windows.Forms.Label lblgNoFees;
+        private System.Windows.Forms.Label lblgFees;
+        private System.Windows.Forms.Label lblFeesDue;
     }
 }

@@ -30,8 +30,11 @@ namespace Citadel
         Double feeDbl = 0;     // Used as storage for the new student fee double value.
         bool editing = false;  // Determines if the user is editing a user or creating a new one.
         int editStudent;       // Determines the student being edited.
-        int males, females;    // Amount of males and females for statistics.
-        int statHeight;        // Default height of graphs on statistic page.
+        double males, females; // Amount of males and females for statistics.
+        double aYes, aNo;      // Amount of students active and non active.
+        double hasFees, noFees;// Amount of students that have or do not have fees.
+        double totalFees;      // Total amount due in fees.
+        double statHeight;     // Default height of graphs on statistic page.
 
         // Saves the panel tab buttons with their respective display panels.
         Dictionary<Panel, Panel> displays = new Dictionary<Panel, Panel>();
@@ -484,27 +487,62 @@ namespace Citadel
             // Initialize the data on the statistic page.
             statHeight = pnlgMale.Height;
             lblStudentCount.Text = "Total Students: " + studentLength.ToString();
+            totalFees = 0;
 
             for (int i = 0; i < students.GetLength(0); i++)
             {
+                double _temp = 0;
                 if (students[i, 0] == null) break;
-                if (students[i, 6] == "1") females++; // Get the amount of males and females.
+                Double.TryParse(students[i, 3].Trim('$'), out _temp);
+                totalFees += _temp;
+                if (students[i, 3] != "$0.00") hasFees++;
+                else noFees++;
+                if (students[i, 5] == "1") aYes++;    // Get the amount of active and nonactive members.
+                else aNo++;
+                if (students[i, 6] == "0") females++; // Get the amount of males and females.
                 else males++;
             }
 
-            try
+            string fees = totalFees.ToString();
+            if (fees.Contains('.'))
             {
-                int temp, temp2;
-                temp = (studentLength * 100) / males; // Get the percentage of males.
-                temp2 = statHeight * (temp / 100);    // Get the height of the panel.
-                lblpMale.Text = temp.ToString() + "%";
-                lblpFemale.Text = (100 - temp).ToString() + "%";
-                pnlgMale.Height = temp2;
-                pnlgFemale.Height = statHeight - temp2;
-                lblpMale.Height = pnlgMale.Height - 16;
-                lblpFemale.Height = pnlgFemale.Height - 16;
+                switch (fees.Split('.').Length)
+                {
+                    case 0: fees += "00"; break;
+                    case 1: fees += "0"; break;
+                    case 2: break;
+                }
+            } else
+            {
+                fees += ".00";
             }
-            catch { }
+
+            lblFeesDue.Text = "Total Fees: $" + fees;
+
+            // Update the graphs on the statistic page.
+            statPercentage(males, females, pnlgMale, pnlgFemale, lblpMale, lblpFemale);
+            statPercentage(aYes, aNo, pnlgActive, pnlgNonactive, lblpActive, lblpNonactive);
+            statPercentage(hasFees, noFees, pnlgFees, pnlgNoFees, lblpFees, lblpNoFees);
+
+        }
+
+        void statPercentage(double param1, double param2, Panel panel1, Panel panel2, Label label1, Label label2)
+        {
+            double temp, temp2;
+            temp = (param1 / studentLength) * 100;                          // Get the percentage of males.
+            temp2 = statHeight * (temp / 100);                              // Get the height of the panel.
+            label1.Text = Convert.ToInt32(temp).ToString() + "%";           // Display the percentage of males.
+            label2.Text = Convert.ToInt32((100 - temp)).ToString() + "%";   // Display the percentage of females.
+            panel1.Height = Convert.ToInt32(temp2);                         // Set the height of the male panel.
+            panel2.Height = Convert.ToInt32(statHeight - temp2);            // Set the height of the female panel.
+
+            // Translate the male and female panels down so that they rest above labels.
+            panel1.Location = new Point(panel1.Location.X, Convert.ToInt32(panel1.Location.Y + (statHeight - temp2)));
+            panel2.Location = new Point(panel2.Location.X, Convert.ToInt32(panel2.Location.Y + (statHeight - (statHeight - temp2))));
+
+            // Move the male and female labels to be on top of the bars.
+            label1.Location = new Point(label1.Location.X, panel1.Location.Y - 16);
+            label2.Location = new Point(label2.Location.X, panel2.Location.Y - 16);
         }
 
         void delete(string contains, string path, bool decrypt)
