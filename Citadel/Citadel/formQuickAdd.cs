@@ -143,10 +143,10 @@ namespace Citadel
                             {
                                 switch (tempStudents[i, j])
                                 {
-                                    case "M": tempStudents[i, j] = "0"; break;
-                                    case "F": tempStudents[i, j] = "1"; break;
-                                    case "Yes": tempStudents[i, j] = "0"; break;
-                                    case "No": tempStudents[i, j] = "1"; break;
+                                    case "M": tempStudents[i, j] = "1"; break;
+                                    case "F": tempStudents[i, j] = "0"; break;
+                                    case "Yes": tempStudents[i, j] = "1"; break;
+                                    case "No": tempStudents[i, j] = "0"; break;
                                 }
                             }
                             GO = true;
@@ -165,9 +165,9 @@ namespace Citadel
                 {
                     for (int i = 0; i < tempStudents.GetLength(1) - 1; i++)
                     {
-                        newStudents[j] += tempStudents[0, i] + "\\";
+                        newStudents[j] += tempStudents[j, i] + "\\";
                     }
-                    newStudents[j] += tempStudents[0, tempStudents.GetLength(1) - 1] + "\r\n";
+                    newStudents[j] += tempStudents[j, tempStudents.GetLength(1) - 1] + "\r\n";
                 }
                 
                 foreach (String str in newStudents)

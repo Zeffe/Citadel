@@ -34,22 +34,22 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAddAll = new asset.ThirteenButton();
             this.dQuickList = new System.Windows.Forms.DataGridView();
-            this.hMemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hYearJoined = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.hSex = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.hActive = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.hGrade = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.hSchool = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new asset.ThirteenButton();
             this.txtAdd = new asset.ThirteenTextBox();
             this.thirteenControlBox1 = new asset.ThirteenControlBox();
+            this.hMemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hYearJoined = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.hActive = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.hSex = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.hGrade = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.hSchool = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thirteenForm1.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -127,8 +127,8 @@
             this.hLastName,
             this.hFees,
             this.hYearJoined,
-            this.hSex,
             this.hActive,
+            this.hSex,
             this.hGrade,
             this.hSchool,
             this.hEmail,
@@ -144,115 +144,6 @@
             this.dQuickList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dQuickList_CellEndEdit);
             this.dQuickList.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dQuickList_CellEnter);
             this.dQuickList.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dQuickList_RowsAdded);
-            // 
-            // hMemNum
-            // 
-            this.hMemNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hMemNum.HeaderText = "#";
-            this.hMemNum.Name = "hMemNum";
-            this.hMemNum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hMemNum.Width = 40;
-            // 
-            // hFirstName
-            // 
-            this.hFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hFirstName.HeaderText = "First Name";
-            this.hFirstName.Name = "hFirstName";
-            this.hFirstName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hFirstName.Width = 98;
-            // 
-            // hLastName
-            // 
-            this.hLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hLastName.HeaderText = "Last Name";
-            this.hLastName.Name = "hLastName";
-            this.hLastName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hLastName.Width = 98;
-            // 
-            // hFees
-            // 
-            this.hFees.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hFees.HeaderText = "Fees";
-            this.hFees.Name = "hFees";
-            this.hFees.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hFees.Width = 64;
-            // 
-            // hYearJoined
-            // 
-            this.hYearJoined.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hYearJoined.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.hYearJoined.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hYearJoined.HeaderText = "Joined";
-            this.hYearJoined.Name = "hYearJoined";
-            this.hYearJoined.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hYearJoined.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hYearJoined.Width = 74;
-            // 
-            // hSex
-            // 
-            this.hSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hSex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hSex.HeaderText = "Sex";
-            this.hSex.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.hSex.Name = "hSex";
-            this.hSex.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hSex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hSex.Width = 56;
-            // 
-            // hActive
-            // 
-            this.hActive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hActive.HeaderText = "Active";
-            this.hActive.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.hActive.Name = "hActive";
-            this.hActive.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hActive.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hActive.Width = 70;
-            // 
-            // hGrade
-            // 
-            this.hGrade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hGrade.HeaderText = "Grade";
-            this.hGrade.Items.AddRange(new object[] {
-            "9",
-            "10",
-            "11",
-            "12",
-            "13+"});
-            this.hGrade.Name = "hGrade";
-            this.hGrade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hGrade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hGrade.Width = 71;
-            // 
-            // hSchool
-            // 
-            this.hSchool.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hSchool.HeaderText = "School";
-            this.hSchool.Name = "hSchool";
-            this.hSchool.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hSchool.Width = 75;
-            // 
-            // hEmail
-            // 
-            this.hEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hEmail.HeaderText = "Email";
-            this.hEmail.Name = "hEmail";
-            this.hEmail.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hEmail.Width = 67;
-            // 
-            // hComment
-            // 
-            this.hComment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hComment.HeaderText = "Comments";
-            this.hComment.Name = "hComment";
-            this.hComment.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hComment.Width = 97;
             // 
             // tabPage2
             // 
@@ -316,6 +207,115 @@
             this.thirteenControlBox1.TabIndex = 0;
             this.thirteenControlBox1.Text = "thirteenControlBox1";
             // 
+            // hMemNum
+            // 
+            this.hMemNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hMemNum.HeaderText = "#";
+            this.hMemNum.Name = "hMemNum";
+            this.hMemNum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hMemNum.Width = 40;
+            // 
+            // hFirstName
+            // 
+            this.hFirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hFirstName.HeaderText = "First Name";
+            this.hFirstName.Name = "hFirstName";
+            this.hFirstName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hFirstName.Width = 98;
+            // 
+            // hLastName
+            // 
+            this.hLastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hLastName.HeaderText = "Last Name";
+            this.hLastName.Name = "hLastName";
+            this.hLastName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hLastName.Width = 98;
+            // 
+            // hFees
+            // 
+            this.hFees.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hFees.HeaderText = "Fees";
+            this.hFees.Name = "hFees";
+            this.hFees.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hFees.Width = 64;
+            // 
+            // hYearJoined
+            // 
+            this.hYearJoined.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hYearJoined.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.hYearJoined.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hYearJoined.HeaderText = "Joined";
+            this.hYearJoined.Name = "hYearJoined";
+            this.hYearJoined.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hYearJoined.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hYearJoined.Width = 74;
+            // 
+            // hActive
+            // 
+            this.hActive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hActive.HeaderText = "Active";
+            this.hActive.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.hActive.Name = "hActive";
+            this.hActive.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hActive.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hActive.Width = 70;
+            // 
+            // hSex
+            // 
+            this.hSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hSex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hSex.HeaderText = "Sex";
+            this.hSex.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.hSex.Name = "hSex";
+            this.hSex.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hSex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hSex.Width = 56;
+            // 
+            // hGrade
+            // 
+            this.hGrade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hGrade.HeaderText = "Grade";
+            this.hGrade.Items.AddRange(new object[] {
+            "9",
+            "10",
+            "11",
+            "12",
+            "13+"});
+            this.hGrade.Name = "hGrade";
+            this.hGrade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hGrade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hGrade.Width = 71;
+            // 
+            // hSchool
+            // 
+            this.hSchool.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hSchool.HeaderText = "School";
+            this.hSchool.Name = "hSchool";
+            this.hSchool.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hSchool.Width = 75;
+            // 
+            // hEmail
+            // 
+            this.hEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hEmail.HeaderText = "Email";
+            this.hEmail.Name = "hEmail";
+            this.hEmail.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hEmail.Width = 67;
+            // 
+            // hComment
+            // 
+            this.hComment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hComment.HeaderText = "Comments";
+            this.hComment.Name = "hComment";
+            this.hComment.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hComment.Width = 97;
+            // 
             // formQuickAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,8 +356,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn hFees;
         private System.Windows.Forms.DataGridViewComboBoxColumn hYearJoined;
-        private System.Windows.Forms.DataGridViewComboBoxColumn hSex;
         private System.Windows.Forms.DataGridViewComboBoxColumn hActive;
+        private System.Windows.Forms.DataGridViewComboBoxColumn hSex;
         private System.Windows.Forms.DataGridViewComboBoxColumn hGrade;
         private System.Windows.Forms.DataGridViewTextBoxColumn hSchool;
         private System.Windows.Forms.DataGridViewTextBoxColumn hEmail;

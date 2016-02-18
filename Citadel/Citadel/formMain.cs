@@ -492,16 +492,19 @@ namespace Citadel
                 else males++;
             }
 
-            int temp, temp2;
-            temp = (studentLength * 100) / males; // Get the percentage of males.
-            temp2 = statHeight * (temp / 100);    // Get the height of the panel.
-            lblpMale.Text = temp.ToString() + "%";
-            lblpFemale.Text = (100 - temp).ToString() + "%";
-            pnlgMale.Height = temp2;
-            pnlgFemale.Height = statHeight - temp2;
-            lblpMale.Height = pnlgMale.Height - 16;
-            lblpFemale.Height = pnlgFemale.Height - 16;
-
+            try
+            {
+                int temp, temp2;
+                temp = (studentLength * 100) / males; // Get the percentage of males.
+                temp2 = statHeight * (temp / 100);    // Get the height of the panel.
+                lblpMale.Text = temp.ToString() + "%";
+                lblpFemale.Text = (100 - temp).ToString() + "%";
+                pnlgMale.Height = temp2;
+                pnlgFemale.Height = statHeight - temp2;
+                lblpMale.Height = pnlgMale.Height - 16;
+                lblpFemale.Height = pnlgFemale.Height - 16;
+            }
+            catch { }
         }
 
         void delete(string contains, string path, bool decrypt)

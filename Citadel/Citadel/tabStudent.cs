@@ -308,7 +308,7 @@ namespace Citadel
 
                 // The string that will be saved.
                 string _temp = nmNewMemNum.Text + '\\' + txtNewFirst.Text + '\\' + txtNewLast.Text + '\\' + txtNewFees.Text
-                    + '\\' + nmNewYear.Text + '\\' + _gender + '\\' + _active + '\\' + _grade
+                    + '\\' + nmNewYear.Text + '\\' + _active + '\\' + _gender + '\\' + _grade
                     + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtNewComment.Text;
 
                 try
