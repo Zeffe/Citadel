@@ -23,5 +23,10 @@ Usability and functionality should be the prime objectives.
  -------------------------------------------------------------------------------------------------------------
 
  ![ScreenShot] (https://i.gyazo.com/72086c01e35ca448abfc1fb5f6a4f5b1.png)
- ![ScreenShot] (https://i.gyazo.com/0ce4ab8985b63b537cbc9e0d29c71a0b.png)
- ![ScreenShot] (https://i.gyazo.com/a80b19be6ceff1f768e4eeb73c1e07f6.png)
+ ![ScreenShot] (https://i.gyazo.com/5d563546591f440d757f5311cf9bcbb2.png)
+ ![ScreenShot] (https://i.gyazo.com/4d27233084a16c45f261c67bcbb19a09.png)
+ ![ScreenShot] (https://i.gyazo.com/97fd6378ae9ed4481024575a8216d35a.png)
+ ![ScreenShot] (https://i.gyazo.com/89753920de1c9d3d9c34c54b7ef4759e.png)
+ ![ScreenShot] (https://i.gyazo.com/cca9d147238193af1680e80dda3d47c8.png)
+ ![ScreenShot] (https://i.gyazo.com/02848e9f7d38c2a392449bf44a7ddd01.png)
+ ![ScreenShot] (https://i.gyazo.com/74130f929bf234917dbfbe99274f0c1d.png)
