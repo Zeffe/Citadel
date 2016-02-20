@@ -332,7 +332,7 @@ namespace Citadel
             lblUser.Click += new System.EventHandler(_onClick);
             pnlContainer.Click += new System.EventHandler(_onClick);
             lblWelcome.Click += new System.EventHandler(_onClick);
-
+            
             // Adjusts the welcome message at the top of the tabs.
             string _user = "";
             if (getUser(currentUser).Length < 12)
@@ -487,7 +487,11 @@ namespace Citadel
             // Initialize the data on the statistic page.
             statHeight = pnlgMale.Height;
             lblStudentCount.Text = "Total Students: " + studentLength.ToString();
+            lblStudentCount2.Text = studentLength.ToString();
             totalFees = 0;
+
+            // Temporary variables for displaying grade statstics.
+            int _fresh = 0, _soph = 0, _junio = 0, _senio = 0, _colle = 0;
 
             for (int i = 0; i < students.GetLength(0); i++)
             {
@@ -495,6 +499,14 @@ namespace Citadel
                 if (students[i, 0] == null) break;
                 Double.TryParse(students[i, 3].Trim('$'), out _temp);
                 totalFees += _temp;
+                switch (students[i, 7])
+                {
+                    case "9": _fresh++; break;
+                    case "10": _soph++; break;
+                    case "11": _junio++; break;
+                    case "12": _senio++; break;
+                    case "13+": _colle++; break;
+                }
                 if (students[i, 3] != "$0.00") hasFees++;
                 else noFees++;
                 if (students[i, 5] == "1") aYes++;    // Get the amount of active and nonactive members.
@@ -518,12 +530,36 @@ namespace Citadel
             }
 
             lblFeesDue.Text = "Total Fees: $" + fees;
+            lblActiveStudents.Text = "Active Students: " + aYes.ToString();
+
+            lblgM.Text = "M: " + males.ToString();
+            lblgF.Text = "F: " + females.ToString();
+
+            lblaYes.Text = "Yes: " + aYes.ToString();
+            lblaNo.Text = "No: " + aNo.ToString();
+
+            lblg9.Text = "9th: " + _fresh.ToString();
+            lblg10.Text = "10th: " + _soph.ToString();
+            lblg11.Text = "11th: " + _junio.ToString();
+            lblg12.Text = "12th: " + _senio.ToString();
+            lblg13.Text = "13+: " + _colle.ToString();
 
             // Update the graphs on the statistic page.
             statPercentage(males, females, pnlgMale, pnlgFemale, lblpMale, lblpFemale);
             statPercentage(aYes, aNo, pnlgActive, pnlgNonactive, lblpActive, lblpNonactive);
             statPercentage(hasFees, noFees, pnlgFees, pnlgNoFees, lblpFees, lblpNoFees);
 
+        }
+
+        private void lblActiveStudents_Click(object sender, EventArgs e)
+        {
+            if (lblActiveStudents.Text.Substring(0, 3) == "Act")
+            {
+                lblActiveStudents.Text = "Non-Active Students: " + aNo.ToString();
+            } else
+            {
+                lblActiveStudents.Text = "Active Students: " + aYes.ToString();
+            }
         }
 
         void statPercentage(double param1, double param2, Panel panel1, Panel panel2, Label label1, Label label2)
