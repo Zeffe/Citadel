@@ -130,11 +130,11 @@ namespace Citadel
         {
             bool GO = false;
             int rowsToUse = dQuickList.Rows.Count - 1;
-            String[,] tempStudents = new String[rowsToUse, 11];
+            String[,] tempStudents = new String[rowsToUse, 12];
             String[] newStudents = new String[rowsToUse];
             for (int i = 0; i < rowsToUse; i++)
             {
-                for (int j = 0; j < tempStudents.GetLength(1) - 1; j++)
+                for (int j = 0; j < tempStudents.GetLength(1); j++)
                 {
                     try {
                         if ((tempStudents[i, j] = dQuickList.Rows[i].Cells[j].Value.ToString()) != "" || j == 10)

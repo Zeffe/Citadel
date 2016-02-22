@@ -44,12 +44,13 @@
             this.hLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hFees = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hYearJoined = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.hActive = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.hSex = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.hActive = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.hGrade = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.hSchool = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hState = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.thirteenForm1.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -69,7 +70,7 @@
             this.thirteenForm1.ForeColor = System.Drawing.Color.White;
             this.thirteenForm1.Location = new System.Drawing.Point(0, 0);
             this.thirteenForm1.Name = "thirteenForm1";
-            this.thirteenForm1.Size = new System.Drawing.Size(886, 632);
+            this.thirteenForm1.Size = new System.Drawing.Size(957, 632);
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Quick Add";
             // 
@@ -83,7 +84,7 @@
             this.tcMain.Location = new System.Drawing.Point(12, 37);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(867, 588);
+            this.tcMain.Size = new System.Drawing.Size(931, 588);
             this.tcMain.TabIndex = 5;
             this.tcMain.SelectedIndexChanged += new System.EventHandler(this.tcMain_SelectedIndexChanged);
             // 
@@ -95,7 +96,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(859, 559);
+            this.tabPage1.Size = new System.Drawing.Size(923, 559);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Multiple";
             // 
@@ -127,18 +128,19 @@
             this.hLastName,
             this.hFees,
             this.hYearJoined,
-            this.hActive,
             this.hSex,
+            this.hActive,
             this.hGrade,
             this.hSchool,
             this.hEmail,
-            this.hComment});
+            this.hComment,
+            this.hState});
             this.dQuickList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dQuickList.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dQuickList.Location = new System.Drawing.Point(3, 6);
             this.dQuickList.Name = "dQuickList";
             this.dQuickList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dQuickList.Size = new System.Drawing.Size(853, 516);
+            this.dQuickList.Size = new System.Drawing.Size(917, 516);
             this.dQuickList.TabIndex = 0;
             this.dQuickList.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dQuickList_CellBeginEdit);
             this.dQuickList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dQuickList_CellEndEdit);
@@ -201,7 +203,7 @@
             this.thirteenControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenControlBox1.ColorScheme = asset.ThirteenControlBox.ColorSchemes.Dark;
             this.thirteenControlBox1.ForeColor = System.Drawing.Color.White;
-            this.thirteenControlBox1.Location = new System.Drawing.Point(783, 3);
+            this.thirteenControlBox1.Location = new System.Drawing.Point(854, 3);
             this.thirteenControlBox1.Name = "thirteenControlBox1";
             this.thirteenControlBox1.Size = new System.Drawing.Size(100, 25);
             this.thirteenControlBox1.TabIndex = 0;
@@ -250,19 +252,6 @@
             this.hYearJoined.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.hYearJoined.Width = 74;
             // 
-            // hActive
-            // 
-            this.hActive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hActive.HeaderText = "Active";
-            this.hActive.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.hActive.Name = "hActive";
-            this.hActive.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.hActive.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.hActive.Width = 70;
-            // 
             // hSex
             // 
             this.hSex.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -275,6 +264,19 @@
             this.hSex.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.hSex.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.hSex.Width = 56;
+            // 
+            // hActive
+            // 
+            this.hActive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hActive.HeaderText = "Active";
+            this.hActive.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.hActive.Name = "hActive";
+            this.hActive.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hActive.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hActive.Width = 70;
             // 
             // hGrade
             // 
@@ -316,11 +318,72 @@
             this.hComment.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.hComment.Width = 97;
             // 
+            // hState
+            // 
+            this.hState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hState.HeaderText = "State";
+            this.hState.Items.AddRange(new object[] {
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY",
+            "Other"});
+            this.hState.Name = "hState";
+            this.hState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.hState.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.hState.Width = 64;
+            // 
             // formQuickAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 632);
+            this.ClientSize = new System.Drawing.Size(957, 632);
             this.Controls.Add(this.thirteenForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -356,11 +419,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn hFees;
         private System.Windows.Forms.DataGridViewComboBoxColumn hYearJoined;
-        private System.Windows.Forms.DataGridViewComboBoxColumn hActive;
         private System.Windows.Forms.DataGridViewComboBoxColumn hSex;
+        private System.Windows.Forms.DataGridViewComboBoxColumn hActive;
         private System.Windows.Forms.DataGridViewComboBoxColumn hGrade;
         private System.Windows.Forms.DataGridViewTextBoxColumn hSchool;
         private System.Windows.Forms.DataGridViewTextBoxColumn hEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn hComment;
+        private System.Windows.Forms.DataGridViewComboBoxColumn hState;
     }
 }

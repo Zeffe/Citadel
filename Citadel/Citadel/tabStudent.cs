@@ -169,6 +169,7 @@ namespace Citadel
                 lblSchool.Text = "School: " + students[studentNum, 8];
                 lblEmail2.Text = "Email: " + students[studentNum, 9];
                 txtComment.Text = students[studentNum, 10];
+                lblvState.Text = students[studentNum, 11];
             }
             catch { }
         }
@@ -228,7 +229,7 @@ namespace Citadel
         {
             txtNewFirst.Enabled = enable; txtNewLast.Enabled = enable; txtNewSchool.Enabled = enable;
             txtNewEmail.Enabled = enable; nmNewYear.Enabled = enable; txtNewFees.Enabled = enable;
-            txtNewComment.Enabled = enable; nmNewMemNum.Enabled = enable;
+            txtNewComment.Enabled = enable; nmNewMemNum.Enabled = enable; cmbState.Enabled = enable;
         }
 
         void newStudent()
@@ -309,7 +310,7 @@ namespace Citadel
                 // The string that will be saved.
                 string _temp = nmNewMemNum.Text + '\\' + txtNewFirst.Text + '\\' + txtNewLast.Text + '\\' + txtNewFees.Text
                     + '\\' + nmNewYear.Text + '\\' + _active + '\\' + _gender + '\\' + _grade
-                    + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtNewComment.Text;
+                    + '\\' + txtNewSchool.Text + '\\' + txtNewEmail.Text + '\\' + txtNewComment.Text + '\\' + cmbState.Text;
 
                 try
                 {

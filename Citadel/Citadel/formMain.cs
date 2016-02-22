@@ -21,7 +21,7 @@ namespace Citadel
         int perms;             // Used to recognize permissions of a user, only 1 = administrator.
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
-        public static String[,] students = new String[50, 11]; // 2D array that stores students.
+        public static String[,] students = new String[50, 12]; // 2D array that stores students.
         int currentView;       // The Student that is currently being viewed
         int studentLength;     // Number of valid student accounts.
         int searchFor = 0;     // Value used to determine the 2nd dimension to filter by.
@@ -473,6 +473,7 @@ namespace Citadel
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
 
             cmbPerms.SelectedIndex = 0;
+            cmbState.Text = "MO";
 
             // Disables new user form and user delete if user is not administrator.
             if (perms != 1)
@@ -483,72 +484,84 @@ namespace Citadel
 
             viewStudent(0);
             updateUserPage(currentUser);
-
-            // Initialize the data on the statistic page.
-            statHeight = pnlgMale.Height;
-            lblStudentCount.Text = "Total Students: " + studentLength.ToString();
-            lblStudentCount2.Text = studentLength.ToString();
-            totalFees = 0;
-
-            // Temporary variables for displaying grade statstics.
-            int _fresh = 0, _soph = 0, _junio = 0, _senio = 0, _colle = 0;
-
-            for (int i = 0; i < students.GetLength(0); i++)
+            if (studentLength != 0)
             {
-                double _temp = 0;
-                if (students[i, 0] == null) break;
-                Double.TryParse(students[i, 3].Trim('$'), out _temp);
-                totalFees += _temp;
-                switch (students[i, 7])
+                try {
+                    // Show the bar graphs.
+                    pnlgMale.Show(); pnlgFemale.Show();
+                    pnlgActive.Show(); pnlgNonactive.Show();
+                    pnlgFees.Show(); pnlgNoFees.Show();
+
+                    // Initialize the data on the statistic page.
+                    statHeight = pnlgMale.Height;
+                    lblStudentCount.Text = "Total Students: " + studentLength.ToString();
+                    lblStudentCount2.Text = studentLength.ToString();
+                    totalFees = 0;
+
+                    // Temporary variables for displaying grade statstics.
+                    int _fresh = 0, _soph = 0, _junio = 0, _senio = 0, _colle = 0;
+
+                    for (int i = 0; i < students.GetLength(0); i++)
+                    {
+                        double _temp = 0;
+                        if (students[i, 0] == null) break;
+                        Double.TryParse(students[i, 3].Trim('$'), out _temp);
+                        totalFees += _temp;
+                        switch (students[i, 7])
+                        {
+                            case "9": _fresh++; break;
+                            case "10": _soph++; break;
+                            case "11": _junio++; break;
+                            case "12": _senio++; break;
+                            case "13+": _colle++; break;
+                        }
+                        if (students[i, 3] != "$0.00") hasFees++;
+                        else noFees++;
+                        if (students[i, 5] == "1") aYes++;    // Get the amount of active and nonactive members.
+                        else aNo++;
+                        if (students[i, 6] == "0") females++; // Get the amount of males and females.
+                        else males++;
+                    }
+
+                    string fees = totalFees.ToString();
+                    if (fees.Contains('.'))
+                    {
+                        switch (fees.Split('.').Length)
+                        {
+                            case 0: fees += "00"; break;
+                            case 1: fees += "0"; break;
+                            case 2: break;
+                        }
+                    }
+                    else
+                    {
+                        fees += ".00";
+                    }
+
+                    lblFeesDue.Text = "Total Fees: $" + fees;
+                    lblActiveStudents.Text = "Active Students: " + aYes.ToString();
+
+                    lblgM.Text = "M: " + males.ToString();
+                    lblgF.Text = "F: " + females.ToString();
+
+                    lblaYes.Text = "Yes: " + aYes.ToString();
+                    lblaNo.Text = "No: " + aNo.ToString();
+
+                    lblg9.Text = "9th: " + _fresh.ToString();
+                    lblg10.Text = "10th: " + _soph.ToString();
+                    lblg11.Text = "11th: " + _junio.ToString();
+                    lblg12.Text = "12th: " + _senio.ToString();
+                    lblg13.Text = "13+: " + _colle.ToString();
+
+                    // Update the graphs on the statistic page.
+                    statPercentage(males, females, pnlgMale, pnlgFemale, lblpMale, lblpFemale);
+                    statPercentage(aYes, aNo, pnlgActive, pnlgNonactive, lblpActive, lblpNonactive);
+                    statPercentage(hasFees, noFees, pnlgFees, pnlgNoFees, lblpFees, lblpNoFees);
+                } catch
                 {
-                    case "9": _fresh++; break;
-                    case "10": _soph++; break;
-                    case "11": _junio++; break;
-                    case "12": _senio++; break;
-                    case "13+": _colle++; break;
+                    rformLogin.message("Citadel was not able to load statistics.", "Error", 1);
                 }
-                if (students[i, 3] != "$0.00") hasFees++;
-                else noFees++;
-                if (students[i, 5] == "1") aYes++;    // Get the amount of active and nonactive members.
-                else aNo++;
-                if (students[i, 6] == "0") females++; // Get the amount of males and females.
-                else males++;
             }
-
-            string fees = totalFees.ToString();
-            if (fees.Contains('.'))
-            {
-                switch (fees.Split('.').Length)
-                {
-                    case 0: fees += "00"; break;
-                    case 1: fees += "0"; break;
-                    case 2: break;
-                }
-            } else
-            {
-                fees += ".00";
-            }
-
-            lblFeesDue.Text = "Total Fees: $" + fees;
-            lblActiveStudents.Text = "Active Students: " + aYes.ToString();
-
-            lblgM.Text = "M: " + males.ToString();
-            lblgF.Text = "F: " + females.ToString();
-
-            lblaYes.Text = "Yes: " + aYes.ToString();
-            lblaNo.Text = "No: " + aNo.ToString();
-
-            lblg9.Text = "9th: " + _fresh.ToString();
-            lblg10.Text = "10th: " + _soph.ToString();
-            lblg11.Text = "11th: " + _junio.ToString();
-            lblg12.Text = "12th: " + _senio.ToString();
-            lblg13.Text = "13+: " + _colle.ToString();
-
-            // Update the graphs on the statistic page.
-            statPercentage(males, females, pnlgMale, pnlgFemale, lblpMale, lblpFemale);
-            statPercentage(aYes, aNo, pnlgActive, pnlgNonactive, lblpActive, lblpNonactive);
-            statPercentage(hasFees, noFees, pnlgFees, pnlgNoFees, lblpFees, lblpNoFees);
-
         }
 
         private void lblActiveStudents_Click(object sender, EventArgs e)
