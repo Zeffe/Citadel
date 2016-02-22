@@ -42,6 +42,10 @@ namespace Citadel
         Dictionary<Panel, Point> heights = new Dictionary<Panel, Point>();
         // Saves the student number with its respective property.
         Dictionary<String, int> treeProps = new Dictionary<String, int>();
+        // Saves the amount of students who joined in a specific year.
+        Dictionary<String, int> years = new Dictionary<String, int>();
+        // Saves the amount of students in a specific state.
+        Dictionary<String, int> states = new Dictionary<String, int>();
 
         // Confirmation box that is displayed when attempting to exit.
         msgbox logConf = new msgbox("Are you sure you wish to exit Citadel?", "Exit", 2);
@@ -500,6 +504,8 @@ namespace Citadel
 
                     // Temporary variables for displaying grade statstics.
                     int _fresh = 0, _soph = 0, _junio = 0, _senio = 0, _colle = 0;
+                    List<String> tempYears = new List<String>();
+                    List<String> tempState = new List<String>();
 
                     for (int i = 0; i < students.GetLength(0); i++)
                     {
@@ -521,6 +527,38 @@ namespace Citadel
                         else aNo++;
                         if (students[i, 6] == "0") females++; // Get the amount of males and females.
                         else males++;
+
+                        // Check if the list contains the state.
+                        if (!tempState.Contains(students[i,11]))
+                        {
+                            tempState.Add(students[i, 11]);
+                            states[students[i, 11]] = 1;
+                        } else
+                        {
+                            states[students[i, 11]]++;
+                        }
+
+                        // Check if the list contains the year.                        
+                        if (!tempYears.Contains(students[i, 4]))
+                        {
+                            tempYears.Add(students[i, 4]);
+                            years[students[i, 4]] = 1;
+                        } else
+                        {
+                            years[students[i, 4]]++;
+                        }                                                                                      
+                    }
+
+                    // Add the states to the listbox.
+                    foreach (String state in tempState)
+                    {
+                        listStates.Items.Add(state + " :: " + states[state]);
+                    }
+
+                    // Add the years to the listbox.
+                    foreach (String year in tempYears)
+                    {
+                        listYears.Items.Add(year + " :: " + years[year]);
                     }
 
                     string fees = totalFees.ToString();

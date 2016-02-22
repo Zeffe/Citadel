@@ -34,11 +34,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAddAll = new asset.ThirteenButton();
             this.dQuickList = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new asset.ThirteenButton();
-            this.txtAdd = new asset.ThirteenTextBox();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.hMemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +46,11 @@
             this.hEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hComment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hState = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new asset.ThirteenButton();
+            this.txtAdd = new asset.ThirteenTextBox();
+            this.thirteenControlBox1 = new asset.ThirteenControlBox();
             this.thirteenForm1.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -146,68 +146,6 @@
             this.dQuickList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dQuickList_CellEndEdit);
             this.dQuickList.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dQuickList_CellEnter);
             this.dQuickList.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dQuickList_RowsAdded);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.btnAdd);
-            this.tabPage2.Controls.Add(this.txtAdd);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(859, 559);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Quick Add Codes";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Please only use quickadd codes that have been copied \r\nfrom the students tab.";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnAdd.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(281, 69);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(58, 27);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txtAdd
-            // 
-            this.txtAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAdd.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAdd.ForeColor = System.Drawing.Color.White;
-            this.txtAdd.Location = new System.Drawing.Point(6, 41);
-            this.txtAdd.Name = "txtAdd";
-            this.txtAdd.Size = new System.Drawing.Size(333, 22);
-            this.txtAdd.TabIndex = 1;
-            // 
-            // thirteenControlBox1
-            // 
-            this.thirteenControlBox1.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.thirteenControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.thirteenControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenControlBox1.ColorScheme = asset.ThirteenControlBox.ColorSchemes.Dark;
-            this.thirteenControlBox1.ForeColor = System.Drawing.Color.White;
-            this.thirteenControlBox1.Location = new System.Drawing.Point(854, 3);
-            this.thirteenControlBox1.Name = "thirteenControlBox1";
-            this.thirteenControlBox1.Size = new System.Drawing.Size(100, 25);
-            this.thirteenControlBox1.TabIndex = 0;
-            this.thirteenControlBox1.Text = "thirteenControlBox1";
             // 
             // hMemNum
             // 
@@ -378,6 +316,68 @@
             this.hState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.hState.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.hState.Width = 64;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.btnAdd);
+            this.tabPage2.Controls.Add(this.txtAdd);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(923, 559);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Quick Add Codes";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(343, 32);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Please only use quickadd codes that have been copied \r\nfrom the students tab.";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnAdd.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(281, 69);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(58, 27);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtAdd
+            // 
+            this.txtAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdd.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAdd.ForeColor = System.Drawing.Color.White;
+            this.txtAdd.Location = new System.Drawing.Point(6, 41);
+            this.txtAdd.Name = "txtAdd";
+            this.txtAdd.Size = new System.Drawing.Size(333, 22);
+            this.txtAdd.TabIndex = 1;
+            // 
+            // thirteenControlBox1
+            // 
+            this.thirteenControlBox1.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.thirteenControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.thirteenControlBox1.ColorScheme = asset.ThirteenControlBox.ColorSchemes.Dark;
+            this.thirteenControlBox1.ForeColor = System.Drawing.Color.White;
+            this.thirteenControlBox1.Location = new System.Drawing.Point(854, 3);
+            this.thirteenControlBox1.Name = "thirteenControlBox1";
+            this.thirteenControlBox1.Size = new System.Drawing.Size(100, 25);
+            this.thirteenControlBox1.TabIndex = 0;
+            this.thirteenControlBox1.Text = "thirteenControlBox1";
             // 
             // formQuickAdd
             // 
