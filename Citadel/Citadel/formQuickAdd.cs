@@ -84,8 +84,8 @@ namespace Citadel
                 tcMain.Size = new Size(362, 133);
             } else
             {
-                this.Size = new Size(616, 521);
-                tcMain.Size = new Size(592, 472);
+                this.Size = new Size(957, 632);
+                tcMain.Size = new Size(931, 588);
             }
         }
 

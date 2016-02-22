@@ -107,7 +107,7 @@
             this.btnAddAll.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
             this.btnAddAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnAddAll.ForeColor = System.Drawing.Color.White;
-            this.btnAddAll.Location = new System.Drawing.Point(777, 529);
+            this.btnAddAll.Location = new System.Drawing.Point(845, 528);
             this.btnAddAll.Name = "btnAddAll";
             this.btnAddAll.Size = new System.Drawing.Size(75, 23);
             this.btnAddAll.TabIndex = 5;
