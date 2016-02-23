@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(msgbox));
-            this.thirteenForm1 = new asset.ThirteenForm();
-            this.btnYes = new asset.ThirteenButton();
-            this.btnNo = new asset.ThirteenButton();
-            this.btnOk = new asset.ThirteenButton();
+            this.thirteenForm1 = new Xenon.ThirteenForm();
+            this.btnYes = new Xenon.ThirteenButton();
+            this.btnNo = new Xenon.ThirteenButton();
+            this.btnOk = new Xenon.ThirteenButton();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();
+            this.thirteenControlBox1 = new Xenon.ThirteenControlBox();
             this.thirteenForm1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             // 
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.ColorScheme = Xenon.ThirteenForm.ColorSchemes.Dark;
             this.thirteenForm1.Controls.Add(this.btnYes);
             this.thirteenForm1.Controls.Add(this.btnNo);
             this.thirteenForm1.Controls.Add(this.btnOk);
@@ -61,7 +61,7 @@
             // 
             this.btnYes.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnYes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnYes.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnYes.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
             this.btnYes.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnYes.ForeColor = System.Drawing.Color.White;
@@ -78,7 +78,7 @@
             // 
             this.btnNo.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnNo.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnNo.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
             this.btnNo.DialogResult = System.Windows.Forms.DialogResult.No;
             this.btnNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnNo.ForeColor = System.Drawing.Color.White;
@@ -95,7 +95,7 @@
             // 
             this.btnOk.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnOk.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnOk.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnOk.ForeColor = System.Drawing.Color.White;
             this.btnOk.Location = new System.Drawing.Point(24, 37);
@@ -121,7 +121,7 @@
             this.thirteenControlBox1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.thirteenControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenControlBox1.ColorScheme = asset.ThirteenControlBox.ColorSchemes.Dark;
+            this.thirteenControlBox1.ColorScheme = Xenon.ThirteenControlBox.ColorSchemes.Dark;
             this.thirteenControlBox1.ForeColor = System.Drawing.Color.White;
             this.thirteenControlBox1.Location = new System.Drawing.Point(60, 3);
             this.thirteenControlBox1.Name = "thirteenControlBox1";
@@ -148,11 +148,11 @@
 
         #endregion
 
-        private asset.ThirteenForm thirteenForm1;
+        private Xenon.ThirteenForm thirteenForm1;
         private System.Windows.Forms.Label lblMessage;
-        private asset.ThirteenButton btnYes;
-        private asset.ThirteenButton btnNo;
-        private asset.ThirteenButton btnOk;
-        private asset.ThirteenControlBox thirteenControlBox1;
+        private Xenon.ThirteenButton btnYes;
+        private Xenon.ThirteenButton btnNo;
+        private Xenon.ThirteenButton btnOk;
+        private Xenon.ThirteenControlBox thirteenControlBox1;
     }
 }

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="menuRefresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
   <metadata name="ttMaster.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -151,6 +154,23 @@
         9jytcm9gwm03taeh4d7BpP/YCzCJXc1GAu2iBHsOa1XZ7g9hd50DMdiOyH8PaIWQFRdXjFXFFIeQYRR+
         FWOx+0D0JSYTC2tRp/+AqeuH0f9z4MFfILx4bGu4dzCpHUy213+gUQ3npFK5BmngiFoGE17YAAAAAElF
         TkSuQmCC
+</value>
+  </data>
+  <data name="pbGenderSel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAohJREFUWEe1
+        lzFoFEEUhq9IkSJFCouATQoLC0GLQAQtLBJsLERsBIsUghYWgq2gXQoJESwipAhoI1qIxM5CJIWFgoUE
+        CwWLFBEsBC0sUly+f+Zl92Z2Z3dn7/zg57Lz/vdmd3YyMzsYl+FweB69Q7m8RQtWpj8UeePK9eO5lekH
+        BabQL1eqJ1aqP9S450v1w8qMB3Xm0UpCX1ESK/F/oP59300as04eard2Lsw+Wai77stXqLwOS2kG3zF0
+        Bl2w32kLVSCW6lztmhMBllaF2BxaRV9krEFPo6JzltLYucXbb4A2/W/r/f2VoQMHaAttuKsqrnPB3803
+        wPVp9NRFJsMamrHyqn/ZtY5gIRecQanh7kPx5EfQVj8C/GrYt11Llc/oDtKmo5s8ha4jDXuKDVc4gvbk
+        Ddz0lwE/0QNUTLIYYtfQexTzxCwBtC+g0b3j9dHTf3OXIZcsrxF8GpUfLqNEE/OEWQJo1wT/jdTnkhqW
+        UMyW+TuBX+tDzKaFKxAr1xEuHjt7ie5u1sKdIeeZyy7Zt1AzGD96f8G2hbIg74ZPD2h/EEzfvbdg1UJZ
+        kHfOpwcsWziNGUe5ZaEsyJv16QErFk6Dadd7Cx5ZKAvyln16wEULp8EUn2h3LJQFeVqsYuYtnAZTfHD4
+        h05auDPk7Ljskj0LNYNR+3vMBzRlllbw3nZZIcl1oALmug8LnQVabwLPWRRv3VoJu48i5rqVTGgkagvR
+        Po0eInUWU7sZNUJS6hCpOaHPKHWm3UzfAa/QPqpDu2dxBsiCxHg5zWUPtc/8FCRrZ9NI/EG5vECLVmo8
+        KHQFvVTVDnxCd9FxS58cFNUBQiOiOaA9XxNO714b2Ca6ipJH9HYGg0P1pYTlsw5JOAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="btnGradeNext.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -198,26 +218,6 @@
         PsaNKZW6AjowJ3KtL7niAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pbGenderSel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAohJREFUWEe1
-        lzFoFEEUhq9IkSJFCouATQoLC0GLQAQtLBJsLERsBIsUghYWgq2gXQoJESwipAhoI1qIxM5CJIWFgoUE
-        CwWLFBEsBC0sUly+f+Zl92Z2Z3dn7/zg57Lz/vdmd3YyMzsYl+FweB69Q7m8RQtWpj8UeePK9eO5lekH
-        BabQL1eqJ1aqP9S450v1w8qMB3Xm0UpCX1ESK/F/oP59300as04eard2Lsw+Wai77stXqLwOS2kG3zF0
-        Bl2w32kLVSCW6lztmhMBllaF2BxaRV9krEFPo6JzltLYucXbb4A2/W/r/f2VoQMHaAttuKsqrnPB3803
-        wPVp9NRFJsMamrHyqn/ZtY5gIRecQanh7kPx5EfQVj8C/GrYt11Llc/oDtKmo5s8ha4jDXuKDVc4gvbk
-        Ddz0lwE/0QNUTLIYYtfQexTzxCwBtC+g0b3j9dHTf3OXIZcsrxF8GpUfLqNEE/OEWQJo1wT/jdTnkhqW
-        UMyW+TuBX+tDzKaFKxAr1xEuHjt7ie5u1sKdIeeZyy7Zt1AzGD96f8G2hbIg74ZPD2h/EEzfvbdg1UJZ
-        kHfOpwcsWziNGUe5ZaEsyJv16QErFk6Dadd7Cx5ZKAvyln16wEULp8EUn2h3LJQFeVqsYuYtnAZTfHD4
-        h05auDPk7Ljskj0LNYNR+3vMBzRlllbw3nZZIcl1oALmug8LnQVabwLPWRRv3VoJu48i5rqVTGgkagvR
-        Po0eInUWU7sZNUJS6hCpOaHPKHWm3UzfAa/QPqpDu2dxBsiCxHg5zWUPtc/8FCRrZ9NI/EG5vECLVmo8
-        KHQFvVTVDnxCd9FxS58cFNUBQiOiOaA9XxNO714b2Ca6ipJH9HYGg0P1pYTlsw5JOAAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <metadata name="menuRefresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
   <data name="label43.Text" xml:space="preserve">
     <value>Citadel actually comes 
 second in my attempts

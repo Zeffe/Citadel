@@ -325,9 +325,6 @@ namespace Citadel
             gbGraph.ForeColor = Color.White;
             gbNewuser.ForeColor = Color.White;
             gbUserlist.ForeColor = Color.White;
-            gbSearch.ForeColor = Color.White;
-            gbStudentList.ForeColor = Color.White;
-            gbNewStudent.ForeColor = Color.White;
             gbVersion.ForeColor = Color.White;
             gbProjSumm.ForeColor = Color.White;
 

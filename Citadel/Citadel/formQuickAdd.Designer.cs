@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formQuickAdd));
-            this.thirteenForm1 = new asset.ThirteenForm();
-            this.tcMain = new asset.ThirteenTabControl();
+            this.thirteenForm1 = new Xenon.ThirteenForm();
+            this.tcMain = new Xenon.ThirteenTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnAddAll = new asset.ThirteenButton();
+            this.btnAddAll = new Xenon.ThirteenButton();
             this.dQuickList = new System.Windows.Forms.DataGridView();
             this.hMemNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +48,9 @@
             this.hState = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new asset.ThirteenButton();
-            this.txtAdd = new asset.ThirteenTextBox();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();
+            this.btnAdd = new Xenon.ThirteenButton();
+            this.txtAdd = new Xenon.ThirteenTextBox();
+            this.thirteenControlBox1 = new Xenon.ThirteenControlBox();
             this.thirteenForm1.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenForm1.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.ColorScheme = Xenon.ThirteenForm.ColorSchemes.Dark;
             this.thirteenForm1.Controls.Add(this.tcMain);
             this.thirteenForm1.Controls.Add(this.thirteenControlBox1);
             this.thirteenForm1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,7 +77,8 @@
             // tcMain
             // 
             this.tcMain.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.tcMain.ColorScheme = asset.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcMain.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tcMain.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
             this.tcMain.Controls.Add(this.tabPage1);
             this.tcMain.Controls.Add(this.tabPage2);
             this.tcMain.ForeColor = System.Drawing.Color.White;
@@ -104,7 +105,7 @@
             // 
             this.btnAddAll.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnAddAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnAddAll.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnAddAll.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
             this.btnAddAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnAddAll.ForeColor = System.Drawing.Color.White;
             this.btnAddAll.Location = new System.Drawing.Point(845, 528);
@@ -343,7 +344,7 @@
             // 
             this.btnAdd.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnAdd.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnAdd.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(281, 69);
@@ -358,7 +359,7 @@
             // 
             this.txtAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.txtAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAdd.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtAdd.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
             this.txtAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtAdd.ForeColor = System.Drawing.Color.White;
             this.txtAdd.Location = new System.Drawing.Point(6, 41);
@@ -371,7 +372,7 @@
             this.thirteenControlBox1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.thirteenControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenControlBox1.ColorScheme = asset.ThirteenControlBox.ColorSchemes.Dark;
+            this.thirteenControlBox1.ColorScheme = Xenon.ThirteenControlBox.ColorSchemes.Dark;
             this.thirteenControlBox1.ForeColor = System.Drawing.Color.White;
             this.thirteenControlBox1.Location = new System.Drawing.Point(854, 3);
             this.thirteenControlBox1.Name = "thirteenControlBox1";
@@ -404,15 +405,15 @@
 
         #endregion
 
-        private asset.ThirteenForm thirteenForm1;
-        private asset.ThirteenButton btnAdd;
+        private Xenon.ThirteenForm thirteenForm1;
+        private Xenon.ThirteenButton btnAdd;
         private System.Windows.Forms.Label label1;
-        private asset.ThirteenTextBox txtAdd;
-        private asset.ThirteenControlBox thirteenControlBox1;
-        private asset.ThirteenTabControl tcMain;
+        private Xenon.ThirteenTextBox txtAdd;
+        private Xenon.ThirteenControlBox thirteenControlBox1;
+        private Xenon.ThirteenTabControl tcMain;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private asset.ThirteenButton btnAddAll;
+        private Xenon.ThirteenButton btnAddAll;
         private System.Windows.Forms.DataGridView dQuickList;
         private System.Windows.Forms.DataGridViewTextBoxColumn hMemNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn hFirstName;

@@ -21,7 +21,7 @@ namespace Citadel
 
         string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // %APPDATA% path
         string specificFolder; // A string used to store the Citadel folder in appData.
-        public static asset.ThirteenTextBox[] textboxA = new asset.ThirteenTextBox[50]; // Array of textboxes for placeholder method
+        public static Xenon.ThirteenTextBox[] textboxA = new Xenon.ThirteenTextBox[50]; // Array of textboxes for placeholder method
         public static int count = 0; // Counts placeholder array members.
         formMain main;
         public static msgbox _message;
@@ -87,7 +87,7 @@ namespace Citadel
         public static Dictionary<String, int> userNums = new Dictionary<String, int>();
 
         // Declares all necessarry events for placeholder TextBoxes to work.
-        public static void placeHolder(asset.ThirteenTextBox textbox, String text, bool pass)
+        public static void placeHolder(Xenon.ThirteenTextBox textbox, String text, bool pass)
         {
             placeText.Add(textbox, text);
             textbox.Text = text;

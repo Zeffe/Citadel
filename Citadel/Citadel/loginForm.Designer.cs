@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rformLogin));
-            this.formLogin = new asset.ThirteenForm();
-            this.btnLogin = new asset.ThirteenButton();
-            this.txtPass = new asset.ThirteenTextBox();
-            this.txtUser = new asset.ThirteenTextBox();
-            this.thirteenControlBox1 = new asset.ThirteenControlBox();
+            this.formLogin = new Xenon.ThirteenForm();
+            this.btnLogin = new Xenon.ThirteenButton();
+            this.txtPass = new Xenon.ThirteenTextBox();
+            this.txtUser = new Xenon.ThirteenTextBox();
+            this.thirteenControlBox1 = new Xenon.ThirteenControlBox();
             this.formLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             // 
             this.formLogin.AccentColor = System.Drawing.Color.DodgerBlue;
             this.formLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.formLogin.ColorScheme = asset.ThirteenForm.ColorSchemes.Dark;
+            this.formLogin.ColorScheme = Xenon.ThirteenForm.ColorSchemes.Dark;
             this.formLogin.Controls.Add(this.btnLogin);
             this.formLogin.Controls.Add(this.txtPass);
             this.formLogin.Controls.Add(this.txtUser);
@@ -59,7 +59,7 @@
             // 
             this.btnLogin.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogin.ColorScheme = asset.ThirteenButton.ColorSchemes.Dark;
+            this.btnLogin.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(75, 116);
@@ -74,7 +74,7 @@
             // 
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtPass.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtPass.ForeColor = System.Drawing.Color.White;
             this.txtPass.Location = new System.Drawing.Point(47, 78);
@@ -88,7 +88,7 @@
             // 
             this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.ColorScheme = asset.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtUser.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUser.ForeColor = System.Drawing.Color.White;
             this.txtUser.Location = new System.Drawing.Point(47, 50);
@@ -103,7 +103,7 @@
             this.thirteenControlBox1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.thirteenControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.thirteenControlBox1.ColorScheme = asset.ThirteenControlBox.ColorSchemes.Dark;
+            this.thirteenControlBox1.ColorScheme = Xenon.ThirteenControlBox.ColorSchemes.Dark;
             this.thirteenControlBox1.ForeColor = System.Drawing.Color.White;
             this.thirteenControlBox1.Location = new System.Drawing.Point(122, 3);
             this.thirteenControlBox1.Name = "thirteenControlBox1";
@@ -132,11 +132,11 @@
 
         #endregion
 
-        private asset.ThirteenForm formLogin;
-        private asset.ThirteenControlBox thirteenControlBox1;
-        private asset.ThirteenTextBox txtPass;
-        private asset.ThirteenTextBox txtUser;
-        private asset.ThirteenButton btnLogin;
+        private Xenon.ThirteenForm formLogin;
+        private Xenon.ThirteenControlBox thirteenControlBox1;
+        private Xenon.ThirteenTextBox txtPass;
+        private Xenon.ThirteenTextBox txtUser;
+        private Xenon.ThirteenButton btnLogin;
     }
 }
 
