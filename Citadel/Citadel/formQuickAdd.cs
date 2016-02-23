@@ -57,7 +57,8 @@ namespace Citadel
                     }
                     File.AppendAllText(studentFile, _temp + "\r\n");
                     txtAdd.Clear();
-                    rformLogin.message("Successfully added " + _check[1] + " " + _check[2] + ".", "Success", 1);
+                    msgbox msg = new msgbox("Successfully added " + _check[1] + " " + _check[2] + ".", "Success", 1);
+                    msg.Show();
                     added = true;
                     memberNum++;
                     worked = true;
@@ -66,7 +67,8 @@ namespace Citadel
 
             if (!worked)
             {
-                rformLogin.message("The data you have entered is not formatted correctly, please be sure you are only using data that has been copied from any copy of Citadel.", "Error", 1);
+                msgbox msg = new msgbox("The data you have entered is not formatted correctly, please be sure you are only using data that has been copied from any copy of Citadel.", "Error", 1, Color.DarkRed);
+                msg.Show();
             }
         }
 
@@ -153,7 +155,8 @@ namespace Citadel
                         } 
                     } catch
                     {
-                        rformLogin.message("Please ensure all required entries are filled.", "Error", 1);
+                        msgbox msg = new msgbox("Please ensure all required entries are filled.", "Error", 1, Color.DarkRed);
+                        msg.Show();
                         GO = false; break;
                     }
                 }
@@ -176,7 +179,8 @@ namespace Citadel
                 }
 
                 dQuickList.Rows.Clear();
-                rformLogin.message("Successfully added " + rowsToUse.ToString() + " student(s).", "Sucess", 1);
+                msgbox msg = new msgbox("Successfully added " + rowsToUse.ToString() + " student(s).", "Sucess", 1);
+                msg.Show();
             }
         }
     }

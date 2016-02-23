@@ -594,7 +594,8 @@ namespace Citadel
                     statPercentage(hasFees, noFees, pnlgFees, pnlgNoFees, lblpFees, lblpNoFees);
                 } catch
                 {
-                    rformLogin.message("Citadel was not able to load statistics.", "Error", 1);
+                    msgbox msg = new msgbox("Citadel was not able to load statistics.", "Error", 1, Color.DarkRed);
+                    msg.Show();
                 }
             }
         }

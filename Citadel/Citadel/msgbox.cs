@@ -16,11 +16,22 @@ namespace Citadel
         string msgOut; bool GO;
         public static int _return = 0;
 
+        public msgbox(String msg, String title, int type, Color accent)
+        {
+            InitializeComponent();
+
+            createMessage(msg, title, type, accent);
+        }
+
         public msgbox(String msg, String title, int type)
         {
-            //_returnVal = returnVal;
-            //_return = 0;
             InitializeComponent();
+
+            createMessage(msg, title, type, Color.DodgerBlue);         
+        }
+
+        void createMessage(String msg, String title, int type, Color accent)
+        {
             int cur = -1;
             for (int j = 1; j < msg.Length; j++)
             {
@@ -60,11 +71,15 @@ namespace Citadel
                 case 2:
                     this.Height += lblMessage.Height + btnNo.Height - 10; btnYes.Visible = true; btnNo.Visible = true;
                     btnNo.Location = new System.Drawing.Point(this.Width - btnNo.Width - 10, this.Height - btnNo.Height - 10);
-                    btnYes.Location = new System.Drawing.Point(btnNo.Location.X - btnYes.Width - 5, btnNo.Location.Y);              
+                    btnYes.Location = new System.Drawing.Point(btnNo.Location.X - btnYes.Width - 5, btnNo.Location.Y);
                     //btnYes.Location = new System.Drawing.Point(this.Width / 3 - this.Width/8, this.Height - this.Height / 3);
                     //btnNo.Location = new System.Drawing.Point((this.Width / 3) * 2 - this.Width/8, this.Height - this.Height / 3);
                     break;
             }
+
+            thirteenForm1.AccentColor = accent; thirteenControlBox1.AccentColor = accent;
+            btnYes.AccentColor = accent; btnNo.AccentColor = accent; btnOk.AccentColor = accent;
+
             // this.Icon later
             thirteenForm1.Text = title; this.Text = title;
             //thirteenControlBox1.Controls.Remove();

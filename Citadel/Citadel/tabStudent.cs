@@ -216,7 +216,8 @@ namespace Citadel
 
             // Copy the string to the clipboard.
             Clipboard.SetText(_temp);
-            rformLogin.message("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1);
+            msgbox msg = new msgbox("Successfully copied " + students[currentView, 1] + " " + students[currentView, 2] + " to clipboard!", "Success", 1);
+            msg.Show();
         }
 
         void clearNewStudent()
@@ -323,7 +324,8 @@ namespace Citadel
                     refreshStudentTree("");
                     if (!editing)
                     {
-                        rformLogin.message("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
+                        msgbox msg = new msgbox("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
+                        msg.Show();
                     }
 
                     // Reset the new student form.
@@ -334,12 +336,14 @@ namespace Citadel
                 }
                 catch
                 {
-                    rformLogin.message("Error writing student to the selected source.", "Error", 1);
+                    msgbox msg = new msgbox("Error writing student to the selected source.", "Error", 1);
+                    msg.Show();
                 }
             }
             else
             {
-                rformLogin.message("Please ensure that all of the required entries have been filled in.", "Error", 1);
+                msgbox msg = new msgbox("Please ensure that all of the required entries have been filled in.", "Error", 1);
+                msg.Show();
             }
         }
 

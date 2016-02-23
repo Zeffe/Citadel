@@ -72,12 +72,6 @@ namespace Citadel
             return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
         }
 
-        // Used to call the custom message box.
-        public static void message(string msg, string title, int type)
-        {
-            _message = new msgbox(msg, title, type);
-            _message.Show();
-        }
 
         // Stores the place text for the respective TextBoxes.
         public static Dictionary<TextBox, String> placeText = new Dictionary<TextBox, string>();
@@ -246,7 +240,8 @@ namespace Citadel
                     break;
                 } else if (i == users.GetLength(0) - 1)
                 {
-                    message("Invalid username or password.", "Error", 1);
+                    msgbox msg = new msgbox("Invalid username or password.", "Error", 1, Color.DarkRed);
+                    msg.Show();
                 }
             }
         }
