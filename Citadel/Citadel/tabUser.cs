@@ -24,11 +24,11 @@ namespace Citadel
             lblEmail.Text = rformLogin.users[user, 4];
             lblCuruser.Text = getUser(user);
 
-            gbTitle(gbCuruser, lblCuruser);
-            gbTitle(gbCuruser, lblEmail);
+            gbTitle(tcSelectedUser, lblCuruser);
+            gbTitle(tcSelectedUser, lblEmail);
 
-            int _x = gbCuruser.Width - lblFirstname.Width - 15;
-            int _x2 = gbCuruser.Width - lblLastname.Width - 15;
+            int _x = tcSelectedUser.Width - lblFirstname.Width - 15;
+            int _x2 = tcSelectedUser.Width - lblLastname.Width - 15;
             lblFirstname.Location = new Point(_x, lblFirstname.Location.Y);
             lblLastname.Location = new Point(_x2, lblLastname.Location.Y);
         }

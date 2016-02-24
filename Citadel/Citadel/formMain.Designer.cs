@@ -55,6 +55,98 @@
             this.lblStudentCount2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.thirteenForm1 = new Xenon.ThirteenForm();
+            this.pnlInfo = new System.Windows.Forms.Panel();
+            this.thirteenTabControl5 = new Xenon.ThirteenTabControl();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.label43 = new System.Windows.Forms.Label();
+            this.thirteenTabControl4 = new Xenon.ThirteenTabControl();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.pnlUsers = new System.Windows.Forms.Panel();
+            this.tcUserList = new Xenon.ThirteenTabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.btnDelete = new Xenon.ThirteenButton();
+            this.listUsers = new System.Windows.Forms.ListBox();
+            this.tcSelectedUser = new Xenon.ThirteenTabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.btnLogout = new Xenon.ThirteenButton();
+            this.lblCuruser = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.lblFirstname = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tcNewUser = new Xenon.ThirteenTabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtUsername = new Xenon.ThirteenTextBox();
+            this.npnlEmailconf = new System.Windows.Forms.Panel();
+            this.txtPassword = new Xenon.ThirteenTextBox();
+            this.npnlEmail = new System.Windows.Forms.Panel();
+            this.txtPassconf = new Xenon.ThirteenTextBox();
+            this.npnlLast = new System.Windows.Forms.Panel();
+            this.txtFirstname = new Xenon.ThirteenTextBox();
+            this.npnlFirst = new System.Windows.Forms.Panel();
+            this.txtLastname = new Xenon.ThirteenTextBox();
+            this.npnlPassconf = new System.Windows.Forms.Panel();
+            this.txtEmail = new Xenon.ThirteenTextBox();
+            this.npnlPass = new System.Windows.Forms.Panel();
+            this.cmbPerms = new Xenon.ThirteenComboBox();
+            this.npnlUser = new System.Windows.Forms.Panel();
+            this.btnCreate = new Xenon.ThirteenButton();
+            this.txtEmailconf = new Xenon.ThirteenTextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlStats = new System.Windows.Forms.Panel();
+            this.thirteenTabControl3 = new Xenon.ThirteenTabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.listStates = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.lblg9 = new System.Windows.Forms.Label();
+            this.listYears = new System.Windows.Forms.ListBox();
+            this.lblg10 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.lblg11 = new System.Windows.Forms.Label();
+            this.lblgF = new System.Windows.Forms.Label();
+            this.lblg12 = new System.Windows.Forms.Label();
+            this.lblgM = new System.Windows.Forms.Label();
+            this.lblg13 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.lblaNo = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.lblaYes = new System.Windows.Forms.Label();
+            this.thirteenTabControl2 = new Xenon.ThirteenTabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lblActiveStudents = new System.Windows.Forms.Label();
+            this.lblStudentCount = new System.Windows.Forms.Label();
+            this.lblFeesDue = new System.Windows.Forms.Label();
+            this.gbGraph1 = new System.Windows.Forms.GroupBox();
+            this.lblpFemale = new System.Windows.Forms.Label();
+            this.lblpMale = new System.Windows.Forms.Label();
+            this.pnlgFemale = new System.Windows.Forms.Panel();
+            this.pnlgMale = new System.Windows.Forms.Panel();
+            this.lblgFemale = new System.Windows.Forms.Label();
+            this.lblgMale = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblpNoFees = new System.Windows.Forms.Label();
+            this.lblpFees = new System.Windows.Forms.Label();
+            this.pnlgNoFees = new System.Windows.Forms.Panel();
+            this.pnlgFees = new System.Windows.Forms.Panel();
+            this.lblgNoFees = new System.Windows.Forms.Label();
+            this.lblgFees = new System.Windows.Forms.Label();
+            this.gbGraph2 = new System.Windows.Forms.GroupBox();
+            this.lblpNonactive = new System.Windows.Forms.Label();
+            this.lblpActive = new System.Windows.Forms.Label();
+            this.pnlgNonactive = new System.Windows.Forms.Panel();
+            this.pnlgActive = new System.Windows.Forms.Panel();
+            this.lblgNonactive = new System.Windows.Forms.Label();
+            this.lblgActive = new System.Windows.Forms.Label();
+            this.lblReadingFrom2 = new System.Windows.Forms.Label();
+            this.lblStatsTitle = new System.Windows.Forms.Label();
             this.pnlStudents = new System.Windows.Forms.Panel();
             this.thirteenTabControl1 = new Xenon.ThirteenTabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -126,95 +218,8 @@
             this.nmNewYear = new System.Windows.Forms.NumericUpDown();
             this.lblReadingFrom = new System.Windows.Forms.Label();
             this.lblStudentsTitle = new System.Windows.Forms.Label();
-            this.pnlStats = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listStates = new System.Windows.Forms.ListBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.listYears = new System.Windows.Forms.ListBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.lblgF = new System.Windows.Forms.Label();
-            this.lblgM = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.lblaNo = new System.Windows.Forms.Label();
-            this.lblaYes = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.lblg13 = new System.Windows.Forms.Label();
-            this.lblg12 = new System.Windows.Forms.Label();
-            this.lblg11 = new System.Windows.Forms.Label();
-            this.lblg10 = new System.Windows.Forms.Label();
-            this.lblg9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.gbGraph = new System.Windows.Forms.GroupBox();
-            this.lblActiveStudents = new System.Windows.Forms.Label();
-            this.lblFeesDue = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblpNoFees = new System.Windows.Forms.Label();
-            this.lblpFees = new System.Windows.Forms.Label();
-            this.pnlgNoFees = new System.Windows.Forms.Panel();
-            this.pnlgFees = new System.Windows.Forms.Panel();
-            this.lblgNoFees = new System.Windows.Forms.Label();
-            this.lblgFees = new System.Windows.Forms.Label();
-            this.gbGraph2 = new System.Windows.Forms.GroupBox();
-            this.lblpNonactive = new System.Windows.Forms.Label();
-            this.lblpActive = new System.Windows.Forms.Label();
-            this.pnlgNonactive = new System.Windows.Forms.Panel();
-            this.pnlgActive = new System.Windows.Forms.Panel();
-            this.lblgNonactive = new System.Windows.Forms.Label();
-            this.lblgActive = new System.Windows.Forms.Label();
-            this.gbGraph1 = new System.Windows.Forms.GroupBox();
-            this.lblpFemale = new System.Windows.Forms.Label();
-            this.lblpMale = new System.Windows.Forms.Label();
-            this.pnlgFemale = new System.Windows.Forms.Panel();
-            this.pnlgMale = new System.Windows.Forms.Panel();
-            this.lblgFemale = new System.Windows.Forms.Label();
-            this.lblgMale = new System.Windows.Forms.Label();
-            this.lblStudentCount = new System.Windows.Forms.Label();
-            this.lblReadingFrom2 = new System.Windows.Forms.Label();
-            this.lblStatsTitle = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.pnlInfo = new System.Windows.Forms.Panel();
-            this.gbVersion = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.gbProjSumm = new System.Windows.Forms.GroupBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.pnlUsers = new System.Windows.Forms.Panel();
-            this.gbNewuser = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.npnlEmailconf = new System.Windows.Forms.Panel();
-            this.npnlEmail = new System.Windows.Forms.Panel();
-            this.npnlLast = new System.Windows.Forms.Panel();
-            this.npnlFirst = new System.Windows.Forms.Panel();
-            this.npnlPassconf = new System.Windows.Forms.Panel();
-            this.npnlPass = new System.Windows.Forms.Panel();
-            this.npnlUser = new System.Windows.Forms.Panel();
-            this.txtEmailconf = new Xenon.ThirteenTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnCreate = new Xenon.ThirteenButton();
-            this.cmbPerms = new Xenon.ThirteenComboBox();
-            this.txtEmail = new Xenon.ThirteenTextBox();
-            this.txtLastname = new Xenon.ThirteenTextBox();
-            this.txtFirstname = new Xenon.ThirteenTextBox();
-            this.txtPassconf = new Xenon.ThirteenTextBox();
-            this.txtPassword = new Xenon.ThirteenTextBox();
-            this.txtUsername = new Xenon.ThirteenTextBox();
-            this.gbUserlist = new System.Windows.Forms.GroupBox();
-            this.btnDelete = new Xenon.ThirteenButton();
-            this.listUsers = new System.Windows.Forms.ListBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.gbCuruser = new System.Windows.Forms.GroupBox();
-            this.btnLogout = new Xenon.ThirteenButton();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblLastname = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblFirstname = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblCuruser = new System.Windows.Forms.Label();
             this.pnlSettings = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.pnlSource = new System.Windows.Forms.Panel();
@@ -276,6 +281,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.thirteenForm1.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
+            this.thirteenTabControl5.SuspendLayout();
+            this.tabPage11.SuspendLayout();
+            this.thirteenTabControl4.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.pnlUsers.SuspendLayout();
+            this.tcUserList.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.tcSelectedUser.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tcNewUser.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.pnlStats.SuspendLayout();
+            this.thirteenTabControl3.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.thirteenTabControl2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.gbGraph1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gbGraph2.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.thirteenTabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -298,19 +323,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGenderPrev)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGenderNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmNewYear)).BeginInit();
-            this.pnlStats.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.gbGraph.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.gbGraph2.SuspendLayout();
-            this.gbGraph1.SuspendLayout();
-            this.pnlInfo.SuspendLayout();
-            this.gbVersion.SuspendLayout();
-            this.gbProjSumm.SuspendLayout();
-            this.pnlUsers.SuspendLayout();
-            this.gbNewuser.SuspendLayout();
-            this.gbUserlist.SuspendLayout();
-            this.gbCuruser.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlSource.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -597,7 +609,7 @@
             // lblStudentCount2
             // 
             this.lblStudentCount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.lblStudentCount2.Location = new System.Drawing.Point(475, 13);
+            this.lblStudentCount2.Location = new System.Drawing.Point(471, 1);
             this.lblStudentCount2.Name = "lblStudentCount2";
             this.lblStudentCount2.Size = new System.Drawing.Size(93, 33);
             this.lblStudentCount2.TabIndex = 21;
@@ -622,11 +634,11 @@
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = Xenon.ThirteenForm.ColorSchemes.Dark;
             this.thirteenForm1.Controls.Add(this.pnlStudents);
+            this.thirteenForm1.Controls.Add(this.pnlInfo);
+            this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.pnlStats);
             this.thirteenForm1.Controls.Add(this.label45);
             this.thirteenForm1.Controls.Add(this.label44);
-            this.thirteenForm1.Controls.Add(this.pnlInfo);
-            this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.pnlSettings);
             this.thirteenForm1.Controls.Add(this.pnlSource);
             this.thirteenForm1.Controls.Add(this.label9);
@@ -658,6 +670,1031 @@
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
             // 
+            // pnlInfo
+            // 
+            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlInfo.Controls.Add(this.thirteenTabControl5);
+            this.pnlInfo.Controls.Add(this.thirteenTabControl4);
+            this.pnlInfo.Controls.Add(this.pictureBox1);
+            this.pnlInfo.Controls.Add(this.label19);
+            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
+            this.pnlInfo.TabIndex = 3;
+            // 
+            // thirteenTabControl5
+            // 
+            this.thirteenTabControl5.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenTabControl5.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.thirteenTabControl5.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.thirteenTabControl5.Controls.Add(this.tabPage11);
+            this.thirteenTabControl5.ForeColor = System.Drawing.Color.White;
+            this.thirteenTabControl5.Location = new System.Drawing.Point(20, 284);
+            this.thirteenTabControl5.Name = "thirteenTabControl5";
+            this.thirteenTabControl5.SelectedIndex = 0;
+            this.thirteenTabControl5.Size = new System.Drawing.Size(244, 308);
+            this.thirteenTabControl5.TabIndex = 1;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage11.Controls.Add(this.label43);
+            this.tabPage11.Location = new System.Drawing.Point(4, 25);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(236, 279);
+            this.tabPage11.TabIndex = 0;
+            this.tabPage11.Text = "Version 1";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label43.Location = new System.Drawing.Point(6, 8);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(225, 260);
+            this.label43.TabIndex = 0;
+            this.label43.Text = resources.GetString("label43.Text");
+            // 
+            // thirteenTabControl4
+            // 
+            this.thirteenTabControl4.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenTabControl4.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.thirteenTabControl4.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.thirteenTabControl4.Controls.Add(this.tabPage10);
+            this.thirteenTabControl4.ForeColor = System.Drawing.Color.White;
+            this.thirteenTabControl4.Location = new System.Drawing.Point(20, 55);
+            this.thirteenTabControl4.Name = "thirteenTabControl4";
+            this.thirteenTabControl4.SelectedIndex = 0;
+            this.thirteenTabControl4.Size = new System.Drawing.Size(571, 218);
+            this.thirteenTabControl4.TabIndex = 10;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage10.Controls.Add(this.label42);
+            this.tabPage10.Location = new System.Drawing.Point(4, 25);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(563, 189);
+            this.tabPage10.TabIndex = 0;
+            this.tabPage10.Text = "Project Summary";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label42.Location = new System.Drawing.Point(6, 17);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(549, 144);
+            this.label42.TabIndex = 0;
+            this.label42.Text = resources.GetString("label42.Text");
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label19.Location = new System.Drawing.Point(194, 16);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(256, 25);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Citadel - [ Information ]";
+            // 
+            // pnlUsers
+            // 
+            this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlUsers.Controls.Add(this.tcUserList);
+            this.pnlUsers.Controls.Add(this.tcSelectedUser);
+            this.pnlUsers.Controls.Add(this.tcNewUser);
+            this.pnlUsers.Controls.Add(this.label11);
+            this.pnlUsers.Location = new System.Drawing.Point(229, 33);
+            this.pnlUsers.Name = "pnlUsers";
+            this.pnlUsers.Size = new System.Drawing.Size(609, 599);
+            this.pnlUsers.TabIndex = 5;
+            // 
+            // tcUserList
+            // 
+            this.tcUserList.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcUserList.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcUserList.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcUserList.Controls.Add(this.tabPage9);
+            this.tcUserList.ForeColor = System.Drawing.Color.White;
+            this.tcUserList.Location = new System.Drawing.Point(326, 77);
+            this.tcUserList.Name = "tcUserList";
+            this.tcUserList.SelectedIndex = 0;
+            this.tcUserList.Size = new System.Drawing.Size(265, 205);
+            this.tcUserList.TabIndex = 7;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage9.Controls.Add(this.btnDelete);
+            this.tabPage9.Controls.Add(this.listUsers);
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(257, 176);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "User List";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnDelete.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(72, 144);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(116, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete Selected";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // listUsers
+            // 
+            this.listUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listUsers.ForeColor = System.Drawing.Color.White;
+            this.listUsers.FormattingEnabled = true;
+            this.listUsers.ItemHeight = 16;
+            this.listUsers.Location = new System.Drawing.Point(3, 2);
+            this.listUsers.Name = "listUsers";
+            this.listUsers.Size = new System.Drawing.Size(253, 132);
+            this.listUsers.TabIndex = 0;
+            // 
+            // tcSelectedUser
+            // 
+            this.tcSelectedUser.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcSelectedUser.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcSelectedUser.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcSelectedUser.Controls.Add(this.tabPage8);
+            this.tcSelectedUser.ForeColor = System.Drawing.Color.White;
+            this.tcSelectedUser.Location = new System.Drawing.Point(20, 77);
+            this.tcSelectedUser.Name = "tcSelectedUser";
+            this.tcSelectedUser.SelectedIndex = 0;
+            this.tcSelectedUser.Size = new System.Drawing.Size(265, 205);
+            this.tcSelectedUser.TabIndex = 15;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage8.Controls.Add(this.btnLogout);
+            this.tabPage8.Controls.Add(this.lblCuruser);
+            this.tabPage8.Controls.Add(this.lblEmail);
+            this.tabPage8.Controls.Add(this.label15);
+            this.tabPage8.Controls.Add(this.lblLastname);
+            this.tabPage8.Controls.Add(this.lblFirstname);
+            this.tabPage8.Controls.Add(this.label17);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(257, 176);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Selected User";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnLogout.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(93, 140);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(73, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblCuruser
+            // 
+            this.lblCuruser.AutoSize = true;
+            this.lblCuruser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblCuruser.Location = new System.Drawing.Point(86, 9);
+            this.lblCuruser.Name = "lblCuruser";
+            this.lblCuruser.Size = new System.Drawing.Size(124, 24);
+            this.lblCuruser.TabIndex = 0;
+            this.lblCuruser.Text = "placeHolder";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblEmail.Location = new System.Drawing.Point(100, 106);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(63, 20);
+            this.lblEmail.TabIndex = 5;
+            this.lblEmail.Text = "lblEmail";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label15.Location = new System.Drawing.Point(5, 46);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 18);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "First Name:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLastname
+            // 
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblLastname.Location = new System.Drawing.Point(175, 76);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(71, 18);
+            this.lblLastname.TabIndex = 4;
+            this.lblLastname.Text = "lastName";
+            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFirstname
+            // 
+            this.lblFirstname.AutoSize = true;
+            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblFirstname.Location = new System.Drawing.Point(175, 46);
+            this.lblFirstname.Name = "lblFirstname";
+            this.lblFirstname.Size = new System.Drawing.Size(72, 18);
+            this.lblFirstname.TabIndex = 2;
+            this.lblFirstname.Text = "firstName";
+            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label17.Location = new System.Drawing.Point(6, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 18);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Last Name:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tcNewUser
+            // 
+            this.tcNewUser.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcNewUser.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcNewUser.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcNewUser.Controls.Add(this.tabPage7);
+            this.tcNewUser.ForeColor = System.Drawing.Color.White;
+            this.tcNewUser.Location = new System.Drawing.Point(20, 298);
+            this.tcNewUser.Name = "tcNewUser";
+            this.tcNewUser.SelectedIndex = 0;
+            this.tcNewUser.Size = new System.Drawing.Size(571, 282);
+            this.tcNewUser.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage7.Controls.Add(this.label20);
+            this.tabPage7.Controls.Add(this.txtUsername);
+            this.tabPage7.Controls.Add(this.npnlEmailconf);
+            this.tabPage7.Controls.Add(this.txtPassword);
+            this.tabPage7.Controls.Add(this.npnlEmail);
+            this.tabPage7.Controls.Add(this.txtPassconf);
+            this.tabPage7.Controls.Add(this.npnlLast);
+            this.tabPage7.Controls.Add(this.txtFirstname);
+            this.tabPage7.Controls.Add(this.npnlFirst);
+            this.tabPage7.Controls.Add(this.txtLastname);
+            this.tabPage7.Controls.Add(this.npnlPassconf);
+            this.tabPage7.Controls.Add(this.txtEmail);
+            this.tabPage7.Controls.Add(this.npnlPass);
+            this.tabPage7.Controls.Add(this.cmbPerms);
+            this.tabPage7.Controls.Add(this.npnlUser);
+            this.tabPage7.Controls.Add(this.btnCreate);
+            this.tabPage7.Controls.Add(this.txtEmailconf);
+            this.tabPage7.Controls.Add(this.label16);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(563, 253);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "New User";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 70);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(191, 16);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "* No greater than 15 characters";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsername.ForeColor = System.Drawing.Color.White;
+            this.txtUsername.Location = new System.Drawing.Point(14, 33);
+            this.txtUsername.MaxLength = 15;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(166, 26);
+            this.txtUsername.TabIndex = 0;
+            // 
+            // npnlEmailconf
+            // 
+            this.npnlEmailconf.Location = new System.Drawing.Point(184, 23);
+            this.npnlEmailconf.Name = "npnlEmailconf";
+            this.npnlEmailconf.Size = new System.Drawing.Size(35, 15);
+            this.npnlEmailconf.TabIndex = 13;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(312, 33);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(166, 26);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // npnlEmail
+            // 
+            this.npnlEmail.Location = new System.Drawing.Point(243, 24);
+            this.npnlEmail.Name = "npnlEmail";
+            this.npnlEmail.Size = new System.Drawing.Size(35, 15);
+            this.npnlEmail.TabIndex = 13;
+            // 
+            // txtPassconf
+            // 
+            this.txtPassconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtPassconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtPassconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassconf.ForeColor = System.Drawing.Color.White;
+            this.txtPassconf.Location = new System.Drawing.Point(312, 65);
+            this.txtPassconf.Name = "txtPassconf";
+            this.txtPassconf.Size = new System.Drawing.Size(166, 26);
+            this.txtPassconf.TabIndex = 2;
+            // 
+            // npnlLast
+            // 
+            this.npnlLast.Location = new System.Drawing.Point(208, 53);
+            this.npnlLast.Name = "npnlLast";
+            this.npnlLast.Size = new System.Drawing.Size(35, 15);
+            this.npnlLast.TabIndex = 13;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFirstname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFirstname.ForeColor = System.Drawing.Color.White;
+            this.txtFirstname.Location = new System.Drawing.Point(14, 108);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(166, 26);
+            this.txtFirstname.TabIndex = 3;
+            // 
+            // npnlFirst
+            // 
+            this.npnlFirst.Location = new System.Drawing.Point(220, 77);
+            this.npnlFirst.Name = "npnlFirst";
+            this.npnlFirst.Size = new System.Drawing.Size(35, 15);
+            this.npnlFirst.TabIndex = 13;
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLastname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLastname.ForeColor = System.Drawing.Color.White;
+            this.txtLastname.Location = new System.Drawing.Point(14, 140);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(166, 26);
+            this.txtLastname.TabIndex = 4;
+            // 
+            // npnlPassconf
+            // 
+            this.npnlPassconf.Location = new System.Drawing.Point(218, 116);
+            this.npnlPassconf.Name = "npnlPassconf";
+            this.npnlPassconf.Size = new System.Drawing.Size(35, 15);
+            this.npnlPassconf.TabIndex = 13;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(269, 108);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(255, 26);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // npnlPass
+            // 
+            this.npnlPass.Location = new System.Drawing.Point(208, 151);
+            this.npnlPass.Name = "npnlPass";
+            this.npnlPass.Size = new System.Drawing.Size(35, 15);
+            this.npnlPass.TabIndex = 12;
+            // 
+            // cmbPerms
+            // 
+            this.cmbPerms.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.cmbPerms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cmbPerms.ColorScheme = Xenon.ThirteenComboBox.ColorSchemes.Dark;
+            this.cmbPerms.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPerms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPerms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbPerms.ForeColor = System.Drawing.Color.White;
+            this.cmbPerms.FormattingEnabled = true;
+            this.cmbPerms.Items.AddRange(new object[] {
+            "Can Not Create New Users",
+            "Can Create New Users"});
+            this.cmbPerms.Location = new System.Drawing.Point(163, 218);
+            this.cmbPerms.Name = "cmbPerms";
+            this.cmbPerms.Size = new System.Drawing.Size(221, 23);
+            this.cmbPerms.TabIndex = 7;
+            // 
+            // npnlUser
+            // 
+            this.npnlUser.Location = new System.Drawing.Point(489, 12);
+            this.npnlUser.Name = "npnlUser";
+            this.npnlUser.Size = new System.Drawing.Size(35, 15);
+            this.npnlUser.TabIndex = 11;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnCreate.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Location = new System.Drawing.Point(460, 214);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(77, 30);
+            this.btnCreate.TabIndex = 8;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            // 
+            // txtEmailconf
+            // 
+            this.txtEmailconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtEmailconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmailconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtEmailconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmailconf.ForeColor = System.Drawing.Color.White;
+            this.txtEmailconf.Location = new System.Drawing.Point(269, 140);
+            this.txtEmailconf.Name = "txtEmailconf";
+            this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
+            this.txtEmailconf.TabIndex = 6;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(160, 199);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 16);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Permissions";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label11.Location = new System.Drawing.Point(215, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(193, 25);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Citadel - [ Users ]";
+            // 
+            // pnlStats
+            // 
+            this.pnlStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlStats.Controls.Add(this.thirteenTabControl3);
+            this.pnlStats.Controls.Add(this.thirteenTabControl2);
+            this.pnlStats.Controls.Add(this.lblReadingFrom2);
+            this.pnlStats.Controls.Add(this.lblStatsTitle);
+            this.pnlStats.Location = new System.Drawing.Point(229, 34);
+            this.pnlStats.Name = "pnlStats";
+            this.pnlStats.Size = new System.Drawing.Size(609, 599);
+            this.pnlStats.TabIndex = 2;
+            // 
+            // thirteenTabControl3
+            // 
+            this.thirteenTabControl3.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenTabControl3.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.thirteenTabControl3.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.thirteenTabControl3.Controls.Add(this.tabPage6);
+            this.thirteenTabControl3.ForeColor = System.Drawing.Color.White;
+            this.thirteenTabControl3.Location = new System.Drawing.Point(20, 346);
+            this.thirteenTabControl3.Name = "thirteenTabControl3";
+            this.thirteenTabControl3.SelectedIndex = 0;
+            this.thirteenTabControl3.Size = new System.Drawing.Size(571, 245);
+            this.thirteenTabControl3.TabIndex = 12;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage6.Controls.Add(this.listStates);
+            this.tabPage6.Controls.Add(this.label7);
+            this.tabPage6.Controls.Add(this.label54);
+            this.tabPage6.Controls.Add(this.lblStudentCount2);
+            this.tabPage6.Controls.Add(this.label53);
+            this.tabPage6.Controls.Add(this.lblg9);
+            this.tabPage6.Controls.Add(this.listYears);
+            this.tabPage6.Controls.Add(this.lblg10);
+            this.tabPage6.Controls.Add(this.label51);
+            this.tabPage6.Controls.Add(this.lblg11);
+            this.tabPage6.Controls.Add(this.lblgF);
+            this.tabPage6.Controls.Add(this.lblg12);
+            this.tabPage6.Controls.Add(this.lblgM);
+            this.tabPage6.Controls.Add(this.lblg13);
+            this.tabPage6.Controls.Add(this.label50);
+            this.tabPage6.Controls.Add(this.label46);
+            this.tabPage6.Controls.Add(this.lblaNo);
+            this.tabPage6.Controls.Add(this.label47);
+            this.tabPage6.Controls.Add(this.lblaYes);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(563, 216);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Statistics";
+            // 
+            // listStates
+            // 
+            this.listStates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listStates.ForeColor = System.Drawing.Color.White;
+            this.listStates.FormattingEnabled = true;
+            this.listStates.ItemHeight = 16;
+            this.listStates.Location = new System.Drawing.Point(463, 64);
+            this.listStates.Name = "listStates";
+            this.listStates.Size = new System.Drawing.Size(91, 148);
+            this.listStates.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label7.Location = new System.Drawing.Point(10, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 24);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Grades:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(462, 47);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(46, 16);
+            this.label54.TabIndex = 27;
+            this.label54.Text = "States";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(274, 10);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(44, 16);
+            this.label53.TabIndex = 26;
+            this.label53.Text = "Years";
+            // 
+            // lblg9
+            // 
+            this.lblg9.AutoSize = true;
+            this.lblg9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblg9.Location = new System.Drawing.Point(17, 51);
+            this.lblg9.Name = "lblg9";
+            this.lblg9.Size = new System.Drawing.Size(45, 22);
+            this.lblg9.TabIndex = 10;
+            this.lblg9.Text = "9th: ";
+            // 
+            // listYears
+            // 
+            this.listYears.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listYears.ForeColor = System.Drawing.Color.White;
+            this.listYears.FormattingEnabled = true;
+            this.listYears.ItemHeight = 16;
+            this.listYears.Location = new System.Drawing.Point(274, 32);
+            this.listYears.Name = "listYears";
+            this.listYears.Size = new System.Drawing.Size(170, 180);
+            this.listYears.TabIndex = 11;
+            // 
+            // lblg10
+            // 
+            this.lblg10.AutoSize = true;
+            this.lblg10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblg10.Location = new System.Drawing.Point(7, 82);
+            this.lblg10.Name = "lblg10";
+            this.lblg10.Size = new System.Drawing.Size(55, 22);
+            this.lblg10.TabIndex = 11;
+            this.lblg10.Text = "10th: ";
+            // 
+            // label51
+            // 
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label51.Location = new System.Drawing.Point(255, 7);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(2, 202);
+            this.label51.TabIndex = 25;
+            this.label51.Text = "label51";
+            // 
+            // lblg11
+            // 
+            this.lblg11.AutoSize = true;
+            this.lblg11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblg11.Location = new System.Drawing.Point(7, 111);
+            this.lblg11.Name = "lblg11";
+            this.lblg11.Size = new System.Drawing.Size(55, 22);
+            this.lblg11.TabIndex = 12;
+            this.lblg11.Text = "11th: ";
+            // 
+            // lblgF
+            // 
+            this.lblgF.AutoSize = true;
+            this.lblgF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblgF.Location = new System.Drawing.Point(132, 177);
+            this.lblgF.Name = "lblgF";
+            this.lblgF.Size = new System.Drawing.Size(31, 22);
+            this.lblgF.TabIndex = 24;
+            this.lblgF.Text = "F: ";
+            // 
+            // lblg12
+            // 
+            this.lblg12.AutoSize = true;
+            this.lblg12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblg12.Location = new System.Drawing.Point(7, 141);
+            this.lblg12.Name = "lblg12";
+            this.lblg12.Size = new System.Drawing.Size(55, 22);
+            this.lblg12.TabIndex = 13;
+            this.lblg12.Text = "12th: ";
+            // 
+            // lblgM
+            // 
+            this.lblgM.AutoSize = true;
+            this.lblgM.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblgM.Location = new System.Drawing.Point(129, 147);
+            this.lblgM.Name = "lblgM";
+            this.lblgM.Size = new System.Drawing.Size(34, 22);
+            this.lblgM.TabIndex = 23;
+            this.lblgM.Text = "M: ";
+            // 
+            // lblg13
+            // 
+            this.lblg13.AutoSize = true;
+            this.lblg13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblg13.Location = new System.Drawing.Point(11, 171);
+            this.lblg13.Name = "lblg13";
+            this.lblg13.Size = new System.Drawing.Size(51, 22);
+            this.lblg13.TabIndex = 14;
+            this.lblg13.Text = "13+: ";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label50.Location = new System.Drawing.Point(138, 114);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(79, 24);
+            this.label50.TabIndex = 22;
+            this.label50.Text = "Gender:";
+            // 
+            // label46
+            // 
+            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label46.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label46.Location = new System.Drawing.Point(108, 7);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(2, 202);
+            this.label46.TabIndex = 15;
+            this.label46.Text = "label46";
+            // 
+            // lblaNo
+            // 
+            this.lblaNo.AutoSize = true;
+            this.lblaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblaNo.Location = new System.Drawing.Point(136, 82);
+            this.lblaNo.Name = "lblaNo";
+            this.lblaNo.Size = new System.Drawing.Size(43, 22);
+            this.lblaNo.TabIndex = 18;
+            this.lblaNo.Text = "No: ";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label47.Location = new System.Drawing.Point(138, 15);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(66, 24);
+            this.label47.TabIndex = 16;
+            this.label47.Text = "Active:";
+            // 
+            // lblaYes
+            // 
+            this.lblaYes.AutoSize = true;
+            this.lblaYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblaYes.Location = new System.Drawing.Point(129, 51);
+            this.lblaYes.Name = "lblaYes";
+            this.lblaYes.Size = new System.Drawing.Size(51, 22);
+            this.lblaYes.TabIndex = 17;
+            this.lblaYes.Text = "Yes: ";
+            // 
+            // thirteenTabControl2
+            // 
+            this.thirteenTabControl2.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenTabControl2.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.thirteenTabControl2.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.thirteenTabControl2.Controls.Add(this.tabPage5);
+            this.thirteenTabControl2.ForeColor = System.Drawing.Color.White;
+            this.thirteenTabControl2.Location = new System.Drawing.Point(20, 67);
+            this.thirteenTabControl2.Name = "thirteenTabControl2";
+            this.thirteenTabControl2.SelectedIndex = 0;
+            this.thirteenTabControl2.Size = new System.Drawing.Size(571, 274);
+            this.thirteenTabControl2.TabIndex = 11;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage5.Controls.Add(this.lblActiveStudents);
+            this.tabPage5.Controls.Add(this.lblStudentCount);
+            this.tabPage5.Controls.Add(this.lblFeesDue);
+            this.tabPage5.Controls.Add(this.gbGraph1);
+            this.tabPage5.Controls.Add(this.groupBox1);
+            this.tabPage5.Controls.Add(this.gbGraph2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(563, 245);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Graphs";
+            // 
+            // lblActiveStudents
+            // 
+            this.lblActiveStudents.AutoSize = true;
+            this.lblActiveStudents.Location = new System.Drawing.Point(197, 2);
+            this.lblActiveStudents.Name = "lblActiveStudents";
+            this.lblActiveStudents.Size = new System.Drawing.Size(106, 16);
+            this.lblActiveStudents.TabIndex = 8;
+            this.lblActiveStudents.Text = "Active Students: ";
+            this.lblActiveStudents.Click += new System.EventHandler(this.lblActiveStudents_Click);
+            // 
+            // lblStudentCount
+            // 
+            this.lblStudentCount.AutoSize = true;
+            this.lblStudentCount.Location = new System.Drawing.Point(11, 3);
+            this.lblStudentCount.Name = "lblStudentCount";
+            this.lblStudentCount.Size = new System.Drawing.Size(100, 16);
+            this.lblStudentCount.TabIndex = 0;
+            this.lblStudentCount.Text = "Total Students: ";
+            // 
+            // lblFeesDue
+            // 
+            this.lblFeesDue.AutoSize = true;
+            this.lblFeesDue.Location = new System.Drawing.Point(382, 2);
+            this.lblFeesDue.Name = "lblFeesDue";
+            this.lblFeesDue.Size = new System.Drawing.Size(79, 16);
+            this.lblFeesDue.TabIndex = 7;
+            this.lblFeesDue.Text = "Total Fees: ";
+            // 
+            // gbGraph1
+            // 
+            this.gbGraph1.Controls.Add(this.lblpFemale);
+            this.gbGraph1.Controls.Add(this.lblpMale);
+            this.gbGraph1.Controls.Add(this.pnlgFemale);
+            this.gbGraph1.Controls.Add(this.pnlgMale);
+            this.gbGraph1.Controls.Add(this.lblgFemale);
+            this.gbGraph1.Controls.Add(this.lblgMale);
+            this.gbGraph1.ForeColor = System.Drawing.Color.White;
+            this.gbGraph1.Location = new System.Drawing.Point(14, 28);
+            this.gbGraph1.Name = "gbGraph1";
+            this.gbGraph1.Size = new System.Drawing.Size(165, 213);
+            this.gbGraph1.TabIndex = 1;
+            this.gbGraph1.TabStop = false;
+            this.gbGraph1.Text = "Gender";
+            // 
+            // lblpFemale
+            // 
+            this.lblpFemale.AutoSize = true;
+            this.lblpFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpFemale.Location = new System.Drawing.Point(107, 164);
+            this.lblpFemale.Name = "lblpFemale";
+            this.lblpFemale.Size = new System.Drawing.Size(21, 13);
+            this.lblpFemale.TabIndex = 6;
+            this.lblpFemale.Text = "0%";
+            // 
+            // lblpMale
+            // 
+            this.lblpMale.AutoSize = true;
+            this.lblpMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpMale.Location = new System.Drawing.Point(30, 164);
+            this.lblpMale.Name = "lblpMale";
+            this.lblpMale.Size = new System.Drawing.Size(21, 13);
+            this.lblpMale.TabIndex = 5;
+            this.lblpMale.Text = "0%";
+            // 
+            // pnlgFemale
+            // 
+            this.pnlgFemale.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgFemale.Location = new System.Drawing.Point(93, 39);
+            this.pnlgFemale.Name = "pnlgFemale";
+            this.pnlgFemale.Size = new System.Drawing.Size(52, 139);
+            this.pnlgFemale.TabIndex = 3;
+            this.pnlgFemale.Visible = false;
+            // 
+            // pnlgMale
+            // 
+            this.pnlgMale.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgMale.Location = new System.Drawing.Point(17, 39);
+            this.pnlgMale.Name = "pnlgMale";
+            this.pnlgMale.Size = new System.Drawing.Size(52, 139);
+            this.pnlgMale.TabIndex = 2;
+            this.pnlgMale.Visible = false;
+            // 
+            // lblgFemale
+            // 
+            this.lblgFemale.AutoSize = true;
+            this.lblgFemale.Location = new System.Drawing.Point(92, 184);
+            this.lblgFemale.Name = "lblgFemale";
+            this.lblgFemale.Size = new System.Drawing.Size(54, 16);
+            this.lblgFemale.TabIndex = 1;
+            this.lblgFemale.Text = "Female";
+            // 
+            // lblgMale
+            // 
+            this.lblgMale.AutoSize = true;
+            this.lblgMale.Location = new System.Drawing.Point(23, 184);
+            this.lblgMale.Name = "lblgMale";
+            this.lblgMale.Size = new System.Drawing.Size(38, 16);
+            this.lblgMale.TabIndex = 0;
+            this.lblgMale.Text = "Male";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblpNoFees);
+            this.groupBox1.Controls.Add(this.lblpFees);
+            this.groupBox1.Controls.Add(this.pnlgNoFees);
+            this.groupBox1.Controls.Add(this.pnlgFees);
+            this.groupBox1.Controls.Add(this.lblgNoFees);
+            this.groupBox1.Controls.Add(this.lblgFees);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(384, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(165, 213);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Have Fees";
+            // 
+            // lblpNoFees
+            // 
+            this.lblpNoFees.AutoSize = true;
+            this.lblpNoFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpNoFees.Location = new System.Drawing.Point(105, 164);
+            this.lblpNoFees.Name = "lblpNoFees";
+            this.lblpNoFees.Size = new System.Drawing.Size(21, 13);
+            this.lblpNoFees.TabIndex = 4;
+            this.lblpNoFees.Text = "0%";
+            // 
+            // lblpFees
+            // 
+            this.lblpFees.AutoSize = true;
+            this.lblpFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpFees.Location = new System.Drawing.Point(28, 164);
+            this.lblpFees.Name = "lblpFees";
+            this.lblpFees.Size = new System.Drawing.Size(21, 13);
+            this.lblpFees.TabIndex = 2;
+            this.lblpFees.Text = "0%";
+            // 
+            // pnlgNoFees
+            // 
+            this.pnlgNoFees.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgNoFees.Location = new System.Drawing.Point(93, 39);
+            this.pnlgNoFees.Name = "pnlgNoFees";
+            this.pnlgNoFees.Size = new System.Drawing.Size(52, 139);
+            this.pnlgNoFees.TabIndex = 3;
+            this.pnlgNoFees.Visible = false;
+            // 
+            // pnlgFees
+            // 
+            this.pnlgFees.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgFees.Location = new System.Drawing.Point(17, 39);
+            this.pnlgFees.Name = "pnlgFees";
+            this.pnlgFees.Size = new System.Drawing.Size(52, 139);
+            this.pnlgFees.TabIndex = 2;
+            this.pnlgFees.Visible = false;
+            // 
+            // lblgNoFees
+            // 
+            this.lblgNoFees.AutoSize = true;
+            this.lblgNoFees.Location = new System.Drawing.Point(107, 184);
+            this.lblgNoFees.Name = "lblgNoFees";
+            this.lblgNoFees.Size = new System.Drawing.Size(26, 16);
+            this.lblgNoFees.TabIndex = 1;
+            this.lblgNoFees.Text = "No";
+            // 
+            // lblgFees
+            // 
+            this.lblgFees.AutoSize = true;
+            this.lblgFees.Location = new System.Drawing.Point(28, 184);
+            this.lblgFees.Name = "lblgFees";
+            this.lblgFees.Size = new System.Drawing.Size(32, 16);
+            this.lblgFees.TabIndex = 0;
+            this.lblgFees.Text = "Yes";
+            // 
+            // gbGraph2
+            // 
+            this.gbGraph2.Controls.Add(this.lblpNonactive);
+            this.gbGraph2.Controls.Add(this.lblpActive);
+            this.gbGraph2.Controls.Add(this.pnlgNonactive);
+            this.gbGraph2.Controls.Add(this.pnlgActive);
+            this.gbGraph2.Controls.Add(this.lblgNonactive);
+            this.gbGraph2.Controls.Add(this.lblgActive);
+            this.gbGraph2.ForeColor = System.Drawing.Color.White;
+            this.gbGraph2.Location = new System.Drawing.Point(199, 28);
+            this.gbGraph2.Name = "gbGraph2";
+            this.gbGraph2.Size = new System.Drawing.Size(165, 213);
+            this.gbGraph2.TabIndex = 5;
+            this.gbGraph2.TabStop = false;
+            this.gbGraph2.Text = "Active";
+            // 
+            // lblpNonactive
+            // 
+            this.lblpNonactive.AutoSize = true;
+            this.lblpNonactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpNonactive.Location = new System.Drawing.Point(105, 164);
+            this.lblpNonactive.Name = "lblpNonactive";
+            this.lblpNonactive.Size = new System.Drawing.Size(21, 13);
+            this.lblpNonactive.TabIndex = 4;
+            this.lblpNonactive.Text = "0%";
+            // 
+            // lblpActive
+            // 
+            this.lblpActive.AutoSize = true;
+            this.lblpActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblpActive.Location = new System.Drawing.Point(28, 164);
+            this.lblpActive.Name = "lblpActive";
+            this.lblpActive.Size = new System.Drawing.Size(21, 13);
+            this.lblpActive.TabIndex = 2;
+            this.lblpActive.Text = "0%";
+            // 
+            // pnlgNonactive
+            // 
+            this.pnlgNonactive.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgNonactive.Location = new System.Drawing.Point(93, 39);
+            this.pnlgNonactive.Name = "pnlgNonactive";
+            this.pnlgNonactive.Size = new System.Drawing.Size(52, 139);
+            this.pnlgNonactive.TabIndex = 3;
+            this.pnlgNonactive.Visible = false;
+            // 
+            // pnlgActive
+            // 
+            this.pnlgActive.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlgActive.Location = new System.Drawing.Point(17, 39);
+            this.pnlgActive.Name = "pnlgActive";
+            this.pnlgActive.Size = new System.Drawing.Size(52, 139);
+            this.pnlgActive.TabIndex = 2;
+            this.pnlgActive.Visible = false;
+            // 
+            // lblgNonactive
+            // 
+            this.lblgNonactive.AutoSize = true;
+            this.lblgNonactive.Location = new System.Drawing.Point(107, 184);
+            this.lblgNonactive.Name = "lblgNonactive";
+            this.lblgNonactive.Size = new System.Drawing.Size(26, 16);
+            this.lblgNonactive.TabIndex = 1;
+            this.lblgNonactive.Text = "No";
+            // 
+            // lblgActive
+            // 
+            this.lblgActive.AutoSize = true;
+            this.lblgActive.Location = new System.Drawing.Point(28, 184);
+            this.lblgActive.Name = "lblgActive";
+            this.lblgActive.Size = new System.Drawing.Size(32, 16);
+            this.lblgActive.TabIndex = 0;
+            this.lblgActive.Text = "Yes";
+            // 
+            // lblReadingFrom2
+            // 
+            this.lblReadingFrom2.AutoSize = true;
+            this.lblReadingFrom2.Location = new System.Drawing.Point(135, 45);
+            this.lblReadingFrom2.Name = "lblReadingFrom2";
+            this.lblReadingFrom2.Size = new System.Drawing.Size(150, 16);
+            this.lblReadingFrom2.TabIndex = 8;
+            this.lblReadingFrom2.Text = "Reading From: students";
+            // 
+            // lblStatsTitle
+            // 
+            this.lblStatsTitle.AutoSize = true;
+            this.lblStatsTitle.Font = new System.Drawing.Font("Verdana", 15F);
+            this.lblStatsTitle.Location = new System.Drawing.Point(200, 16);
+            this.lblStatsTitle.Name = "lblStatsTitle";
+            this.lblStatsTitle.Size = new System.Drawing.Size(229, 25);
+            this.lblStatsTitle.TabIndex = 1;
+            this.lblStatsTitle.Text = "Citadel - [ Statistics ]";
+            // 
             // pnlStudents
             // 
             this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -678,7 +1715,7 @@
             this.thirteenTabControl1.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
             this.thirteenTabControl1.Controls.Add(this.tabPage4);
             this.thirteenTabControl1.ForeColor = System.Drawing.Color.White;
-            this.thirteenTabControl1.Location = new System.Drawing.Point(300, 68);
+            this.thirteenTabControl1.Location = new System.Drawing.Point(306, 74);
             this.thirteenTabControl1.Name = "thirteenTabControl1";
             this.thirteenTabControl1.SelectedIndex = 0;
             this.thirteenTabControl1.Size = new System.Drawing.Size(279, 225);
@@ -717,7 +1754,7 @@
             this.tcStudent.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
             this.tcStudent.Controls.Add(this.tabPage3);
             this.tcStudent.ForeColor = System.Drawing.Color.White;
-            this.tcStudent.Location = new System.Drawing.Point(20, 68);
+            this.tcStudent.Location = new System.Drawing.Point(26, 74);
             this.tcStudent.Name = "tcStudent";
             this.tcStudent.SelectedIndex = 0;
             this.tcStudent.Size = new System.Drawing.Size(269, 225);
@@ -824,7 +1861,7 @@
             this.tcNewStudent.Controls.Add(this.tabPage1);
             this.tcNewStudent.Controls.Add(this.tabPage2);
             this.tcNewStudent.ForeColor = System.Drawing.Color.White;
-            this.tcNewStudent.Location = new System.Drawing.Point(20, 311);
+            this.tcNewStudent.Location = new System.Drawing.Point(26, 317);
             this.tcNewStudent.Name = "tcNewStudent";
             this.tcNewStudent.SelectedIndex = 0;
             this.tcNewStudent.Size = new System.Drawing.Size(559, 256);
@@ -1546,525 +2583,6 @@
             this.lblStudentsTitle.TabIndex = 1;
             this.lblStudentsTitle.Text = "Citadel - [ Students ]";
             // 
-            // pnlStats
-            // 
-            this.pnlStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlStats.Controls.Add(this.groupBox2);
-            this.pnlStats.Controls.Add(this.gbGraph);
-            this.pnlStats.Controls.Add(this.lblReadingFrom2);
-            this.pnlStats.Controls.Add(this.lblStatsTitle);
-            this.pnlStats.Location = new System.Drawing.Point(229, 34);
-            this.pnlStats.Name = "pnlStats";
-            this.pnlStats.Size = new System.Drawing.Size(609, 599);
-            this.pnlStats.TabIndex = 2;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.listStates);
-            this.groupBox2.Controls.Add(this.label54);
-            this.groupBox2.Controls.Add(this.label53);
-            this.groupBox2.Controls.Add(this.listYears);
-            this.groupBox2.Controls.Add(this.label51);
-            this.groupBox2.Controls.Add(this.lblgF);
-            this.groupBox2.Controls.Add(this.lblgM);
-            this.groupBox2.Controls.Add(this.label50);
-            this.groupBox2.Controls.Add(this.label49);
-            this.groupBox2.Controls.Add(this.lblaNo);
-            this.groupBox2.Controls.Add(this.lblaYes);
-            this.groupBox2.Controls.Add(this.label47);
-            this.groupBox2.Controls.Add(this.label46);
-            this.groupBox2.Controls.Add(this.lblg13);
-            this.groupBox2.Controls.Add(this.lblg12);
-            this.groupBox2.Controls.Add(this.lblg11);
-            this.groupBox2.Controls.Add(this.lblg10);
-            this.groupBox2.Controls.Add(this.lblg9);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label48);
-            this.groupBox2.Controls.Add(this.lblStudentCount2);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(20, 359);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(571, 233);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Stats";
-            // 
-            // listStates
-            // 
-            this.listStates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.listStates.ForeColor = System.Drawing.Color.White;
-            this.listStates.FormattingEnabled = true;
-            this.listStates.ItemHeight = 16;
-            this.listStates.Location = new System.Drawing.Point(467, 76);
-            this.listStates.Name = "listStates";
-            this.listStates.Size = new System.Drawing.Size(91, 148);
-            this.listStates.TabIndex = 28;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(466, 59);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(46, 16);
-            this.label54.TabIndex = 27;
-            this.label54.Text = "States";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(278, 22);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(44, 16);
-            this.label53.TabIndex = 26;
-            this.label53.Text = "Years";
-            // 
-            // listYears
-            // 
-            this.listYears.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.listYears.ForeColor = System.Drawing.Color.White;
-            this.listYears.FormattingEnabled = true;
-            this.listYears.ItemHeight = 16;
-            this.listYears.Location = new System.Drawing.Point(278, 44);
-            this.listYears.Name = "listYears";
-            this.listYears.Size = new System.Drawing.Size(170, 180);
-            this.listYears.TabIndex = 11;
-            // 
-            // label51
-            // 
-            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label51.Location = new System.Drawing.Point(259, 19);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(2, 202);
-            this.label51.TabIndex = 25;
-            this.label51.Text = "label51";
-            // 
-            // lblgF
-            // 
-            this.lblgF.AutoSize = true;
-            this.lblgF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblgF.Location = new System.Drawing.Point(136, 189);
-            this.lblgF.Name = "lblgF";
-            this.lblgF.Size = new System.Drawing.Size(31, 22);
-            this.lblgF.TabIndex = 24;
-            this.lblgF.Text = "F: ";
-            // 
-            // lblgM
-            // 
-            this.lblgM.AutoSize = true;
-            this.lblgM.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblgM.Location = new System.Drawing.Point(133, 159);
-            this.lblgM.Name = "lblgM";
-            this.lblgM.Size = new System.Drawing.Size(34, 22);
-            this.lblgM.TabIndex = 23;
-            this.lblgM.Text = "M: ";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label50.Location = new System.Drawing.Point(142, 126);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(79, 24);
-            this.label50.TabIndex = 22;
-            this.label50.Text = "Gender:";
-            // 
-            // label49
-            // 
-            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label49.Location = new System.Drawing.Point(470, 8);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(2, 47);
-            this.label49.TabIndex = 20;
-            this.label49.Text = "label49";
-            // 
-            // lblaNo
-            // 
-            this.lblaNo.AutoSize = true;
-            this.lblaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblaNo.Location = new System.Drawing.Point(140, 94);
-            this.lblaNo.Name = "lblaNo";
-            this.lblaNo.Size = new System.Drawing.Size(43, 22);
-            this.lblaNo.TabIndex = 18;
-            this.lblaNo.Text = "No: ";
-            // 
-            // lblaYes
-            // 
-            this.lblaYes.AutoSize = true;
-            this.lblaYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblaYes.Location = new System.Drawing.Point(133, 63);
-            this.lblaYes.Name = "lblaYes";
-            this.lblaYes.Size = new System.Drawing.Size(51, 22);
-            this.lblaYes.TabIndex = 17;
-            this.lblaYes.Text = "Yes: ";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label47.Location = new System.Drawing.Point(142, 27);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(66, 24);
-            this.label47.TabIndex = 16;
-            this.label47.Text = "Active:";
-            // 
-            // label46
-            // 
-            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label46.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label46.Location = new System.Drawing.Point(112, 19);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(2, 202);
-            this.label46.TabIndex = 15;
-            this.label46.Text = "label46";
-            // 
-            // lblg13
-            // 
-            this.lblg13.AutoSize = true;
-            this.lblg13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblg13.Location = new System.Drawing.Point(15, 183);
-            this.lblg13.Name = "lblg13";
-            this.lblg13.Size = new System.Drawing.Size(51, 22);
-            this.lblg13.TabIndex = 14;
-            this.lblg13.Text = "13+: ";
-            // 
-            // lblg12
-            // 
-            this.lblg12.AutoSize = true;
-            this.lblg12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblg12.Location = new System.Drawing.Point(11, 153);
-            this.lblg12.Name = "lblg12";
-            this.lblg12.Size = new System.Drawing.Size(55, 22);
-            this.lblg12.TabIndex = 13;
-            this.lblg12.Text = "12th: ";
-            // 
-            // lblg11
-            // 
-            this.lblg11.AutoSize = true;
-            this.lblg11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblg11.Location = new System.Drawing.Point(11, 123);
-            this.lblg11.Name = "lblg11";
-            this.lblg11.Size = new System.Drawing.Size(55, 22);
-            this.lblg11.TabIndex = 12;
-            this.lblg11.Text = "11th: ";
-            // 
-            // lblg10
-            // 
-            this.lblg10.AutoSize = true;
-            this.lblg10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblg10.Location = new System.Drawing.Point(11, 94);
-            this.lblg10.Name = "lblg10";
-            this.lblg10.Size = new System.Drawing.Size(55, 22);
-            this.lblg10.TabIndex = 11;
-            this.lblg10.Text = "10th: ";
-            // 
-            // lblg9
-            // 
-            this.lblg9.AutoSize = true;
-            this.lblg9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblg9.Location = new System.Drawing.Point(21, 63);
-            this.lblg9.Name = "lblg9";
-            this.lblg9.Size = new System.Drawing.Size(45, 22);
-            this.lblg9.TabIndex = 10;
-            this.lblg9.Text = "9th: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.Location = new System.Drawing.Point(14, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 24);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Grades:";
-            // 
-            // label48
-            // 
-            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label48.Location = new System.Drawing.Point(472, 53);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(99, 2);
-            this.label48.TabIndex = 19;
-            this.label48.Text = "label48";
-            // 
-            // gbGraph
-            // 
-            this.gbGraph.Controls.Add(this.lblActiveStudents);
-            this.gbGraph.Controls.Add(this.lblFeesDue);
-            this.gbGraph.Controls.Add(this.groupBox1);
-            this.gbGraph.Controls.Add(this.gbGraph2);
-            this.gbGraph.Controls.Add(this.gbGraph1);
-            this.gbGraph.Controls.Add(this.lblStudentCount);
-            this.gbGraph.Location = new System.Drawing.Point(20, 77);
-            this.gbGraph.Name = "gbGraph";
-            this.gbGraph.Size = new System.Drawing.Size(571, 274);
-            this.gbGraph.TabIndex = 9;
-            this.gbGraph.TabStop = false;
-            this.gbGraph.Text = "Graphs";
-            // 
-            // lblActiveStudents
-            // 
-            this.lblActiveStudents.AutoSize = true;
-            this.lblActiveStudents.Location = new System.Drawing.Point(201, 21);
-            this.lblActiveStudents.Name = "lblActiveStudents";
-            this.lblActiveStudents.Size = new System.Drawing.Size(106, 16);
-            this.lblActiveStudents.TabIndex = 8;
-            this.lblActiveStudents.Text = "Active Students: ";
-            this.lblActiveStudents.Click += new System.EventHandler(this.lblActiveStudents_Click);
-            // 
-            // lblFeesDue
-            // 
-            this.lblFeesDue.AutoSize = true;
-            this.lblFeesDue.Location = new System.Drawing.Point(386, 21);
-            this.lblFeesDue.Name = "lblFeesDue";
-            this.lblFeesDue.Size = new System.Drawing.Size(79, 16);
-            this.lblFeesDue.TabIndex = 7;
-            this.lblFeesDue.Text = "Total Fees: ";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblpNoFees);
-            this.groupBox1.Controls.Add(this.lblpFees);
-            this.groupBox1.Controls.Add(this.pnlgNoFees);
-            this.groupBox1.Controls.Add(this.pnlgFees);
-            this.groupBox1.Controls.Add(this.lblgNoFees);
-            this.groupBox1.Controls.Add(this.lblgFees);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(388, 47);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(165, 213);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Have Fees";
-            // 
-            // lblpNoFees
-            // 
-            this.lblpNoFees.AutoSize = true;
-            this.lblpNoFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpNoFees.Location = new System.Drawing.Point(105, 164);
-            this.lblpNoFees.Name = "lblpNoFees";
-            this.lblpNoFees.Size = new System.Drawing.Size(21, 13);
-            this.lblpNoFees.TabIndex = 4;
-            this.lblpNoFees.Text = "0%";
-            // 
-            // lblpFees
-            // 
-            this.lblpFees.AutoSize = true;
-            this.lblpFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpFees.Location = new System.Drawing.Point(28, 164);
-            this.lblpFees.Name = "lblpFees";
-            this.lblpFees.Size = new System.Drawing.Size(21, 13);
-            this.lblpFees.TabIndex = 2;
-            this.lblpFees.Text = "0%";
-            // 
-            // pnlgNoFees
-            // 
-            this.pnlgNoFees.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgNoFees.Location = new System.Drawing.Point(93, 39);
-            this.pnlgNoFees.Name = "pnlgNoFees";
-            this.pnlgNoFees.Size = new System.Drawing.Size(52, 139);
-            this.pnlgNoFees.TabIndex = 3;
-            this.pnlgNoFees.Visible = false;
-            // 
-            // pnlgFees
-            // 
-            this.pnlgFees.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgFees.Location = new System.Drawing.Point(17, 39);
-            this.pnlgFees.Name = "pnlgFees";
-            this.pnlgFees.Size = new System.Drawing.Size(52, 139);
-            this.pnlgFees.TabIndex = 2;
-            this.pnlgFees.Visible = false;
-            // 
-            // lblgNoFees
-            // 
-            this.lblgNoFees.AutoSize = true;
-            this.lblgNoFees.Location = new System.Drawing.Point(107, 184);
-            this.lblgNoFees.Name = "lblgNoFees";
-            this.lblgNoFees.Size = new System.Drawing.Size(26, 16);
-            this.lblgNoFees.TabIndex = 1;
-            this.lblgNoFees.Text = "No";
-            // 
-            // lblgFees
-            // 
-            this.lblgFees.AutoSize = true;
-            this.lblgFees.Location = new System.Drawing.Point(28, 184);
-            this.lblgFees.Name = "lblgFees";
-            this.lblgFees.Size = new System.Drawing.Size(32, 16);
-            this.lblgFees.TabIndex = 0;
-            this.lblgFees.Text = "Yes";
-            // 
-            // gbGraph2
-            // 
-            this.gbGraph2.Controls.Add(this.lblpNonactive);
-            this.gbGraph2.Controls.Add(this.lblpActive);
-            this.gbGraph2.Controls.Add(this.pnlgNonactive);
-            this.gbGraph2.Controls.Add(this.pnlgActive);
-            this.gbGraph2.Controls.Add(this.lblgNonactive);
-            this.gbGraph2.Controls.Add(this.lblgActive);
-            this.gbGraph2.ForeColor = System.Drawing.Color.White;
-            this.gbGraph2.Location = new System.Drawing.Point(203, 47);
-            this.gbGraph2.Name = "gbGraph2";
-            this.gbGraph2.Size = new System.Drawing.Size(165, 213);
-            this.gbGraph2.TabIndex = 5;
-            this.gbGraph2.TabStop = false;
-            this.gbGraph2.Text = "Active";
-            // 
-            // lblpNonactive
-            // 
-            this.lblpNonactive.AutoSize = true;
-            this.lblpNonactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpNonactive.Location = new System.Drawing.Point(105, 164);
-            this.lblpNonactive.Name = "lblpNonactive";
-            this.lblpNonactive.Size = new System.Drawing.Size(21, 13);
-            this.lblpNonactive.TabIndex = 4;
-            this.lblpNonactive.Text = "0%";
-            // 
-            // lblpActive
-            // 
-            this.lblpActive.AutoSize = true;
-            this.lblpActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpActive.Location = new System.Drawing.Point(28, 164);
-            this.lblpActive.Name = "lblpActive";
-            this.lblpActive.Size = new System.Drawing.Size(21, 13);
-            this.lblpActive.TabIndex = 2;
-            this.lblpActive.Text = "0%";
-            // 
-            // pnlgNonactive
-            // 
-            this.pnlgNonactive.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgNonactive.Location = new System.Drawing.Point(93, 39);
-            this.pnlgNonactive.Name = "pnlgNonactive";
-            this.pnlgNonactive.Size = new System.Drawing.Size(52, 139);
-            this.pnlgNonactive.TabIndex = 3;
-            this.pnlgNonactive.Visible = false;
-            // 
-            // pnlgActive
-            // 
-            this.pnlgActive.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgActive.Location = new System.Drawing.Point(17, 39);
-            this.pnlgActive.Name = "pnlgActive";
-            this.pnlgActive.Size = new System.Drawing.Size(52, 139);
-            this.pnlgActive.TabIndex = 2;
-            this.pnlgActive.Visible = false;
-            // 
-            // lblgNonactive
-            // 
-            this.lblgNonactive.AutoSize = true;
-            this.lblgNonactive.Location = new System.Drawing.Point(107, 184);
-            this.lblgNonactive.Name = "lblgNonactive";
-            this.lblgNonactive.Size = new System.Drawing.Size(26, 16);
-            this.lblgNonactive.TabIndex = 1;
-            this.lblgNonactive.Text = "No";
-            // 
-            // lblgActive
-            // 
-            this.lblgActive.AutoSize = true;
-            this.lblgActive.Location = new System.Drawing.Point(28, 184);
-            this.lblgActive.Name = "lblgActive";
-            this.lblgActive.Size = new System.Drawing.Size(32, 16);
-            this.lblgActive.TabIndex = 0;
-            this.lblgActive.Text = "Yes";
-            // 
-            // gbGraph1
-            // 
-            this.gbGraph1.Controls.Add(this.lblpFemale);
-            this.gbGraph1.Controls.Add(this.lblpMale);
-            this.gbGraph1.Controls.Add(this.pnlgFemale);
-            this.gbGraph1.Controls.Add(this.pnlgMale);
-            this.gbGraph1.Controls.Add(this.lblgFemale);
-            this.gbGraph1.Controls.Add(this.lblgMale);
-            this.gbGraph1.ForeColor = System.Drawing.Color.White;
-            this.gbGraph1.Location = new System.Drawing.Point(18, 47);
-            this.gbGraph1.Name = "gbGraph1";
-            this.gbGraph1.Size = new System.Drawing.Size(165, 213);
-            this.gbGraph1.TabIndex = 1;
-            this.gbGraph1.TabStop = false;
-            this.gbGraph1.Text = "Gender";
-            // 
-            // lblpFemale
-            // 
-            this.lblpFemale.AutoSize = true;
-            this.lblpFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpFemale.Location = new System.Drawing.Point(107, 164);
-            this.lblpFemale.Name = "lblpFemale";
-            this.lblpFemale.Size = new System.Drawing.Size(21, 13);
-            this.lblpFemale.TabIndex = 6;
-            this.lblpFemale.Text = "0%";
-            // 
-            // lblpMale
-            // 
-            this.lblpMale.AutoSize = true;
-            this.lblpMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lblpMale.Location = new System.Drawing.Point(30, 164);
-            this.lblpMale.Name = "lblpMale";
-            this.lblpMale.Size = new System.Drawing.Size(21, 13);
-            this.lblpMale.TabIndex = 5;
-            this.lblpMale.Text = "0%";
-            // 
-            // pnlgFemale
-            // 
-            this.pnlgFemale.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgFemale.Location = new System.Drawing.Point(93, 39);
-            this.pnlgFemale.Name = "pnlgFemale";
-            this.pnlgFemale.Size = new System.Drawing.Size(52, 139);
-            this.pnlgFemale.TabIndex = 3;
-            this.pnlgFemale.Visible = false;
-            // 
-            // pnlgMale
-            // 
-            this.pnlgMale.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pnlgMale.Location = new System.Drawing.Point(17, 39);
-            this.pnlgMale.Name = "pnlgMale";
-            this.pnlgMale.Size = new System.Drawing.Size(52, 139);
-            this.pnlgMale.TabIndex = 2;
-            this.pnlgMale.Visible = false;
-            // 
-            // lblgFemale
-            // 
-            this.lblgFemale.AutoSize = true;
-            this.lblgFemale.Location = new System.Drawing.Point(92, 184);
-            this.lblgFemale.Name = "lblgFemale";
-            this.lblgFemale.Size = new System.Drawing.Size(54, 16);
-            this.lblgFemale.TabIndex = 1;
-            this.lblgFemale.Text = "Female";
-            // 
-            // lblgMale
-            // 
-            this.lblgMale.AutoSize = true;
-            this.lblgMale.Location = new System.Drawing.Point(23, 184);
-            this.lblgMale.Name = "lblgMale";
-            this.lblgMale.Size = new System.Drawing.Size(38, 16);
-            this.lblgMale.TabIndex = 0;
-            this.lblgMale.Text = "Male";
-            // 
-            // lblStudentCount
-            // 
-            this.lblStudentCount.AutoSize = true;
-            this.lblStudentCount.Location = new System.Drawing.Point(15, 22);
-            this.lblStudentCount.Name = "lblStudentCount";
-            this.lblStudentCount.Size = new System.Drawing.Size(100, 16);
-            this.lblStudentCount.TabIndex = 0;
-            this.lblStudentCount.Text = "Total Students: ";
-            // 
-            // lblReadingFrom2
-            // 
-            this.lblReadingFrom2.AutoSize = true;
-            this.lblReadingFrom2.Location = new System.Drawing.Point(135, 45);
-            this.lblReadingFrom2.Name = "lblReadingFrom2";
-            this.lblReadingFrom2.Size = new System.Drawing.Size(150, 16);
-            this.lblReadingFrom2.TabIndex = 8;
-            this.lblReadingFrom2.Text = "Reading From: students";
-            // 
-            // lblStatsTitle
-            // 
-            this.lblStatsTitle.AutoSize = true;
-            this.lblStatsTitle.Font = new System.Drawing.Font("Verdana", 15F);
-            this.lblStatsTitle.Location = new System.Drawing.Point(200, 16);
-            this.lblStatsTitle.Name = "lblStatsTitle";
-            this.lblStatsTitle.Size = new System.Drawing.Size(229, 25);
-            this.lblStatsTitle.TabIndex = 1;
-            this.lblStatsTitle.Text = "Citadel - [ Statistics ]";
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -2084,435 +2602,6 @@
             this.label44.Size = new System.Drawing.Size(135, 13);
             this.label44.TabIndex = 16;
             this.label44.Text = "Programmed by Seth Dixon";
-            // 
-            // pnlInfo
-            // 
-            this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlInfo.Controls.Add(this.pictureBox1);
-            this.pnlInfo.Controls.Add(this.gbVersion);
-            this.pnlInfo.Controls.Add(this.gbProjSumm);
-            this.pnlInfo.Controls.Add(this.label19);
-            this.pnlInfo.Location = new System.Drawing.Point(229, 34);
-            this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(609, 599);
-            this.pnlInfo.TabIndex = 3;
-            // 
-            // gbVersion
-            // 
-            this.gbVersion.Controls.Add(this.label43);
-            this.gbVersion.Location = new System.Drawing.Point(20, 284);
-            this.gbVersion.Name = "gbVersion";
-            this.gbVersion.Size = new System.Drawing.Size(244, 308);
-            this.gbVersion.TabIndex = 8;
-            this.gbVersion.TabStop = false;
-            this.gbVersion.Text = "Version 1";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label43.Location = new System.Drawing.Point(6, 21);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(225, 260);
-            this.label43.TabIndex = 0;
-            this.label43.Text = resources.GetString("label43.Text");
-            // 
-            // gbProjSumm
-            // 
-            this.gbProjSumm.Controls.Add(this.label42);
-            this.gbProjSumm.Location = new System.Drawing.Point(20, 55);
-            this.gbProjSumm.Name = "gbProjSumm";
-            this.gbProjSumm.Size = new System.Drawing.Size(571, 218);
-            this.gbProjSumm.TabIndex = 7;
-            this.gbProjSumm.TabStop = false;
-            this.gbProjSumm.Text = "Project Summary";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label42.Location = new System.Drawing.Point(11, 36);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(549, 144);
-            this.label42.TabIndex = 0;
-            this.label42.Text = resources.GetString("label42.Text");
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label19.Location = new System.Drawing.Point(194, 16);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(256, 25);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Citadel - [ Information ]";
-            // 
-            // pnlUsers
-            // 
-            this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlUsers.Controls.Add(this.gbNewuser);
-            this.pnlUsers.Controls.Add(this.gbUserlist);
-            this.pnlUsers.Controls.Add(this.label11);
-            this.pnlUsers.Controls.Add(this.gbCuruser);
-            this.pnlUsers.Location = new System.Drawing.Point(229, 33);
-            this.pnlUsers.Name = "pnlUsers";
-            this.pnlUsers.Size = new System.Drawing.Size(609, 599);
-            this.pnlUsers.TabIndex = 5;
-            // 
-            // gbNewuser
-            // 
-            this.gbNewuser.Controls.Add(this.label20);
-            this.gbNewuser.Controls.Add(this.npnlEmailconf);
-            this.gbNewuser.Controls.Add(this.npnlEmail);
-            this.gbNewuser.Controls.Add(this.npnlLast);
-            this.gbNewuser.Controls.Add(this.npnlFirst);
-            this.gbNewuser.Controls.Add(this.npnlPassconf);
-            this.gbNewuser.Controls.Add(this.npnlPass);
-            this.gbNewuser.Controls.Add(this.npnlUser);
-            this.gbNewuser.Controls.Add(this.txtEmailconf);
-            this.gbNewuser.Controls.Add(this.label16);
-            this.gbNewuser.Controls.Add(this.btnCreate);
-            this.gbNewuser.Controls.Add(this.cmbPerms);
-            this.gbNewuser.Controls.Add(this.txtEmail);
-            this.gbNewuser.Controls.Add(this.txtLastname);
-            this.gbNewuser.Controls.Add(this.txtFirstname);
-            this.gbNewuser.Controls.Add(this.txtPassconf);
-            this.gbNewuser.Controls.Add(this.txtPassword);
-            this.gbNewuser.Controls.Add(this.txtUsername);
-            this.gbNewuser.Location = new System.Drawing.Point(20, 298);
-            this.gbNewuser.Name = "gbNewuser";
-            this.gbNewuser.Size = new System.Drawing.Size(571, 282);
-            this.gbNewuser.TabIndex = 4;
-            this.gbNewuser.TabStop = false;
-            this.gbNewuser.Text = "New User";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(27, 92);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(191, 16);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "* No greater than 15 characters";
-            // 
-            // npnlEmailconf
-            // 
-            this.npnlEmailconf.Location = new System.Drawing.Point(0, 0);
-            this.npnlEmailconf.Name = "npnlEmailconf";
-            this.npnlEmailconf.Size = new System.Drawing.Size(35, 15);
-            this.npnlEmailconf.TabIndex = 13;
-            // 
-            // npnlEmail
-            // 
-            this.npnlEmail.Location = new System.Drawing.Point(0, 0);
-            this.npnlEmail.Name = "npnlEmail";
-            this.npnlEmail.Size = new System.Drawing.Size(35, 15);
-            this.npnlEmail.TabIndex = 13;
-            // 
-            // npnlLast
-            // 
-            this.npnlLast.Location = new System.Drawing.Point(0, 0);
-            this.npnlLast.Name = "npnlLast";
-            this.npnlLast.Size = new System.Drawing.Size(35, 15);
-            this.npnlLast.TabIndex = 13;
-            // 
-            // npnlFirst
-            // 
-            this.npnlFirst.Location = new System.Drawing.Point(0, 0);
-            this.npnlFirst.Name = "npnlFirst";
-            this.npnlFirst.Size = new System.Drawing.Size(35, 15);
-            this.npnlFirst.TabIndex = 13;
-            // 
-            // npnlPassconf
-            // 
-            this.npnlPassconf.Location = new System.Drawing.Point(0, 0);
-            this.npnlPassconf.Name = "npnlPassconf";
-            this.npnlPassconf.Size = new System.Drawing.Size(35, 15);
-            this.npnlPassconf.TabIndex = 13;
-            // 
-            // npnlPass
-            // 
-            this.npnlPass.Location = new System.Drawing.Point(0, 0);
-            this.npnlPass.Name = "npnlPass";
-            this.npnlPass.Size = new System.Drawing.Size(35, 15);
-            this.npnlPass.TabIndex = 12;
-            // 
-            // npnlUser
-            // 
-            this.npnlUser.Location = new System.Drawing.Point(505, 34);
-            this.npnlUser.Name = "npnlUser";
-            this.npnlUser.Size = new System.Drawing.Size(35, 15);
-            this.npnlUser.TabIndex = 11;
-            // 
-            // txtEmailconf
-            // 
-            this.txtEmailconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtEmailconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtEmailconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmailconf.ForeColor = System.Drawing.Color.White;
-            this.txtEmailconf.Location = new System.Drawing.Point(285, 162);
-            this.txtEmailconf.Name = "txtEmailconf";
-            this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
-            this.txtEmailconf.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(176, 221);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(93, 16);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Permissions";
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnCreate.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(476, 236);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(77, 30);
-            this.btnCreate.TabIndex = 8;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // cmbPerms
-            // 
-            this.cmbPerms.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.cmbPerms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.cmbPerms.ColorScheme = Xenon.ThirteenComboBox.ColorSchemes.Dark;
-            this.cmbPerms.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPerms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPerms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cmbPerms.ForeColor = System.Drawing.Color.White;
-            this.cmbPerms.FormattingEnabled = true;
-            this.cmbPerms.Items.AddRange(new object[] {
-            "Can Not Create New Users",
-            "Can Create New Users"});
-            this.cmbPerms.Location = new System.Drawing.Point(179, 240);
-            this.cmbPerms.Name = "cmbPerms";
-            this.cmbPerms.Size = new System.Drawing.Size(221, 23);
-            this.cmbPerms.TabIndex = 7;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(285, 130);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(255, 26);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLastname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtLastname.ForeColor = System.Drawing.Color.White;
-            this.txtLastname.Location = new System.Drawing.Point(30, 162);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(166, 26);
-            this.txtLastname.TabIndex = 4;
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFirstname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtFirstname.ForeColor = System.Drawing.Color.White;
-            this.txtFirstname.Location = new System.Drawing.Point(30, 130);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(166, 26);
-            this.txtFirstname.TabIndex = 3;
-            // 
-            // txtPassconf
-            // 
-            this.txtPassconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtPassconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtPassconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPassconf.ForeColor = System.Drawing.Color.White;
-            this.txtPassconf.Location = new System.Drawing.Point(328, 87);
-            this.txtPassconf.Name = "txtPassconf";
-            this.txtPassconf.Size = new System.Drawing.Size(166, 26);
-            this.txtPassconf.TabIndex = 2;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(328, 55);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(166, 26);
-            this.txtPassword.TabIndex = 1;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(30, 55);
-            this.txtUsername.MaxLength = 15;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(166, 26);
-            this.txtUsername.TabIndex = 0;
-            // 
-            // gbUserlist
-            // 
-            this.gbUserlist.Controls.Add(this.btnDelete);
-            this.gbUserlist.Controls.Add(this.listUsers);
-            this.gbUserlist.Location = new System.Drawing.Point(326, 77);
-            this.gbUserlist.Name = "gbUserlist";
-            this.gbUserlist.Size = new System.Drawing.Size(265, 196);
-            this.gbUserlist.TabIndex = 3;
-            this.gbUserlist.TabStop = false;
-            this.gbUserlist.Text = "User List";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnDelete.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(72, 162);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 23);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Delete Selected";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // listUsers
-            // 
-            this.listUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.listUsers.ForeColor = System.Drawing.Color.White;
-            this.listUsers.FormattingEnabled = true;
-            this.listUsers.ItemHeight = 16;
-            this.listUsers.Location = new System.Drawing.Point(6, 21);
-            this.listUsers.Name = "listUsers";
-            this.listUsers.Size = new System.Drawing.Size(253, 116);
-            this.listUsers.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label11.Location = new System.Drawing.Point(215, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Citadel - [ Users ]";
-            // 
-            // gbCuruser
-            // 
-            this.gbCuruser.Controls.Add(this.btnLogout);
-            this.gbCuruser.Controls.Add(this.lblEmail);
-            this.gbCuruser.Controls.Add(this.lblLastname);
-            this.gbCuruser.Controls.Add(this.label17);
-            this.gbCuruser.Controls.Add(this.lblFirstname);
-            this.gbCuruser.Controls.Add(this.label15);
-            this.gbCuruser.Controls.Add(this.lblCuruser);
-            this.gbCuruser.Location = new System.Drawing.Point(20, 77);
-            this.gbCuruser.Name = "gbCuruser";
-            this.gbCuruser.Size = new System.Drawing.Size(265, 196);
-            this.gbCuruser.TabIndex = 2;
-            this.gbCuruser.TabStop = false;
-            this.gbCuruser.Text = "Selected User";
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogout.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(90, 160);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(73, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Log Out";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblEmail.Location = new System.Drawing.Point(97, 126);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(63, 20);
-            this.lblEmail.TabIndex = 5;
-            this.lblEmail.Text = "lblEmail";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblLastname
-            // 
-            this.lblLastname.AutoSize = true;
-            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblLastname.Location = new System.Drawing.Point(172, 96);
-            this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(71, 18);
-            this.lblLastname.TabIndex = 4;
-            this.lblLastname.Text = "lastName";
-            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label17.Location = new System.Drawing.Point(7, 96);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 18);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Last Name:";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblFirstname
-            // 
-            this.lblFirstname.AutoSize = true;
-            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblFirstname.Location = new System.Drawing.Point(172, 66);
-            this.lblFirstname.Name = "lblFirstname";
-            this.lblFirstname.Size = new System.Drawing.Size(72, 18);
-            this.lblFirstname.TabIndex = 2;
-            this.lblFirstname.Text = "firstName";
-            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label15.Location = new System.Drawing.Point(6, 66);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 18);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "First Name:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCuruser
-            // 
-            this.lblCuruser.AutoSize = true;
-            this.lblCuruser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lblCuruser.Location = new System.Drawing.Point(83, 29);
-            this.lblCuruser.Name = "lblCuruser";
-            this.lblCuruser.Size = new System.Drawing.Size(124, 24);
-            this.lblCuruser.TabIndex = 0;
-            this.lblCuruser.Text = "placeHolder";
             // 
             // pnlSettings
             // 
@@ -2964,6 +3053,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.thirteenForm1.ResumeLayout(false);
             this.thirteenForm1.PerformLayout();
+            this.pnlInfo.ResumeLayout(false);
+            this.pnlInfo.PerformLayout();
+            this.thirteenTabControl5.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
+            this.thirteenTabControl4.ResumeLayout(false);
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            this.pnlUsers.ResumeLayout(false);
+            this.pnlUsers.PerformLayout();
+            this.tcUserList.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
+            this.tcSelectedUser.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tcNewUser.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.pnlStats.ResumeLayout(false);
+            this.pnlStats.PerformLayout();
+            this.thirteenTabControl3.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.thirteenTabControl2.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.gbGraph1.ResumeLayout(false);
+            this.gbGraph1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gbGraph2.ResumeLayout(false);
+            this.gbGraph2.PerformLayout();
             this.pnlStudents.ResumeLayout(false);
             this.pnlStudents.PerformLayout();
             this.thirteenTabControl1.ResumeLayout(false);
@@ -2990,31 +3111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGenderPrev)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGenderNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmNewYear)).EndInit();
-            this.pnlStats.ResumeLayout(false);
-            this.pnlStats.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.gbGraph.ResumeLayout(false);
-            this.gbGraph.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.gbGraph2.ResumeLayout(false);
-            this.gbGraph2.PerformLayout();
-            this.gbGraph1.ResumeLayout(false);
-            this.gbGraph1.PerformLayout();
-            this.pnlInfo.ResumeLayout(false);
-            this.pnlInfo.PerformLayout();
-            this.gbVersion.ResumeLayout(false);
-            this.gbVersion.PerformLayout();
-            this.gbProjSumm.ResumeLayout(false);
-            this.gbProjSumm.PerformLayout();
-            this.pnlUsers.ResumeLayout(false);
-            this.pnlUsers.PerformLayout();
-            this.gbNewuser.ResumeLayout(false);
-            this.gbNewuser.PerformLayout();
-            this.gbUserlist.ResumeLayout(false);
-            this.gbCuruser.ResumeLayout(false);
-            this.gbCuruser.PerformLayout();
             this.pnlSettings.ResumeLayout(false);
             this.pnlSettings.PerformLayout();
             this.pnlSource.ResumeLayout(false);
@@ -3094,11 +3190,8 @@
         private System.Windows.Forms.Label lblSettings;
         private System.Windows.Forms.Panel pnlSettings;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox gbCuruser;
         private System.Windows.Forms.Label lblCuruser;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox gbNewuser;
-        private System.Windows.Forms.GroupBox gbUserlist;
         private System.Windows.Forms.ListBox listUsers;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLastname;
@@ -3147,9 +3240,7 @@
         private Xenon.ThirteenComboBox cmbFilterBy;
         private System.Windows.Forms.PictureBox btnFilter;
         private Xenon.ThirteenTextBox txtFilter;
-        private System.Windows.Forms.GroupBox gbVersion;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.GroupBox gbProjSumm;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label45;
@@ -3159,7 +3250,6 @@
         private System.Windows.Forms.ContextMenuStrip menuRefresh;
         private System.Windows.Forms.ToolStripMenuItem btnRefresh;
         private System.Windows.Forms.Label lblReadingFrom2;
-        private System.Windows.Forms.GroupBox gbGraph;
         private System.Windows.Forms.Label lblStudentCount;
         private System.Windows.Forms.GroupBox gbGraph1;
         private System.Windows.Forms.Panel pnlgFemale;
@@ -3183,7 +3273,6 @@
         private System.Windows.Forms.Label lblgNoFees;
         private System.Windows.Forms.Label lblgFees;
         private System.Windows.Forms.Label lblFeesDue;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblActiveStudents;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblg13;
@@ -3192,11 +3281,9 @@
         private System.Windows.Forms.Label lblg10;
         private System.Windows.Forms.Label lblg9;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label lblaNo;
         private System.Windows.Forms.Label lblaYes;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label lblStudentCount2;
         private System.Windows.Forms.Label lblgF;
         private System.Windows.Forms.Label lblgM;
@@ -3277,5 +3364,19 @@
         private System.Windows.Forms.NumericUpDown nmNewYear;
         private Xenon.ThirteenTabControl thirteenTabControl1;
         private System.Windows.Forms.TabPage tabPage4;
+        private Xenon.ThirteenTabControl thirteenTabControl2;
+        private System.Windows.Forms.TabPage tabPage5;
+        private Xenon.ThirteenTabControl thirteenTabControl3;
+        private System.Windows.Forms.TabPage tabPage6;
+        private Xenon.ThirteenTabControl tcNewUser;
+        private System.Windows.Forms.TabPage tabPage7;
+        private Xenon.ThirteenTabControl tcSelectedUser;
+        private System.Windows.Forms.TabPage tabPage8;
+        private Xenon.ThirteenTabControl tcUserList;
+        private System.Windows.Forms.TabPage tabPage9;
+        private Xenon.ThirteenTabControl thirteenTabControl5;
+        private System.Windows.Forms.TabPage tabPage11;
+        private Xenon.ThirteenTabControl thirteenTabControl4;
+        private System.Windows.Forms.TabPage tabPage10;
     }
 }

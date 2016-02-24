@@ -314,19 +314,12 @@ namespace Citadel
             pnlDashboard.BringToFront();
 
             // Centers controls inside their parents.
-            gbTitle(gbUserlist, btnDelete);
-            gbTitle(gbCuruser, btnLogout);
+            gbTitle(tcUserList, btnDelete);
+            gbTitle(tcSelectedUser, btnLogout);
             gbTitle(pnlStats, lblStatsTitle);
             gbTitle(pnlStats, lblReadingFrom2);
             gbTitle(pnlStudents, lblReadingFrom);
             gbTitle(pnlStudents, lblStudentsTitle);
-
-            // Sets the text color of group boxes to white.
-            gbGraph.ForeColor = Color.White;
-            gbNewuser.ForeColor = Color.White;
-            gbUserlist.ForeColor = Color.White;
-            gbVersion.ForeColor = Color.White;
-            gbProjSumm.ForeColor = Color.White;
 
             // Click event handlers that open the user page
             // when the welcome message is clicked.
@@ -479,7 +472,7 @@ namespace Citadel
             // Disables new user form and user delete if user is not administrator.
             if (perms != 1)
             {
-                gbNewuser.Enabled = false;
+                tcNewUser.Enabled = false;
                 btnDelete.Enabled = false;
             }
 
@@ -609,6 +602,11 @@ namespace Citadel
             {
                 lblActiveStudents.Text = "Active Students: " + aYes.ToString();
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
 
         void statPercentage(double param1, double param2, Panel panel1, Panel panel2, Label label1, Label label2)
