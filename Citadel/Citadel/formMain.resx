@@ -173,30 +173,6 @@
         gg==
 </value>
   </data>
-  <data name="label43.Text" xml:space="preserve">
-    <value>Citadel actually comes 
-second in my attempts
-at fulfilling the goals set 
-by the competition. 
-I decided to restart the 
-project from scratch 
-after learning a good 
-amount about development 
-practices and UI. 
-
-Version 1 shows a much more 
-complicated UI with very 
-little style.</value>
-  </data>
-  <data name="label42.Text" xml:space="preserve">
-    <value>Citadel was made as part of an FBLA-PBL competition known as 
-Desktop Application Programming. In summary, the goal of the 
-program is to store student information that can be easily viewed 
-and exported on a nice user interface. Citadel attempts to do just 
-that by sticking to a nice color scheme, and a simple to use UI,
-while also maintaining useful and convenient functions.
-</value>
-  </data>
   <data name="btnGradeNext.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAwAAAAgCAYAAAAmG5mqAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -240,6 +216,30 @@ while also maintaining useful and convenient functions.
         pMj3GJJHXEfD9vvCsZrIvnOnF0LD4XtIkKFwxljv8H0j7xUeGroJVwidkMj+4ZvHG/DWF8hMfdZJicB2
         qO6nhoY/1CaFuvjB4SOAk8+EgLPUR4SG528GnMHHFJ2KiewrHhAeHueuD9k87hIevc87Vqwn4AmhLoLG
         PsaNKZW6AjowJ3KtL7niAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>Citadel actually comes 
+second in my attempts
+at fulfilling the goals set 
+by the competition. 
+I decided to restart the 
+project from scratch 
+after learning a good 
+amount about development 
+practices and UI. 
+
+Version 1 shows a much more 
+complicated UI with very 
+little style.</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>Citadel was made as part of an FBLA-PBL competition known as 
+Desktop Application Programming. In summary, the goal of the 
+program is to store student information that can be easily viewed 
+and exported on a nice user interface. Citadel attempts to do just 
+that by sticking to a nice color scheme, and a simple to use UI,
+while also maintaining useful and convenient functions.
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
