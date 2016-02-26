@@ -120,12 +120,19 @@ namespace Citadel
         {
             // Removes the selected item from the
             // user file, user array, and listbox.
-            if (listUsers.SelectedItem != null)
+            if (listUsers.SelectedItem != null && rformLogin.userNums[listUsers.SelectedItem.ToString()] != currentUser)
             {
                 int _userNum = rformLogin.userNums[listUsers.SelectedItem.ToString()];
                 delete(rformLogin.users[_userNum, 0] + '\\' + rformLogin.users[_userNum, 1] + '\\' + rformLogin.users[_userNum, 2], specificFolder + "/users.fbla", true);
                 rformLogin.users[rformLogin.userNums[listUsers.SelectedItem.ToString()], 1] = rformLogin.Encrypt("disable");
                 updateUserPage(currentUser);
+
+                // Log the deletion of the user.
+                File.AppendAllText(Path.Combine(specificFolder, "log.fbla"), "[D]\\" + 
+                    rformLogin.users[currentUser, 0].Substring(0, rformLogin.users[currentUser, 0].Length - 1) 
+                    + '\\' + "user\\" + rformLogin.users[_userNum, 0].Substring(0, rformLogin.users[_userNum, 0].Length - 1) 
+                    + '\\' + DateTime.Now.ToShortDateString() + '\\' + DateTime.Now.ToShortTimeString() + "\r\n");
+
                 listUsers.Items.Remove(listUsers.SelectedItem);
             }
         }
@@ -183,6 +190,12 @@ namespace Citadel
         {
             // Writes the text to the user file.
             File.AppendAllText(specificFolder + "/users.fbla", rformLogin.Encrypt(user + '\\' + pass + '\\' + first + '\\' + last + '\\' + email) + "\r\n");
+
+            // Logs the new user.
+            File.AppendAllText(Path.Combine(specificFolder, "log.fbla"), "[A]\\" + 
+                rformLogin.users[currentUser, 0].Substring(0, rformLogin.users[currentUser, 0].Length - 1) + 
+                "\\user\\" + user.Substring(0, user.Length - 1) + '\\' + DateTime.Now.ToShortDateString() +
+                '\\' + DateTime.Now.ToShortTimeString() + "\r\n");
 
             // Sets the user number for the new user and the
             // username without the permission number.

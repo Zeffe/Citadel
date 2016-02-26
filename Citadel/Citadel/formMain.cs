@@ -20,6 +20,7 @@ namespace Citadel
         string specificFolder; // A string used to store the Citadel folder in appData.
         Panel activePanel;     // Panel used to find the height to move indicator.
         public static String[,] students = new String[50, 12]; // 2D array that stores students.
+        String[,] log = new String[200, 6]; // 2D array that stores log information
         int currentView;       // The Student that is currently being viewed
         int studentLength;     // Number of valid student accounts.
         int searchFor = 0;     // Value used to determine the 2nd dimension to filter by.
@@ -48,6 +49,8 @@ namespace Citadel
 
         // Confirmation box that is displayed when attempting to exit.
         msgbox logConf = new msgbox("Are you sure you wish to exit Citadel?", "Exit", 2);
+        // Confirmation box for clearing the log.
+        msgbox logClearConf = new msgbox("Are you sure that you want to clear the log?", "Clear", 2);
         // Confirmation box used to confirm that the user wants to clear data on new student tab.
         msgbox _conf;
         // Confirmation box used when deleting a student.
@@ -481,6 +484,9 @@ namespace Citadel
             statY = pnlgMale.Location.Y;
             statHeight = pnlgMale.Height;
             updateStatistics();
+
+            readToArray(Path.Combine(specificFolder, "log.fbla"), log, "NA");
+            updateLog();
         }
 
         private void lblActiveStudents_Click(object sender, EventArgs e)
@@ -492,6 +498,62 @@ namespace Citadel
             {
                 lblActiveStudents.Text = "Active Students: " + aYes.ToString();
             }
+        }
+
+        void updateLog()
+        {
+            listLog.Items.Clear();
+            readToArray(Path.Combine(specificFolder, "log.fbla"), log, "NA");
+            for (int i = 0; i < log.GetLength(0); i++)
+            {
+                if (log[i, 0] == null) break;
+                listLog.Items.Add(log[i, 0] + " " + log[i, 1] + " : " + log[i, 2] + " : " + log[i, 4]);
+            }
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (logClearConf.ShowDialog() == DialogResult.Yes)
+            {
+                File.Delete(Path.Combine(specificFolder, "log.fbla"));
+                File.Create(Path.Combine(specificFolder, "log.fbla")).Dispose();
+                log.Clear();
+                msgbox msg = new msgbox("Successfully cleared the log.", "Success", 1);
+                msg.Show();
+                listLog.Items.Clear();
+            }
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateLog();
+        }
+
+        string logEvent(string str)
+        {
+            switch (str)
+            {
+                case "[D]": return "deleted";
+                case "[A]": return "added";
+                case "[E]": return "edited";
+            }
+            return "changed";
+        }
+
+        private void listLog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = listLog.SelectedIndex;
+
+            try
+            {
+                // Show extra log information.
+                msgbox msg = new msgbox("'" + log[index, 1] + "' " + logEvent(log[index, 0])
+                    + " the " + log[index, 2] + " '" + log[index, 3]
+                    + "' on " + log[index, 4] + " at " + log[index, 5]
+                    + ".", "Log Info", 1);
+                msg.Show();
+            }
+            catch { }
         }
 
         private void btnRefreshStats_Click(object sender, EventArgs e)

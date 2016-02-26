@@ -55,6 +55,53 @@
             this.lblStudentCount2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.thirteenForm1 = new Xenon.ThirteenForm();
+            this.pnlDashboard = new System.Windows.Forms.Panel();
+            this.tcLog = new Xenon.ThirteenTabControl();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.listLog = new System.Windows.Forms.ListBox();
+            this.menuLog = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thirteenTabControl6 = new Xenon.ThirteenTabControl();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pnlUsers = new System.Windows.Forms.Panel();
+            this.tcUserList = new Xenon.ThirteenTabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.btnDelete = new Xenon.ThirteenButton();
+            this.listUsers = new System.Windows.Forms.ListBox();
+            this.tcSelectedUser = new Xenon.ThirteenTabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.btnLogout = new Xenon.ThirteenButton();
+            this.lblCuruser = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.lblFirstname = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tcNewUser = new Xenon.ThirteenTabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtUsername = new Xenon.ThirteenTextBox();
+            this.npnlEmailconf = new System.Windows.Forms.Panel();
+            this.txtPassword = new Xenon.ThirteenTextBox();
+            this.npnlEmail = new System.Windows.Forms.Panel();
+            this.txtPassconf = new Xenon.ThirteenTextBox();
+            this.npnlLast = new System.Windows.Forms.Panel();
+            this.txtFirstname = new Xenon.ThirteenTextBox();
+            this.npnlFirst = new System.Windows.Forms.Panel();
+            this.txtLastname = new Xenon.ThirteenTextBox();
+            this.npnlPassconf = new System.Windows.Forms.Panel();
+            this.txtEmail = new Xenon.ThirteenTextBox();
+            this.npnlPass = new System.Windows.Forms.Panel();
+            this.cmbPerms = new Xenon.ThirteenComboBox();
+            this.npnlUser = new System.Windows.Forms.Panel();
+            this.btnCreate = new Xenon.ThirteenButton();
+            this.txtEmailconf = new Xenon.ThirteenTextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.pnlStats = new System.Windows.Forms.Panel();
             this.btnRefreshStats = new Xenon.ThirteenButton();
             this.thirteenTabControl3 = new Xenon.ThirteenTabControl();
@@ -184,41 +231,6 @@
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.label42 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.pnlUsers = new System.Windows.Forms.Panel();
-            this.tcUserList = new Xenon.ThirteenTabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.btnDelete = new Xenon.ThirteenButton();
-            this.listUsers = new System.Windows.Forms.ListBox();
-            this.tcSelectedUser = new Xenon.ThirteenTabControl();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.btnLogout = new Xenon.ThirteenButton();
-            this.lblCuruser = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblLastname = new System.Windows.Forms.Label();
-            this.lblFirstname = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tcNewUser = new Xenon.ThirteenTabControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtUsername = new Xenon.ThirteenTextBox();
-            this.npnlEmailconf = new System.Windows.Forms.Panel();
-            this.txtPassword = new Xenon.ThirteenTextBox();
-            this.npnlEmail = new System.Windows.Forms.Panel();
-            this.txtPassconf = new Xenon.ThirteenTextBox();
-            this.npnlLast = new System.Windows.Forms.Panel();
-            this.txtFirstname = new Xenon.ThirteenTextBox();
-            this.npnlFirst = new System.Windows.Forms.Panel();
-            this.txtLastname = new Xenon.ThirteenTextBox();
-            this.npnlPassconf = new System.Windows.Forms.Panel();
-            this.txtEmail = new Xenon.ThirteenTextBox();
-            this.npnlPass = new System.Windows.Forms.Panel();
-            this.cmbPerms = new Xenon.ThirteenComboBox();
-            this.npnlUser = new System.Windows.Forms.Panel();
-            this.btnCreate = new Xenon.ThirteenButton();
-            this.txtEmailconf = new Xenon.ThirteenTextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.pnlSettings = new System.Windows.Forms.Panel();
@@ -235,8 +247,6 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.thirteenControlBox1 = new Xenon.ThirteenControlBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
-            this.pnlDashboard = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.pctPointer = new System.Windows.Forms.PictureBox();
             this.pctPointer2 = new System.Windows.Forms.PictureBox();
             this.pnlbStats = new System.Windows.Forms.Panel();
@@ -282,6 +292,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.thirteenForm1.SuspendLayout();
+            this.pnlDashboard.SuspendLayout();
+            this.tcLog.SuspendLayout();
+            this.tabPage13.SuspendLayout();
+            this.menuLog.SuspendLayout();
+            this.thirteenTabControl6.SuspendLayout();
+            this.pnlUsers.SuspendLayout();
+            this.tcUserList.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.tcSelectedUser.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tcNewUser.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.pnlStats.SuspendLayout();
             this.thirteenTabControl3.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -317,16 +339,8 @@
             this.tabPage11.SuspendLayout();
             this.thirteenTabControl4.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            this.pnlUsers.SuspendLayout();
-            this.tcUserList.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tcSelectedUser.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tcNewUser.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlSource.SuspendLayout();
-            this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).BeginInit();
             this.pnlbStats.SuspendLayout();
@@ -634,10 +648,11 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = Xenon.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.Controls.Add(this.pnlDashboard);
+            this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.pnlStats);
             this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlInfo);
-            this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.label45);
             this.thirteenForm1.Controls.Add(this.label44);
             this.thirteenForm1.Controls.Add(this.pnlSettings);
@@ -652,7 +667,6 @@
             this.thirteenForm1.Controls.Add(this.lblWelcome);
             this.thirteenForm1.Controls.Add(this.thirteenControlBox1);
             this.thirteenForm1.Controls.Add(this.pnlContainer);
-            this.thirteenForm1.Controls.Add(this.pnlDashboard);
             this.thirteenForm1.Controls.Add(this.pctPointer);
             this.thirteenForm1.Controls.Add(this.pctPointer2);
             this.thirteenForm1.Controls.Add(this.pnlbStats);
@@ -670,6 +684,538 @@
             this.thirteenForm1.Size = new System.Drawing.Size(841, 638);
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
+            // 
+            // pnlDashboard
+            // 
+            this.pnlDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlDashboard.Controls.Add(this.tcLog);
+            this.pnlDashboard.Controls.Add(this.thirteenTabControl6);
+            this.pnlDashboard.Controls.Add(this.label6);
+            this.pnlDashboard.Location = new System.Drawing.Point(229, 34);
+            this.pnlDashboard.Name = "pnlDashboard";
+            this.pnlDashboard.Size = new System.Drawing.Size(609, 599);
+            this.pnlDashboard.TabIndex = 5;
+            // 
+            // tcLog
+            // 
+            this.tcLog.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcLog.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcLog.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcLog.Controls.Add(this.tabPage13);
+            this.tcLog.ForeColor = System.Drawing.Color.White;
+            this.tcLog.Location = new System.Drawing.Point(317, 62);
+            this.tcLog.Name = "tcLog";
+            this.tcLog.SelectedIndex = 0;
+            this.tcLog.Size = new System.Drawing.Size(268, 507);
+            this.tcLog.TabIndex = 0;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage13.Controls.Add(this.label49);
+            this.tabPage13.Controls.Add(this.label48);
+            this.tabPage13.Controls.Add(this.listLog);
+            this.tabPage13.Location = new System.Drawing.Point(4, 25);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(260, 478);
+            this.tabPage13.TabIndex = 0;
+            this.tabPage13.Text = "Log";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(68, 456);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(116, 16);
+            this.label49.TabIndex = 3;
+            this.label49.Text = "User : Type : Date";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(34, 435);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(187, 16);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "[A] Add     [D] Delete     [E] Edit";
+            // 
+            // listLog
+            // 
+            this.listLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listLog.ContextMenuStrip = this.menuLog;
+            this.listLog.ForeColor = System.Drawing.Color.White;
+            this.listLog.FormattingEnabled = true;
+            this.listLog.ItemHeight = 16;
+            this.listLog.Location = new System.Drawing.Point(5, 8);
+            this.listLog.Name = "listLog";
+            this.listLog.Size = new System.Drawing.Size(249, 420);
+            this.listLog.TabIndex = 2;
+            this.listLog.SelectedIndexChanged += new System.EventHandler(this.listLog_SelectedIndexChanged);
+            // 
+            // menuLog
+            // 
+            this.menuLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem,
+            this.clearToolStripMenuItem});
+            this.menuLog.Name = "menuLog";
+            this.menuLog.Size = new System.Drawing.Size(114, 48);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // thirteenTabControl6
+            // 
+            this.thirteenTabControl6.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.thirteenTabControl6.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.thirteenTabControl6.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.thirteenTabControl6.Controls.Add(this.tabPage12);
+            this.thirteenTabControl6.ForeColor = System.Drawing.Color.White;
+            this.thirteenTabControl6.Location = new System.Drawing.Point(28, 62);
+            this.thirteenTabControl6.Name = "thirteenTabControl6";
+            this.thirteenTabControl6.SelectedIndex = 0;
+            this.thirteenTabControl6.Size = new System.Drawing.Size(268, 508);
+            this.thirteenTabControl6.TabIndex = 1;
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage12.Location = new System.Drawing.Point(4, 25);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(260, 479);
+            this.tabPage12.TabIndex = 0;
+            this.tabPage12.Text = "Report";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label6.Location = new System.Drawing.Point(190, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(244, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Citadel - [ Dashboard ]";
+            // 
+            // pnlUsers
+            // 
+            this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlUsers.Controls.Add(this.tcUserList);
+            this.pnlUsers.Controls.Add(this.tcSelectedUser);
+            this.pnlUsers.Controls.Add(this.tcNewUser);
+            this.pnlUsers.Controls.Add(this.label11);
+            this.pnlUsers.Location = new System.Drawing.Point(229, 33);
+            this.pnlUsers.Name = "pnlUsers";
+            this.pnlUsers.Size = new System.Drawing.Size(609, 599);
+            this.pnlUsers.TabIndex = 5;
+            // 
+            // tcUserList
+            // 
+            this.tcUserList.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcUserList.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcUserList.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcUserList.Controls.Add(this.tabPage9);
+            this.tcUserList.ForeColor = System.Drawing.Color.White;
+            this.tcUserList.Location = new System.Drawing.Point(326, 77);
+            this.tcUserList.Name = "tcUserList";
+            this.tcUserList.SelectedIndex = 0;
+            this.tcUserList.Size = new System.Drawing.Size(265, 205);
+            this.tcUserList.TabIndex = 7;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage9.Controls.Add(this.btnDelete);
+            this.tabPage9.Controls.Add(this.listUsers);
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(257, 176);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "User List";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnDelete.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(72, 144);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(116, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete Selected";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // listUsers
+            // 
+            this.listUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.listUsers.ForeColor = System.Drawing.Color.White;
+            this.listUsers.FormattingEnabled = true;
+            this.listUsers.ItemHeight = 16;
+            this.listUsers.Location = new System.Drawing.Point(3, 2);
+            this.listUsers.Name = "listUsers";
+            this.listUsers.Size = new System.Drawing.Size(253, 132);
+            this.listUsers.TabIndex = 0;
+            // 
+            // tcSelectedUser
+            // 
+            this.tcSelectedUser.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcSelectedUser.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcSelectedUser.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcSelectedUser.Controls.Add(this.tabPage8);
+            this.tcSelectedUser.ForeColor = System.Drawing.Color.White;
+            this.tcSelectedUser.Location = new System.Drawing.Point(20, 77);
+            this.tcSelectedUser.Name = "tcSelectedUser";
+            this.tcSelectedUser.SelectedIndex = 0;
+            this.tcSelectedUser.Size = new System.Drawing.Size(265, 205);
+            this.tcSelectedUser.TabIndex = 15;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage8.Controls.Add(this.btnLogout);
+            this.tabPage8.Controls.Add(this.lblCuruser);
+            this.tabPage8.Controls.Add(this.lblEmail);
+            this.tabPage8.Controls.Add(this.label15);
+            this.tabPage8.Controls.Add(this.lblLastname);
+            this.tabPage8.Controls.Add(this.lblFirstname);
+            this.tabPage8.Controls.Add(this.label17);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(257, 176);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Selected User";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnLogout.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(93, 140);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(73, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblCuruser
+            // 
+            this.lblCuruser.AutoSize = true;
+            this.lblCuruser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblCuruser.Location = new System.Drawing.Point(86, 9);
+            this.lblCuruser.Name = "lblCuruser";
+            this.lblCuruser.Size = new System.Drawing.Size(124, 24);
+            this.lblCuruser.TabIndex = 0;
+            this.lblCuruser.Text = "placeHolder";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblEmail.Location = new System.Drawing.Point(100, 106);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(63, 20);
+            this.lblEmail.TabIndex = 5;
+            this.lblEmail.Text = "lblEmail";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label15.Location = new System.Drawing.Point(5, 46);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 18);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "First Name:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblLastname
+            // 
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblLastname.Location = new System.Drawing.Point(175, 76);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(71, 18);
+            this.lblLastname.TabIndex = 4;
+            this.lblLastname.Text = "lastName";
+            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblFirstname
+            // 
+            this.lblFirstname.AutoSize = true;
+            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblFirstname.Location = new System.Drawing.Point(175, 46);
+            this.lblFirstname.Name = "lblFirstname";
+            this.lblFirstname.Size = new System.Drawing.Size(72, 18);
+            this.lblFirstname.TabIndex = 2;
+            this.lblFirstname.Text = "firstName";
+            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label17.Location = new System.Drawing.Point(6, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 18);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Last Name:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tcNewUser
+            // 
+            this.tcNewUser.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.tcNewUser.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.tcNewUser.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
+            this.tcNewUser.Controls.Add(this.tabPage7);
+            this.tcNewUser.ForeColor = System.Drawing.Color.White;
+            this.tcNewUser.Location = new System.Drawing.Point(20, 298);
+            this.tcNewUser.Name = "tcNewUser";
+            this.tcNewUser.SelectedIndex = 0;
+            this.tcNewUser.Size = new System.Drawing.Size(571, 282);
+            this.tcNewUser.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage7.Controls.Add(this.label20);
+            this.tabPage7.Controls.Add(this.txtUsername);
+            this.tabPage7.Controls.Add(this.npnlEmailconf);
+            this.tabPage7.Controls.Add(this.txtPassword);
+            this.tabPage7.Controls.Add(this.npnlEmail);
+            this.tabPage7.Controls.Add(this.txtPassconf);
+            this.tabPage7.Controls.Add(this.npnlLast);
+            this.tabPage7.Controls.Add(this.txtFirstname);
+            this.tabPage7.Controls.Add(this.npnlFirst);
+            this.tabPage7.Controls.Add(this.txtLastname);
+            this.tabPage7.Controls.Add(this.npnlPassconf);
+            this.tabPage7.Controls.Add(this.txtEmail);
+            this.tabPage7.Controls.Add(this.npnlPass);
+            this.tabPage7.Controls.Add(this.cmbPerms);
+            this.tabPage7.Controls.Add(this.npnlUser);
+            this.tabPage7.Controls.Add(this.btnCreate);
+            this.tabPage7.Controls.Add(this.txtEmailconf);
+            this.tabPage7.Controls.Add(this.label16);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(563, 253);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "New User";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 70);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(191, 16);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "* No greater than 15 characters";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsername.ForeColor = System.Drawing.Color.White;
+            this.txtUsername.Location = new System.Drawing.Point(14, 33);
+            this.txtUsername.MaxLength = 15;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(166, 26);
+            this.txtUsername.TabIndex = 0;
+            // 
+            // npnlEmailconf
+            // 
+            this.npnlEmailconf.Location = new System.Drawing.Point(184, 23);
+            this.npnlEmailconf.Name = "npnlEmailconf";
+            this.npnlEmailconf.Size = new System.Drawing.Size(35, 15);
+            this.npnlEmailconf.TabIndex = 13;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(312, 33);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(166, 26);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // npnlEmail
+            // 
+            this.npnlEmail.Location = new System.Drawing.Point(243, 24);
+            this.npnlEmail.Name = "npnlEmail";
+            this.npnlEmail.Size = new System.Drawing.Size(35, 15);
+            this.npnlEmail.TabIndex = 13;
+            // 
+            // txtPassconf
+            // 
+            this.txtPassconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtPassconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtPassconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassconf.ForeColor = System.Drawing.Color.White;
+            this.txtPassconf.Location = new System.Drawing.Point(312, 65);
+            this.txtPassconf.Name = "txtPassconf";
+            this.txtPassconf.Size = new System.Drawing.Size(166, 26);
+            this.txtPassconf.TabIndex = 2;
+            // 
+            // npnlLast
+            // 
+            this.npnlLast.Location = new System.Drawing.Point(208, 53);
+            this.npnlLast.Name = "npnlLast";
+            this.npnlLast.Size = new System.Drawing.Size(35, 15);
+            this.npnlLast.TabIndex = 13;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFirstname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFirstname.ForeColor = System.Drawing.Color.White;
+            this.txtFirstname.Location = new System.Drawing.Point(14, 108);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(166, 26);
+            this.txtFirstname.TabIndex = 3;
+            // 
+            // npnlFirst
+            // 
+            this.npnlFirst.Location = new System.Drawing.Point(220, 77);
+            this.npnlFirst.Name = "npnlFirst";
+            this.npnlFirst.Size = new System.Drawing.Size(35, 15);
+            this.npnlFirst.TabIndex = 13;
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLastname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtLastname.ForeColor = System.Drawing.Color.White;
+            this.txtLastname.Location = new System.Drawing.Point(14, 140);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(166, 26);
+            this.txtLastname.TabIndex = 4;
+            // 
+            // npnlPassconf
+            // 
+            this.npnlPassconf.Location = new System.Drawing.Point(218, 116);
+            this.npnlPassconf.Name = "npnlPassconf";
+            this.npnlPassconf.Size = new System.Drawing.Size(35, 15);
+            this.npnlPassconf.TabIndex = 13;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(269, 108);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(255, 26);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // npnlPass
+            // 
+            this.npnlPass.Location = new System.Drawing.Point(208, 151);
+            this.npnlPass.Name = "npnlPass";
+            this.npnlPass.Size = new System.Drawing.Size(35, 15);
+            this.npnlPass.TabIndex = 12;
+            // 
+            // cmbPerms
+            // 
+            this.cmbPerms.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.cmbPerms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cmbPerms.ColorScheme = Xenon.ThirteenComboBox.ColorSchemes.Dark;
+            this.cmbPerms.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPerms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPerms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbPerms.ForeColor = System.Drawing.Color.White;
+            this.cmbPerms.FormattingEnabled = true;
+            this.cmbPerms.Items.AddRange(new object[] {
+            "Can Not Create New Users",
+            "Can Create New Users"});
+            this.cmbPerms.Location = new System.Drawing.Point(163, 218);
+            this.cmbPerms.Name = "cmbPerms";
+            this.cmbPerms.Size = new System.Drawing.Size(221, 23);
+            this.cmbPerms.TabIndex = 7;
+            // 
+            // npnlUser
+            // 
+            this.npnlUser.Location = new System.Drawing.Point(489, 12);
+            this.npnlUser.Name = "npnlUser";
+            this.npnlUser.Size = new System.Drawing.Size(35, 15);
+            this.npnlUser.TabIndex = 11;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnCreate.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Location = new System.Drawing.Point(460, 214);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(77, 30);
+            this.btnCreate.TabIndex = 8;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            // 
+            // txtEmailconf
+            // 
+            this.txtEmailconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.txtEmailconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmailconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
+            this.txtEmailconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmailconf.ForeColor = System.Drawing.Color.White;
+            this.txtEmailconf.Location = new System.Drawing.Point(269, 140);
+            this.txtEmailconf.Name = "txtEmailconf";
+            this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
+            this.txtEmailconf.TabIndex = 6;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(160, 199);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(93, 16);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Permissions";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label11.Location = new System.Drawing.Point(215, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(193, 25);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Citadel - [ Users ]";
             // 
             // pnlStats
             // 
@@ -2191,415 +2737,6 @@
             this.label19.TabIndex = 1;
             this.label19.Text = "Citadel - [ Information ]";
             // 
-            // pnlUsers
-            // 
-            this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlUsers.Controls.Add(this.tcUserList);
-            this.pnlUsers.Controls.Add(this.tcSelectedUser);
-            this.pnlUsers.Controls.Add(this.tcNewUser);
-            this.pnlUsers.Controls.Add(this.label11);
-            this.pnlUsers.Location = new System.Drawing.Point(229, 33);
-            this.pnlUsers.Name = "pnlUsers";
-            this.pnlUsers.Size = new System.Drawing.Size(609, 599);
-            this.pnlUsers.TabIndex = 5;
-            // 
-            // tcUserList
-            // 
-            this.tcUserList.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.tcUserList.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tcUserList.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
-            this.tcUserList.Controls.Add(this.tabPage9);
-            this.tcUserList.ForeColor = System.Drawing.Color.White;
-            this.tcUserList.Location = new System.Drawing.Point(326, 77);
-            this.tcUserList.Name = "tcUserList";
-            this.tcUserList.SelectedIndex = 0;
-            this.tcUserList.Size = new System.Drawing.Size(265, 205);
-            this.tcUserList.TabIndex = 7;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage9.Controls.Add(this.btnDelete);
-            this.tabPage9.Controls.Add(this.listUsers);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(257, 176);
-            this.tabPage9.TabIndex = 0;
-            this.tabPage9.Text = "User List";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnDelete.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(72, 144);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(116, 23);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Delete Selected";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // listUsers
-            // 
-            this.listUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.listUsers.ForeColor = System.Drawing.Color.White;
-            this.listUsers.FormattingEnabled = true;
-            this.listUsers.ItemHeight = 16;
-            this.listUsers.Location = new System.Drawing.Point(3, 2);
-            this.listUsers.Name = "listUsers";
-            this.listUsers.Size = new System.Drawing.Size(253, 132);
-            this.listUsers.TabIndex = 0;
-            // 
-            // tcSelectedUser
-            // 
-            this.tcSelectedUser.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.tcSelectedUser.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tcSelectedUser.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
-            this.tcSelectedUser.Controls.Add(this.tabPage8);
-            this.tcSelectedUser.ForeColor = System.Drawing.Color.White;
-            this.tcSelectedUser.Location = new System.Drawing.Point(20, 77);
-            this.tcSelectedUser.Name = "tcSelectedUser";
-            this.tcSelectedUser.SelectedIndex = 0;
-            this.tcSelectedUser.Size = new System.Drawing.Size(265, 205);
-            this.tcSelectedUser.TabIndex = 15;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage8.Controls.Add(this.btnLogout);
-            this.tabPage8.Controls.Add(this.lblCuruser);
-            this.tabPage8.Controls.Add(this.lblEmail);
-            this.tabPage8.Controls.Add(this.label15);
-            this.tabPage8.Controls.Add(this.lblLastname);
-            this.tabPage8.Controls.Add(this.lblFirstname);
-            this.tabPage8.Controls.Add(this.label17);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(257, 176);
-            this.tabPage8.TabIndex = 0;
-            this.tabPage8.Text = "Selected User";
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogout.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(93, 140);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(73, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Log Out";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // lblCuruser
-            // 
-            this.lblCuruser.AutoSize = true;
-            this.lblCuruser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.lblCuruser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lblCuruser.Location = new System.Drawing.Point(86, 9);
-            this.lblCuruser.Name = "lblCuruser";
-            this.lblCuruser.Size = new System.Drawing.Size(124, 24);
-            this.lblCuruser.TabIndex = 0;
-            this.lblCuruser.Text = "placeHolder";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblEmail.Location = new System.Drawing.Point(100, 106);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(63, 20);
-            this.lblEmail.TabIndex = 5;
-            this.lblEmail.Text = "lblEmail";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label15.Location = new System.Drawing.Point(5, 46);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 18);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "First Name:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblLastname
-            // 
-            this.lblLastname.AutoSize = true;
-            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblLastname.Location = new System.Drawing.Point(175, 76);
-            this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(71, 18);
-            this.lblLastname.TabIndex = 4;
-            this.lblLastname.Text = "lastName";
-            this.lblLastname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblFirstname
-            // 
-            this.lblFirstname.AutoSize = true;
-            this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblFirstname.Location = new System.Drawing.Point(175, 46);
-            this.lblFirstname.Name = "lblFirstname";
-            this.lblFirstname.Size = new System.Drawing.Size(72, 18);
-            this.lblFirstname.TabIndex = 2;
-            this.lblFirstname.Text = "firstName";
-            this.lblFirstname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label17.Location = new System.Drawing.Point(6, 76);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 18);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Last Name:";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tcNewUser
-            // 
-            this.tcNewUser.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.tcNewUser.ClearColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.tcNewUser.ColorScheme = Xenon.ThirteenTabControl.ColorSchemes.Dark;
-            this.tcNewUser.Controls.Add(this.tabPage7);
-            this.tcNewUser.ForeColor = System.Drawing.Color.White;
-            this.tcNewUser.Location = new System.Drawing.Point(20, 298);
-            this.tcNewUser.Name = "tcNewUser";
-            this.tcNewUser.SelectedIndex = 0;
-            this.tcNewUser.Size = new System.Drawing.Size(571, 282);
-            this.tcNewUser.TabIndex = 0;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.tabPage7.Controls.Add(this.label20);
-            this.tabPage7.Controls.Add(this.txtUsername);
-            this.tabPage7.Controls.Add(this.npnlEmailconf);
-            this.tabPage7.Controls.Add(this.txtPassword);
-            this.tabPage7.Controls.Add(this.npnlEmail);
-            this.tabPage7.Controls.Add(this.txtPassconf);
-            this.tabPage7.Controls.Add(this.npnlLast);
-            this.tabPage7.Controls.Add(this.txtFirstname);
-            this.tabPage7.Controls.Add(this.npnlFirst);
-            this.tabPage7.Controls.Add(this.txtLastname);
-            this.tabPage7.Controls.Add(this.npnlPassconf);
-            this.tabPage7.Controls.Add(this.txtEmail);
-            this.tabPage7.Controls.Add(this.npnlPass);
-            this.tabPage7.Controls.Add(this.cmbPerms);
-            this.tabPage7.Controls.Add(this.npnlUser);
-            this.tabPage7.Controls.Add(this.btnCreate);
-            this.tabPage7.Controls.Add(this.txtEmailconf);
-            this.tabPage7.Controls.Add(this.label16);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(563, 253);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "New User";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(11, 70);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(191, 16);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "* No greater than 15 characters";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(14, 33);
-            this.txtUsername.MaxLength = 15;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(166, 26);
-            this.txtUsername.TabIndex = 0;
-            // 
-            // npnlEmailconf
-            // 
-            this.npnlEmailconf.Location = new System.Drawing.Point(184, 23);
-            this.npnlEmailconf.Name = "npnlEmailconf";
-            this.npnlEmailconf.Size = new System.Drawing.Size(35, 15);
-            this.npnlEmailconf.TabIndex = 13;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(312, 33);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(166, 26);
-            this.txtPassword.TabIndex = 1;
-            // 
-            // npnlEmail
-            // 
-            this.npnlEmail.Location = new System.Drawing.Point(243, 24);
-            this.npnlEmail.Name = "npnlEmail";
-            this.npnlEmail.Size = new System.Drawing.Size(35, 15);
-            this.npnlEmail.TabIndex = 13;
-            // 
-            // txtPassconf
-            // 
-            this.txtPassconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtPassconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtPassconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPassconf.ForeColor = System.Drawing.Color.White;
-            this.txtPassconf.Location = new System.Drawing.Point(312, 65);
-            this.txtPassconf.Name = "txtPassconf";
-            this.txtPassconf.Size = new System.Drawing.Size(166, 26);
-            this.txtPassconf.TabIndex = 2;
-            // 
-            // npnlLast
-            // 
-            this.npnlLast.Location = new System.Drawing.Point(208, 53);
-            this.npnlLast.Name = "npnlLast";
-            this.npnlLast.Size = new System.Drawing.Size(35, 15);
-            this.npnlLast.TabIndex = 13;
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFirstname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtFirstname.ForeColor = System.Drawing.Color.White;
-            this.txtFirstname.Location = new System.Drawing.Point(14, 108);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(166, 26);
-            this.txtFirstname.TabIndex = 3;
-            // 
-            // npnlFirst
-            // 
-            this.npnlFirst.Location = new System.Drawing.Point(220, 77);
-            this.npnlFirst.Name = "npnlFirst";
-            this.npnlFirst.Size = new System.Drawing.Size(35, 15);
-            this.npnlFirst.TabIndex = 13;
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLastname.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtLastname.ForeColor = System.Drawing.Color.White;
-            this.txtLastname.Location = new System.Drawing.Point(14, 140);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(166, 26);
-            this.txtLastname.TabIndex = 4;
-            // 
-            // npnlPassconf
-            // 
-            this.npnlPassconf.Location = new System.Drawing.Point(218, 116);
-            this.npnlPassconf.Name = "npnlPassconf";
-            this.npnlPassconf.Size = new System.Drawing.Size(35, 15);
-            this.npnlPassconf.TabIndex = 13;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(269, 108);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(255, 26);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // npnlPass
-            // 
-            this.npnlPass.Location = new System.Drawing.Point(208, 151);
-            this.npnlPass.Name = "npnlPass";
-            this.npnlPass.Size = new System.Drawing.Size(35, 15);
-            this.npnlPass.TabIndex = 12;
-            // 
-            // cmbPerms
-            // 
-            this.cmbPerms.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.cmbPerms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.cmbPerms.ColorScheme = Xenon.ThirteenComboBox.ColorSchemes.Dark;
-            this.cmbPerms.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPerms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPerms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cmbPerms.ForeColor = System.Drawing.Color.White;
-            this.cmbPerms.FormattingEnabled = true;
-            this.cmbPerms.Items.AddRange(new object[] {
-            "Can Not Create New Users",
-            "Can Create New Users"});
-            this.cmbPerms.Location = new System.Drawing.Point(163, 218);
-            this.cmbPerms.Name = "cmbPerms";
-            this.cmbPerms.Size = new System.Drawing.Size(221, 23);
-            this.cmbPerms.TabIndex = 7;
-            // 
-            // npnlUser
-            // 
-            this.npnlUser.Location = new System.Drawing.Point(489, 12);
-            this.npnlUser.Name = "npnlUser";
-            this.npnlUser.Size = new System.Drawing.Size(35, 15);
-            this.npnlUser.TabIndex = 11;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.AccentColor = System.Drawing.Color.DodgerBlue;
-            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnCreate.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(460, 214);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(77, 30);
-            this.btnCreate.TabIndex = 8;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = false;
-            // 
-            // txtEmailconf
-            // 
-            this.txtEmailconf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.txtEmailconf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailconf.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.txtEmailconf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmailconf.ForeColor = System.Drawing.Color.White;
-            this.txtEmailconf.Location = new System.Drawing.Point(269, 140);
-            this.txtEmailconf.Name = "txtEmailconf";
-            this.txtEmailconf.Size = new System.Drawing.Size(255, 26);
-            this.txtEmailconf.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(160, 199);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(93, 16);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Permissions";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label11.Location = new System.Drawing.Point(215, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Citadel - [ Users ]";
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -2757,25 +2894,6 @@
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(78, 28);
             this.pnlContainer.TabIndex = 3;
-            // 
-            // pnlDashboard
-            // 
-            this.pnlDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlDashboard.Controls.Add(this.label6);
-            this.pnlDashboard.Location = new System.Drawing.Point(229, 34);
-            this.pnlDashboard.Name = "pnlDashboard";
-            this.pnlDashboard.Size = new System.Drawing.Size(609, 599);
-            this.pnlDashboard.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label6.Location = new System.Drawing.Point(190, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(244, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Citadel - [ Dashboard ]";
             // 
             // pctPointer
             // 
@@ -3070,6 +3188,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.thirteenForm1.ResumeLayout(false);
             this.thirteenForm1.PerformLayout();
+            this.pnlDashboard.ResumeLayout(false);
+            this.pnlDashboard.PerformLayout();
+            this.tcLog.ResumeLayout(false);
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
+            this.menuLog.ResumeLayout(false);
+            this.thirteenTabControl6.ResumeLayout(false);
+            this.pnlUsers.ResumeLayout(false);
+            this.pnlUsers.PerformLayout();
+            this.tcUserList.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
+            this.tcSelectedUser.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tcNewUser.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.pnlStats.ResumeLayout(false);
             this.pnlStats.PerformLayout();
             this.thirteenTabControl3.ResumeLayout(false);
@@ -3118,22 +3253,10 @@
             this.thirteenTabControl4.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            this.pnlUsers.ResumeLayout(false);
-            this.pnlUsers.PerformLayout();
-            this.tcUserList.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
-            this.tcSelectedUser.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
-            this.tcNewUser.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
             this.pnlSettings.ResumeLayout(false);
             this.pnlSettings.PerformLayout();
             this.pnlSource.ResumeLayout(false);
             this.pnlSource.PerformLayout();
-            this.pnlDashboard.ResumeLayout(false);
-            this.pnlDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
             this.pnlbStats.ResumeLayout(false);
@@ -3396,5 +3519,15 @@
         private Xenon.ThirteenTabControl thirteenTabControl4;
         private System.Windows.Forms.TabPage tabPage10;
         private Xenon.ThirteenButton btnRefreshStats;
+        private Xenon.ThirteenTabControl tcLog;
+        private System.Windows.Forms.TabPage tabPage13;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.ListBox listLog;
+        private Xenon.ThirteenTabControl thirteenTabControl6;
+        private System.Windows.Forms.TabPage tabPage12;
+        private System.Windows.Forms.ContextMenuStrip menuLog;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
     }
 }

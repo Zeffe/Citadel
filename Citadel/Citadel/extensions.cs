@@ -14,6 +14,17 @@ namespace Extensions
             return str.All(c => c >= '0' && c <= '9');
         }
 
+        public static void Clear(this string[,] array)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    array[i, j] = null;
+                }
+            }
+        }
+
         public static void Sort(this int[] arr)
         {
             int temp = 0;
