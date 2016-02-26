@@ -324,8 +324,21 @@ namespace Citadel
                     refreshStudentTree("");
                     if (!editing)
                     {
+                        // Log the addition of the student.
+                        File.AppendAllText(Path.Combine(specificFolder, "log.fbla"), "[A]\\" +
+                                rformLogin.users[currentUser, 0].Substring(0, rformLogin.users[currentUser, 0].Length - 1)
+                                + '\\' + "student\\" + txtNewFirst.Text + " " + txtNewLast.Text
+                                + '\\' + DateTime.Now.ToShortDateString() + '\\' + DateTime.Now.ToShortTimeString() + "\r\n");
+
                         msgbox msg = new msgbox("Successfully added " + txtNewFirst.Text + " " + txtNewLast.Text + ".", "Success", 1);
                         msg.Show();
+                    }
+                    else
+                    {
+                        File.AppendAllText(Path.Combine(specificFolder, "log.fbla"), "[E]\\" +
+                                rformLogin.users[currentUser, 0].Substring(0, rformLogin.users[currentUser, 0].Length - 1)
+                                + '\\' + "student\\" + txtNewFirst.Text + " " + txtNewLast.Text
+                                + '\\' + DateTime.Now.ToShortDateString() + '\\' + DateTime.Now.ToShortTimeString() + "\r\n");
                     }
 
                     // Reset the new student form.
@@ -430,12 +443,18 @@ namespace Citadel
 
             if (delConf.DialogResult == DialogResult.Yes)
             {
+                // Log the deletion of the student.
+                File.AppendAllText(Path.Combine(specificFolder, "log.fbla"), "[D]\\" +
+                    rformLogin.users[currentUser, 0].Substring(0, rformLogin.users[currentUser, 0].Length - 1)
+                    + '\\' + "student\\" + students[currentView, 1] + " " + students[currentView, 2]
+                    +'\\' + DateTime.Now.ToShortDateString() + '\\' + DateTime.Now.ToShortTimeString() + "\r\n");
+
                 // String used to find the student inside the student file.
                 string _contains = students[currentView, 1] + '\\' + students[currentView, 2] + '\\'
                     + students[currentView, 3] + '\\';
                 // Delete the line that contains _contains in the given source.
                 delete(_contains, specificFolder + "/data/students.fbla", false);
-
+                
                 // Reset the students array and treeview.
                 readToArray(specificFolder + "/data/students.fbla", students, "NA");
                 refreshStudentTree("");
