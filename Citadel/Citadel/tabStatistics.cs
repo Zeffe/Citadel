@@ -90,6 +90,8 @@ namespace Citadel
                     foreach (String state in tempState)
                     {
                         listStates.Items.Add(state + " :: " + states[state]);
+                        cmbReportState.Items.Add(state);
+                        cmbReportState.SelectedIndex = 0;
                     }
 
                     // Add the years to the listbox.

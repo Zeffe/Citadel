@@ -66,6 +66,9 @@
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thirteenTabControl6 = new Xenon.ThirteenTabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.label55 = new System.Windows.Forms.Label();
+            this.cmbReportState = new Xenon.ThirteenComboBox();
+            this.btnCreateReport = new Xenon.ThirteenButton();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlUsers = new System.Windows.Forms.Panel();
             this.tcUserList = new Xenon.ThirteenTabControl();
@@ -297,6 +300,7 @@
             this.tabPage13.SuspendLayout();
             this.menuLog.SuspendLayout();
             this.thirteenTabControl6.SuspendLayout();
+            this.tabPage12.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.tcUserList.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -791,12 +795,56 @@
             // tabPage12
             // 
             this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage12.Controls.Add(this.label55);
+            this.tabPage12.Controls.Add(this.cmbReportState);
+            this.tabPage12.Controls.Add(this.btnCreateReport);
             this.tabPage12.Location = new System.Drawing.Point(4, 25);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage12.Size = new System.Drawing.Size(260, 479);
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "Report";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(20, 12);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(39, 16);
+            this.label55.TabIndex = 5;
+            this.label55.Text = "State";
+            // 
+            // cmbReportState
+            // 
+            this.cmbReportState.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.cmbReportState.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cmbReportState.ColorScheme = Xenon.ThirteenComboBox.ColorSchemes.Dark;
+            this.cmbReportState.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbReportState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReportState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cmbReportState.ForeColor = System.Drawing.Color.White;
+            this.cmbReportState.FormattingEnabled = true;
+            this.cmbReportState.Items.AddRange(new object[] {
+            "All"});
+            this.cmbReportState.Location = new System.Drawing.Point(23, 31);
+            this.cmbReportState.Name = "cmbReportState";
+            this.cmbReportState.Size = new System.Drawing.Size(121, 23);
+            this.cmbReportState.TabIndex = 4;
+            // 
+            // btnCreateReport
+            // 
+            this.btnCreateReport.AccentColor = System.Drawing.Color.DodgerBlue;
+            this.btnCreateReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnCreateReport.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
+            this.btnCreateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btnCreateReport.ForeColor = System.Drawing.Color.White;
+            this.btnCreateReport.Location = new System.Drawing.Point(165, 31);
+            this.btnCreateReport.Name = "btnCreateReport";
+            this.btnCreateReport.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateReport.TabIndex = 3;
+            this.btnCreateReport.Text = "Create";
+            this.btnCreateReport.UseVisualStyleBackColor = false;
+            this.btnCreateReport.Click += new System.EventHandler(this.btnCreateReport_Click);
             // 
             // label6
             // 
@@ -1235,7 +1283,7 @@
             this.btnRefreshStats.AccentColor = System.Drawing.Color.DodgerBlue;
             this.btnRefreshStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnRefreshStats.ColorScheme = Xenon.ThirteenButton.ColorSchemes.Dark;
-            this.btnRefreshStats.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.btnRefreshStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnRefreshStats.ForeColor = System.Drawing.Color.White;
             this.btnRefreshStats.Location = new System.Drawing.Point(516, 41);
             this.btnRefreshStats.Name = "btnRefreshStats";
@@ -3195,6 +3243,8 @@
             this.tabPage13.PerformLayout();
             this.menuLog.ResumeLayout(false);
             this.thirteenTabControl6.ResumeLayout(false);
+            this.tabPage12.ResumeLayout(false);
+            this.tabPage12.PerformLayout();
             this.pnlUsers.ResumeLayout(false);
             this.pnlUsers.PerformLayout();
             this.tcUserList.ResumeLayout(false);
@@ -3529,5 +3579,8 @@
         private System.Windows.Forms.ContextMenuStrip menuLog;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.Label label55;
+        private Xenon.ThirteenComboBox cmbReportState;
+        private Xenon.ThirteenButton btnCreateReport;
     }
 }

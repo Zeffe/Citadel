@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Extensions;
+using cXML = ClosedXML.Excel;
+using dXML = DocumentFormat.OpenXml.Spreadsheet;
 
 namespace Citadel
 {
@@ -554,6 +556,118 @@ namespace Citadel
                 msg.Show();
             }
             catch { }
+        }
+
+        private void btnCreateReport_Click(object sender, EventArgs e)
+        {
+            var wb = new cXML.XLWorkbook();
+            var ws = wb.Worksheets.Add("Members");
+
+            string title = "Citadel Report";
+
+            if (cmbReportState.Text != "All") title += " - " + cmbReportState.Text;
+
+            //Title
+            ws.Cell("B2").Value = title;
+
+            // Headers
+            ws.Cell("B3").Value = "Mem #";
+            ws.Cell("C3").Value = "FName";
+            ws.Cell("D3").Value = "LName";
+            ws.Cell("E3").Value = "Joined";
+            ws.Cell("F3").Value = "Grade";
+            ws.Cell("G3").Value = "Due";
+
+            int skipped = 0;
+
+            // Populate the spreadsheet.
+            for (int i = 4; i - 4 < students.GetLength(0); i++)
+            {
+                if (students[i - 4, 0] == null) break;
+                if (students[i - 4, 11] == cmbReportState.Text || cmbReportState.Text == "All")
+                {
+                    ws.Cell("B" + (i - skipped).ToString()).Value = students[i - 4, 0]; // Member Numbers
+                    ws.Cell("C" + (i - skipped).ToString()).Value = students[i - 4, 1]; // First Names
+                    ws.Cell("D" + (i - skipped).ToString()).Value = students[i - 4, 2]; // Last Names
+                    ws.Cell("E" + (i - skipped).ToString()).Value = students[i - 4, 4]; // Year Joined
+                    ws.Cell("F" + (i - skipped).ToString()).Value = students[i - 4, 7]; // Grade
+                    ws.Cell("G" + (i - skipped).ToString()).Value = students[i - 4, 3]; // Amount Due
+                } else
+                {
+                    skipped++;
+                }
+            }
+
+            // Members Owing
+            ws.Cell("C" + (studentLength + 4 - skipped).ToString()).Value = "Owing:";
+            ws.Cell("C" + (studentLength + 4 - skipped).ToString()).Style.Font.SetBold();
+
+            ws.Cell("D" + (studentLength + 4 - skipped).ToString()).Value = hasFees.ToString() + " of " + studentLength.ToString();
+            ws.Cell("D" + (studentLength + 4 - skipped).ToString()).Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+
+            // Active Members
+            ws.Cell("C" + (studentLength + 5 - skipped).ToString()).Value = "Active:";
+            ws.Cell("C" + (studentLength + 5 - skipped).ToString()).Style.Font.SetBold();
+
+            ws.Cell("D" + (studentLength + 5 - skipped).ToString()).Value = aYes.ToString() + " of " + studentLength.ToString();
+            ws.Cell("D" + (studentLength + 5 - skipped).ToString()).Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+
+            // Total Fees due
+            ws.Cell("F" + (studentLength + 4 - skipped).ToString()).Value = "Total:";
+            ws.Cell("F" + (studentLength + 4 - skipped).ToString()).Style.Font.SetBold();
+
+            ws.Cell("G" + (studentLength + 4 - skipped).ToString()).Value = "$" + totalFees.ToString();
+            ws.Cell("G" + (studentLength + 4 - skipped).ToString()).Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+
+            //From worksheet
+            var rngTable = ws.Range("B2:G" + (studentLength + 5 - skipped).ToString());
+
+            rngTable.FirstCell().Style
+                .Font.SetBold()
+                .Fill.SetBackgroundColor(cXML.XLColor.CornflowerBlue)
+                .Alignment.SetHorizontal(cXML.XLAlignmentHorizontalValues.Center);
+
+            rngTable.FirstRow().Merge(); // We could've also used: rngTable.Range("A1:E1").Merge() or rngTable.Row(1).Merge()
+
+            var num = rngTable.Range("A1:A" + (studentLength + 2 - skipped).ToString());
+            num.Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+
+            var due = rngTable.Range("F1:F" + (studentLength + 2 - skipped).ToString());
+            due.Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+
+            var rngHeaders = rngTable.Range("A2:F2"); // The address is relative to rngTable (NOT the worksheet)
+            rngHeaders.Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+            rngHeaders.Style.Font.Bold = true;
+            rngHeaders.Style.Font.FontColor = cXML.XLColor.DarkBlue;
+            rngHeaders.Style.Fill.BackgroundColor = cXML.XLColor.Aqua;
+
+            var rngData = ws.Range("B3:G" + (studentLength + 5 - skipped).ToString());
+            var excelTable = rngData.CreateTable();
+
+            // Add the totals row
+            excelTable.ShowTotalsRow = true;
+            // Put the average on the field "Income"
+            // Notice how we're calling the cell by the column name
+            //excelTable.Field("Income").TotalsRowFunction = cXML.XLTotalsRowFunction.Average;
+            // Put a label on the totals cell of the field "DOB"
+            //excelTable.Field("DOB").TotalsRowLabel = "Average:";
+
+            //Add thick borders to the contents of our spreadsheet
+            ws.RangeUsed().Style.Border.OutsideBorder = cXML.XLBorderStyleValues.Thick;
+
+            // You can also specify the border for each side:
+            // contents.FirstColumn().Style.Border.LeftBorder = XLBorderStyleValues.Thick;
+            // contents.LastColumn().Style.Border.RightBorder = XLBorderStyleValues.Thick;
+            // contents.FirstRow().Style.Border.TopBorder = XLBorderStyleValues.Thick;
+            // contents.LastRow().Style.Border.BottomBorder = XLBorderStyleValues.Thick;
+
+            ws.Columns().AdjustToContents(); // You can also specify the range of columns to adjust, e.g.
+                                             // ws.Columns(2, 6).AdjustToContents(); or ws.Columns("2-6").AdjustToContents();
+
+            wb.SaveAs("C:\\Users\\Seth\\Desktop\\Showcase.xlsx");
+
+            msgbox msg = new msgbox("Successfully generated report.", "Success", 1);
+            msg.Show();
         }
 
         private void btnRefreshStats_Click(object sender, EventArgs e)
