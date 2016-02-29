@@ -652,10 +652,10 @@
             this.thirteenForm1.AccentColor = System.Drawing.Color.DodgerBlue;
             this.thirteenForm1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.thirteenForm1.ColorScheme = Xenon.ThirteenForm.ColorSchemes.Dark;
+            this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlDashboard);
             this.thirteenForm1.Controls.Add(this.pnlUsers);
             this.thirteenForm1.Controls.Add(this.pnlStats);
-            this.thirteenForm1.Controls.Add(this.pnlStudents);
             this.thirteenForm1.Controls.Add(this.pnlInfo);
             this.thirteenForm1.Controls.Add(this.label45);
             this.thirteenForm1.Controls.Add(this.label44);
@@ -1858,6 +1858,7 @@
             this.tvStudents.Size = new System.Drawing.Size(253, 137);
             this.tvStudents.TabIndex = 0;
             this.tvStudents.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvStudents_AfterSelect);
+            this.tvStudents.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tvStudents_KeyDown);
             // 
             // tcStudent
             // 

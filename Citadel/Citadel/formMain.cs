@@ -664,10 +664,18 @@ namespace Citadel
             ws.Columns().AdjustToContents(); // You can also specify the range of columns to adjust, e.g.
                                              // ws.Columns(2, 6).AdjustToContents(); or ws.Columns("2-6").AdjustToContents();
 
-            wb.SaveAs("C:\\Users\\Seth\\Desktop\\Showcase.xlsx");
+            wb.SaveAs("C:\\Users\\SethD\\Desktop\\Showcase.xlsx");
 
             msgbox msg = new msgbox("Successfully generated report.", "Success", 1);
             msg.Show();
+        }
+
+        private void tvStudents_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                delStudent();
+            }
         }
 
         private void btnRefreshStats_Click(object sender, EventArgs e)
