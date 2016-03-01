@@ -1,72 +1,25 @@
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Citadel.pdb
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.dll
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.xml
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.csprojResolveAssemblyReference.cache
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.formMain.resources
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.formQuickAdd.resources
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.rformLogin.resources
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.msgbox.resources
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.exe
-C:\Users\5654920324\Desktop\Citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.exe
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Citadel.pdb
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.xml
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.csprojResolveAssemblyReference.cache
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.formMain.resources
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.formQuickAdd.resources
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.rformLogin.resources
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.msgbox.resources
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\ClosedXML.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\DocumentFormat.OpenXml.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\ClosedXML.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.exe
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Citadel.exe
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Citadel.pdb
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\ClosedXML.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\DocumentFormat.OpenXml.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\ClosedXML.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.csprojResolveAssemblyReference.cache
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.formMain.resources
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.formQuickAdd.resources
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.rformLogin.resources
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.msgbox.resources
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
-C:\Users\SethD\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Citadel.exe
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Citadel.pdb
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\ClosedXML.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\ClosedXML.xml
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.csprojResolveAssemblyReference.cache
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.formMain.resources
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.formQuickAdd.resources
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.rformLogin.resources
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.msgbox.resources
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.Properties.Resources.resources
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.exe
+C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.pdb

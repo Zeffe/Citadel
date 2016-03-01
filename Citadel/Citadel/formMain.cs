@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Extensions;
 using cXML = ClosedXML.Excel;
 using dXML = DocumentFormat.OpenXml.Spreadsheet;
+using System.Diagnostics;
 
 namespace Citadel
 {
@@ -48,6 +49,9 @@ namespace Citadel
         Dictionary<String, int> years = new Dictionary<String, int>();
         // Saves the amount of students in a specific state.
         Dictionary<String, int> states = new Dictionary<String, int>();
+
+        // List of panel buttons.
+        List<Panel> panelButtons = new List<Panel>();
 
         // Confirmation box that is displayed when attempting to exit.
         msgbox logConf = new msgbox("Are you sure you wish to exit Citadel?", "Exit", 2);
@@ -112,7 +116,13 @@ namespace Citadel
                 pctPointer2.Visible = false;
                 if (activePanel != pnl)
                 {
-                    pnl.BackColor = Color.FromArgb(50, 50, 50);
+                    foreach (Panel panel in panelButtons)
+                    {
+                        if (panel != activePanel)
+                        {
+                            panel.BackColor = Color.FromArgb(50, 50, 50);
+                        }
+                    }
                 }
                 else
                 {
@@ -197,6 +207,7 @@ namespace Citadel
         void panelButton(Panel panelb, Label label, PictureBox picture, Panel display)
         {
             displays.Add(panelb, display);
+            panelButtons.Add(panelb);
             heights.Add(panelb, new Point(pctPointer.Location.X, panelb.Location.Y + 12));
             panelb.Click += new System.EventHandler(pnlClick);
             picture.Click += new System.EventHandler(pctClick);
@@ -489,6 +500,10 @@ namespace Citadel
 
             readToArray(Path.Combine(specificFolder, "log.fbla"), log, "NA");
             updateLog();
+
+            lblLocal.Text = Application.StartupPath;
+            lblData.Text = specificFolder;
+
         }
 
         private void lblActiveStudents_Click(object sender, EventArgs e)
@@ -579,12 +594,17 @@ namespace Citadel
             ws.Cell("G3").Value = "Due";
 
             int skipped = 0;
+            int total = 0;
+            int owing = 0;
+            int active = 0;
+            Double fees = 0;
+            Double _temp;
 
             // Populate the spreadsheet.
             for (int i = 4; i - 4 < students.GetLength(0); i++)
             {
                 if (students[i - 4, 0] == null) break;
-                if (students[i - 4, 11] == cmbReportState.Text || cmbReportState.Text == "All")
+                if ((students[i - 4, 11] == cmbReportState.Text || cmbReportState.Text == "All") && rbAll.Checked || (rbOwing.Checked && students[i-4, 3] != "$0.00") || (rbPaid.Checked && students[i - 4, 3] == "$0.00"))
                 {
                     ws.Cell("B" + (i - skipped).ToString()).Value = students[i - 4, 0]; // Member Numbers
                     ws.Cell("C" + (i - skipped).ToString()).Value = students[i - 4, 1]; // First Names
@@ -592,6 +612,11 @@ namespace Citadel
                     ws.Cell("E" + (i - skipped).ToString()).Value = students[i - 4, 4]; // Year Joined
                     ws.Cell("F" + (i - skipped).ToString()).Value = students[i - 4, 7]; // Grade
                     ws.Cell("G" + (i - skipped).ToString()).Value = students[i - 4, 3]; // Amount Due
+                    if (students[i - 4, 3] != "$0.00") owing++;
+                    if (students[i - 4, 5] == "1") active++;
+                    Double.TryParse(students[i - 4, 3].Trim('$'), out _temp);
+                    fees += _temp;
+                    total++;
                 } else
                 {
                     skipped++;
@@ -602,21 +627,21 @@ namespace Citadel
             ws.Cell("C" + (studentLength + 4 - skipped).ToString()).Value = "Owing:";
             ws.Cell("C" + (studentLength + 4 - skipped).ToString()).Style.Font.SetBold();
 
-            ws.Cell("D" + (studentLength + 4 - skipped).ToString()).Value = hasFees.ToString() + " of " + studentLength.ToString();
+            ws.Cell("D" + (studentLength + 4 - skipped).ToString()).Value = owing.ToString() + " of " + total.ToString();
             ws.Cell("D" + (studentLength + 4 - skipped).ToString()).Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
 
             // Active Members
             ws.Cell("C" + (studentLength + 5 - skipped).ToString()).Value = "Active:";
             ws.Cell("C" + (studentLength + 5 - skipped).ToString()).Style.Font.SetBold();
 
-            ws.Cell("D" + (studentLength + 5 - skipped).ToString()).Value = aYes.ToString() + " of " + studentLength.ToString();
+            ws.Cell("D" + (studentLength + 5 - skipped).ToString()).Value = active.ToString() + " of " + total.ToString();
             ws.Cell("D" + (studentLength + 5 - skipped).ToString()).Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
 
             // Total Fees due
             ws.Cell("F" + (studentLength + 4 - skipped).ToString()).Value = "Total:";
             ws.Cell("F" + (studentLength + 4 - skipped).ToString()).Style.Font.SetBold();
 
-            ws.Cell("G" + (studentLength + 4 - skipped).ToString()).Value = "$" + totalFees.ToString();
+            ws.Cell("G" + (studentLength + 4 - skipped).ToString()).Value = "$" + fees.ToString();
             ws.Cell("G" + (studentLength + 4 - skipped).ToString()).Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
 
             //From worksheet
@@ -627,7 +652,7 @@ namespace Citadel
                 .Fill.SetBackgroundColor(cXML.XLColor.CornflowerBlue)
                 .Alignment.SetHorizontal(cXML.XLAlignmentHorizontalValues.Center);
 
-            rngTable.FirstRow().Merge(); // We could've also used: rngTable.Range("A1:E1").Merge() or rngTable.Row(1).Merge()
+            rngTable.FirstRow().Merge();
 
             var num = rngTable.Range("A1:A" + (studentLength + 2 - skipped).ToString());
             num.Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
@@ -644,30 +669,32 @@ namespace Citadel
             var rngData = ws.Range("B3:G" + (studentLength + 5 - skipped).ToString());
             var excelTable = rngData.CreateTable();
 
-            // Add the totals row
             excelTable.ShowTotalsRow = true;
-            // Put the average on the field "Income"
-            // Notice how we're calling the cell by the column name
-            //excelTable.Field("Income").TotalsRowFunction = cXML.XLTotalsRowFunction.Average;
-            // Put a label on the totals cell of the field "DOB"
-            //excelTable.Field("DOB").TotalsRowLabel = "Average:";
 
-            //Add thick borders to the contents of our spreadsheet
+            //Add thick borders to the contents of the spreadsheet
             ws.RangeUsed().Style.Border.OutsideBorder = cXML.XLBorderStyleValues.Thick;
 
-            // You can also specify the border for each side:
-            // contents.FirstColumn().Style.Border.LeftBorder = XLBorderStyleValues.Thick;
-            // contents.LastColumn().Style.Border.RightBorder = XLBorderStyleValues.Thick;
-            // contents.FirstRow().Style.Border.TopBorder = XLBorderStyleValues.Thick;
-            // contents.LastRow().Style.Border.BottomBorder = XLBorderStyleValues.Thick;
+            ws.Columns().AdjustToContents();
 
-            ws.Columns().AdjustToContents(); // You can also specify the range of columns to adjust, e.g.
-                                             // ws.Columns(2, 6).AdjustToContents(); or ws.Columns("2-6").AdjustToContents();
+            wb.SaveAs(Path.Combine(Application.StartupPath, "Report" + reportSuffix() + ".xlsx"));
 
-            wb.SaveAs("C:\\Users\\SethD\\Desktop\\Showcase.xlsx");
-
-            msgbox msg = new msgbox("Successfully generated report.", "Success", 1);
+            msgbox msg = new msgbox("Successfully generated report in program's local directory.", "Success", 1);
             msg.Show();
+        }
+
+        string reportSuffix()
+        {
+            if (rbAll.Checked)
+            {
+                return "All";
+            } else if (rbOwing.Checked)
+            {
+                return "Owing";
+            } else if (rbPaid.Checked)
+            {
+                return "Paid";
+            }
+            return "1";
         }
 
         private void tvStudents_KeyDown(object sender, KeyEventArgs e)
@@ -676,6 +703,100 @@ namespace Citadel
             {
                 delStudent();
             }
+        }
+
+        private void btnCreateSenior_Click(object sender, EventArgs e)
+        {
+            var wb = new cXML.XLWorkbook();
+            var ws = wb.Worksheets.Add("Members");
+
+            string title = "Senior Report";
+
+            //Title
+            ws.Cell("B2").Value = title;
+
+            // Headers
+            ws.Cell("B3").Value = "State";
+            ws.Cell("C3").Value = "FName";
+            ws.Cell("D3").Value = "LName";
+            ws.Cell("E3").Value = "Email";
+
+            int skipped = 0;
+            int total = 0;
+
+            // Populate the spreadsheet.
+            foreach (string item in cmbReportState.Items)
+            {
+                skipped = 0;
+                for (int i = 4; i - 4 < students.GetLength(0); i++)
+                {
+                    if (students[i - 4, 0] == null) break;
+                    if (students[i - 4, 7] == "12" && students[i - 4, 11] == item)
+                    {
+                        ws.Cell("B" + (i + total - skipped).ToString()).Value = students[i - 4, 11]; // State
+                        ws.Cell("C" + (i + total - skipped).ToString()).Value = students[i - 4, 1]; // First Names
+                        ws.Cell("D" + (i + total - skipped).ToString()).Value = students[i - 4, 2]; // Last Names
+                        ws.Cell("E" + (i + total - skipped).ToString()).Value = students[i - 4, 9]; // Emails
+                        total++;
+                    } else
+                    {
+                        skipped++;
+                    }
+                }
+            }
+
+            skipped = studentLength - total;
+
+            //From worksheet
+            var rngTable = ws.Range("B2:E" + (studentLength + 5 - skipped).ToString());
+
+            rngTable.FirstCell().Style
+                .Font.SetBold()
+                .Fill.SetBackgroundColor(cXML.XLColor.CornflowerBlue)
+                .Alignment.SetHorizontal(cXML.XLAlignmentHorizontalValues.Center);
+
+            rngTable.FirstRow().Merge();
+
+            var rngHeaders = rngTable.Range("A2:D2"); // The address is relative to rngTable (NOT the worksheet)
+            rngHeaders.Style.Alignment.Horizontal = cXML.XLAlignmentHorizontalValues.Center;
+            rngHeaders.Style.Font.Bold = true;
+            rngHeaders.Style.Font.FontColor = cXML.XLColor.DarkBlue;
+            rngHeaders.Style.Fill.BackgroundColor = cXML.XLColor.Aqua;
+
+            var rngData = ws.Range("B3:E" + (studentLength + 5 - skipped).ToString());
+            var excelTable = rngData.CreateTable();
+
+            excelTable.ShowTotalsRow = true;
+
+            //Add thick borders to the contents of the spreadsheet
+            ws.RangeUsed().Style.Border.OutsideBorder = cXML.XLBorderStyleValues.Thick;
+
+            ws.Columns().AdjustToContents();
+
+            wb.SaveAs(Path.Combine(Application.StartupPath, "SeniorReport.xlsx"));
+
+            msgbox msg = new msgbox("Successfully generated senior report in program's local directory.", "Success", 1);
+            msg.Show();
+        }
+
+        private void lblLocal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TextBox textbox = sender as TextBox;
+                Process.Start(textbox.Text);
+            }
+            catch { }
+        }
+
+        private void lblData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TextBox textbox = sender as TextBox;
+                Process.Start(textbox.Text);
+            }
+            catch { }
         }
 
         private void btnRefreshStats_Click(object sender, EventArgs e)
