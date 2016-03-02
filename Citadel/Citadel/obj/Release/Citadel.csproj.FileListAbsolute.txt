@@ -1,4 +1,3 @@
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Citadel.exe.config
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Citadel.exe
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Citadel.pdb
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\ClosedXML.dll
@@ -8,7 +7,6 @@ C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Re
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Microsoft.Threading.Tasks.Extensions.dll
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\System.Net.Http.Extensions.dll
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\System.Net.Http.Primitives.dll
-C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Xenon.dll
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\ClosedXML.xml
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Microsoft.Threading.Tasks.xml
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Microsoft.Threading.Tasks.Extensions.xml
@@ -24,3 +22,5 @@ C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Re
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Release\Citadel.csproj.GenerateResource.Cache
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Release\Citadel.exe
 C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Release\Citadel.pdb
+C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Xenon.dll
+C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Release\Citadel.exe.config
