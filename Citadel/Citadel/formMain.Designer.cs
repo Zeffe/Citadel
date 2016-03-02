@@ -55,6 +55,12 @@
             this.lblStudentCount2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.thirteenForm1 = new Xenon.ThirteenForm();
+            this.pnlSettings = new System.Windows.Forms.Panel();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pnlSource = new System.Windows.Forms.Panel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.thirteenTabControl7 = new Xenon.ThirteenTabControl();
             this.tabPage14 = new System.Windows.Forms.TabPage();
@@ -249,10 +255,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.pnlSettings = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pnlSource = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -289,8 +291,6 @@
             this.pctInfo = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
             this.menuRefresh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
@@ -310,6 +310,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDelStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.thirteenForm1.SuspendLayout();
+            this.pnlSettings.SuspendLayout();
+            this.pnlSource.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             this.thirteenTabControl7.SuspendLayout();
             this.tabPage14.SuspendLayout();
@@ -360,8 +362,6 @@
             this.tabPage11.SuspendLayout();
             this.thirteenTabControl4.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            this.pnlSettings.SuspendLayout();
-            this.pnlSource.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).BeginInit();
             this.pnlbStats.SuspendLayout();
@@ -706,6 +706,66 @@
             this.thirteenForm1.TabIndex = 0;
             this.thirteenForm1.Text = "Citadel - [ Panel ]";
             // 
+            // pnlSettings
+            // 
+            this.pnlSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlSettings.Controls.Add(this.label62);
+            this.pnlSettings.Controls.Add(this.label14);
+            this.pnlSettings.Location = new System.Drawing.Point(229, 33);
+            this.pnlSettings.Name = "pnlSettings";
+            this.pnlSettings.Size = new System.Drawing.Size(609, 599);
+            this.pnlSettings.TabIndex = 6;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label62.Location = new System.Drawing.Point(166, 232);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(311, 46);
+            this.label62.TabIndex = 3;
+            this.label62.Text = "Coming Soon...";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label14.Location = new System.Drawing.Point(198, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(220, 25);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Citadel - [ Settings ]";
+            // 
+            // pnlSource
+            // 
+            this.pnlSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.pnlSource.Controls.Add(this.label61);
+            this.pnlSource.Controls.Add(this.label4);
+            this.pnlSource.Location = new System.Drawing.Point(229, 33);
+            this.pnlSource.Name = "pnlSource";
+            this.pnlSource.Size = new System.Drawing.Size(609, 599);
+            this.pnlSource.TabIndex = 4;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label61.Location = new System.Drawing.Point(166, 232);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(311, 46);
+            this.label61.TabIndex = 2;
+            this.label61.Text = "Coming Soon...";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 15F);
+            this.label4.Location = new System.Drawing.Point(164, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(301, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Citadel - [ Source Manager ]";
+            // 
             // pnlDashboard
             // 
             this.pnlDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -761,7 +821,7 @@
             this.lblData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.lblData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblData.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.lblData.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblData.ForeColor = System.Drawing.Color.White;
             this.lblData.Location = new System.Drawing.Point(11, 120);
             this.lblData.Multiline = true;
@@ -776,7 +836,7 @@
             this.lblLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.lblLocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblLocal.ColorScheme = Xenon.ThirteenTextBox.ColorSchemes.Dark;
-            this.lblLocal.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.lblLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.lblLocal.ForeColor = System.Drawing.Color.White;
             this.lblLocal.Location = new System.Drawing.Point(11, 35);
             this.lblLocal.Multiline = true;
@@ -2989,46 +3049,6 @@
             this.label44.TabIndex = 16;
             this.label44.Text = "Programmed by Seth Dixon";
             // 
-            // pnlSettings
-            // 
-            this.pnlSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlSettings.Controls.Add(this.label62);
-            this.pnlSettings.Controls.Add(this.label14);
-            this.pnlSettings.Location = new System.Drawing.Point(229, 33);
-            this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.Size = new System.Drawing.Size(609, 599);
-            this.pnlSettings.TabIndex = 6;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label14.Location = new System.Drawing.Point(198, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(220, 25);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Citadel - [ Settings ]";
-            // 
-            // pnlSource
-            // 
-            this.pnlSource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.pnlSource.Controls.Add(this.label61);
-            this.pnlSource.Controls.Add(this.label4);
-            this.pnlSource.Location = new System.Drawing.Point(229, 33);
-            this.pnlSource.Name = "pnlSource";
-            this.pnlSource.Size = new System.Drawing.Size(609, 599);
-            this.pnlSource.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label4.Location = new System.Drawing.Point(164, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Citadel - [ Source Manager ]";
-            // 
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3389,26 +3409,6 @@
             this.lblInfo.Text = "Information";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.label61.Location = new System.Drawing.Point(166, 232);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(311, 46);
-            this.label61.TabIndex = 2;
-            this.label61.Text = "Coming Soon...";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.label62.Location = new System.Drawing.Point(145, 221);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(311, 46);
-            this.label62.TabIndex = 3;
-            this.label62.Text = "Coming Soon...";
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3442,6 +3442,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.thirteenForm1.ResumeLayout(false);
             this.thirteenForm1.PerformLayout();
+            this.pnlSettings.ResumeLayout(false);
+            this.pnlSettings.PerformLayout();
+            this.pnlSource.ResumeLayout(false);
+            this.pnlSource.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
             this.pnlDashboard.PerformLayout();
             this.thirteenTabControl7.ResumeLayout(false);
@@ -3512,10 +3516,6 @@
             this.thirteenTabControl4.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
-            this.pnlSettings.ResumeLayout(false);
-            this.pnlSettings.PerformLayout();
-            this.pnlSource.ResumeLayout(false);
-            this.pnlSource.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPointer2)).EndInit();
             this.pnlbStats.ResumeLayout(false);

@@ -23,3 +23,6 @@ C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.Properties
 C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.csproj.GenerateResource.Cache
 C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.exe
 C:\Users\5654920324\Desktop\citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
+C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\bin\Debug\Citadel.exe.config
+C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.exe
+C:\Users\Seth\Desktop\Ongoing Projects\C#\Citadel\Citadel\Citadel\Citadel\obj\Debug\Citadel.pdb
